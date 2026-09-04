@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Galería de Arte</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    header {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
+                  url("https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1600&q=80")
+                  center/cover;
+    }
+
+    header h1 {
+      font-size: 60px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #ddd;
+    }
+
+    nav {
+      padding: 20px;
+      text-align: center;
+      background: #080808;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #d6b36a;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 25px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 50px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .cuadro {
+      background: #1c1c1c;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform .3s;
+    }
+
+    .cuadro:hover {
+      transform: translateY(-8px);
+    }
+
+    .cuadro img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .info {
+      padding: 20px;
+    }
+
+    .info h3 {
+      margin-bottom: 8px;
+    }
+
+    .precio {
+      color: #d6b36a;
+      font-size: 18px;
+    }
+
+    .sobre-mi {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    .contacto {
+      text-align: center;
+      background: #181818;
+      max-width: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #050505;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 38px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="inicio">
+    <div>
+      <h1>Mi Galería</h1>
+      <p>Arte original · Pintura · Creación</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#cuadros">Cuadros</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="cuadros">
+    <h2>Mis cuadros</h2>
+
+    <div class="galeria">
+
+      <div class="cuadro">
+        <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01988b5?auto=format&fit=crop&w=800&q=80" alt="Cuadro 1">
+        <div class="info">
+          <h3>Obra 01</h3>
+          <p>Descripción de la obra</p>
+          <p class="precio">Consultar precio</p>
+        </div>
+      </div>
+
+      <div class="cuadro">
+        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80" alt="Cuadro 2">
+        <div class="info">
+          <h3>Obra 02</h3>
+          <p>Descripción de la obra</p>
+          <p class="precio">Consultar precio</p>
+        </div>
+      </div>
+
+      <div class="cuadro">
+        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800&q=80" alt="Cuadro 3">
+        <div class="info">
+          <h3>Obra 03</h3>
+          <p>Descripción de la obra</p>
+          <p class="precio">Consultar precio</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+
+    <div class="sobre-mi">
+      <p>
+        Bienvenido/a a mi galería de arte.
+        Aquí encontrarás una selección de mis obras,
+        pinturas y creaciones originales.
+      </p>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>¿Te interesa alguna obra?</p>
+    <p>Escríbeme para conocer disponibilidad y precios.</p>
+  </section>
+
+  <footer>
+    © 2026 Mi Galería de Arte
+  </footer>
+
+</body>
+</html>
