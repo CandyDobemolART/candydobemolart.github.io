@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>DOBEMOLART | Galería de Arte</title>
+  <title>DOBEMOLART | Art Gallery</title>
 
-  <meta name="description" content="DOBEMOLART - Galería de arte, cuadros originales y diseños para camisetas.">
+  <meta name="description" content="DOBEMOLART - Original artwork, paintings and creative T-shirt designs.">
 
   <style>
 
@@ -27,19 +27,14 @@
       line-height: 1.6;
     }
 
-    /* =========================
-       CABECERA
-    ========================= */
+    /* HEADER */
 
     header {
       min-height: 75vh;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       text-align: center;
-
       padding: 40px 20px;
 
       background:
@@ -64,9 +59,7 @@
       letter-spacing: 2px;
     }
 
-    /* =========================
-       MENU
-    ========================= */
+    /* MENU */
 
     nav {
       position: sticky;
@@ -74,9 +67,7 @@
       z-index: 100;
 
       background: rgba(8,8,8,.96);
-
       padding: 18px 10px;
-
       text-align: center;
 
       border-bottom: 1px solid #333;
@@ -100,9 +91,7 @@
       color: #d6b36a;
     }
 
-    /* =========================
-       SECCIONES
-    ========================= */
+    /* SECTIONS */
 
     section {
       max-width: 1200px;
@@ -120,11 +109,9 @@
       letter-spacing: 2px;
     }
 
-    /* =========================
-       GALERIA DE CUADROS
-    ========================= */
+    /* ARTWORK */
 
-    .galeria {
+    .gallery {
       display: grid;
 
       grid-template-columns:
@@ -133,7 +120,7 @@
       gap: 30px;
     }
 
-    .cuadro {
+    .artwork {
       background: #1b1b1b;
 
       border-radius: 8px;
@@ -145,14 +132,14 @@
         box-shadow .3s;
     }
 
-    .cuadro:hover {
+    .artwork:hover {
       transform: translateY(-8px);
 
       box-shadow:
         0 15px 35px rgba(0,0,0,.5);
     }
 
-    .cuadro img {
+    .artwork img {
       width: 100%;
       height: 330px;
 
@@ -167,7 +154,6 @@
 
     .info h3 {
       font-size: 21px;
-
       margin-bottom: 8px;
     }
 
@@ -175,7 +161,7 @@
       color: #bbb;
     }
 
-    .precio {
+    .price {
       margin-top: 12px;
 
       color: #d6b36a !important;
@@ -185,11 +171,9 @@
       font-weight: bold;
     }
 
-    /* =========================
-       DISEÑOS PARA CAMISETAS
-    ========================= */
+    /* T-SHIRT DESIGNS */
 
-    #camisetas {
+    #tshirts {
       background: #151515;
 
       max-width: none;
@@ -198,12 +182,12 @@
       padding-right: 25px;
     }
 
-    #camisetas .contenido-camisetas {
+    .tshirt-content {
       max-width: 1200px;
       margin: auto;
     }
 
-    .intro-camisetas {
+    .intro {
       max-width: 750px;
 
       margin: -25px auto 50px;
@@ -215,7 +199,7 @@
       font-size: 17px;
     }
 
-    .disenos {
+    .designs {
       display: grid;
 
       grid-template-columns:
@@ -224,7 +208,7 @@
       gap: 30px;
     }
 
-    .diseno {
+    .design {
       background: #202020;
 
       border-radius: 8px;
@@ -236,14 +220,14 @@
         box-shadow .3s;
     }
 
-    .diseno:hover {
+    .design:hover {
       transform: translateY(-8px);
 
       box-shadow:
         0 15px 35px rgba(0,0,0,.5);
     }
 
-    .diseno img {
+    .design img {
       width: 100%;
 
       height: 300px;
@@ -253,25 +237,25 @@
       display: block;
     }
 
-    .diseno-info {
+    .design-info {
       padding: 22px;
 
       text-align: center;
     }
 
-    .diseno-info h3 {
+    .design-info h3 {
       margin-bottom: 8px;
 
       font-size: 21px;
     }
 
-    .diseno-info p {
+    .design-info p {
       color: #bbb;
 
       margin-bottom: 18px;
     }
 
-    .boton {
+    .button {
       display: inline-block;
 
       padding: 11px 22px;
@@ -287,17 +271,15 @@
       transition: .3s;
     }
 
-    .boton:hover {
+    .button:hover {
       background: #d6b36a;
 
       color: #111;
     }
 
-    /* =========================
-       SOBRE MI
-    ========================= */
+    /* ABOUT */
 
-    .sobre-mi {
+    .about {
       max-width: 800px;
 
       margin: auto;
@@ -311,11 +293,9 @@
       line-height: 1.9;
     }
 
-    /* =========================
-       CONTACTO
-    ========================= */
+    /* CONTACT */
 
-    #contacto {
+    #contact {
       max-width: none;
 
       text-align: center;
@@ -323,15 +303,13 @@
       background: #181818;
     }
 
-    #contacto p {
+    #contact p {
       color: #ccc;
 
       margin: 10px 0;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       text-align: center;
@@ -345,9 +323,7 @@
       font-size: 14px;
     }
 
-    /* =========================
-       MOVIL
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 600px) {
 
@@ -382,18 +358,16 @@
 <body>
 
 
-  <!-- =========================
-       INICIO
-  ========================= -->
+  <!-- HOME -->
 
-  <header id="inicio">
+  <header id="home">
 
     <div>
 
       <h1>DOBEMOLART</h1>
 
       <p>
-        Arte · Pintura · Diseños originales
+        Art · Painting · Original Designs
       </p>
 
     </div>
@@ -401,68 +375,64 @@
   </header>
 
 
-  <!-- =========================
-       MENU
-  ========================= -->
+  <!-- MENU -->
 
   <nav>
 
-    <a href="#inicio">
-      Inicio
+    <a href="#home">
+      Home
     </a>
 
-    <a href="#cuadros">
-      Cuadros
+    <a href="#artwork">
+      Artwork
     </a>
 
-    <a href="#camisetas">
-      Diseños para camisetas
+    <a href="#tshirts">
+      T-Shirt Designs
     </a>
 
-    <a href="#sobre-mi">
-      Sobre mí
+    <a href="#about">
+      About Me
     </a>
 
-    <a href="#contacto">
-      Contacto
+    <a href="#contact">
+      Contact
     </a>
 
   </nav>
 
 
-  <!-- =========================
-       CUADROS
-  ========================= -->
+  <!-- ARTWORK -->
 
-  <section id="cuadros">
+  <section id="artwork">
 
     <h2>
-      Mis cuadros
+      My Artwork
     </h2>
 
 
-    <div class="galeria">
+    <div class="gallery">
 
 
-      <div class="cuadro">
+      <div class="artwork">
 
         <img
           src="https://images.unsplash.com/photo-1577083552431-6e5fd01988b5?auto=format&fit=crop&w=800&q=80"
-          alt="Obra de arte"
+          alt="Original artwork"
         >
 
         <div class="info">
 
           <h3>
-            Obra 01
+            Artwork 01
           </h3>
 
           <p>
-            Descripción de la obra
+            Description of the artwork
           </p>
 
-          <p class="precio">
-            Consultar precio
+          <p class="price">
+            Price on request
           </p>
 
         </div>
@@ -470,25 +440,25 @@
       </div>
 
 
-      <div class="cuadro">
+      <div class="artwork">
 
         <img
           src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80"
-          alt="Obra de arte"
+          alt="Original artwork"
         >
 
         <div class="info">
 
           <h3>
-            Obra 02
+            Artwork 02
           </h3>
 
           <p>
-            Descripción de la obra
+            Description of the artwork
           </p>
 
-          <p class="precio">
-            Consultar precio
+          <p class="price">
+            Price on request
           </p>
 
         </div>
@@ -496,25 +466,25 @@
       </div>
 
 
-      <div class="cuadro">
+      <div class="artwork">
 
         <img
           src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800&q=80"
-          alt="Obra de arte"
+          alt="Original artwork"
         >
 
         <div class="info">
 
           <h3>
-            Obra 03
+            Artwork 03
           </h3>
 
           <p>
-            Descripción de la obra
+            Description of the artwork
           </p>
 
-          <p class="precio">
-            Consultar precio
+          <p class="price">
+            Price on request
           </p>
 
         </div>
@@ -527,55 +497,53 @@
   </section>
 
 
-  <!-- =========================
-       DISEÑOS PARA CAMISETAS
-  ========================= -->
+  <!-- T-SHIRT DESIGNS -->
 
-  <section id="camisetas">
+  <section id="tshirts">
 
-    <div class="contenido-camisetas">
+    <div class="tshirt-content">
 
       <h2>
-        Diseños para camisetas
+        T-Shirt Designs
       </h2>
 
 
-      <p class="intro-camisetas">
+      <p class="intro">
 
-        Diseños originales de DOBEMOLART
-        pensados para llevar el arte también
-        en camisetas.
+        Original DOBEMOLART designs created
+        to bring art and creativity to your
+        everyday style.
 
       </p>
 
 
-      <div class="disenos">
+      <div class="designs">
 
 
-        <!-- DISEÑO 1 -->
+        <!-- DESIGN 1 -->
 
-        <div class="diseno">
+        <div class="design">
 
           <img
             src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"
-            alt="Diseño para camiseta"
+            alt="T-shirt design"
           >
 
-          <div class="diseno-info">
+          <div class="design-info">
 
             <h3>
-              Diseño 01
+              Design 01
             </h3>
 
             <p>
-              Próximamente disponible
+              Coming soon
             </p>
 
             <a
-              href="#contacto"
-              class="boton"
+              href="#contact"
+              class="button"
             >
-              Más información
+              More information
             </a>
 
           </div>
@@ -583,30 +551,30 @@
         </div>
 
 
-        <!-- DISEÑO 2 -->
+        <!-- DESIGN 2 -->
 
-        <div class="diseno">
+        <div class="design">
 
           <img
             src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=800&q=80"
-            alt="Diseño para camiseta"
+            alt="T-shirt design"
           >
 
-          <div class="diseno-info">
+          <div class="design-info">
 
             <h3>
-              Diseño 02
+              Design 02
             </h3>
 
             <p>
-              Próximamente disponible
+              Coming soon
             </p>
 
             <a
-              href="#contacto"
-              class="boton"
+              href="#contact"
+              class="button"
             >
-              Más información
+              More information
             </a>
 
           </div>
@@ -614,30 +582,30 @@
         </div>
 
 
-        <!-- DISEÑO 3 -->
+        <!-- DESIGN 3 -->
 
-        <div class="diseno">
+        <div class="design">
 
           <img
             src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=800&q=80"
-            alt="Diseño para camiseta"
+            alt="T-shirt design"
           >
 
-          <div class="diseno-info">
+          <div class="design-info">
 
             <h3>
-              Diseño 03
+              Design 03
             </h3>
 
             <p>
-              Próximamente disponible
+              Coming soon
             </p>
 
             <a
-              href="#contacto"
-              class="boton"
+              href="#contact"
+              class="button"
             >
-              Más información
+              More information
             </a>
 
           </div>
@@ -652,29 +620,27 @@
   </section>
 
 
-  <!-- =========================
-       SOBRE MI
-  ========================= -->
+  <!-- ABOUT ME -->
 
-  <section id="sobre-mi">
+  <section id="about">
 
     <h2>
-      Sobre mí
+      About Me
     </h2>
 
 
-    <div class="sobre-mi">
+    <div class="about">
 
       <p>
 
-        Bienvenido/a a DOBEMOLART.
+        Welcome to DOBEMOLART.
 
-        Este espacio reúne mis obras,
-        pinturas y diseños originales.
+        This gallery brings together
+        my original artwork, paintings
+        and creative designs.
 
-        Un lugar donde el arte,
-        el color y la creatividad
-        se convierten en piezas únicas.
+        A space where art, colour and
+        creativity become unique pieces.
 
       </p>
 
@@ -683,37 +649,34 @@
   </section>
 
 
-  <!-- =========================
-       CONTACTO
-  ========================= -->
+  <!-- CONTACT -->
 
-  <section id="contacto">
+  <section id="contact">
 
     <h2>
-      Contacto
+      Contact
     </h2>
 
 
     <p>
-      ¿Te interesa alguna obra o alguno de mis diseños?
+      Interested in one of my artworks
+      or T-shirt designs?
     </p>
 
     <p>
-      Ponte en contacto conmigo para conocer
-      disponibilidad, precios y pedidos.
+      Get in touch for availability,
+      prices and orders.
     </p>
 
 
   </section>
 
 
-  <!-- =========================
-       PIE DE PAGINA
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
-    © 2026 DOBEMOLART · Todos los derechos reservados
+    © 2026 DOBEMOLART · All rights reserved
 
   </footer>
 
