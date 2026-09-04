@@ -3,219 +3,720 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Galería de Arte</title>
+
+  <title>DOBEMOLART | Galería de Arte</title>
+
+  <meta name="description" content="DOBEMOLART - Galería de arte, cuadros originales y diseños para camisetas.">
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
+    html {
+      scroll-behavior: smooth;
     }
 
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       CABECERA
+    ========================= */
+
     header {
-      min-height: 70vh;
+      min-height: 75vh;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
+
       padding: 40px 20px;
-      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
-                  url("https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1600&q=80")
-                  center/cover;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,.55),
+          rgba(0,0,0,.80)
+        ),
+        url("https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1600&q=80")
+        center / cover;
     }
 
     header h1 {
-      font-size: 60px;
-      letter-spacing: 5px;
+      font-size: clamp(45px, 8vw, 80px);
+      letter-spacing: 8px;
       text-transform: uppercase;
     }
 
     header p {
       margin-top: 20px;
-      font-size: 20px;
+      font-size: 21px;
       color: #ddd;
+      letter-spacing: 2px;
     }
 
+    /* =========================
+       MENU
+    ========================= */
+
     nav {
-      padding: 20px;
-      text-align: center;
-      background: #080808;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
+
+      background: rgba(8,8,8,.96);
+
+      padding: 18px 10px;
+
+      text-align: center;
+
+      border-bottom: 1px solid #333;
     }
 
     nav a {
+      display: inline-block;
+
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+
+      margin: 5px 12px;
+
       font-size: 15px;
+      font-weight: bold;
+
+      transition: .3s;
     }
 
     nav a:hover {
       color: #d6b36a;
     }
 
+    /* =========================
+       SECCIONES
+    ========================= */
+
     section {
       max-width: 1200px;
       margin: auto;
-      padding: 80px 25px;
+      padding: 90px 25px;
     }
 
-    h2 {
+    section h2 {
       text-align: center;
-      font-size: 38px;
-      margin-bottom: 50px;
+
+      font-size: clamp(32px, 5vw, 45px);
+
+      margin-bottom: 55px;
+
+      letter-spacing: 2px;
     }
+
+    /* =========================
+       GALERIA DE CUADROS
+    ========================= */
 
     .galeria {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
       gap: 30px;
     }
 
     .cuadro {
-      background: #1c1c1c;
+      background: #1b1b1b;
+
       border-radius: 8px;
+
       overflow: hidden;
-      transition: transform .3s;
+
+      transition:
+        transform .3s,
+        box-shadow .3s;
     }
 
     .cuadro:hover {
       transform: translateY(-8px);
+
+      box-shadow:
+        0 15px 35px rgba(0,0,0,.5);
     }
 
     .cuadro img {
       width: 100%;
-      height: 320px;
+      height: 330px;
+
       object-fit: cover;
+
       display: block;
     }
 
     .info {
-      padding: 20px;
+      padding: 22px;
     }
 
     .info h3 {
+      font-size: 21px;
+
       margin-bottom: 8px;
     }
 
-    .precio {
-      color: #d6b36a;
-      font-size: 18px;
+    .info p {
+      color: #bbb;
     }
+
+    .precio {
+      margin-top: 12px;
+
+      color: #d6b36a !important;
+
+      font-size: 18px;
+
+      font-weight: bold;
+    }
+
+    /* =========================
+       DISEÑOS PARA CAMISETAS
+    ========================= */
+
+    #camisetas {
+      background: #151515;
+
+      max-width: none;
+
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    #camisetas .contenido-camisetas {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .intro-camisetas {
+      max-width: 750px;
+
+      margin: -25px auto 50px;
+
+      text-align: center;
+
+      color: #bbb;
+
+      font-size: 17px;
+    }
+
+    .disenos {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+      gap: 30px;
+    }
+
+    .diseno {
+      background: #202020;
+
+      border-radius: 8px;
+
+      overflow: hidden;
+
+      transition:
+        transform .3s,
+        box-shadow .3s;
+    }
+
+    .diseno:hover {
+      transform: translateY(-8px);
+
+      box-shadow:
+        0 15px 35px rgba(0,0,0,.5);
+    }
+
+    .diseno img {
+      width: 100%;
+
+      height: 300px;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+    .diseno-info {
+      padding: 22px;
+
+      text-align: center;
+    }
+
+    .diseno-info h3 {
+      margin-bottom: 8px;
+
+      font-size: 21px;
+    }
+
+    .diseno-info p {
+      color: #bbb;
+
+      margin-bottom: 18px;
+    }
+
+    .boton {
+      display: inline-block;
+
+      padding: 11px 22px;
+
+      border: 1px solid #d6b36a;
+
+      border-radius: 4px;
+
+      color: #d6b36a;
+
+      text-decoration: none;
+
+      transition: .3s;
+    }
+
+    .boton:hover {
+      background: #d6b36a;
+
+      color: #111;
+    }
+
+    /* =========================
+       SOBRE MI
+    ========================= */
 
     .sobre-mi {
-      text-align: center;
       max-width: 800px;
+
       margin: auto;
-      line-height: 1.8;
+
+      text-align: center;
+
       color: #ccc;
+
+      font-size: 18px;
+
+      line-height: 1.9;
     }
 
-    .contacto {
-      text-align: center;
-      background: #181818;
+    /* =========================
+       CONTACTO
+    ========================= */
+
+    #contacto {
       max-width: none;
+
+      text-align: center;
+
+      background: #181818;
     }
+
+    #contacto p {
+      color: #ccc;
+
+      margin: 10px 0;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       text-align: center;
-      padding: 30px;
+
+      padding: 35px 20px;
+
       background: #050505;
-      color: #888;
+
+      color: #777;
+
+      font-size: 14px;
     }
 
+    /* =========================
+       MOVIL
+    ========================= */
+
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 38px;
+
+      nav {
+        padding: 12px 5px;
       }
 
       nav a {
-        margin: 0 7px;
+        margin: 4px 6px;
+
+        font-size: 13px;
       }
+
+      header {
+        min-height: 65vh;
+      }
+
+      header h1 {
+        letter-spacing: 5px;
+      }
+
+      section {
+        padding: 65px 18px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+
+  <!-- =========================
+       INICIO
+  ========================= -->
+
   <header id="inicio">
+
     <div>
-      <h1>Mi Galería</h1>
-      <p>Arte original · Pintura · Creación</p>
+
+      <h1>DOBEMOLART</h1>
+
+      <p>
+        Arte · Pintura · Diseños originales
+      </p>
+
     </div>
+
   </header>
 
+
+  <!-- =========================
+       MENU
+  ========================= -->
+
   <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#cuadros">Cuadros</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#contacto">Contacto</a>
+
+    <a href="#inicio">
+      Inicio
+    </a>
+
+    <a href="#cuadros">
+      Cuadros
+    </a>
+
+    <a href="#camisetas">
+      Diseños para camisetas
+    </a>
+
+    <a href="#sobre-mi">
+      Sobre mí
+    </a>
+
+    <a href="#contacto">
+      Contacto
+    </a>
+
   </nav>
 
+
+  <!-- =========================
+       CUADROS
+  ========================= -->
+
   <section id="cuadros">
-    <h2>Mis cuadros</h2>
+
+    <h2>
+      Mis cuadros
+    </h2>
+
 
     <div class="galeria">
 
-      <div class="cuadro">
-        <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01988b5?auto=format&fit=crop&w=800&q=80" alt="Cuadro 1">
-        <div class="info">
-          <h3>Obra 01</h3>
-          <p>Descripción de la obra</p>
-          <p class="precio">Consultar precio</p>
-        </div>
-      </div>
 
       <div class="cuadro">
-        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80" alt="Cuadro 2">
+
+        <img
+          src="https://images.unsplash.com/photo-1577083552431-6e5fd01988b5?auto=format&fit=crop&w=800&q=80"
+          alt="Obra de arte"
+        >
+
         <div class="info">
-          <h3>Obra 02</h3>
-          <p>Descripción de la obra</p>
-          <p class="precio">Consultar precio</p>
+
+          <h3>
+            Obra 01
+          </h3>
+
+          <p>
+            Descripción de la obra
+          </p>
+
+          <p class="precio">
+            Consultar precio
+          </p>
+
         </div>
+
       </div>
 
+
       <div class="cuadro">
-        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800&q=80" alt="Cuadro 3">
+
+        <img
+          src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80"
+          alt="Obra de arte"
+        >
+
         <div class="info">
-          <h3>Obra 03</h3>
-          <p>Descripción de la obra</p>
-          <p class="precio">Consultar precio</p>
+
+          <h3>
+            Obra 02
+          </h3>
+
+          <p>
+            Descripción de la obra
+          </p>
+
+          <p class="precio">
+            Consultar precio
+          </p>
+
         </div>
+
+      </div>
+
+
+      <div class="cuadro">
+
+        <img
+          src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800&q=80"
+          alt="Obra de arte"
+        >
+
+        <div class="info">
+
+          <h3>
+            Obra 03
+          </h3>
+
+          <p>
+            Descripción de la obra
+          </p>
+
+          <p class="precio">
+            Consultar precio
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       DISEÑOS PARA CAMISETAS
+  ========================= -->
+
+  <section id="camisetas">
+
+    <div class="contenido-camisetas">
+
+      <h2>
+        Diseños para camisetas
+      </h2>
+
+
+      <p class="intro-camisetas">
+
+        Diseños originales de DOBEMOLART
+        pensados para llevar el arte también
+        en camisetas.
+
+      </p>
+
+
+      <div class="disenos">
+
+
+        <!-- DISEÑO 1 -->
+
+        <div class="diseno">
+
+          <img
+            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"
+            alt="Diseño para camiseta"
+          >
+
+          <div class="diseno-info">
+
+            <h3>
+              Diseño 01
+            </h3>
+
+            <p>
+              Próximamente disponible
+            </p>
+
+            <a
+              href="#contacto"
+              class="boton"
+            >
+              Más información
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- DISEÑO 2 -->
+
+        <div class="diseno">
+
+          <img
+            src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=800&q=80"
+            alt="Diseño para camiseta"
+          >
+
+          <div class="diseno-info">
+
+            <h3>
+              Diseño 02
+            </h3>
+
+            <p>
+              Próximamente disponible
+            </p>
+
+            <a
+              href="#contacto"
+              class="boton"
+            >
+              Más información
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- DISEÑO 3 -->
+
+        <div class="diseno">
+
+          <img
+            src="https://images.unsplash.com/photo-1562157873-818bc0726f68?auto=format&fit=crop&w=800&q=80"
+            alt="Diseño para camiseta"
+          >
+
+          <div class="diseno-info">
+
+            <h3>
+              Diseño 03
+            </h3>
+
+            <p>
+              Próximamente disponible
+            </p>
+
+            <a
+              href="#contacto"
+              class="boton"
+            >
+              Más información
+            </a>
+
+          </div>
+
+        </div>
+
+
       </div>
 
     </div>
+
   </section>
+
+
+  <!-- =========================
+       SOBRE MI
+  ========================= -->
 
   <section id="sobre-mi">
-    <h2>Sobre mí</h2>
+
+    <h2>
+      Sobre mí
+    </h2>
+
 
     <div class="sobre-mi">
+
       <p>
-        Bienvenido/a a mi galería de arte.
-        Aquí encontrarás una selección de mis obras,
-        pinturas y creaciones originales.
+
+        Bienvenido/a a DOBEMOLART.
+
+        Este espacio reúne mis obras,
+        pinturas y diseños originales.
+
+        Un lugar donde el arte,
+        el color y la creatividad
+        se convierten en piezas únicas.
+
       </p>
+
     </div>
+
   </section>
 
-  <section id="contacto" class="contacto">
-    <h2>Contacto</h2>
-    <p>¿Te interesa alguna obra?</p>
-    <p>Escríbeme para conocer disponibilidad y precios.</p>
+
+  <!-- =========================
+       CONTACTO
+  ========================= -->
+
+  <section id="contacto">
+
+    <h2>
+      Contacto
+    </h2>
+
+
+    <p>
+      ¿Te interesa alguna obra o alguno de mis diseños?
+    </p>
+
+    <p>
+      Ponte en contacto conmigo para conocer
+      disponibilidad, precios y pedidos.
+    </p>
+
+
   </section>
+
+
+  <!-- =========================
+       PIE DE PAGINA
+  ========================= -->
 
   <footer>
-    © 2026 Mi Galería de Arte
+
+    © 2026 DOBEMOLART · Todos los derechos reservados
+
   </footer>
+
 
 </body>
 </html>
