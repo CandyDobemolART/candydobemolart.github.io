@@ -11,6 +11,7 @@
     content="CandyDobemol_ART - Original artwork, paintings and creative T-shirt designs.">
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -28,7 +29,10 @@
       line-height: 1.6;
     }
 
-    /* HEADER */
+
+    /* ========================================
+       HEADER
+    ======================================== */
 
     header {
       min-height: 75vh;
@@ -61,7 +65,10 @@
       letter-spacing: 2px;
     }
 
-    /* MENU */
+
+    /* ========================================
+       MENU
+    ======================================== */
 
     nav {
       position: sticky;
@@ -88,7 +95,10 @@
       transform: translateY(-2px);
     }
 
-    /* SECTIONS */
+
+    /* ========================================
+       SECTIONS
+    ======================================== */
 
     section {
       max-width: 1200px;
@@ -102,6 +112,7 @@
       margin-bottom: 55px;
       letter-spacing: 2px;
     }
+
 
     /* ========================================
        MY ARTWORK
@@ -120,8 +131,10 @@
       border-radius: 10px;
       overflow: hidden;
       min-height: 430px;
+
       display: flex;
       flex-direction: column;
+
       transition:
         transform .3s ease,
         box-shadow .3s ease;
@@ -150,10 +163,13 @@
     .info {
       padding: 20px 22px 25px;
       text-align: center;
+
       flex: 1;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
 
     .info h3 {
@@ -166,31 +182,6 @@
       color: #bbb;
     }
 
-    .price 
-    .price-button {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 20px;
-  border: 1px solid #d6b36a;
-  border-radius: 25px;
-  color: #d6b36a;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  transition: all .3s ease;
-}
-
-.price-button:hover {
-  background: #d6b36a;
-  color: #111;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, .35);
-}{
-      margin-top: 12px;
-      color: #d6b36a !important;
-      font-size: 18px;
-      font-weight: bold;
-    }
 
     /* ========================================
        T-SHIRT DESIGNS
@@ -216,36 +207,51 @@
       font-size: 17px;
     }
 
-    /* SHOP LINK */
+
+    /* ========================================
+       SHOP LINK
+    ======================================== */
 
     .shop-link {
       display: inline-block;
       margin-top: 18px;
       padding: 11px 20px;
+
       border: 1px solid #d6b36a;
       border-radius: 25px;
+
       color: #d6b36a;
       text-decoration: none;
       font-weight: bold;
+
       transition: all .3s ease;
+
       box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
     }
 
     .shop-link:hover {
       background: #d6b36a;
       color: #111;
+
       transform: translateY(-3px);
+
       box-shadow: 0 8px 20px rgba(0, 0, 0, .4);
     }
 
-    /* T-SHIRT GRID */
+
+    /* ========================================
+       T-SHIRT GRID
+    ======================================== */
 
     .designs {
       display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(260px, 1fr)
-      );
+
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(260px, 1fr)
+        );
+
       gap: 30px;
     }
 
@@ -254,6 +260,7 @@
       border-radius: 8px;
       overflow: hidden;
       position: relative;
+
       transition:
         transform .35s ease,
         box-shadow .35s ease;
@@ -261,40 +268,63 @@
 
     .design:hover {
       transform: translateY(-8px);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, .65);
+
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, .65);
     }
 
-    /* T-SHIRT IMAGES */
+
+    /* ========================================
+       T-SHIRT IMAGES
+    ======================================== */
 
     .design img {
       width: 100%;
       height: 350px;
+
       object-fit: cover;
       object-position: center center;
+
       display: block;
-      transition: transform .5s ease;
+
+      cursor: zoom-in;
+
+      transition:
+        transform .5s ease;
     }
 
     .design:hover img {
       transform: scale(1.05);
     }
 
-    /* SHOP BADGE */
+
+    /* ========================================
+       SHOP BADGE
+    ======================================== */
 
     .shop-badge {
       position: absolute;
+
       top: 15px;
       right: 15px;
+
       padding: 7px 13px;
+
       background: rgba(0, 0, 0, .85);
+
       border: 1px solid #d6b36a;
       border-radius: 20px;
+
       color: #d6b36a;
+
       font-size: 12px;
       font-weight: bold;
       letter-spacing: 1px;
+
       opacity: 0;
+
       transform: translateY(-8px);
+
       transition: all .35s ease;
     }
 
@@ -303,7 +333,10 @@
       transform: translateY(0);
     }
 
-    /* T-SHIRT INFO */
+
+    /* ========================================
+       T-SHIRT INFO
+    ======================================== */
 
     .design-info {
       padding: 20px 22px 25px;
@@ -321,48 +354,78 @@
       margin-bottom: 18px;
     }
 
-    /* HAVE A LOOK */
+
+    /* ========================================
+       HAVE A LOOK
+    ======================================== */
 
     .look-link {
       display: inline-block;
+
       margin-bottom: 18px;
+
       padding: 9px 18px;
+
       border: 1px solid #555;
       border-radius: 20px;
+
       color: #d6b36a;
       text-decoration: none;
       font-weight: bold;
+
       transition: all .3s ease;
     }
 
     .look-link:hover {
       background: #d6b36a;
+
       color: #111;
+
       border-color: #d6b36a;
+
       transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, .35);
+
+      box-shadow:
+        0 6px 15px rgba(0, 0, 0, .35);
     }
 
-    /* MORE INFORMATION BUTTON */
+
+    /* ========================================
+       BUTTON
+    ======================================== */
 
     .button {
       display: inline-block;
+
       padding: 11px 22px;
+
       border: 1px solid #d6b36a;
       border-radius: 25px;
+
       color: #d6b36a;
+
       text-decoration: none;
       font-weight: bold;
+
       transition: all .3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+
+      box-shadow:
+        0 4px 10px rgba(0, 0, 0, .2);
     }
 
     .button:hover {
       background: #d6b36a;
+
       color: #111;
-      transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, .4);
+
+      transform:
+        translateY(-3px)
+        scale(1.03);
+
+      box-shadow:
+        0 8px 18px rgba(0, 0, 0, .4);
     }
+
 
     /* ========================================
        ABOUT
@@ -371,11 +434,15 @@
     .about {
       max-width: 800px;
       margin: auto;
+
       text-align: center;
+
       color: #ccc;
+
       font-size: 18px;
       line-height: 1.9;
     }
+
 
     /* ========================================
        CONTACT
@@ -383,30 +450,41 @@
 
     #contact {
       max-width: none;
+
       text-align: center;
+
       background: #181818;
     }
 
     #contact p {
       color: #ccc;
+
       margin: 10px 0;
     }
 
     .email-link {
       display: inline-block;
+
       margin-top: 15px;
+
       color: #d6b36a;
+
       font-size: 18px;
       font-weight: bold;
+
       text-decoration: none;
+
       transition: all .3s ease;
     }
 
     .email-link:hover {
       color: #fff;
+
       transform: translateY(-2px);
+
       text-decoration: underline;
     }
+
 
     /* ========================================
        LIGHTBOX
@@ -414,13 +492,20 @@
 
     .lightbox {
       display: none;
+
       position: fixed;
+
       inset: 0;
+
       z-index: 9999;
+
       background: rgba(0, 0, 0, .94);
+
       align-items: center;
       justify-content: center;
+
       padding: 30px;
+
       cursor: zoom-out;
     }
 
@@ -431,30 +516,45 @@
     .lightbox img {
       max-width: 90vw;
       max-height: 90vh;
+
       width: auto;
       height: auto;
+
       object-fit: contain;
+
       border-radius: 5px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, .8);
+
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, .8);
+
       cursor: default;
     }
 
     .lightbox-close {
       position: absolute;
+
       top: 15px;
       right: 25px;
+
       color: #d6b36a;
+
       font-size: 50px;
       line-height: 1;
+
       cursor: pointer;
+
       z-index: 10000;
-      transition: transform .2s ease;
+
+      transition:
+        transform .2s ease;
     }
 
     .lightbox-close:hover {
       transform: scale(1.1);
+
       color: #fff;
     }
+
 
     /* ========================================
        FOOTER
@@ -462,11 +562,16 @@
 
     footer {
       text-align: center;
+
       padding: 35px 20px;
+
       background: #050505;
+
       color: #777;
+
       font-size: 14px;
     }
+
 
     /* ========================================
        MOBILE
@@ -483,7 +588,9 @@
         grid-template-columns: 1fr;
         gap: 25px;
       }
+
     }
+
 
     @media (max-width: 600px) {
 
@@ -519,13 +626,20 @@
       .design img {
         height: 350px;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- HOME -->
+
+  <!-- ========================================
+       HOME
+  ======================================== -->
 
   <header id="home">
 
@@ -542,26 +656,35 @@
   </header>
 
 
-  <!-- MENU -->
+  <!-- ========================================
+       MENU
+  ======================================== -->
 
   <nav>
 
     <a href="#home">Home</a>
+
     <a href="#artwork">Artwork</a>
+
     <a href="#tshirts">T-Shirt Designs</a>
+
     <a href="#about">About Me</a>
+
     <a href="#contact">Contact</a>
 
   </nav>
 
 
-  <!-- ARTWORK -->
+  <!-- ========================================
+       ARTWORK
+  ======================================== -->
 
   <section id="artwork">
 
     <h2>
       My Artwork
     </h2>
+
 
     <div class="gallery">
 
@@ -586,14 +709,14 @@
             Acrylic canvas painting 6x6cm
           </p>
 
-       <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
-  class="price-button"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Price on request
-</a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
+            class="button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Price on request
+          </a>
 
         </div>
 
@@ -620,14 +743,14 @@
             Acrylic canvas painting 20x50cm
           </p>
 
-        <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
-  class="price-button"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Price on request
-</a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
+            class="button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Price on request
+          </a>
 
         </div>
 
@@ -648,25 +771,28 @@
             Coming soon
           </p>
 
-         <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
-  class="price-button"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Price on request
-</a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
+            class="button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Price on request
+          </a>
 
         </div>
 
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- T-SHIRT DESIGNS -->
+  <!-- ========================================
+       T-SHIRT DESIGNS
+  ======================================== -->
 
   <section id="tshirts">
 
@@ -676,11 +802,13 @@
         T-Shirt Designs
       </h2>
 
+
       <p class="intro">
 
         Original CandyDobemol_ART designs created to bring art and creativity to your everyday style.
 
         <br>
+
 
         <a
           href="https://www.latostadora.com/shop/Dobemol/?shop_trk"
@@ -704,6 +832,7 @@
           <img
             src="Shu.webp"
             alt="Shu Multi-Guitar2"
+            onclick="openLightbox(this.src, this.alt)"
           >
 
           <div class="design-info">
@@ -725,6 +854,7 @@
 
             </p>
 
+
             <a
               href="#contact"
               class="button"
@@ -744,6 +874,7 @@
           <img
             src="Freenomads Girl.webp"
             alt="Freenomads Multi-Guitar"
+            onclick="openLightbox(this.src, this.alt)"
           >
 
           <div class="design-info">
@@ -765,6 +896,7 @@
 
             </p>
 
+
             <a
               href="#contact"
               class="button"
@@ -784,6 +916,7 @@
           <img
             src="Twin Girl.webp"
             alt="Twin Multi-Guitar"
+            onclick="openLightbox(this.src, this.alt)"
           >
 
           <div class="design-info">
@@ -805,6 +938,7 @@
 
             </p>
 
+
             <a
               href="#contact"
               class="button"
@@ -816,6 +950,7 @@
 
         </div>
 
+
       </div>
 
     </div>
@@ -823,13 +958,16 @@
   </section>
 
 
-  <!-- ABOUT ME -->
+  <!-- ========================================
+       ABOUT ME
+  ======================================== -->
 
   <section id="about">
 
     <h2>
       About Me
     </h2>
+
 
     <div class="about">
 
@@ -852,13 +990,16 @@
   </section>
 
 
-  <!-- CONTACT -->
+  <!-- ========================================
+       CONTACT
+  ======================================== -->
 
   <section id="contact">
 
     <h2>
       Contact
     </h2>
+
 
     <p>
       Interested in one of my artworks or T-shirt designs?
@@ -867,6 +1008,7 @@
     <p>
       Get in touch for availability, prices and orders.
     </p>
+
 
     <a
       href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
@@ -880,7 +1022,9 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- ========================================
+       FOOTER
+  ======================================== -->
 
   <footer>
 
@@ -889,7 +1033,9 @@
   </footer>
 
 
-  <!-- LIGHTBOX -->
+  <!-- ========================================
+       LIGHTBOX
+  ======================================== -->
 
   <div
     class="lightbox"
@@ -904,6 +1050,7 @@
       &times;
     </span>
 
+
     <img
       id="lightbox-image"
       src=""
@@ -914,13 +1061,19 @@
   </div>
 
 
+  <!-- ========================================
+       JAVASCRIPT
+  ======================================== -->
+
   <script>
 
     function openLightbox(src, alt) {
 
-      const lightbox = document.getElementById("lightbox");
+      const lightbox =
+        document.getElementById("lightbox");
 
-      const image = document.getElementById("lightbox-image");
+      const image =
+        document.getElementById("lightbox-image");
 
       image.src = src;
 
@@ -933,9 +1086,11 @@
 
     function closeLightbox() {
 
-      const lightbox = document.getElementById("lightbox");
+      const lightbox =
+        document.getElementById("lightbox");
 
-      const image = document.getElementById("lightbox-image");
+      const image =
+        document.getElementById("lightbox-image");
 
       lightbox.classList.remove("active");
 
@@ -955,6 +1110,7 @@
     });
 
   </script>
+
 
 </body>
 
