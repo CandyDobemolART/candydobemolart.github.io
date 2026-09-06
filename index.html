@@ -7,8 +7,7 @@
 
   <title>CandyDobemol_ART | Art Gallery</title>
 
-  <meta name="description"
-    content="CandyDobemol_ART - Original artwork, paintings and creative T-shirt designs.">
+  <meta name="description" content="CandyDobemol_ART - Original artwork, paintings and creative T-shirt designs.">
 
   <style>
 
@@ -25,39 +24,41 @@
     body {
       font-family: Georgia, "Times New Roman", serif;
       background: #111;
-      color: #fff;
+      color: #ddd;
       line-height: 1.6;
     }
 
 
-    /* ========================================
+    /* =========================
        HEADER
-    ======================================== */
+    ========================= */
 
     header {
-      min-height: 75vh;
+      min-height: 330px;
 
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
 
       text-align: center;
 
-      padding: 40px 20px;
-
       background:
         linear-gradient(
-          rgba(0, 0, 0, .55),
-          rgba(0, 0, 0, .80)
+          rgba(0,0,0,0.65),
+          rgba(0,0,0,0.75)
         ),
-        url("https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1600&q=80")
-        center / cover;
+        url("https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1800&q=80");
+
+      background-size: cover;
+      background-position: center;
+
+      padding: 60px 20px 40px;
     }
 
 
-    /* MULTICOLOR TITLE */
-
     header h1 {
+
       font-size: clamp(45px, 8vw, 80px);
 
       letter-spacing: 8px;
@@ -85,6 +86,8 @@
       -webkit-text-fill-color: transparent;
 
       animation: rainbowText 8s linear infinite;
+
+      margin-bottom: 12px;
     }
 
 
@@ -102,146 +105,148 @@
 
 
     header p {
-      margin-top: 20px;
-
-      font-size: 21px;
-
+      font-size: 20px;
+      letter-spacing: 3px;
       color: #ddd;
-
-      letter-spacing: 2px;
     }
 
 
-    /* ========================================
-       MENU
-    ======================================== */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
-      position: sticky;
 
+      position: sticky;
       top: 0;
 
-      z-index: 100;
+      z-index: 1000;
 
-      background: rgba(8, 8, 8, .96);
+      background: rgba(10,10,10,0.96);
 
-      padding: 18px 10px;
+      border-bottom: 1px solid #8f5cff;
 
-      text-align: center;
+      display: flex;
 
-      border-bottom: 1px solid #555;
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 30px;
+
+      padding: 15px 20px;
+
+      backdrop-filter: blur(8px);
     }
 
 
     nav a {
-      display: inline-block;
 
-      color: #dcdcdc;
+      color: #c9a7ff;
 
       text-decoration: none;
 
-      margin: 5px 12px;
-
-      font-size: 16px;
-
       font-weight: bold;
 
-      transition: all .3s ease;
+      font-size: 17px;
+
+      transition: all 0.3s ease;
     }
 
 
     nav a:hover {
-      color: #fff;
 
-      transform: translateY(-2px);
+      color: #ffffff;
 
       text-shadow:
-        0 0 8px rgba(255, 255, 255, .6);
+        0 0 8px rgba(180,120,255,0.9),
+        0 0 18px rgba(180,120,255,0.6);
+
+      transform: translateY(-2px);
     }
 
 
-    /* ========================================
+    /* =========================
        SECTIONS
-    ======================================== */
+    ========================= */
 
     section {
+
       max-width: 1200px;
 
       margin: auto;
 
-      padding: 90px 25px;
+      padding: 70px 30px;
     }
 
 
     section h2 {
+
       text-align: center;
 
-      font-size: clamp(32px, 5vw, 45px);
+      font-size: 38px;
 
-      margin-bottom: 55px;
+      margin-bottom: 50px;
+
+      color: #c9a7ff;
 
       letter-spacing: 2px;
 
-      background: linear-gradient(
-        180deg,
-        #ffffff 0%,
-        #a8a8a8 45%,
-        #ffffff 55%,
-        #777777 100%
-      );
-
-      -webkit-background-clip: text;
-      background-clip: text;
-
-      -webkit-text-fill-color: transparent;
+      text-shadow:
+        0 0 8px rgba(180,120,255,0.35);
     }
 
 
-    /* ========================================
-       MY ARTWORK
-    ======================================== */
+    /* =========================
+       ARTWORK GRID
+    ========================= */
 
     .gallery {
+
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
 
       gap: 30px;
 
-      max-width: 1100px;
-
-      margin: 0 auto;
+      align-items: stretch;
     }
 
 
     .artwork {
-      background: #1b1b1b;
 
-      border-radius: 10px;
+      background: #1c1c1c;
+
+      border-radius: 8px;
 
       overflow: hidden;
 
-      min-height: 430px;
+      text-align: center;
+
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.45);
+
+      transition: all 0.35s ease;
 
       display: flex;
 
       flex-direction: column;
-
-      transition:
-        transform .3s ease,
-        box-shadow .3s ease;
     }
 
 
     .artwork:hover {
+
       transform: translateY(-8px);
 
       box-shadow:
-        0 15px 35px rgba(0, 0, 0, .5);
+        0 15px 35px rgba(0,0,0,0.7),
+        0 0 20px rgba(180,120,255,0.15);
     }
 
 
     .artwork img {
+
       width: 100%;
 
       height: 280px;
@@ -252,24 +257,23 @@
 
       display: block;
 
-      background: #111;
-
       cursor: zoom-in;
 
-      transition:
-        transform .5s ease;
+      background: #111;
+
+      transition: transform 0.3s ease;
     }
 
 
-    .artwork:hover img {
-      transform: scale(1.03);
+    .artwork img:hover {
+
+      transform: scale(1.02);
     }
 
 
-    .info {
-      padding: 20px 22px 25px;
+    .artwork-info {
 
-      text-align: center;
+      padding: 20px;
 
       flex: 1;
 
@@ -277,172 +281,184 @@
 
       flex-direction: column;
 
-      justify-content: center;
-
-      align-items: center;
+      justify-content: flex-start;
     }
 
 
-    .info h3 {
-      font-size: 21px;
+    .artwork-info h3 {
+
+      font-size: 22px;
 
       margin-bottom: 8px;
 
-      background: linear-gradient(
-        180deg,
-        #ffffff,
-        #999999,
-        #eeeeee
-      );
-
-      -webkit-background-clip: text;
-      background-clip: text;
-
-      -webkit-text-fill-color: transparent;
+      color: #c9a7ff;
     }
 
 
-    .info p {
-      color: #bbb;
+    .artwork-info p {
+
+      color: #ddd;
+
+      margin-bottom: 12px;
+
+      font-size: 16px;
     }
 
 
-    /* ========================================
-       T-SHIRT DESIGNS
-    ======================================== */
+    /* =========================
+       STATUS
+       
+       FOR SALE = GREEN
+       SOLD = RED
+    ========================= */
 
-    #tshirts {
-      background: #151515;
-
-      max-width: none;
-
-      padding-left: 25px;
-
-      padding-right: 25px;
-    }
-
-
-    .tshirt-content {
-      max-width: 1200px;
-
-      margin: auto;
-    }
-
-
-    .intro {
-      max-width: 750px;
-
-      margin: -25px auto 50px;
-
-      text-align: center;
-
-      color: #bbb;
+    .status {
 
       font-size: 17px;
-    }
-
-
-    /* ========================================
-       SHOP LINK
-    ======================================== */
-
-    .shop-link {
-      display: inline-block;
-
-      margin-top: 18px;
-
-      padding: 11px 20px;
-
-      border: 1px solid #dcdcdc;
-
-      border-radius: 25px;
-
-      color: #fff;
-
-      text-decoration: none;
 
       font-weight: bold;
 
+      margin: 10px 0 14px;
+
+      letter-spacing: 1px;
+    }
+
+
+    .status.available {
+
+      color: #39d353;
+
+      text-shadow:
+        0 0 8px rgba(57,211,83,0.35);
+    }
+
+
+    .status.sold {
+
+      color: #ff4d4d;
+
+      text-shadow:
+        0 0 8px rgba(255,77,77,0.35);
+    }
+
+
+    /* =========================
+       SEPARATOR BEFORE PRICE
+    ========================= */
+
+    .price-area {
+
+      border-top: 1px solid rgba(201,167,255,0.45);
+
+      margin-top: 5px;
+
+      padding-top: 18px;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .button {
+
+      display: inline-block;
+
+      padding: 11px 22px;
+
+      border: 1px solid #b56cff;
+
+      border-radius: 25px;
+
+      color: #c9a7ff;
+
       background: linear-gradient(
         135deg,
-        #777,
-        #eee,
-        #999,
-        #fff,
-        #777
+        #7b3fc6,
+        #c9a7ff,
+        #8f5cff,
+        #e0c8ff,
+        #7b3fc6
       );
 
       background-size: 250% 250%;
 
       -webkit-background-clip: text;
+
       background-clip: text;
 
       -webkit-text-fill-color: transparent;
 
-      transition: all .4s ease;
+      text-decoration: none;
+
+      font-weight: bold;
+
+      transition: all 0.4s ease;
 
       box-shadow:
-        0 4px 12px rgba(255, 255, 255, .10);
+        0 4px 12px rgba(181,108,255,0.15);
     }
 
 
-    .shop-link:hover {
+    .button:hover {
+
       background-position: 100% 50%;
 
-      border-color: #fff;
+      border-color: #d9baff;
+
+      transform:
+        translateY(-3px)
+        scale(1.03);
 
       box-shadow:
-        0 6px 20px rgba(255, 255, 255, .25);
-
-      transform: translateY(-3px);
+        0 8px 22px rgba(181,108,255,0.3);
     }
 
 
-    /* ========================================
-       T-SHIRT GRID
-    ======================================== */
+    /* =========================
+       T-SHIRT DESIGNS
+    ========================= */
 
     .designs {
+
       display: grid;
 
       grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(260px, 1fr)
-        );
+        repeat(auto-fit, minmax(300px, 1fr));
 
       gap: 30px;
     }
 
 
     .design {
-      background: #202020;
+
+      background: #1c1c1c;
 
       border-radius: 8px;
 
       overflow: hidden;
 
-      position: relative;
+      text-align: center;
 
-      transition:
-        transform .35s ease,
-        box-shadow .35s ease;
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.45);
+
+      transition: all 0.35s ease;
     }
 
 
     .design:hover {
+
       transform: translateY(-8px);
 
       box-shadow:
-        0 18px 40px rgba(0, 0, 0, .65);
+        0 15px 35px rgba(0,0,0,0.7),
+        0 0 20px rgba(180,120,255,0.15);
     }
 
 
-    /* ========================================
-       T-SHIRT IMAGES
-    ======================================== */
-
     .design img {
+
       width: 100%;
 
       height: 350px;
@@ -455,451 +471,331 @@
 
       cursor: zoom-in;
 
-      transition:
-        transform .5s ease;
+      background: #111;
+
+      transition: transform 0.3s ease;
     }
 
 
-    .design:hover img {
-      transform: scale(1.05);
+    .design img:hover {
+
+      transform: scale(1.02);
     }
 
-
-    /* ========================================
-       SHOP BADGE
-    ======================================== */
-
-    .shop-badge {
-      position: absolute;
-
-      top: 15px;
-
-      right: 15px;
-
-      padding: 7px 13px;
-
-      background: rgba(0, 0, 0, .85);
-
-      border: 1px solid #dcdcdc;
-
-      border-radius: 20px;
-
-      color: #ddd;
-
-      font-size: 12px;
-
-      font-weight: bold;
-
-      letter-spacing: 1px;
-
-      opacity: 0;
-
-      transform: translateY(-8px);
-
-      transition: all .35s ease;
-    }
-
-
-    .design:hover .shop-badge {
-      opacity: 1;
-
-      transform: translateY(0);
-    }
-
-
-    /* ========================================
-       T-SHIRT INFO
-    ======================================== */
 
     .design-info {
-      padding: 20px 22px 25px;
 
-      text-align: center;
+      padding: 20px;
     }
 
 
     .design-info h3 {
-      margin-bottom: 8px;
 
       font-size: 21px;
 
-      color: #eee;
+      margin-bottom: 8px;
+
+      color: #c9a7ff;
     }
 
 
     .design-info p {
-      color: #bbb;
 
-      margin-bottom: 18px;
+      color: #ddd;
+
+      margin-bottom: 15px;
     }
 
 
-    /* ========================================
-       HAVE A LOOK
-    ======================================== */
+    /* =========================
+       LINKS
+    ========================= */
 
-    .look-link {
-      display: inline-block;
+    .look-link,
+    .shop-link {
 
-      margin-bottom: 18px;
-
-      padding: 9px 18px;
-
-      border: 1px solid #888;
-
-      border-radius: 20px;
-
-      color: #eee;
+      color: #c9a7ff;
 
       text-decoration: none;
 
       font-weight: bold;
 
-      transition: all .3s ease;
+      transition: all 0.3s ease;
     }
 
 
-    .look-link:hover {
-      background: #ddd;
+    .look-link:hover,
+    .shop-link:hover {
 
-      color: #111;
+      color: #ffffff;
 
-      border-color: #fff;
-
-      transform: translateY(-3px);
-
-      box-shadow:
-        0 6px 18px rgba(255, 255, 255, .25);
+      text-shadow:
+        0 0 8px rgba(180,120,255,0.8);
     }
 
 
-    /* ========================================
-       MAIN BUTTONS
-    ======================================== */
-
-    .button {
-      display: inline-block;
-
-      padding: 11px 22px;
-
-      border: 1px solid #dcdcdc;
-
-      border-radius: 25px;
-
-      color: #fff;
-
-      background: linear-gradient(
-        135deg,
-        #777777,
-        #eeeeee,
-        #999999,
-        #ffffff,
-        #777777
-      );
-
-      background-size: 250% 250%;
-
-      -webkit-background-clip: text;
-      background-clip: text;
-
-      -webkit-text-fill-color: transparent;
-
-      text-decoration: none;
-
-      font-weight: bold;
-
-      transition: all .4s ease;
-
-      box-shadow:
-        0 4px 12px rgba(255, 255, 255, .12);
-    }
-
-
-    .button:hover {
-      background-position: 100% 50%;
-
-      border-color: #fff;
-
-      transform:
-        translateY(-3px)
-        scale(1.03);
-
-      box-shadow:
-        0 8px 22px rgba(255, 255, 255, .25);
-    }
-
-
-    /* ========================================
+    /* =========================
        ABOUT
-    ======================================== */
+    ========================= */
 
-    .about {
-      max-width: 800px;
+    #about {
+
+      text-align: center;
+    }
+
+
+    #about p {
+
+      max-width: 850px;
 
       margin: auto;
 
-      text-align: center;
-
-      color: #ccc;
-
       font-size: 18px;
 
-      line-height: 1.9;
+      color: #ccc;
     }
 
 
-    /* ========================================
+    /* =========================
        CONTACT
-    ======================================== */
+    ========================= */
 
     #contact {
-      max-width: none;
 
       text-align: center;
-
-      background: #181818;
     }
 
 
     #contact p {
-      color: #ccc;
 
-      margin: 10px 0;
+      margin-bottom: 12px;
+
+      font-size: 18px;
     }
 
 
     .email-link {
+
       display: inline-block;
 
       margin-top: 15px;
 
-      font-size: 18px;
+      color: #c9a7ff;
+
+      font-size: 20px;
 
       font-weight: bold;
 
       text-decoration: none;
 
-      background: linear-gradient(
-        180deg,
-        #ffffff,
-        #999999,
-        #ffffff,
-        #777777
-      );
-
-      -webkit-background-clip: text;
-      background-clip: text;
-
-      -webkit-text-fill-color: transparent;
-
-      transition: all .3s ease;
+      transition: all 0.3s ease;
     }
 
 
     .email-link:hover {
-      transform: translateY(-2px);
 
-      filter: brightness(1.4);
+      color: #ffffff;
 
-      text-decoration: underline;
+      text-shadow:
+        0 0 10px rgba(180,120,255,0.9);
     }
 
 
-    /* ========================================
+    /* =========================
        LIGHTBOX
-    ======================================== */
+    ========================= */
 
     .lightbox {
+
       display: none;
 
       position: fixed;
 
-      inset: 0;
-
       z-index: 9999;
 
-      background: rgba(0, 0, 0, .94);
+      left: 0;
+
+      top: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      background: rgba(0,0,0,0.94);
 
       align-items: center;
 
       justify-content: center;
 
       padding: 30px;
-
-      cursor: zoom-out;
-    }
-
-
-    .lightbox.active {
-      display: flex;
     }
 
 
     .lightbox img {
-      max-width: 90vw;
 
-      max-height: 90vh;
+      max-width: 90%;
 
-      width: auto;
-
-      height: auto;
+      max-height: 90%;
 
       object-fit: contain;
 
       border-radius: 5px;
 
       box-shadow:
-        0 20px 60px rgba(0, 0, 0, .8);
-
-      cursor: default;
+        0 0 40px rgba(0,0,0,0.8);
     }
 
 
-    .lightbox-close {
+    .lightbox .close {
+
       position: absolute;
 
-      top: 15px;
+      top: 20px;
 
-      right: 25px;
+      right: 35px;
 
-      color: #ddd;
+      font-size: 45px;
 
-      font-size: 50px;
-
-      line-height: 1;
+      color: #c9a7ff;
 
       cursor: pointer;
 
-      z-index: 10000;
+      font-weight: bold;
 
-      transition: all .2s ease;
+      transition: all 0.3s ease;
     }
 
 
-    .lightbox-close:hover {
-      transform: scale(1.1);
+    .lightbox .close:hover {
 
-      color: #fff;
+      color: #ffffff;
 
       text-shadow:
-        0 0 12px rgba(255, 255, 255, .8);
+        0 0 10px rgba(180,120,255,0.9);
     }
 
 
-    /* ========================================
+    /* =========================
        FOOTER
-    ======================================== */
+    ========================= */
 
     footer {
+
       text-align: center;
 
-      padding: 35px 20px;
+      padding: 30px 20px;
 
-      background: #050505;
+      background: #090909;
 
-      color: #777;
+      border-top: 1px solid rgba(181,108,255,0.35);
+
+      color: #aaa;
 
       font-size: 14px;
     }
 
 
-    /* ========================================
+    /* =========================
        MOBILE
-    ======================================== */
+    ========================= */
 
-    @media (max-width: 800px) {
-
-      .gallery {
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-      }
-
-
-      .designs {
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-      }
-
-    }
-
-
-    @media (max-width: 600px) {
-
-      nav {
-        padding: 12px 5px;
-      }
-
-
-      nav a {
-        margin: 4px 6px;
-
-        font-size: 13px;
-      }
-
+    @media (max-width: 700px) {
 
       header {
-        min-height: 65vh;
+
+        min-height: 280px;
+
+        padding: 50px 15px 35px;
       }
 
 
       header h1 {
-        letter-spacing: 5px;
+
+        font-size: 40px;
+
+        letter-spacing: 4px;
       }
 
 
-      section {
-        padding: 65px 18px;
+      header p {
+
+        font-size: 16px;
+
+        letter-spacing: 2px;
       }
 
 
-      .shop-link {
+      nav {
+
+        gap: 15px;
+
+        padding: 12px 10px;
+      }
+
+
+      nav a {
+
         font-size: 15px;
       }
 
 
+      section {
+
+        padding: 55px 18px;
+      }
+
+
+      section h2 {
+
+        font-size: 30px;
+
+        margin-bottom: 35px;
+      }
+
+
+      .gallery,
+      .designs {
+
+        grid-template-columns: 1fr;
+      }
+
+
       .artwork img {
-        height: 280px;
+
+        height: 300px;
       }
 
 
       .design img {
-        height: 350px;
+
+        height: 320px;
       }
 
     }
 
   </style>
-
 </head>
 
 
 <body>
 
 
-  <!-- ========================================
-       HOME
-  ======================================== -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header id="home">
 
-    <div>
+    <h1>CandyDobemol_ART</h1>
 
-      <h1>CandyDobemol_ART</h1>
-
-      <p>
-        Art · Painting · Original Designs
-      </p>
-
-    </div>
+    <p>Art · Painting · Original Designs</p>
 
   </header>
 
 
-  <!-- ========================================
-       MENU
-  ======================================== -->
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
   <nav>
 
@@ -907,7 +803,7 @@
 
     <a href="#artwork">Artwork</a>
 
-    <a href="#tshirts">T-Shirt Designs</a>
+    <a href="#designs">T-Shirt Designs</a>
 
     <a href="#about">About Me</a>
 
@@ -916,15 +812,13 @@
   </nav>
 
 
-  <!-- ========================================
+  <!-- =========================
        ARTWORK
-  ======================================== -->
+  ========================= -->
 
   <section id="artwork">
 
-    <h2>
-      My Artwork
-    </h2>
+    <h2>My Artwork</h2>
 
 
     <div class="gallery">
@@ -936,32 +830,41 @@
 
         <img
           src="Dolo.jpeg"
-          alt="Dolo´s MiniWorld original artwork"
-          onclick="openLightbox(this.src, this.alt)"
+          alt="Dolo´s MiniWorld"
+          onclick="openLightbox(this.src)"
         >
 
+        <div class="artwork-info">
 
-        <div class="info">
-
-          <h3>
-            Dolo´s MiniWorld
-          </h3>
+          <h3>Dolo´s MiniWorld</h3>
 
           <p>
             Acrylic canvas painting 6x6cm
           </p>
 
 
-          <a
-            href="#contact"
-            class="button"
-          >
-            Price on request
-          </a>>
+          <!-- CHANGE AVAILABLE TO SOLD WHEN SOLD -->
+
+          <div class="status available">
+            For sale
+          </div>
+
+
+          <div class="price-area">
+
+            <a
+              href="#contact"
+              class="button"
+            >
+              Price on request
+            </a>
+
+          </div>
 
         </div>
 
       </div>
+
 
 
       <!-- ARTWORK 2 -->
@@ -970,287 +873,298 @@
 
         <img
           src="Shu´s Sea.jpg"
-          alt="Shu´s Sea original artwork"
-          onclick="openLightbox(this.src, this.alt)"
+          alt="Shu´s Sea"
+          onclick="openLightbox(this.src)"
         >
 
+        <div class="artwork-info">
 
-        <div class="info">
-
-          <h3>
-            Shu´s Sea
-          </h3>
+          <h3>Shu´s Sea</h3>
 
           <p>
             Acrylic canvas painting 20x50cm
           </p>
 
 
-        <a
-          href="#contact"
-          class="button"
-        >
-          Price on request
-        </a>
+          <!-- CHANGE AVAILABLE TO SOLD WHEN SOLD -->
+
+          <div class="status available">
+            For sale
+          </div>
+
+
+          <div class="price-area">
+
+            <a
+              href="#contact"
+              class="button"
+            >
+              Price on request
+            </a>
+
+          </div>
 
         </div>
 
       </div>
+
 
 
       <!-- ARTWORK 3 -->
 
       <div class="artwork">
 
-        <div class="info">
+        <div
+          style="
+            height:280px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:#1c1c1c;
+          "
+        >
+
+          <div>
+
+            <h3
+              style="
+                color:#c9a7ff;
+                font-size:24px;
+                margin-bottom:10px;
+              "
+            >
+              Artwork 03
+            </h3>
+
+            <p style="color:#ddd;">
+              Coming soon
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="artwork-info">
+
+
+          <!-- CHANGE AVAILABLE TO SOLD WHEN SOLD -->
+
+          <div class="status available">
+            For sale
+          </div>
+
+
+          <div class="price-area">
+
+            <a
+              href="#contact"
+              class="button"
+            >
+              Price on request
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       T-SHIRT DESIGNS
+  ========================= -->
+
+  <section id="designs">
+
+    <h2>T-Shirt Designs</h2>
+
+
+    <div class="designs">
+
+
+      <!-- DESIGN 1 -->
+
+      <div class="design">
+
+        <img
+          src="Shu.webp"
+          alt="Shu Multi-Guitar2"
+          onclick="openLightbox(this.src)"
+        >
+
+        <div class="design-info">
 
           <h3>
-            Artwork 03
+            Shu Multi-Guitar2
           </h3>
 
           <p>
-            Coming soon
+            Original T-shirt design
           </p>
 
-
-       <a
-          href="#contact"
-          class="button"
-       >
-          Price on request
-       </a>
+          <a
+            href="https://www.latostadora.com/web/dobemola-shu-multi-guitar2/11674014?s=H_A1"
+            class="look-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View design
+          </a>
 
         </div>
 
       </div>
 
 
-    </div>
 
-  </section>
+      <!-- DESIGN 2 -->
 
+      <div class="design">
 
-  <!-- ========================================
-       T-SHIRT DESIGNS
-  ======================================== -->
-
-  <section id="tshirts">
-
-    <div class="tshirt-content">
-
-      <h2>
-        T-Shirt Designs
-      </h2>
-
-
-      <p class="intro">
-
-        Original CandyDobemol_ART designs created to bring art and creativity to your everyday style.
-
-        <br>
-
-
-        <a
-          href="https://www.latostadora.com/shop/Dobemol/?shop_trk"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="shop-link"
+        <img
+          src="Freenomads Girl.webp"
+          alt="Freenomads Multi-Guitar"
+          onclick="openLightbox(this.src)"
         >
-          🛍️ Visit my shop on La Tostadora.com
-        </a>
 
-      </p>
+        <div class="design-info">
 
+          <h3>
+            Freenomads Multi-Guitar
+          </h3>
 
-      <div class="designs">
+          <p>
+            Original T-shirt design
+          </p>
 
-
-        <!-- DESIGN 1 -->
-
-        <div class="design">
-
-          <img
-            src="Shu.webp"
-            alt="Shu Multi-Guitar2"
-            onclick="openLightbox(this.src, this.alt)"
+          <a
+            href="https://www.latostadora.com/web/dobemola-freenomads-multi-guitar/11512389?s=M_F1"
+            class="look-link"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-
-
-          <div class="design-info">
-
-            <h3>
-              Shu Multi-Guitar2
-            </h3>
-
-
-            <p>
-
-              <a
-                href="https://www.latostadora.com/web/dobemola-shu-multi-guitar2/11674014?s=H_A1"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="look-link"
-              >
-                🛍️ Have a Look
-              </a>
-
-            </p>
-
-
-            <a
-              href="#contact"
-              class="button"
-            >
-              More information
-            </a>
-
-          </div>
+            View design
+          </a>
 
         </div>
-
-
-        <!-- DESIGN 2 -->
-
-        <div class="design">
-
-          <img
-            src="Freenomads Girl.webp"
-            alt="Freenomads Multi-Guitar"
-            onclick="openLightbox(this.src, this.alt)"
-          >
-
-
-          <div class="design-info">
-
-            <h3>
-              Freenomads Multi-Guitar
-            </h3>
-
-
-            <p>
-
-              <a
-                href="https://www.latostadora.com/web/dobemola-freenomads-multi-guitar/11512389?s=M_F1"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="look-link"
-              >
-                🛍️ Have a Look
-              </a>
-
-            </p>
-
-
-            <a
-              href="#contact"
-              class="button"
-            >
-              More information
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <!-- DESIGN 3 -->
-
-        <div class="design">
-
-          <img
-            src="Twin Girl.webp"
-            alt="Twin Multi-Guitar"
-            onclick="openLightbox(this.src, this.alt)"
-          >
-
-
-          <div class="design-info">
-
-            <h3>
-              Twin Multi-Guitar
-            </h3>
-
-
-            <p>
-
-              <a
-                href="https://www.latostadora.com/web/dobemola-twin-multi-guitar/11673960?s=M_L1"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="look-link"
-              >
-                🛍️ Have a Look
-              </a>
-
-            </p>
-
-
-            <a
-              href="#contact"
-              class="button"
-            >
-              More information
-            </a>
-
-          </div>
-
-        </div>
-
 
       </div>
+
+
+
+      <!-- DESIGN 3 -->
+
+      <div class="design">
+
+        <img
+          src="Twin Girl.webp"
+          alt="Twin Multi-Guitar"
+          onclick="openLightbox(this.src)"
+        >
+
+        <div class="design-info">
+
+          <h3>
+            Twin Multi-Guitar
+          </h3>
+
+          <p>
+            Original T-shirt design
+          </p>
+
+          <a
+            href="https://www.latostadora.com/web/dobemola-twin-multi-guitar/11673960?s=M_L1"
+            class="look-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View design
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <!-- SHOP -->
+
+    <div
+      style="
+        text-align:center;
+        margin-top:45px;
+      "
+    >
+
+      <a
+        href="https://www.latostadora.com/shop/Dobemol/?shop_trk"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visit my T-Shirt Shop
+      </a>
 
     </div>
 
   </section>
 
 
-  <!-- ========================================
+
+  <!-- =========================
        ABOUT ME
-  ======================================== -->
+  ========================= -->
 
   <section id="about">
 
-    <h2>
-      About Me
-    </h2>
+    <h2>About Me</h2>
 
+    <p>
 
-    <div class="about">
+      Welcome to CandyDobemol_ART.
 
-      <p>
+      This gallery brings together my original artwork,
+      paintings and creative designs.
 
-        Welcome to CandyDobemol_ART. This gallery brings together my original artwork, paintings and creative designs.
+      A space where art, colour and creativity become
+      unique pieces.
 
-        A space where art, colour and creativity become unique pieces.
+      Candy Dobemol is a musician and painter who bases
+      his artistic works around the wonderful world
+      of the guitar.
 
-        Candy Dobemol is a musician and painter who bases his artistic works around the wonderful world of the guitar.
+      On this website you can find and buy his paintings
+      on canvas as well as links to his T-shirt shop
+      featuring his designs.
 
-        On this website you can find and buy his paintings on canvas as well as links to his t-shirt shop featuring his designs.
+      Enjoy!!!!
 
-        Enjoy!!!!
-
-      </p>
-
-    </div>
+    </p>
 
   </section>
 
 
-  <!-- ========================================
+
+  <!-- =========================
        CONTACT
-  ======================================== -->
+  ========================= -->
 
   <section id="contact">
 
-    <h2>
-      Contact
-    </h2>
-
+    <h2>Contact</h2>
 
     <p>
       Interested in one of my artworks or T-shirt designs?
     </p>
-
 
     <p>
       Get in touch for availability, prices and orders.
@@ -1263,15 +1177,16 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      ✉️ candydobemolart@gmail.com
+      candydobemolart@gmail.com
     </a>
 
   </section>
 
 
-  <!-- ========================================
+
+  <!-- =========================
        FOOTER
-  ======================================== -->
+  ========================= -->
 
   <footer>
 
@@ -1280,81 +1195,68 @@
   </footer>
 
 
-  <!-- ========================================
+
+  <!-- =========================
        LIGHTBOX
-  ======================================== -->
+  ========================= -->
 
   <div
-    class="lightbox"
     id="lightbox"
+    class="lightbox"
     onclick="closeLightbox()"
   >
 
     <span
-      class="lightbox-close"
-      onclick="event.stopPropagation(); closeLightbox();"
+      class="close"
+      onclick="closeLightbox()"
     >
       &times;
     </span>
 
-
     <img
-      id="lightbox-image"
+      id="lightbox-img"
       src=""
-      alt="Artwork enlarged"
-      onclick="event.stopPropagation()"
+      alt="Enlarged artwork"
     >
 
   </div>
 
 
-  <!-- ========================================
+
+  <!-- =========================
        JAVASCRIPT
-  ======================================== -->
+  ========================= -->
 
   <script>
 
-    function openLightbox(src, alt) {
+    function openLightbox(src) {
 
-      const lightbox =
-        document.getElementById("lightbox");
+      document.getElementById("lightbox-img").src = src;
 
-      const image =
-        document.getElementById("lightbox-image");
-
-      image.src = src;
-
-      image.alt = alt;
-
-      lightbox.classList.add("active");
+      document.getElementById("lightbox").style.display = "flex";
 
     }
 
 
     function closeLightbox() {
 
-      const lightbox =
-        document.getElementById("lightbox");
-
-      const image =
-        document.getElementById("lightbox-image");
-
-      lightbox.classList.remove("active");
-
-      image.src = "";
+      document.getElementById("lightbox").style.display = "none";
 
     }
 
 
-    document.addEventListener("keydown", function (event) {
+    document.addEventListener(
+      "keydown",
+      function(event) {
 
-      if (event.key === "Escape") {
+        if (event.key === "Escape") {
 
-        closeLightbox();
+          closeLightbox();
+
+        }
 
       }
-
-    });
+    );
 
   </script>
 
