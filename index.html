@@ -3,1625 +3,1688 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CandyDobemol_ART | Art Gallery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CandyDobemol_ART | Art Gallery</title>
+
+<meta name="description" content="CandyDobemol_ART - Original artwork, paintings and creative T-shirt designs.">
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #111;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* =========================
+   REMOVE LIST MARKERS
+========================= */
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.75)
+    ),
+    url("Shu Multi2.jpeg");
+
+  background-size: cover;
+  background-position: center;
 
-  <meta
-    name="description"
-    content="CandyDobemol_ART - Original artwork, paintings and creative T-shirt designs."
-  >
+  padding: 60px 20px 40px;
+}
 
-  <style>
+/* =========================
+   MULTICOLOR ANIMATED LOGO
+========================= */
+
+header h1 {
+  font-size: clamp(45px, 8vw, 80px);
+  letter-spacing: 8px;
+  text-transform: none;
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  background: linear-gradient(
+    90deg,
+    #ff2d55,
+    #ff9500,
+    #ffd60a,
+    #30d158,
+    #00c7be,
+    #0a84ff,
+    #5e5ce6,
+    #bf5af2,
+    #ff2d55
+  );
 
-    html {
-      scroll-behavior: smooth;
-    }
+  background-size: 300% auto;
 
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      background: #111;
-      color: #ddd;
-      line-height: 1.6;
-    }
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 
+  animation: rainbowText 8s linear infinite;
 
-    /* =========================
-       HEADER
-    ========================= */
+  margin-bottom: 12px;
+}
 
-    header {
-      min-height: 330px;
+@keyframes rainbowText {
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+  0% {
+    background-position: 0% center;
+  }
 
-      text-align: center;
+  100% {
+    background-position: 300% center;
+  }
 
-      background:
-        linear-gradient(
-          rgba(0,0,0,0.65),
-          rgba(0,0,0,0.75)
-        ),
-        url("Shu Multi2.jpeg");
+}
 
-      background-size: cover;
-      background-position: center;
+header p {
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #ddd;
+}
 
-      padding: 60px 20px 40px;
-    }
+/* =========================
+   NAVIGATION
+========================= */
 
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-    /* =========================
-       MULTICOLOR ANIMATED LOGO
-    ========================= */
+  background: rgba(10,10,10,0.96);
 
-    header h1 {
-      font-size: clamp(45px, 8vw, 80px);
-      letter-spacing: 8px;
-      text-transform: none;
+  border-bottom: 1px solid #20d5c5;
 
-      background: linear-gradient(
-        90deg,
-        #ff2d55,
-        #ff9500,
-        #ffd60a,
-        #30d158,
-        #00c7be,
-        #0a84ff,
-        #5e5ce6,
-        #bf5af2,
-        #ff2d55
-      );
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
-      background-size: 300% auto;
+  gap: 30px;
 
-      -webkit-background-clip: text;
-      background-clip: text;
+  padding: 15px 20px;
 
-      -webkit-text-fill-color: transparent;
+  backdrop-filter: blur(8px);
+}
 
-      animation: rainbowText 8s linear infinite;
+nav a {
+  color: #49e6d8;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
 
-      margin-bottom: 12px;
-    }
+  transition: all 0.3s ease;
+}
 
+nav a:hover {
+  color: #ffffff;
 
-    @keyframes rainbowText {
+  text-shadow:
+    0 0 8px rgba(32,213,197,0.9),
+    0 0 18px rgba(32,213,197,0.6);
 
-      0% {
-        background-position: 0% center;
-      }
+  transform: translateY(-2px);
+}
 
-      100% {
-        background-position: 300% center;
-      }
+/* =========================
+   SECTIONS
+========================= */
 
-    }
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 30px;
+}
 
+/* =========================
+   SECTION HEADINGS
+========================= */
 
-    header p {
-      font-size: 20px;
-      letter-spacing: 3px;
-      color: #ddd;
-    }
+section h2 {
+  text-align: center;
 
+  font-size: 38px;
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+  margin-bottom: 50px;
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+  color: #49e6d8;
 
-      background: rgba(10,10,10,0.96);
+  letter-spacing: 2px;
 
-      border-bottom: 1px solid #20d5c5;
+  text-shadow:
+    0 0 8px rgba(32,213,197,0.35);
 
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-      gap: 30px;
+  gap: 25px;
+}
 
-      padding: 15px 20px;
+section h2::before,
+section h2::after {
+  content: "";
 
-      backdrop-filter: blur(8px);
-    }
+  width: 120px;
+  height: 1px;
 
+  background: rgba(73,230,216,0.55);
+}
 
-    nav a {
-      color: #49e6d8;
+/* =========================
+   ARTWORK GRID
+========================= */
 
-      text-decoration: none;
+.gallery {
 
-      font-weight: bold;
+  display: grid;
 
-      font-size: 17px;
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
 
-      transition: all 0.3s ease;
-    }
+  gap: 30px;
 
+  align-items: stretch;
 
-    nav a:hover {
-      color: #ffffff;
+  /* LOWER THE THREE ARTWORK CARDS TOGETHER */
+  padding-top: 100px;
+}
 
-      text-shadow:
-        0 0 8px rgba(32,213,197,0.9),
-        0 0 18px rgba(32,213,197,0.6);
+/* =========================
+   ARTWORK CARDS
+========================= */
 
-      transform: translateY(-2px);
-    }
+.artwork {
 
+  background: #1c1c1c;
 
-    /* =========================
-       SECTIONS
-    ========================= */
+  border-radius: 8px;
 
-    section {
-      max-width: 1200px;
+  /* Needed so Shu's Sea can extend above */
+  overflow: visible;
 
-      margin: auto;
+  text-align: center;
 
-      padding: 70px 30px;
-    }
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.45);
 
+  transition: all 0.35s ease;
 
-    section h2 {
-      text-align: center;
+  display: flex;
+  flex-direction: column;
+}
 
-      font-size: 38px;
+.artwork:hover {
 
-      margin-bottom: 50px;
+  transform: translateY(-8px);
 
-      color: #49e6d8;
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.7),
+    0 0 20px rgba(32,213,197,0.15);
+}
 
-      letter-spacing: 2px;
+/* =========================
+   NORMAL ARTWORK IMAGES
+========================= */
 
-      text-shadow:
-        0 0 8px rgba(32,213,197,0.35);
-    }
+.artwork img {
 
+  width: 100%;
 
-    /* =========================
-       ARTWORK GRID
-    ========================= */
+  height: 280px;
 
-    .gallery {
-      display: grid;
+  object-fit: contain;
 
-      grid-template-columns:
-        repeat(auto-fit, minmax(300px, 1fr));
+  object-position: center center;
 
-      gap: 30px;
+  display: block;
 
-      align-items: stretch;
-    }
+  cursor: zoom-in;
 
+  background: #111;
 
-    .artwork {
-      background: #1c1c1c;
+  transition: transform 0.3s ease;
+}
 
-      border-radius: 8px;
+.artwork img:hover {
+  transform: scale(1.02);
+}
 
-      overflow: hidden;
+/* =========================
+   SHU'S SEA
+========================= */
 
-      text-align: center;
+/*
+   The second artwork remains taller.
+   The card itself is lowered together with
+   the other two cards, while the artwork
+   rises above its card.
+*/
 
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.45);
+.artwork:nth-child(2) {
+  overflow: visible;
+  position: relative;
+}
 
-      transition: all 0.35s ease;
+.artwork:nth-child(2) img {
 
-      display: flex;
+  height: 380px;
 
-      flex-direction: column;
-    }
+  position: relative;
 
+  margin-top: -100px;
 
-    .artwork:hover {
-      transform: translateY(-8px);
+  object-fit: contain;
 
-      box-shadow:
-        0 15px 35px rgba(0,0,0,0.7),
-        0 0 20px rgba(32,213,197,0.15);
-    }
+  object-position: center bottom;
 
+  background: transparent;
 
-    .artwork img {
-      width: 100%;
+  z-index: 5;
+}
 
-      height: 280px;
+/* =========================
+   ARTWORK INFO
+========================= */
 
-      object-fit: contain;
+.artwork-info {
 
-      object-position: center center;
+  padding: 20px;
 
-      display: block;
+  flex: 1;
 
-      cursor: zoom-in;
+  display: flex;
 
-      background: #111;
+  flex-direction: column;
 
-      transition: transform 0.3s ease;
-    }
+  justify-content: flex-start;
+}
 
+.artwork-info h3 {
 
-    .artwork img:hover {
-      transform: scale(1.02);
-    }
+  font-size: 22px;
 
+  margin-bottom: 8px;
 
-    .artwork-info {
-      padding: 20px;
+  color: #49e6d8;
+}
 
-      flex: 1;
+.artwork-info p {
 
-      display: flex;
+  color: #ddd;
 
-      flex-direction: column;
+  margin-bottom: 12px;
 
-      justify-content: flex-start;
-    }
+  font-size: 16px;
+}
 
+/* =========================
+   ARTWORK PRICE
+========================= */
 
-    .artwork-info h3 {
-      font-size: 22px;
+.artwork-price {
 
-      margin-bottom: 8px;
+  font-weight: bold;
 
-      color: #49e6d8;
-    }
+  color: #fff;
 
+  margin-bottom: 8px;
+}
 
-    .artwork-info p {
-      color: #ddd;
+/* =========================
+   STATUS
+========================= */
 
-      margin-bottom: 12px;
+.status {
 
-      font-size: 16px;
-    }
+  font-size: 17px;
 
+  font-weight: bold;
 
-    /* =========================
-       STATUS
-    ========================= */
+  margin: 10px 0 14px;
 
-    .status {
-      font-size: 17px;
+  letter-spacing: 1px;
+}
 
-      font-weight: bold;
+.status.available {
 
-      margin: 10px 0 14px;
+  color: #39d353;
 
-      letter-spacing: 1px;
-    }
+  text-shadow:
+    0 0 8px rgba(57,211,83,0.35);
+}
 
+.status.sold {
 
-    .status.available {
-      color: #39d353;
+  color: #ff4d4d;
 
-      text-shadow:
-        0 0 8px rgba(57,211,83,0.35);
-    }
+  text-shadow:
+    0 0 8px rgba(255,77,77,0.35);
+}
 
+/* =========================
+   SEPARATOR BEFORE BUTTON
+========================= */
 
-    .status.sold {
-      color: #ff4d4d;
+.price-area {
 
-      text-shadow:
-        0 0 8px rgba(255,77,77,0.35);
-    }
+  border-top:
+    1px solid rgba(32,213,197,0.45);
 
+  margin-top: 5px;
 
-    /* =========================
-       SEPARATOR BEFORE BUTTON
-    ========================= */
+  padding-top: 18px;
+}
 
-    .price-area {
-      border-top: 1px solid rgba(32,213,197,0.45);
+/* =========================
+   BUTTONS
+========================= */
 
-      margin-top: 5px;
+.button {
 
-      padding-top: 18px;
-    }
+  display: inline-block;
 
+  padding: 11px 22px;
 
-    /* =========================
-       BUTTONS
-    ========================= */
+  border: 1px solid #20d5c5;
 
-    .button {
-      display: inline-block;
+  border-radius: 25px;
 
-      padding: 11px 22px;
+  color: #49e6d8;
 
-      border: 1px solid #20d5c5;
+  background: linear-gradient(
+    135deg,
+    #087f7a,
+    #20d5c5,
+    #49e6d8,
+    #b8fff8,
+    #20d5c5,
+    #087f7a
+  );
 
-      border-radius: 25px;
+  background-size: 250% 250%;
 
-      color: #49e6d8;
+  -webkit-background-clip: text;
+  background-clip: text;
 
-      background: linear-gradient(
-        135deg,
-        #087f7a,
-        #20d5c5,
-        #49e6d8,
-        #b8fff8,
-        #20d5c5,
-        #087f7a
-      );
+  -webkit-text-fill-color: transparent;
 
-      background-size: 250% 250%;
+  text-decoration: none;
 
-      -webkit-background-clip: text;
+  font-weight: bold;
 
-      background-clip: text;
+  transition: all 0.4s ease;
 
-      -webkit-text-fill-color: transparent;
+  box-shadow:
+    0 4px 12px rgba(32,213,197,0.15);
+}
 
-      text-decoration: none;
+.button:hover {
 
-      font-weight: bold;
+  background-position: 100% 50%;
 
-      transition: all 0.4s ease;
+  border-color: #b8fff8;
 
-      box-shadow:
-        0 4px 12px rgba(32,213,197,0.15);
-    }
+  transform:
+    translateY(-3px)
+    scale(1.03);
 
+  box-shadow:
+    0 8px 22px rgba(32,213,197,0.3);
+}
 
-    .button:hover {
-      background-position: 100% 50%;
+/* =========================
+   T-SHIRT DESIGNS
+========================= */
 
-      border-color: #b8fff8;
+.designs {
 
-      transform:
-        translateY(-3px)
-        scale(1.03);
+  display: grid;
 
-      box-shadow:
-        0 8px 22px rgba(32,213,197,0.3);
-    }
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
 
+  gap: 30px;
+}
 
-    /* =========================
-       T-SHIRT DESIGNS
-    ========================= */
+.design {
 
-    .designs {
-      display: grid;
+  background: #1c1c1c;
 
-      grid-template-columns:
-        repeat(auto-fit, minmax(300px, 1fr));
+  border-radius: 8px;
 
-      gap: 30px;
-    }
+  overflow: hidden;
 
+  text-align: center;
 
-    .design {
-      background: #1c1c1c;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.45);
 
-      border-radius: 8px;
+  transition:
+    all 0.35s ease;
+}
 
-      overflow: hidden;
+.design:hover {
 
-      text-align: center;
+  transform: translateY(-8px);
 
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.45);
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.7),
+    0 0 20px rgba(32,213,197,0.15);
+}
 
-      transition: all 0.35s ease;
-    }
+.design img {
 
+  width: 100%;
 
-    .design:hover {
-      transform: translateY(-8px);
+  height: 350px;
 
-      box-shadow:
-        0 15px 35px rgba(0,0,0,0.7),
-        0 0 20px rgba(32,213,197,0.15);
-    }
+  object-fit: cover;
 
+  object-position: center center;
 
-    .design img {
-      width: 100%;
+  display: block;
 
-      height: 350px;
+  cursor: zoom-in;
 
-      object-fit: cover;
+  background: #111;
 
-      object-position: center center;
+  transition:
+    transform 0.3s ease;
+}
 
-      display: block;
+.design img:hover {
+  transform: scale(1.02);
+}
 
-      cursor: zoom-in;
+.design-info {
+  padding: 20px;
+}
 
-      background: #111;
+.design-info h3 {
 
-      transition: transform 0.3s ease;
-    }
+  font-size: 21px;
 
+  margin-bottom: 8px;
 
-    .design img:hover {
-      transform: scale(1.02);
-    }
+  color: #49e6d8;
+}
 
+.design-info p {
 
-    .design-info {
-      padding: 20px;
-    }
+  color: #ddd;
 
+  margin-bottom: 15px;
+}
 
-    .design-info h3 {
-      font-size: 21px;
+/* =========================
+   ABOUT
+========================= */
 
-      margin-bottom: 8px;
+#about {
+  text-align: center;
+}
 
-      color: #49e6d8;
-    }
+.about-content {
 
+  display: flex;
 
-    .design-info p {
-      color: #ddd;
+  align-items: center;
 
-      margin-bottom: 15px;
-    }
+  justify-content: center;
 
+  gap: 50px;
 
-    /* =========================
-       ABOUT
-    ========================= */
+  max-width: 1000px;
 
-    #about {
-      text-align: center;
-    }
+  margin: auto;
 
+  text-align: left;
+}
 
-    .about-content {
-      display: flex;
+.about-photo {
+  flex: 0 0 300px;
+}
 
-      align-items: center;
+.about-photo img {
 
-      justify-content: center;
+  width: 300px;
 
-      gap: 50px;
+  height: 300px;
 
-      max-width: 1000px;
+  object-fit: cover;
 
-      margin: auto;
+  object-position: center;
 
-      text-align: left;
-    }
+  display: block;
 
+  border-radius: 8px;
 
-    .about-photo {
-      flex: 0 0 300px;
-    }
+  border:
+    1px solid rgba(32,213,197,0.45);
 
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.5),
+    0 0 20px rgba(32,213,197,0.12);
+}
 
-    .about-photo img {
-      width: 300px;
+.about-photo img:hover {
+  transform: scale(1.02);
+}
 
-      height: 300px;
+.about-text {
+  flex: 1;
+}
 
-      object-fit: cover;
+.about-text p {
 
-      object-position: center;
+  max-width: none;
 
-      display: block;
+  margin: 0;
 
-      border-radius: 8px;
+  font-size: 18px;
 
-      border: 1px solid rgba(32,213,197,0.45);
+  color: #ccc;
 
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.5),
-        0 0 20px rgba(32,213,197,0.12);
-    }
+  line-height: 1.8;
+}
 
+/* =========================
+   CONTACT
+========================= */
 
-    .about-photo img:hover {
-      transform: scale(1.02);
-    }
+#contact {
+  text-align: center;
+}
 
+#contact p {
 
-    .about-text {
-      flex: 1;
-    }
+  margin-bottom: 12px;
 
+  font-size: 18px;
+}
 
-    .about-text p {
-      max-width: none;
+.email-link {
 
-      margin: 0;
+  display: inline-block;
 
-      font-size: 18px;
+  margin-top: 15px;
 
-      color: #ccc;
+  color: #49e6d8;
 
-      line-height: 1.8;
-    }
+  font-size: 20px;
 
+  font-weight: bold;
 
-    /* =========================
-       CONTACT
-    ========================= */
+  text-decoration: none;
 
-    #contact {
-      text-align: center;
-    }
+  transition: all 0.3s ease;
+}
 
+.email-link:hover {
 
-    #contact p {
-      margin-bottom: 12px;
+  color: #ffffff;
 
-      font-size: 18px;
-    }
+  text-shadow:
+    0 0 10px rgba(32,213,197,0.9);
+}
 
+/* =========================
+   LIGHTBOX
+========================= */
 
-    .email-link {
-      display: inline-block;
+.lightbox {
 
-      margin-top: 15px;
+  display: none;
 
-      color: #49e6d8;
+  position: fixed;
 
-      font-size: 20px;
+  z-index: 9999;
 
-      font-weight: bold;
+  left: 0;
 
-      text-decoration: none;
+  top: 0;
 
-      transition: all 0.3s ease;
-    }
+  width: 100%;
 
+  height: 100%;
 
-    .email-link:hover {
-      color: #ffffff;
+  background: rgba(0,0,0,0.94);
 
-      text-shadow:
-        0 0 10px rgba(32,213,197,0.9);
-    }
+  align-items: center;
 
+  justify-content: center;
 
-    /* =========================
-       LIGHTBOX
-    ========================= */
+  padding: 30px;
+}
 
-    .lightbox {
-      display: none;
+.lightbox img {
 
-      position: fixed;
+  max-width: 90%;
 
-      z-index: 9999;
+  max-height: 90%;
 
-      left: 0;
+  object-fit: contain;
 
-      top: 0;
+  border-radius: 5px;
 
-      width: 100%;
+  box-shadow:
+    0 0 40px rgba(0,0,0,0.8);
+}
 
-      height: 100%;
+.lightbox .close {
 
-      background: rgba(0,0,0,0.94);
+  position: absolute;
 
-      align-items: center;
+  top: 20px;
 
-      justify-content: center;
+  right: 35px;
 
-      padding: 30px;
-    }
+  font-size: 45px;
 
+  color: #49e6d8;
 
-    .lightbox img {
-      max-width: 90%;
+  cursor: pointer;
 
-      max-height: 90%;
+  font-weight: bold;
 
-      object-fit: contain;
+  transition: all 0.3s ease;
+}
 
-      border-radius: 5px;
+.lightbox .close:hover {
 
-      box-shadow:
-        0 0 40px rgba(0,0,0,0.8);
-    }
+  color: #ffffff;
 
+  text-shadow:
+    0 0 10px rgba(32,213,197,0.9);
+}
 
-    .lightbox .close {
-      position: absolute;
+/* =========================
+   FOOTER
+========================= */
 
-      top: 20px;
+footer {
 
-      right: 35px;
+  text-align: center;
 
-      font-size: 45px;
+  padding: 30px 20px;
 
-      color: #49e6d8;
+  background: #090909;
 
-      cursor: pointer;
+  border-top:
+    1px solid rgba(32,213,197,0.35);
 
-      font-weight: bold;
+  color: #aaa;
 
-      transition: all 0.3s ease;
-    }
+  font-size: 14px;
+}
 
+/* =========================
+   MOBILE
+========================= */
 
-    .lightbox .close:hover {
-      color: #ffffff;
+@media (max-width: 700px) {
 
-      text-shadow:
-        0 0 10px rgba(32,213,197,0.9);
-    }
+  header {
 
+    min-height: 280px;
 
-    /* =========================
-       FOOTER
-    ========================= */
+    padding: 50px 15px 35px;
+  }
 
-    footer {
-      text-align: center;
+  header h1 {
 
-      padding: 30px 20px;
+    font-size: 40px;
 
-      background: #090909;
+    letter-spacing: 4px;
+  }
 
-      border-top: 1px solid rgba(32,213,197,0.35);
+  header p {
 
-      color: #aaa;
+    font-size: 16px;
 
-      font-size: 14px;
-    }
+    letter-spacing: 2px;
+  }
 
+  nav {
 
-    /* =========================
-       MOBILE
-    ========================= */
+    gap: 15px;
 
-    @media (max-width: 700px) {
+    padding: 12px 10px;
+  }
 
-      header {
-        min-height: 280px;
+  nav a {
+    font-size: 15px;
+  }
 
-        padding: 50px 15px 35px;
-      }
+  section {
+    padding: 55px 18px;
+  }
 
+  section h2 {
 
-      header h1 {
-        font-size: 40px;
+    font-size: 30px;
 
-        letter-spacing: 4px;
-      }
+    margin-bottom: 35px;
+  }
 
+  section h2::before,
+  section h2::after {
+    width: 50px;
+  }
 
-      header p {
-        font-size: 16px;
+  .gallery,
+  .designs {
+    grid-template-columns: 1fr;
+  }
 
-        letter-spacing: 2px;
-      }
+  /* Keep the three Artwork cards lowered together */
+  .gallery {
+    padding-top: 80px;
+  }
 
+  .artwork img {
+    height: 300px;
+  }
 
-      nav {
-        gap: 15px;
+  /* Shu´s Sea remains taller on mobile too */
+  .artwork:nth-child(2) img {
 
-        padding: 12px 10px;
-      }
+    height: 350px;
 
+    margin-top: -50px;
+  }
 
-      nav a {
-        font-size: 15px;
-      }
+  .design img {
+    height: 320px;
+  }
 
+  /* =========================
+     ABOUT MOBILE
+  ========================= */
 
-      section {
-        padding: 55px 18px;
-      }
+  .about-content {
 
+    flex-direction: column;
 
-      section h2 {
-        font-size: 30px;
+    gap: 30px;
 
-        margin-bottom: 35px;
-      }
+    text-align: center;
+  }
 
+  .about-photo {
+    flex: none;
+  }
 
-      .gallery,
-      .designs {
-        grid-template-columns: 1fr;
-      }
+  .about-photo img {
 
+    width: 240px;
 
-      .artwork img {
-        height: 300px;
-      }
+    height: 240px;
 
+    margin: auto;
+  }
 
-      .design img {
-        height: 320px;
-      }
+  .about-text p {
 
+    font-size: 17px;
 
-      /* =========================
-         ABOUT MOBILE
-      ========================= */
+    line-height: 1.7;
+  }
 
-      .about-content {
-        flex-direction: column;
+}
 
-        gap: 30px;
-
-        text-align: center;
-      }
-
-
-      .about-photo {
-        flex: none;
-      }
-
-
-      .about-photo img {
-        width: 240px;
-
-        height: 240px;
-
-        margin: auto;
-      }
-
-
-      .about-text p {
-        font-size: 17px;
-
-        line-height: 1.7;
-      }
-
-    }
-
-  </style>
+</style>
 
 </head>
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
-  <header id="home">
+<header id="home">
 
-    <h1>Candy Dobemol_ART</h1>
+  <h1>Candy Dobemol_ART</h1>
 
-    <p>Art · Painting · Original Designs</p>
+  <p>Art · Painting · Original Designs</p>
 
-  </header>
+</header>
 
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
+<nav>
 
-  <nav>
+<a href="#home">Home</a>
 
-    <a href="#home">Home</a>
+<a href="#artwork">Artwork</a>
 
-    <a href="#artwork">Artwork</a>
+<a href="#designs">T-Shirt Designs</a>
 
-    <a href="#designs">T-Shirt Designs</a>
+<a href="#about">About</a>
 
-    <a href="#about">About</a>
+<a href="#contact">Contact</a>
 
-    <a href="#contact">Contact</a>
+</nav>
 
-  </nav>
+<!-- =========================
+     ARTWORK
+========================= -->
 
+<section id="artwork">
 
-  <!-- =========================
-       ARTWORK
-  ========================= -->
+  <h2>Artwork</h2>
 
-  <section id="artwork">
+  <div class="gallery">
 
-    <h2>Artwork</h2>
+```
+<!-- =====================
+     ARTWORK 1
+====================== -->
 
+<div class="artwork">
 
-    <div class="gallery">
+  <img
+    src="Dolo.jpeg"
+    alt="Dolo´s MiniWorld"
+    onclick="openLightbox(this.src)"
+  >
 
+  <div class="artwork-info">
 
-      <!-- =====================
-           ARTWORK 1
-      ====================== -->
+    <h3>
+      Dolo´s MiniWorld
+    </h3>
 
-      <div class="artwork">
+    <p>
+      Acrylic canvas painting 6x6x1cm
+    </p>
 
-        <img
-          src="Dolo.jpeg"
-          alt="Dolo´s MiniWorld"
-          onclick="openLightbox(this.src)"
-        >
-
-
-        <div class="artwork-info">
-
-          <h3>
-            Dolo´s MiniWorld
-          </h3>
-
-
-          <p>
-            Acrylic canvas painting 6x6x1cm
-          </p>
-
-          <div class="artwork-price">
-            Price: 80 €
-          </div>
-
-
-          <!--
-            CHANGE "available" TO "sold"
-            WHEN THE PAINTING IS SOLD
-
-            AVAILABLE:
-            <div class="status available">For sale</div>
-
-            SOLD:
-            <div class="status sold">Sold</div>
-          -->
-
-          <div class="status sold">
-            Sold
-          </div>
-
-
-          <div class="price-area">
-
-            <a
-              href="#contact"
-              class="button"
-            >
-              Buy/Enquire
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =====================
-           ARTWORK 2
-      ====================== -->
-
-      <div class="artwork">
-
-        <img
-          src="Shu´s Sea.jpg"
-          alt="Shu´s Sea"
-          onclick="openLightbox(this.src)"
-        >
-
-
-        <div class="artwork-info">
-
-          <h3>
-            Shu´s Sea
-          </h3>
-
-
-          <p>
-            Acrylic canvas painting 20x50x1,5cm
-          </p>
-
-          <div class="artwork-price">
-            Price: 200 €
-          </div>
-
-
-          <!--
-            CHANGE "available" TO "sold"
-            WHEN THE PAINTING IS SOLD
-          -->
-
-          <div class="status sold">
-            Sold
-          </div>
-
-
-          <div class="price-area">
-
-            <a
-              href="#contact"
-              class="button"
-            >
-              Buy/Enquire
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =====================
-           ARTWORK 3
-      ====================== -->
-
-      <div class="artwork">
-
-        <div
-          style="
-            height:280px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            background:#1c1c1c;
-          "
-        >
-
-          <div>
-
-            <h3
-              style="
-                color:#49e6d8;
-                font-size:24px;
-                margin-bottom:10px;
-              "
-            >
-              Artwork 03
-            </h3>
-
-
-            <p style="color:#ddd;">
-              Coming soon
-            </p>
-
-            <div class="artwork-price">
-              Price: _ €
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="artwork-info">
-
-          <div class="status available">
-            For sale
-          </div>
-
-
-          <div class="price-area">
-
-            <a
-              href="#contact"
-              class="button"
-            >
-              Buy/Enquire
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
+    <div class="artwork-price">
+      Price: 80 €
     </div>
 
-  </section>
-
-
-  <!-- =========================
-       T-SHIRT DESIGNS
-  ========================= -->
-
-  <section id="designs">
-
-    <h2>T-Shirt Designs</h2>
-
-
-    <div class="designs">
-
-
-      <!-- =====================
-           DESIGN 1
-      ====================== -->
-
-      <div class="design">
-
-        <img
-          src="Shu.webp"
-          alt="Shu Multi-Guitar2"
-          onclick="openLightbox(this.src)"
-        >
-
-
-        <div class="design-info">
-
-          <h3>
-            Shu Multi-Guitar2
-          </h3>
-
-
-          <p>
-            Original T-shirt design
-          </p>
-
-
-          <div class="price-area">
-
-            <a
-              href="https://www.latostadora.com/web/dobemola-shu-multi-guitar2/11674014?s=H_A1"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Have a look!
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =====================
-           DESIGN 2
-      ====================== -->
-
-      <div class="design">
-
-        <img
-          src="Freenomads Girl.webp"
-          alt="Freenomads Multi-Guitar"
-          onclick="openLightbox(this.src)"
-        >
-
-
-        <div class="design-info">
-
-          <h3>
-            Freenomads Multi-Guitar
-          </h3>
-
-
-          <p>
-            Original T-shirt design
-          </p>
-
-
-          <div class="price-area">
-
-            <a
-              href="https://www.latostadora.com/web/dobemola-freenomads-multi-guitar/11512389?s=M_F1"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Have a look!
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =====================
-           DESIGN 3
-      ====================== -->
-
-      <div class="design">
-
-        <img
-          src="Twin Girl.webp"
-          alt="Twin Multi-Guitar"
-          onclick="openLightbox(this.src)"
-        >
-
-
-        <div class="design-info">
-
-          <h3>
-            Twin Multi-Guitar
-          </h3>
-
-
-          <p>
-            Original T-shirt design
-          </p>
-
-
-          <div class="price-area">
-
-            <a
-              href="https://www.latostadora.com/web/dobemola-twin-multi-guitar/11673960?s=M_L1"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Have a look!
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =====================
-           DESIGN 4
-      ====================== -->
-
-      <div class="design">
-
-        <img
-          src="Black Guitar.webp"
-          alt="Black Guitar"
-          onclick="openLightbox(this.src)"
-        >
-
-
-        <div class="design-info">
-
-          <h3>
-            Black Guitar
-          </h3>
-
-
-          <p>
-            Original T-shirt design
-          </p>
-
-
-          <div class="price-area">
-
-            <a
-              href="https://www.latostadora.com/web/dobemola-black-guitar/11527097?s=H_A17"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Have a look!
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =====================
-           DESIGN 5
-      ====================== -->
-
-      <div class="design">
-
-        <img
-          src="Yellow Guitar.webp"
-          alt="Yellow Guitar"
-          onclick="openLightbox(this.src)"
-        >
-
-
-        <div class="design-info">
-
-          <h3>
-            Yellow Guitar
-          </h3>
-
-
-          <p>
-            Original T-shirt design
-          </p>
-
-
-          <div class="price-area">
-
-            <a
-              href="https://www.latostadora.com/web/dobemola-yellow-guitar/11535941?s=M_L1"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Have a look!
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =====================
-           DESIGN 6
-      ====================== -->
-
-      <div class="design">
-
-        <img
-          src="Help Guitar.webp"
-          alt="Help Guitar"
-          onclick="openLightbox(this.src)"
-        >
-
-
-        <div class="design-info">
-
-          <h3>
-            Help Guitar
-          </h3>
-
-
-          <p>
-            Original T-shirt design
-          </p>
-
-
-          <div class="price-area">
-
-            <a
-              href="https://www.latostadora.com/web/dobemola-help-guitar/14530692?s=M_L7"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Have a look!
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =====================
-           DESIGN 7
-      ====================== -->
-
-      <div class="design">
-
-        <img
-          src="Picassianna Guitar II.webp"
-          alt="Picassianna Guitar II"
-          onclick="openLightbox(this.src)"
-        >
-
-
-        <div class="design-info">
-
-          <h3>
-            Picassianna Guitar II
-          </h3>
-
-
-          <p>
-            Original T-shirt design
-          </p>
-
-
-          <div class="price-area">
-
-            <a
-              href="https://www.latostadora.com/web/dobemola-picassianna-guitar-ii/11930528"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Have a look!
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =====================
-           DESIGN 8
-      ====================== -->
-
-      <div class="design">
-
-        <img
-          src="Drum Power.webp"
-          alt="Drum Power"
-          onclick="openLightbox(this.src)"
-        >
-
-
-        <div class="design-info">
-
-          <h3>
-            Drum Power
-          </h3>
-
-
-          <p>
-            Original T-shirt design
-          </p>
-
-
-          <div class="price-area">
-
-            <a
-              href="https://www.latostadora.com/web/dobemola-drum-power-1/12223631"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Have a look!
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =====================
-           DESIGN 9
-      ====================== -->
-
-      <div class="design">
-
-        <img
-          src="Sgt. Pepper Honored Guitar.webp"
-          alt="Sgt. Pepper Honored Guitar"
-          onclick="openLightbox(this.src)"
-        >
-
-
-        <div class="design-info">
-
-          <h3>
-            Sgt. Pepper Honored Guitar
-          </h3>
-
-
-          <p>
-            Original T-shirt design
-          </p>
-
-
-          <div class="price-area">
-
-            <a
-              href="https://www.latostadora.com/web/dobemola-sgt-pepper-honored-guitar/15157132"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Have a look!
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
+    <!--
+    CHANGE "available" TO "sold"
+    WHEN THE PAINTING IS SOLD
+
+    AVAILABLE:
+    <div class="status available">For sale</div>
+
+    SOLD:
+    <div class="status sold">Sold</div>
+    -->
+
+    <div class="status sold">
+      Sold
     </div>
 
-
-    <!-- =========================
-         T-SHIRT SHOP
-    ========================= -->
-
-    <div
-      style="
-        text-align:center;
-        margin-top:45px;
-      "
-    >
+    <div class="price-area">
 
       <a
-        href="https://www.latostadora.com/shop/Dobemol/?shop_trk"
+        href="#contact"
         class="button"
-        target="_blank"
-        rel="noopener noreferrer"
       >
-        Visit the complete collection of T-shirts
+        Buy/Enquire
       </a>
 
     </div>
 
-  </section>
+  </div>
+
+</div>
 
 
-  <!-- =========================
-       ABOUT
-  ========================= -->
+<!-- =====================
+     ARTWORK 2
+====================== -->
 
-  <section id="about">
+<div class="artwork">
 
-    <h2>
-      About
-    </h2>
+  <img
+    src="Shu´s Sea.jpg"
+    alt="Shu´s Sea"
+    onclick="openLightbox(this.src)"
+  >
 
+  <div class="artwork-info">
 
-    <div class="about-content">
+    <h3>
+      Shu´s Sea
+    </h3>
 
+    <p>
+      Acrylic canvas painting 20x50x1,5cm
+    </p>
 
-      <!-- =====================
-           ABOUT PHOTO
-      ====================== -->
+    <div class="artwork-price">
+      Price: 200 €
+    </div>
 
-      <div class="about-photo">
+    <!--
+    CHANGE "available" TO "sold"
+    WHEN THE PAINTING IS SOLD
+    -->
 
-        <img
-          src="Dobe.jpeg"
-          alt="Candy Dobemol"
-        >
+    <div class="status sold">
+      Sold
+    </div>
 
-      </div>
+    <div class="price-area">
 
-
-      <!-- =====================
-           ABOUT TEXT
-      ====================== -->
-
-      <div class="about-text">
-
-        <p>
-          Welcome to CandyDobemol_ART.
-        </p>
-
-        <p>
-          Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars.
-        </p>
-
-        <p>
-          This gallery brings together his original artwork, paintings and creative designs.
-          A space where art, colour and creativity become unique pieces.
-        </p>
-
-        <p>
-          On this website You can discover and purchase his paintings on canvas, as well as explore
-          links to the T-shirt shop featuring his designs.
-        </p>
-
-        <p>
-          Enjoy!!!!
-        </p>
-
-      </div>
-
+      <a
+        href="#contact"
+        class="button"
+      >
+        Buy/Enquire
+      </a>
 
     </div>
 
-  </section>
+  </div>
+
+</div>
 
 
-  <!-- =========================
-       CONTACT
-  ========================= -->
+<!-- =====================
+     ARTWORK 3
+====================== -->
 
-  <section id="contact">
-
-    <h2>
-      Contact
-    </h2>
-
-
-    <p>
-      Interested in Candy Dobemol's original artworks or T-shirt designs?
-    </p>
-
-
-    <p>
-      Get in touch for availability, prices and orders.
-    </p>
-
-
-    <a
-      href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
-      class="email-link"
-      style="color:#ff9f43;"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      ✉ candydobemolart@gmail.com
-    </a>
-
-  </section>
-
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
-  <footer>
-
-    © 2026 CandyDobemol_ART - All rights reserved
-
-  </footer>
-
-
-  <!-- =========================
-       LIGHTBOX
-  ========================= -->
+<div class="artwork">
 
   <div
-    id="lightbox"
-    class="lightbox"
-    onclick="closeLightbox()"
+    style="
+      height:280px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#1c1c1c;
+    "
   >
 
-    <span
-      class="close"
-      onclick="closeLightbox()"
-    >
-      &times;
-    </span>
+    <div>
 
+      <h3
+        style="
+          color:#49e6d8;
+          font-size:24px;
+          margin-bottom:10px;
+        "
+      >
+        Artwork 03
+      </h3>
 
-    <img
-      id="lightbox-img"
-      src=""
-      alt="Enlarged artwork"
-    >
+      <p style="color:#ddd;">
+        Coming soon
+      </p>
+
+      <div class="artwork-price">
+        Price: _ €
+      </div>
+
+    </div>
 
   </div>
 
+  <div class="artwork-info">
+
+    <div class="status available">
+      For sale
+    </div>
+
+    <div class="price-area">
+
+      <a
+        href="#contact"
+        class="button"
+      >
+        Buy/Enquire
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================
+     T-SHIRT DESIGNS
+========================= -->
+
+<section id="designs">
+
+  <h2>T-Shirt Designs</h2>
+
+  <div class="designs">
+
+```
+<!-- =====================
+     DESIGN 1
+====================== -->
+
+<div class="design">
+
+  <img
+    src="Shu.webp"
+    alt="Shu Multi-Guitar2"
+    onclick="openLightbox(this.src)"
+  >
+
+  <div class="design-info">
+
+    <h3>
+      Shu Multi-Guitar2
+    </h3>
+
+    <p>
+      Original T-shirt design
+    </p>
+
+    <div class="price-area">
+
+      <a
+        href="https://www.latostadora.com/web/dobemola-shu-multi-guitar2/11674014?s=H_A1"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Have a look!
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================
+     DESIGN 2
+====================== -->
+
+<div class="design">
+
+  <img
+    src="Freenomads Girl.webp"
+    alt="Freenomads Multi-Guitar"
+    onclick="openLightbox(this.src)"
+  >
+
+  <div class="design-info">
+
+    <h3>
+      Freenomads Multi-Guitar
+    </h3>
+
+    <p>
+      Original T-shirt design
+    </p>
+
+    <div class="price-area">
+
+      <a
+        href="https://www.latostadora.com/web/dobemola-freenomads-multi-guitar/11512389?s=M_F1"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Have a look!
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================
+     DESIGN 3
+====================== -->
+
+<div class="design">
+
+  <img
+    src="Twin Girl.webp"
+    alt="Twin Multi-Guitar"
+    onclick="openLightbox(this.src)"
+  >
+
+  <div class="design-info">
+
+    <h3>
+      Twin Multi-Guitar
+    </h3>
+
+    <p>
+      Original T-shirt design
+    </p>
+
+    <div class="price-area">
+
+      <a
+        href="https://www.latostadora.com/web/dobemola-twin-multi-guitar/11673960?s=M_L1"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Have a look!
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================
+     DESIGN 4
+====================== -->
+
+<div class="design">
+
+  <img
+    src="Black Guitar.webp"
+    alt="Black Guitar"
+    onclick="openLightbox(this.src)"
+  >
+
+  <div class="design-info">
+
+    <h3>
+      Black Guitar
+    </h3>
+
+    <p>
+      Original T-shirt design
+    </p>
+
+    <div class="price-area">
+
+      <a
+        href="https://www.latostadora.com/web/dobemola-black-guitar/11527097?s=H_A17"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Have a look!
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================
+     DESIGN 5
+====================== -->
+
+<div class="design">
+
+  <img
+    src="Yellow Guitar.webp"
+    alt="Yellow Guitar"
+    onclick="openLightbox(this.src)"
+  >
+
+  <div class="design-info">
+
+    <h3>
+      Yellow Guitar
+    </h3>
+
+    <p>
+      Original T-shirt design
+    </p>
+
+    <div class="price-area">
+
+      <a
+        href="https://www.latostadora.com/web/dobemola-yellow-guitar/11535941?s=M_L1"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Have a look!
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================
+     DESIGN 6
+====================== -->
+
+<div class="design">
+
+  <img
+    src="Help Guitar.webp"
+    alt="Help Guitar"
+    onclick="openLightbox(this.src)"
+  >
+
+  <div class="design-info">
+
+    <h3>
+      Help Guitar
+    </h3>
+
+    <p>
+      Original T-shirt design
+    </p>
+
+    <div class="price-area">
+
+      <a
+        href="https://www.latostadora.com/web/dobemola-help-guitar/14530692?s=M_L7"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Have a look!
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================
+     DESIGN 7
+====================== -->
+
+<div class="design">
+
+  <img
+    src="Picassianna Guitar II.webp"
+    alt="Picassianna Guitar II"
+    onclick="openLightbox(this.src)"
+  >
+
+  <div class="design-info">
+
+    <h3>
+      Picassianna Guitar II
+    </h3>
+
+    <p>
+      Original T-shirt design
+    </p>
+
+    <div class="price-area">
+
+      <a
+        href="https://www.latostadora.com/web/dobemola-picassianna-guitar-ii/11930528"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Have a look!
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================
+     DESIGN 8
+====================== -->
+
+<div class="design">
+
+  <img
+    src="Drum Power.webp"
+    alt="Drum Power"
+    onclick="openLightbox(this.src)"
+  >
+
+  <div class="design-info">
+
+    <h3>
+      Drum Power
+    </h3>
+
+    <p>
+      Original T-shirt design
+    </p>
+
+    <div class="price-area">
+
+      <a
+        href="https://www.latostadora.com/web/dobemola-drum-power-1/12223631"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Have a look!
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================
+     DESIGN 9
+====================== -->
+
+<div class="design">
+
+  <img
+    src="Sgt. Pepper Honored Guitar.webp"
+    alt="Sgt. Pepper Honored Guitar"
+    onclick="openLightbox(this.src)"
+  >
+
+  <div class="design-info">
+
+    <h3>
+      Sgt. Pepper Honored Guitar
+    </h3>
+
+    <p>
+      Original T-shirt design
+    </p>
+
+    <div class="price-area">
+
+      <a
+        href="https://www.latostadora.com/web/dobemola-sgt-pepper-honored-guitar/15157132"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Have a look!
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </div>
 
   <!-- =========================
-       JAVASCRIPT
+       T-SHIRT SHOP
   ========================= -->
 
-  <script>
+  <div
+    style="
+      text-align:center;
+      margin-top:45px;
+    "
+  >
 
-    function openLightbox(src) {
+```
+<a
+  href="https://www.latostadora.com/shop/Dobemol/?shop_trk"
+  class="button"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Visit the complete collection of T-shirts
+</a>
+```
 
-      document.getElementById("lightbox-img").src = src;
+  </div>
 
-      document.getElementById("lightbox").style.display = "flex";
+</section>
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <h2>
+    About
+  </h2>
+
+  <div class="about-content">
+
+```
+<!-- =====================
+     ABOUT PHOTO
+====================== -->
+
+<div class="about-photo">
+
+  <img
+    src="Dobe.jpeg"
+    alt="Candy Dobemol"
+  >
+
+</div>
+
+
+<!-- =====================
+     ABOUT TEXT
+====================== -->
+
+<div class="about-text">
+
+  <p>
+    Welcome to CandyDobemol_ART.
+  </p>
+
+  <p>
+    Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars.
+  </p>
+
+  <p>
+    This gallery brings together his original artwork, paintings and creative designs. A space where art, colour and creativity become unique pieces.
+  </p>
+
+  <p>
+    On this website You can discover and purchase his paintings on canvas, as well as explore links to the T-shirt shop featuring his designs.
+  </p>
+
+  <p>
+    Enjoy!!!!
+  </p>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+  <h2>
+    Contact
+  </h2>
+
+  <p>
+    Interested in Candy Dobemol's original artworks or T-shirt designs?
+  </p>
+
+  <p>
+    Get in touch for availability, prices and orders.
+  </p>
+
+<a
+href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
+class="email-link"
+style="color:#ff9f43;"
+target="_blank"
+rel="noopener noreferrer"
+
+>
+
+```
+✉ candydobemolart@gmail.com
+```
+
+  </a>
+
+  <div style="margin-top:20px;">
+
+```
+<a
+  href="https://www.facebook.com/candy.dobemol/"
+  class="email-link"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="margin:0 12px; color:#1877F2;"
+>
+  Facebook
+</a>
+
+<a
+  href="https://www.instagram.com/candy_dobemol/"
+  class="email-link"
+  target="_blank"
+  rel="noopener noreferrer"
+  style="margin:0 12px; color:#E4405F;"
+>
+  Instagram
+</a>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+© 2026 CandyDobemol_ART - All rights reserved
+
+</footer>
+
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div
+  id="lightbox"
+  class="lightbox"
+  onclick="closeLightbox()"
+>
+
+<span
+class="close"
+onclick="closeLightbox()"
+
+>
+
+```
+&times;
+```
+
+  </span>
+
+<img
+id="lightbox-img"
+src=""
+alt="Enlarged artwork"
+
+>
+
+</div>
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function openLightbox(src) {
+
+  document.getElementById("lightbox-img").src = src;
+
+  document.getElementById("lightbox").style.display = "flex";
+
+}
+
+function closeLightbox() {
+
+  document.getElementById("lightbox").style.display = "none";
+
+}
+
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (event.key === "Escape") {
+
+      closeLightbox();
 
     }
 
+  }
+);
 
-    function closeLightbox() {
-
-      document.getElementById("lightbox").style.display = "none";
-
-    }
-
-
-    document.addEventListener(
-      "keydown",
-      function(event) {
-
-        if (event.key === "Escape") {
-
-          closeLightbox();
-
-        }
-
-      }
-    );
-
-  </script>
+</script>
 
 </body>
 
