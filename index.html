@@ -53,10 +53,6 @@
       padding: 60px 20px 40px;
     }
 
-    /* =========================
-       MULTICOLOR ANIMATED LOGO
-    ========================= */
-
     header h1 {
       font-size: clamp(45px, 8vw, 80px);
       letter-spacing: 8px;
@@ -155,15 +151,9 @@
       padding: 70px 30px;
     }
 
-    /* =========================
-       SECTION HEADINGS
-    ========================= */
-
     section h2 {
       text-align: center;
-
       font-size: 38px;
-
       margin-bottom: 50px;
 
       color: #49e6d8;
@@ -191,7 +181,7 @@
     }
 
     /* =========================
-       ARTWORK GRID
+       ARTWORK GALLERY
     ========================= */
 
     .gallery {
@@ -204,6 +194,7 @@
 
       align-items: stretch;
 
+      /* Baja las tres tarjetas juntas */
       margin-top: 100px;
     }
 
@@ -212,6 +203,11 @@
 
       border-radius: 8px;
 
+      /*
+        IMPORTANTE:
+        permitimos que únicamente la imagen de
+        Shu´s Sea pueda sobresalir por arriba.
+      */
       overflow: visible;
 
       text-align: center;
@@ -235,9 +231,11 @@
 
     .artwork img {
       width: 100%;
+
       height: 280px;
 
       object-fit: contain;
+
       object-position: center center;
 
       display: block;
@@ -254,20 +252,54 @@
     }
 
     /* =========================
-       SHU´S SEA — TALLER
+       SHU´S SEA
+       SOLO LA IMAGEN SOBRESALE
     ========================= */
 
+    .artwork:nth-child(2) {
+      position: relative;
+    }
+
     .artwork:nth-child(2) img {
+      /*
+        Mantiene el tamaño grande que ya te gusta.
+      */
       height: 380px;
 
+      /*
+        Hace que sobresalga por arriba.
+      */
       margin-top: -100px;
 
       object-fit: contain;
 
       object-position: center bottom;
 
-      background: transparent;
+      /*
+        Fondo negro alrededor del cuadro.
+      */
+      background: #111;
+
+      position: relative;
+
+      z-index: 2;
     }
+
+    /*
+      La base de Shu´s Sea empieza aquí,
+      alineada con las otras tarjetas.
+    */
+    .artwork:nth-child(2) .artwork-info {
+      position: relative;
+
+      z-index: 3;
+
+      background: #1c1c1c;
+    }
+
+    /* =========================
+       ARTWORK INFORMATION
+    ========================= */
 
     .artwork-info {
       padding: 20px;
@@ -296,10 +328,6 @@
       font-size: 16px;
     }
 
-    /* =========================
-       STATUS
-    ========================= */
-
     .status {
       font-size: 17px;
 
@@ -323,10 +351,6 @@
       text-shadow:
         0 0 8px rgba(255,77,77,0.35);
     }
-
-    /* =========================
-       SEPARATOR BEFORE BUTTON
-    ========================= */
 
     .price-area {
       border-top:
@@ -366,7 +390,6 @@
 
       -webkit-background-clip: text;
       background-clip: text;
-
       -webkit-text-fill-color: transparent;
 
       text-decoration: none;
@@ -430,9 +453,11 @@
 
     .design img {
       width: 100%;
+
       height: 350px;
 
       object-fit: cover;
+
       object-position: center center;
 
       display: block;
@@ -478,6 +503,7 @@
       display: flex;
 
       align-items: center;
+
       justify-content: center;
 
       gap: 50px;
@@ -495,9 +521,11 @@
 
     .about-photo img {
       width: 300px;
+
       height: 300px;
 
       object-fit: cover;
+
       object-position: center;
 
       display: block;
@@ -510,10 +538,6 @@
       box-shadow:
         0 10px 30px rgba(0,0,0,0.5),
         0 0 20px rgba(32,213,197,0.12);
-    }
-
-    .about-photo img:hover {
-      transform: scale(1.02);
     }
 
     .about-photo img:hover {
@@ -593,6 +617,7 @@
       background: rgba(0,0,0,0.94);
 
       align-items: center;
+
       justify-content: center;
 
       padding: 30px;
@@ -600,6 +625,7 @@
 
     .lightbox img {
       max-width: 90%;
+
       max-height: 90%;
 
       object-fit: contain;
@@ -662,8 +688,7 @@
       header {
         min-height: 280px;
 
-        padding:
-          50px 15px 35px;
+        padding: 50px 15px 35px;
       }
 
       header h1 {
@@ -708,6 +733,10 @@
         grid-template-columns: 1fr;
       }
 
+      /*
+        En móvil bajamos un poco las tarjetas
+        y mantenemos Shu´s Sea sobresaliendo.
+      */
       .gallery {
         margin-top: 80px;
       }
@@ -718,16 +747,13 @@
 
       .artwork:nth-child(2) img {
         height: 350px;
+
         margin-top: -50px;
       }
 
       .design img {
         height: 320px;
       }
-
-      /* =========================
-         ABOUT MOBILE
-      ========================= */
 
       .about-content {
         flex-direction: column;
@@ -743,6 +769,7 @@
 
       .about-photo img {
         width: 240px;
+
         height: 240px;
 
         margin: auto;
@@ -753,7 +780,6 @@
 
         line-height: 1.7;
       }
-
     }
 
   </style>
@@ -767,9 +793,13 @@
 
   <header id="home">
 
-    <h1>Candy Dobemol_ART</h1>
+    <h1>
+      Candy Dobemol_ART
+    </h1>
 
-    <p>Art · Painting · Original Designs</p>
+    <p>
+      Art · Painting · Original Designs
+    </p>
 
   </header>
 
@@ -780,15 +810,25 @@
 
   <nav>
 
-    <a href="#home">Home</a>
+    <a href="#home">
+      Home
+    </a>
 
-    <a href="#artwork">Artwork</a>
+    <a href="#artwork">
+      Artwork
+    </a>
 
-    <a href="#designs">T-Shirt Designs</a>
+    <a href="#designs">
+      T-Shirt Designs
+    </a>
 
-    <a href="#about">About</a>
+    <a href="#about">
+      About
+    </a>
 
-    <a href="#contact">Contact</a>
+    <a href="#contact">
+      Contact
+    </a>
 
   </nav>
 
@@ -799,14 +839,15 @@
 
   <section id="artwork">
 
-    <h2>Artwork</h2>
+    <h2>
+      Artwork
+    </h2>
+
 
     <div class="gallery">
 
 
-      <!-- =====================
-           ARTWORK 1
-      ====================== -->
+      <!-- DOLO´S MINIWORLD -->
 
       <div class="artwork">
 
@@ -831,14 +872,14 @@
           </div>
 
           <!--
-          CHANGE "available" TO "sold"
-          WHEN THE PAINTING IS SOLD
+            CHANGE "available" TO "sold"
+            WHEN THE PAINTING IS SOLD
 
-          AVAILABLE:
-          <div class="status available">For sale</div>
+            AVAILABLE:
+            <div class="status available">For sale</div>
 
-          SOLD:
-          <div class="status sold">Sold</div>
+            SOLD:
+            <div class="status sold">Sold</div>
           -->
 
           <div class="status sold">
@@ -861,9 +902,7 @@
       </div>
 
 
-      <!-- =====================
-           ARTWORK 2
-      ====================== -->
+      <!-- SHU´S SEA -->
 
       <div class="artwork">
 
@@ -888,8 +927,8 @@
           </div>
 
           <!--
-          CHANGE "available" TO "sold"
-          WHEN THE PAINTING IS SOLD
+            CHANGE "available" TO "sold"
+            WHEN THE PAINTING IS SOLD
           -->
 
           <div class="status sold">
@@ -912,9 +951,7 @@
       </div>
 
 
-      <!-- =====================
-           ARTWORK 3
-      ====================== -->
+      <!-- ARTWORK 03 -->
 
       <div class="artwork">
 
@@ -952,6 +989,7 @@
 
         </div>
 
+
         <div class="artwork-info">
 
           <div class="status available">
@@ -973,6 +1011,7 @@
 
       </div>
 
+
     </div>
 
   </section>
@@ -984,14 +1023,15 @@
 
   <section id="designs">
 
-    <h2>T-Shirt Designs</h2>
+    <h2>
+      T-Shirt Designs
+    </h2>
+
 
     <div class="designs">
 
 
-      <!-- =====================
-           DESIGN 1
-      ====================== -->
+      <!-- DESIGN 1 -->
 
       <div class="design">
 
@@ -1029,9 +1069,7 @@
       </div>
 
 
-      <!-- =====================
-           DESIGN 2
-      ====================== -->
+      <!-- DESIGN 2 -->
 
       <div class="design">
 
@@ -1069,9 +1107,7 @@
       </div>
 
 
-      <!-- =====================
-           DESIGN 3
-      ====================== -->
+      <!-- DESIGN 3 -->
 
       <div class="design">
 
@@ -1109,9 +1145,7 @@
       </div>
 
 
-      <!-- =====================
-           DESIGN 4
-      ====================== -->
+      <!-- DESIGN 4 -->
 
       <div class="design">
 
@@ -1149,9 +1183,7 @@
       </div>
 
 
-      <!-- =====================
-           DESIGN 5
-      ====================== -->
+      <!-- DESIGN 5 -->
 
       <div class="design">
 
@@ -1189,9 +1221,7 @@
       </div>
 
 
-      <!-- =====================
-           DESIGN 6
-      ====================== -->
+      <!-- DESIGN 6 -->
 
       <div class="design">
 
@@ -1229,9 +1259,7 @@
       </div>
 
 
-      <!-- =====================
-           DESIGN 7
-      ====================== -->
+      <!-- DESIGN 7 -->
 
       <div class="design">
 
@@ -1269,9 +1297,7 @@
       </div>
 
 
-      <!-- =====================
-           DESIGN 8
-      ====================== -->
+      <!-- DESIGN 8 -->
 
       <div class="design">
 
@@ -1309,9 +1335,7 @@
       </div>
 
 
-      <!-- =====================
-           DESIGN 9
-      ====================== -->
+      <!-- DESIGN 9 -->
 
       <div class="design">
 
@@ -1348,12 +1372,11 @@
 
       </div>
 
+
     </div>
 
 
-    <!-- =========================
-         T-SHIRT SHOP
-    ========================= -->
+    <!-- COMPLETE COLLECTION BUTTON -->
 
     <div
       style="
@@ -1386,12 +1409,9 @@
       About
     </h2>
 
+
     <div class="about-content">
 
-
-      <!-- =====================
-           ABOUT PHOTO
-      ====================== -->
 
       <div class="about-photo">
 
@@ -1402,10 +1422,6 @@
 
       </div>
 
-
-      <!-- =====================
-           ABOUT TEXT
-      ====================== -->
 
       <div class="about-text">
 
@@ -1454,6 +1470,7 @@
       Get in touch for availability, prices and orders.
     </p>
 
+
     <a
       href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
       class="email-link"
@@ -1464,24 +1481,36 @@
       ✉ candydobemolart@gmail.com
     </a>
 
-    <div style="margin-top:20px;">
+
+    <div
+      style="
+        margin-top:20px;
+      "
+    >
 
       <a
         href="https://www.facebook.com/candy.dobemol/"
         class="email-link"
         target="_blank"
         rel="noopener noreferrer"
-        style="margin:0 12px; color:#1877F2;"
+        style="
+          margin:0 12px;
+          color:#1877F2;
+        "
       >
         Facebook
       </a>
+
 
       <a
         href="https://www.instagram.com/candy_dobemol/"
         class="email-link"
         target="_blank"
         rel="noopener noreferrer"
-        style="margin:0 12px; color:#E4405F;"
+        style="
+          margin:0 12px;
+          color:#E4405F;
+        "
       >
         Instagram
       </a>
@@ -1539,14 +1568,14 @@
       document.getElementById("lightbox-img").src = src;
 
       document.getElementById("lightbox").style.display = "flex";
-
     }
+
 
     function closeLightbox() {
 
       document.getElementById("lightbox").style.display = "none";
-
     }
+
 
     document.addEventListener(
       "keydown",
