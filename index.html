@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -194,7 +194,6 @@
 
       align-items: stretch;
 
-      /* Baja las tres tarjetas juntas */
       margin-top: 100px;
     }
 
@@ -203,11 +202,6 @@
 
       border-radius: 8px;
 
-      /*
-        IMPORTANTE:
-        permitimos que únicamente la imagen de
-        Shu´s Sea pueda sobresalir por arriba.
-      */
       overflow: visible;
 
       text-align: center;
@@ -253,7 +247,6 @@
 
     /* =========================
        SHU´S SEA
-       SOLO LA IMAGEN SOBRESALE
     ========================= */
 
     .artwork:nth-child(2) {
@@ -261,23 +254,14 @@
     }
 
     .artwork:nth-child(2) img {
-      /*
-        Mantiene el tamaño grande que ya te gusta.
-      */
       height: 380px;
 
-      /*
-        Hace que sobresalga por arriba.
-      */
       margin-top: -100px;
 
       object-fit: contain;
 
       object-position: center bottom;
 
-      /*
-        Fondo negro alrededor del cuadro.
-      */
       background: #111;
 
       position: relative;
@@ -285,10 +269,6 @@
       z-index: 2;
     }
 
-    /*
-      La base de Shu´s Sea empieza aquí,
-      alineada con las otras tarjetas.
-    */
     .artwork:nth-child(2) .artwork-info {
       position: relative;
 
@@ -733,16 +713,26 @@
         grid-template-columns: 1fr;
       }
 
-      /*
-        En móvil bajamos un poco las tarjetas
-        y mantenemos Shu´s Sea sobresaliendo.
-      */
+      /* =========================
+         MOBILE ARTWORK
+      ========================= */
+
       .gallery {
         margin-top: 80px;
       }
 
       .artwork img {
         height: 300px;
+      }
+
+      /*
+        En móvil Shu´s Sea mantiene su tamaño,
+        pero la tarjeta completa se separa de
+        Dolo´s para que no se superpongan.
+      */
+
+      .artwork:nth-child(2) {
+        margin-top: 70px;
       }
 
       .artwork:nth-child(2) img {
@@ -754,6 +744,10 @@
       .design img {
         height: 320px;
       }
+
+      /* =========================
+         MOBILE ABOUT
+      ========================= */
 
       .about-content {
         flex-direction: column;
@@ -787,9 +781,7 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- HEADER -->
 
   <header id="home">
 
@@ -804,45 +796,30 @@
   </header>
 
 
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
+  <!-- NAVIGATION -->
 
   <nav>
 
-    <a href="#home">
-      Home
-    </a>
+    <a href="#home">Home</a>
 
-    <a href="#artwork">
-      Artwork
-    </a>
+    <a href="#artwork">Artwork</a>
 
-    <a href="#designs">
-      T-Shirt Designs
-    </a>
+    <a href="#designs">T-Shirt Designs</a>
 
-    <a href="#about">
-      About
-    </a>
+    <a href="#about">About</a>
 
-    <a href="#contact">
-      Contact
-    </a>
+    <a href="#contact">Contact</a>
 
   </nav>
 
 
-  <!-- =========================
-       ARTWORK
-  ========================= -->
+  <!-- ARTWORK -->
 
   <section id="artwork">
 
     <h2>
       Artwork
     </h2>
-
 
     <div class="gallery">
 
@@ -926,10 +903,7 @@
             Price: 200 €
           </div>
 
-          <!--
-            CHANGE "available" TO "sold"
-            WHEN THE PAINTING IS SOLD
-          -->
+          <!-- CHANGE "available" TO "sold" WHEN THE PAINTING IS SOLD -->
 
           <div class="status sold">
             Sold
@@ -989,7 +963,6 @@
 
         </div>
 
-
         <div class="artwork-info">
 
           <div class="status available">
@@ -1011,22 +984,18 @@
 
       </div>
 
-
     </div>
 
   </section>
 
 
-  <!-- =========================
-       T-SHIRT DESIGNS
-  ========================= -->
+  <!-- T-SHIRT DESIGNS -->
 
   <section id="designs">
 
     <h2>
       T-Shirt Designs
     </h2>
-
 
     <div class="designs">
 
@@ -1372,11 +1341,8 @@
 
       </div>
 
-
     </div>
 
-
-    <!-- COMPLETE COLLECTION BUTTON -->
 
     <div
       style="
@@ -1399,9 +1365,7 @@
   </section>
 
 
-  <!-- =========================
-       ABOUT
-  ========================= -->
+  <!-- ABOUT -->
 
   <section id="about">
 
@@ -1409,9 +1373,7 @@
       About
     </h2>
 
-
     <div class="about-content">
-
 
       <div class="about-photo">
 
@@ -1421,7 +1383,6 @@
         >
 
       </div>
-
 
       <div class="about-text">
 
@@ -1452,9 +1413,7 @@
   </section>
 
 
-  <!-- =========================
-       CONTACT
-  ========================= -->
+  <!-- CONTACT -->
 
   <section id="contact">
 
@@ -1470,7 +1429,6 @@
       Get in touch for availability, prices and orders.
     </p>
 
-
     <a
       href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
       class="email-link"
@@ -1480,7 +1438,6 @@
     >
       ✉ candydobemolart@gmail.com
     </a>
-
 
     <div
       style="
@@ -1501,7 +1458,6 @@
         Facebook
       </a>
 
-
       <a
         href="https://www.instagram.com/candy_dobemol/"
         class="email-link"
@@ -1520,9 +1476,7 @@
   </section>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -1531,9 +1485,7 @@
   </footer>
 
 
-  <!-- =========================
-       LIGHTBOX
-  ========================= -->
+  <!-- LIGHTBOX -->
 
   <div
     id="lightbox"
@@ -1557,9 +1509,7 @@
   </div>
 
 
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
+  <!-- JAVASCRIPT -->
 
   <script>
 
@@ -1568,12 +1518,14 @@
       document.getElementById("lightbox-img").src = src;
 
       document.getElementById("lightbox").style.display = "flex";
+
     }
 
 
     function closeLightbox() {
 
       document.getElementById("lightbox").style.display = "none";
+
     }
 
 
