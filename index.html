@@ -178,6 +178,10 @@
     }
 
 
+    /* =========================
+       SECTION HEADINGS
+    ========================= */
+
     section h2 {
       text-align: center;
 
@@ -191,6 +195,26 @@
 
       text-shadow:
         0 0 8px rgba(32,213,197,0.35);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 25px;
+    }
+
+
+    section h2::before,
+    section h2::after {
+      content: "";
+
+      width: 120px;
+
+      height: 1px;
+
+      background: rgba(73,230,216,0.55);
     }
 
 
@@ -537,6 +561,11 @@
     }
 
 
+    .about-photo img:hover {
+      transform: scale(1.02);
+    }
+
+
     .about-text {
       flex: 1;
     }
@@ -733,6 +762,12 @@
         font-size: 30px;
 
         margin-bottom: 35px;
+      }
+
+
+      section h2::before,
+      section h2::after {
+        width: 50px;
       }
 
 
@@ -1544,27 +1579,32 @@
     >
       ✉ candydobemolart@gmail.com
     </a>
-    <div style="margin-top:20px;">
- <a
-  href="https://www.facebook.com/candy.dobemol/"
-  class="email-link"
-  target="_blank"
-  rel="noopener noreferrer"
-  style="margin:0 12px; color:#1877F2;"
->
-  Facebook
-</a>
 
-<a
-  href="https://www.instagram.com/candy_dobemol/"
-  class="email-link"
-  target="_blank"
-  rel="noopener noreferrer"
-  style="margin:0 12px; color:#E4405F;"
->
-  Instagram
-</a>
-</div>
+
+    <div style="margin-top:20px;">
+
+      <a
+        href="https://www.facebook.com/candy.dobemol/"
+        class="email-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="margin:0 12px; color:#1877F2;"
+      >
+        Facebook
+      </a>
+
+
+      <a
+        href="https://www.instagram.com/candy_dobemol/"
+        class="email-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="margin:0 12px; color:#E4405F;"
+      >
+        Instagram
+      </a>
+
+    </div>
 
   </section>
 
