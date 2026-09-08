@@ -42,11 +42,14 @@
     }
 
     #languageButton {
-      padding: 8px 16px;
+      width: 92px;
+      height: 38px;
 
-      background: rgba(17,17,17,0.90);
+      padding: 0;
 
-      color: #49e6d8;
+      background: #111;
+
+      color: #777;
 
       border: 1px solid #20d5c5;
 
@@ -54,7 +57,7 @@
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: 14px;
+      font-size: 13px;
 
       font-weight: bold;
 
@@ -64,14 +67,47 @@
         0 5px 15px rgba(0,0,0,0.45);
 
       transition: all 0.3s ease;
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-around;
+    }
+
+    #languageButton .language-option {
+      width: 40px;
+
+      height: 28px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 15px;
+
+      transition: all 0.3s ease;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    #languageButton .language-option.active {
+      background: #20d5c5;
+
+      color: #111;
+
+      box-shadow:
+        0 0 10px rgba(32,213,197,0.45);
     }
 
     #languageButton:hover {
-      background: #20d5c5;
-
-      color: #ffffff;
-
-      transform: scale(1.05);
+      border-color: #49e6d8;
 
       box-shadow:
         0 0 18px rgba(32,213,197,0.5);
@@ -942,8 +978,13 @@
       }
 
       #languageButton {
-        padding: 7px 13px;
-        font-size: 13px;
+        width: 86px;
+        height: 36px;
+      }
+
+      #languageButton .language-option {
+        width: 37px;
+        height: 26px;
       }
 
       /* =========================
@@ -990,10 +1031,11 @@
 <button
 id="languageButton"
 onclick="toggleLanguage()"
+aria-label="Change language"
 
 >
 
-EN / ES </button>
+<span class="language-option active" id="languageEN">EN</span> <span class="language-option" id="languageES">ES</span> </button>
 
   </div>
 
@@ -1971,6 +2013,20 @@ alt="Enlarged artwork"
           element.getAttribute("data-" + language);
 
       });
+
+      /* LANGUAGE SWITCH INDICATOR */
+
+      document.getElementById("languageEN")
+        .classList.toggle(
+          "active",
+          language === "en"
+        );
+
+      document.getElementById("languageES")
+        .classList.toggle(
+          "active",
+          language === "es"
+        );
 
     }
 
