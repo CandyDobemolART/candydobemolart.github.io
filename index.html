@@ -920,27 +920,28 @@
 
   <div class="music-control">
 
-```
 <div class="music-ring">
 
   <svg viewBox="0 0 100 100">
 
-    <defs>
+```
+<defs>
 
-      <path
-        id="musicCircle"
-        d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
-      />
+  <path
+    id="musicCircle"
+    d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
+  />
 
-    </defs>
+</defs>
 
-    <text>
+<text>
 
-      <textPath href="#musicCircle" startOffset="0%">
-        Turn It Up-Turn It Up-Turn It Up-
-      </textPath>
+  <textPath href="#musicCircle" startOffset="0%">
+    Turn It Up-Turn It Up-Turn It Up-
+  </textPath>
 
-    </text>
+</text>
+```
 
   </svg>
 
@@ -949,7 +950,6 @@
 <button id="musicButton" onclick="toggleMusic()">
   🎵
 </button>
-```
 
   </div>
 
@@ -957,7 +957,6 @@
 
   <header id="home">
 
-```
 <h1>
   Candy Dobemol_ART
 </h1>
@@ -965,7 +964,6 @@
 <p>
   Art · Painting · Original Designs
 </p>
-```
 
   </header>
 
@@ -973,7 +971,6 @@
 
   <nav>
 
-```
 <a href="#home">Home</a>
 
 <a href="#artwork">Artwork</a>
@@ -983,7 +980,6 @@
 <a href="#about">About</a>
 
 <a href="#contact">Contact</a>
-```
 
   </nav>
 
@@ -991,7 +987,6 @@
 
   <section id="artwork">
 
-```
 <h2>
   Artwork
 </h2>
@@ -1002,53 +997,55 @@
 
   <div class="artwork">
 
-    <img
-      src="Dolo.jpeg"
-      alt="Dolo´s MiniWorld"
-      onclick="openLightbox(this.src)"
+```
+<img
+  src="Dolo.jpeg"
+  alt="Dolo´s MiniWorld"
+  onclick="openLightbox(this.src)"
+>
+
+<div class="artwork-info">
+
+  <h3>
+    Dolo´s MiniWorld
+  </h3>
+
+  <p>
+    Acrylic canvas painting 6x6x1cm
+  </p>
+
+  <div class="artwork-price">
+    Price: 80 €
+  </div>
+
+  <!--
+    CHANGE "available" TO "sold"
+    WHEN THE PAINTING IS SOLD
+
+    AVAILABLE:
+    <div class="status available">For sale</div>
+
+    SOLD:
+    <div class="status sold">Sold</div>
+  -->
+
+  <div class="status sold">
+    Sold
+  </div>
+
+  <div class="price-area">
+
+    <a
+      href="#contact"
+      class="button"
     >
+      Buy/Enquire
+    </a>
 
-    <div class="artwork-info">
+  </div>
 
-      <h3>
-        Dolo´s MiniWorld
-      </h3>
-
-      <p>
-        Acrylic canvas painting 6x6x1cm
-      </p>
-
-      <div class="artwork-price">
-        Price: 80 €
-      </div>
-
-      <!--
-        CHANGE "available" TO "sold"
-        WHEN THE PAINTING IS SOLD
-
-        AVAILABLE:
-        <div class="status available">For sale</div>
-
-        SOLD:
-        <div class="status sold">Sold</div>
-      -->
-
-      <div class="status sold">
-        Sold
-      </div>
-
-      <div class="price-area">
-
-        <a
-          href="#contact"
-          class="button"
-        >
-          Buy/Enquire
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
@@ -1056,44 +1053,46 @@
 
   <div class="artwork">
 
-    <img
-      src="Shu´s Sea.jpg"
-      alt="Shu´s Sea"
-      onclick="openLightbox(this.src)"
+```
+<img
+  src="Shu´s Sea.jpg"
+  alt="Shu´s Sea"
+  onclick="openLightbox(this.src)"
+>
+
+<div class="artwork-info">
+
+  <h3>
+    Shu´s Sea
+  </h3>
+
+  <p>
+    Acrylic canvas painting 20x50x1,5cm
+  </p>
+
+  <div class="artwork-price">
+    Price: 200 €
+  </div>
+
+  <!-- CHANGE "available" TO "sold" WHEN THE PAINTING IS SOLD -->
+
+  <div class="status sold">
+    Sold
+  </div>
+
+  <div class="price-area">
+
+    <a
+      href="#contact"
+      class="button"
     >
+      Buy/Enquire
+    </a>
 
-    <div class="artwork-info">
+  </div>
 
-      <h3>
-        Shu´s Sea
-      </h3>
-
-      <p>
-        Acrylic canvas painting 20x50x1,5cm
-      </p>
-
-      <div class="artwork-price">
-        Price: 200 €
-      </div>
-
-      <!-- CHANGE "available" TO "sold" WHEN THE PAINTING IS SOLD -->
-
-      <div class="status sold">
-        Sold
-      </div>
-
-      <div class="price-area">
-
-        <a
-          href="#contact"
-          class="button"
-        >
-          Buy/Enquire
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
@@ -1101,63 +1100,64 @@
 
   <div class="artwork">
 
-    <div
+```
+<div
+  style="
+    height:280px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#1c1c1c;
+  "
+>
+
+  <div>
+
+    <h3
       style="
-        height:280px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        background:#1c1c1c;
+        color:#49e6d8;
+        font-size:24px;
+        margin-bottom:10px;
       "
     >
+      Artwork 03
+    </h3>
 
-      <div>
+    <p style="color:#ddd;">
+      Coming soon
+    </p>
 
-        <h3
-          style="
-            color:#49e6d8;
-            font-size:24px;
-            margin-bottom:10px;
-          "
-        >
-          Artwork 03
-        </h3>
-
-        <p style="color:#ddd;">
-          Coming soon
-        </p>
-
-        <div class="artwork-price">
-          Price: _ €
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="artwork-info">
-
-      <div class="status available">
-        For sale
-      </div>
-
-      <div class="price-area">
-
-        <a
-          href="#contact"
-          class="button"
-        >
-          Buy/Enquire
-        </a>
-
-      </div>
-
+    <div class="artwork-price">
+      Price: _ €
     </div>
 
   </div>
 
 </div>
+
+<div class="artwork-info">
+
+  <div class="status available">
+    For sale
+  </div>
+
+  <div class="price-area">
+
+    <a
+      href="#contact"
+      class="button"
+    >
+      Buy/Enquire
+    </a>
+
+  </div>
+
+</div>
 ```
+
+  </div>
+
+</div>
 
   </section>
 
@@ -1165,7 +1165,6 @@
 
   <section id="designs">
 
-```
 <h2>
   T-Shirt Designs
 </h2>
@@ -1176,36 +1175,38 @@
 
   <div class="design">
 
-    <img
-      src="Shu.webp"
-      alt="Shu Multi-Guitar2"
-      onclick="openLightbox(this.src)"
+```
+<img
+  src="Shu.webp"
+  alt="Shu Multi-Guitar2"
+  onclick="openLightbox(this.src)"
+>
+
+<div class="design-info">
+
+  <h3>
+    Shu Multi-Guitar2
+  </h3>
+
+  <p>
+    Original T-shirt design
+  </p>
+
+  <div class="price-area">
+
+    <a
+      href="https://www.latostadora.com/web/dobemola-shu-multi-guitar2/11674014?s=H_A1"
+      class="button"
+      target="_blank"
+      rel="noopener noreferrer"
     >
+      Have a look!
+    </a>
 
-    <div class="design-info">
+  </div>
 
-      <h3>
-        Shu Multi-Guitar2
-      </h3>
-
-      <p>
-        Original T-shirt design
-      </p>
-
-      <div class="price-area">
-
-        <a
-          href="https://www.latostadora.com/web/dobemola-shu-multi-guitar2/11674014?s=H_A1"
-          class="button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Have a look!
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
@@ -1213,36 +1214,38 @@
 
   <div class="design">
 
-    <img
-      src="Freenomads Girl.webp"
-      alt="Freenomads Multi-Guitar"
-      onclick="openLightbox(this.src)"
+```
+<img
+  src="Freenomads Girl.webp"
+  alt="Freenomads Multi-Guitar"
+  onclick="openLightbox(this.src)"
+>
+
+<div class="design-info">
+
+  <h3>
+    Freenomads Multi-Guitar
+  </h3>
+
+  <p>
+    Original T-shirt design
+  </p>
+
+  <div class="price-area">
+
+    <a
+      href="https://www.latostadora.com/web/dobemola-freenomads-multi-guitar/11512389?s=M_F1"
+      class="button"
+      target="_blank"
+      rel="noopener noreferrer"
     >
+      Have a look!
+    </a>
 
-    <div class="design-info">
+  </div>
 
-      <h3>
-        Freenomads Multi-Guitar
-      </h3>
-
-      <p>
-        Original T-shirt design
-      </p>
-
-      <div class="price-area">
-
-        <a
-          href="https://www.latostadora.com/web/dobemola-freenomads-multi-guitar/11512389?s=M_F1"
-          class="button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Have a look!
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
@@ -1250,36 +1253,38 @@
 
   <div class="design">
 
-    <img
-      src="Twin Girl.webp"
-      alt="Twin Multi-Guitar"
-      onclick="openLightbox(this.src)"
+```
+<img
+  src="Twin Girl.webp"
+  alt="Twin Multi-Guitar"
+  onclick="openLightbox(this.src)"
+>
+
+<div class="design-info">
+
+  <h3>
+    Twin Multi-Guitar
+  </h3>
+
+  <p>
+    Original T-shirt design
+  </p>
+
+  <div class="price-area">
+
+    <a
+      href="https://www.latostadora.com/web/dobemola-twin-multi-guitar/11673960?s=M_L1"
+      class="button"
+      target="_blank"
+      rel="noopener noreferrer"
     >
+      Have a look!
+    </a>
 
-    <div class="design-info">
+  </div>
 
-      <h3>
-        Twin Multi-Guitar
-      </h3>
-
-      <p>
-        Original T-shirt design
-      </p>
-
-      <div class="price-area">
-
-        <a
-          href="https://www.latostadora.com/web/dobemola-twin-multi-guitar/11673960?s=M_L1"
-          class="button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Have a look!
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
@@ -1287,36 +1292,38 @@
 
   <div class="design">
 
-    <img
-      src="Black Guitar.webp"
-      alt="Black Guitar"
-      onclick="openLightbox(this.src)"
+```
+<img
+  src="Black Guitar.webp"
+  alt="Black Guitar"
+  onclick="openLightbox(this.src)"
+>
+
+<div class="design-info">
+
+  <h3>
+    Black Guitar
+  </h3>
+
+  <p>
+    Original T-shirt design
+  </p>
+
+  <div class="price-area">
+
+    <a
+      href="https://www.latostadora.com/web/dobemola-black-guitar/11527097?s=H_A17"
+      class="button"
+      target="_blank"
+      rel="noopener noreferrer"
     >
+      Have a look!
+    </a>
 
-    <div class="design-info">
+  </div>
 
-      <h3>
-        Black Guitar
-      </h3>
-
-      <p>
-        Original T-shirt design
-      </p>
-
-      <div class="price-area">
-
-        <a
-          href="https://www.latostadora.com/web/dobemola-black-guitar/11527097?s=H_A17"
-          class="button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Have a look!
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
@@ -1324,36 +1331,38 @@
 
   <div class="design">
 
-    <img
-      src="Yellow Guitar.webp"
-      alt="Yellow Guitar"
-      onclick="openLightbox(this.src)"
+```
+<img
+  src="Yellow Guitar.webp"
+  alt="Yellow Guitar"
+  onclick="openLightbox(this.src)"
+>
+
+<div class="design-info">
+
+  <h3>
+    Yellow Guitar
+  </h3>
+
+  <p>
+    Original T-shirt design
+  </p>
+
+  <div class="price-area">
+
+    <a
+      href="https://www.latostadora.com/web/dobemola-yellow-guitar/11535941?s=M_L1"
+      class="button"
+      target="_blank"
+      rel="noopener noreferrer"
     >
+      Have a look!
+    </a>
 
-    <div class="design-info">
+  </div>
 
-      <h3>
-        Yellow Guitar
-      </h3>
-
-      <p>
-        Original T-shirt design
-      </p>
-
-      <div class="price-area">
-
-        <a
-          href="https://www.latostadora.com/web/dobemola-yellow-guitar/11535941?s=M_L1"
-          class="button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Have a look!
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
@@ -1361,36 +1370,38 @@
 
   <div class="design">
 
-    <img
-      src="Help Guitar.webp"
-      alt="Help Guitar"
-      onclick="openLightbox(this.src)"
+```
+<img
+  src="Help Guitar.webp"
+  alt="Help Guitar"
+  onclick="openLightbox(this.src)"
+>
+
+<div class="design-info">
+
+  <h3>
+    Help Guitar
+  </h3>
+
+  <p>
+    Original T-shirt design
+  </p>
+
+  <div class="price-area">
+
+    <a
+      href="https://www.latostadora.com/web/dobemola-help-guitar/14530692?s=M_L7"
+      class="button"
+      target="_blank"
+      rel="noopener noreferrer"
     >
+      Have a look!
+    </a>
 
-    <div class="design-info">
+  </div>
 
-      <h3>
-        Help Guitar
-      </h3>
-
-      <p>
-        Original T-shirt design
-      </p>
-
-      <div class="price-area">
-
-        <a
-          href="https://www.latostadora.com/web/dobemola-help-guitar/14530692?s=M_L7"
-          class="button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Have a look!
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
@@ -1398,36 +1409,38 @@
 
   <div class="design">
 
-    <img
-      src="Picassianna Guitar II.webp"
-      alt="Picassianna Guitar II"
-      onclick="openLightbox(this.src)"
+```
+<img
+  src="Picassianna Guitar II.webp"
+  alt="Picassianna Guitar II"
+  onclick="openLightbox(this.src)"
+>
+
+<div class="design-info">
+
+  <h3>
+    Picassianna Guitar II
+  </h3>
+
+  <p>
+    Original T-shirt design
+  </p>
+
+  <div class="price-area">
+
+    <a
+      href="https://www.latostadora.com/web/dobemola-picassianna-guitar-ii/11930528"
+      class="button"
+      target="_blank"
+      rel="noopener noreferrer"
     >
+      Have a look!
+    </a>
 
-    <div class="design-info">
+  </div>
 
-      <h3>
-        Picassianna Guitar II
-      </h3>
-
-      <p>
-        Original T-shirt design
-      </p>
-
-      <div class="price-area">
-
-        <a
-          href="https://www.latostadora.com/web/dobemola-picassianna-guitar-ii/11930528"
-          class="button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Have a look!
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
@@ -1435,36 +1448,38 @@
 
   <div class="design">
 
-    <img
-      src="Drum Power.webp"
-      alt="Drum Power"
-      onclick="openLightbox(this.src)"
+```
+<img
+  src="Drum Power.webp"
+  alt="Drum Power"
+  onclick="openLightbox(this.src)"
+>
+
+<div class="design-info">
+
+  <h3>
+    Drum Power
+  </h3>
+
+  <p>
+    Original T-shirt design
+  </p>
+
+  <div class="price-area">
+
+    <a
+      href="https://www.latostadora.com/web/dobemola-drum-power-1/12223631"
+      class="button"
+      target="_blank"
+      rel="noopener noreferrer"
     >
+      Have a look!
+    </a>
 
-    <div class="design-info">
+  </div>
 
-      <h3>
-        Drum Power
-      </h3>
-
-      <p>
-        Original T-shirt design
-      </p>
-
-      <div class="price-area">
-
-        <a
-          href="https://www.latostadora.com/web/dobemola-drum-power-1/12223631"
-          class="button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Have a look!
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
@@ -1472,36 +1487,38 @@
 
   <div class="design">
 
-    <img
-      src="Sgt. Pepper Honored Guitar.webp"
-      alt="Sgt. Pepper Honored Guitar"
-      onclick="openLightbox(this.src)"
+```
+<img
+  src="Sgt. Pepper Honored Guitar.webp"
+  alt="Sgt. Pepper Honored Guitar"
+  onclick="openLightbox(this.src)"
+>
+
+<div class="design-info">
+
+  <h3>
+    Sgt. Pepper Honored Guitar
+  </h3>
+
+  <p>
+    Original T-shirt design
+  </p>
+
+  <div class="price-area">
+
+    <a
+      href="https://www.latostadora.com/web/dobemola-sgt-pepper-honored-guitar/15157132"
+      class="button"
+      target="_blank"
+      rel="noopener noreferrer"
     >
+      Have a look!
+    </a>
 
-    <div class="design-info">
+  </div>
 
-      <h3>
-        Sgt. Pepper Honored Guitar
-      </h3>
-
-      <p>
-        Original T-shirt design
-      </p>
-
-      <div class="price-area">
-
-        <a
-          href="https://www.latostadora.com/web/dobemola-sgt-pepper-honored-guitar/15157132"
-          class="button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Have a look!
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
@@ -1514,17 +1531,21 @@
   "
 >
 
-  <a
-    href="https://www.latostadora.com/shop/Dobemol/?shop_trk"
-    class="button"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Visit the complete collection of T-shirts
+<a
+href="https://www.latostadora.com/shop/Dobemol/?shop_trk"
+class="button"
+target="_blank"
+rel="noopener noreferrer"
+
+>
+
+```
+Visit the complete collection of T-shirts
+```
+
   </a>
 
 </div>
-```
 
   </section>
 
@@ -1532,7 +1553,6 @@
 
   <section id="about">
 
-```
 <h2>
   About
 </h2>
@@ -1541,39 +1561,42 @@
 
   <div class="about-photo">
 
-    <img
-      src="Dobe.jpeg"
-      alt="Candy Dobemol"
-    >
+```
+<img
+  src="Dobe.jpeg"
+  alt="Candy Dobemol"
+>
+```
 
   </div>
 
   <div class="about-text">
 
-    <p>
-      Welcome to CandyDobemol_ART.
-    </p>
+```
+<p>
+  Welcome to CandyDobemol_ART.
+</p>
 
-    <p>
-      Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars.
-    </p>
+<p>
+  Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars.
+</p>
 
-    <p>
-      This gallery brings together his original artwork, paintings and creative designs. A space where art, colour and creativity become unique pieces.
-    </p>
+<p>
+  This gallery brings together his original artwork, paintings and creative designs. A space where art, colour and creativity become unique pieces.
+</p>
 
-    <p>
-      On this website You can discover and purchase his paintings on canvas, as well as explore links to the T-shirt shop featuring his designs.
-    </p>
+<p>
+  On this website You can discover and purchase his paintings on canvas, as well as explore links to the T-shirt shop featuring his designs.
+</p>
 
-    <p>
-      Enjoy!!!!
-    </p>
+<p>
+  Enjoy!!!!
+</p>
+```
 
   </div>
 
 </div>
-```
 
   </section>
 
@@ -1581,7 +1604,6 @@
 
   <section id="contact">
 
-```
 <h2>
   Contact
 </h2>
@@ -1595,14 +1617,15 @@
 </p>
 
 <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
-  class="email-link"
-  style="color:#ff9f43;"
-  target="_blank"
-  rel="noopener noreferrer"
+href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
+class="email-link"
+style="color:#ff9f43;"
+target="_blank"
+rel="noopener noreferrer"
+
 >
-  ✉ candydobemolart@gmail.com
-</a>
+
+✉ [candydobemolart@gmail.com](mailto:candydobemolart@gmail.com) </a>
 
 <div
   style="
@@ -1610,34 +1633,43 @@
   "
 >
 
-  <a
-    href="https://www.facebook.com/candy.dobemol/"
-    class="email-link"
-    target="_blank"
-    rel="noopener noreferrer"
-    style="
-      margin:0 12px;
-      color:#1877F2;
-    "
-  >
-    Facebook
+<a
+href="https://www.facebook.com/candy.dobemol/"
+class="email-link"
+target="_blank"
+rel="noopener noreferrer"
+style="
+margin:0 12px;
+color:#1877F2;
+"
+
+>
+
+```
+Facebook
+```
+
   </a>
 
-  <a
-    href="https://www.instagram.com/candy_dobemol/"
-    class="email-link"
-    target="_blank"
-    rel="noopener noreferrer"
-    style="
-      margin:0 12px;
-      color:#E4405F;
-    "
-  >
-    Instagram
+<a
+href="https://www.instagram.com/candy_dobemol/"
+class="email-link"
+target="_blank"
+rel="noopener noreferrer"
+style="
+margin:0 12px;
+color:#E4405F;
+"
+
+>
+
+```
+Instagram
+```
+
   </a>
 
 </div>
-```
 
   </section>
 
@@ -1645,9 +1677,7 @@
 
   <footer>
 
-```
 © 2026 CandyDobemol_ART - All rights reserved
-```
 
   </footer>
 
@@ -1659,20 +1689,20 @@
     onclick="closeLightbox()"
   >
 
-```
 <span
-  class="close"
-  onclick="closeLightbox()"
+class="close"
+onclick="closeLightbox()"
+
 >
-  ×
-</span>
+
+× </span>
 
 <img
-  id="lightbox-img"
-  src=""
-  alt="Enlarged artwork"
+id="lightbox-img"
+src=""
+alt="Enlarged artwork"
+
 >
-```
 
   </div>
 
