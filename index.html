@@ -369,6 +369,41 @@
     }
 
     /* =========================
+       ARTWORK 04 & 05
+    ========================= */
+
+    .artwork:nth-child(4),
+    .artwork:nth-child(5) {
+      position: relative;
+    }
+
+    .artwork:nth-child(4) img,
+    .artwork:nth-child(5) img {
+      height: 360px;
+
+      margin-top: -80px;
+
+      object-fit: contain;
+
+      object-position: center bottom;
+
+      background: #111;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .artwork:nth-child(4) .artwork-info,
+    .artwork:nth-child(5) .artwork-info {
+      position: relative;
+
+      z-index: 3;
+
+      background: #1c1c1c;
+    }
+
+    /* =========================
        ARTWORK INFORMATION
     ========================= */
 
@@ -947,6 +982,18 @@
         margin-top: -40px;
       }
 
+      .artwork:nth-child(4),
+      .artwork:nth-child(5) {
+        margin-top: 60px;
+      }
+
+      .artwork:nth-child(4) img,
+      .artwork:nth-child(5) img {
+        height: 340px;
+
+        margin-top: -40px;
+      }
+
       .design img {
         height: 320px;
       }
@@ -1351,7 +1398,122 @@ Buy/Enquire </a>
 </div>
 
   </div>
+
+  <!-- ARTWORK 04 -->
+
+  <div class="artwork">
+
+<img
+src="Cherokee.jpeg"
+alt="Cherokee"
+onclick="openLightbox(this.src)"
+
+>
+
+<div class="artwork-info">
+
+  <h3>
+    Cherokee
+  </h3>
+
+  <p
+    data-en="Acrylic on framed canvas_20x40x1.5cm"
+    data-es="Pintura acrílica sobre lienzo enmarcado_20x40x1.5cm"
+  >
+    Acrylic on framed canvas_20x40x1.5cm
+  </p>
+
+  <div
+    class="artwork-price"
+    data-en="Price: 100 €"
+    data-es="Precio: 100 €"
+  >
+    Price: 100 €
+  </div>
+
+  <div
+    class="status available"
+    data-en="For sale"
+    data-es="A la venta"
+  >
+    For sale
+  </div>
+
+  <div class="price-area">
+
+<a
+href="#contact"
+class="button"
+data-en="Buy/Enquire"
+data-es="Comprar/Consultar"
+
+>
+
+Buy/Enquire </a>
+
+  </div>
+
 </div>
+
+  </div>
+
+  <!-- ARTWORK 05 -->
+
+  <div class="artwork">
+
+<img
+src="On the way.jpeg"
+alt="On the way"
+onclick="openLightbox(this.src)"
+
+>
+
+<div class="artwork-info">
+
+  <h3>
+    On the way
+  </h3>
+
+  <p
+    data-en="Acrylic on framed canvas_20x40x1.5cm"
+    data-es="Pintura acrílica sobre lienzo enmarcado_20x40x1.5cm"
+  >
+    Acrylic on framed canvas_20x40x1.5cm
+  </p>
+
+  <div
+    class="artwork-price"
+    data-en="Price: 100 €"
+    data-es="Precio: 100 €"
+  >
+    Price: 100 €
+  </div>
+
+  <div
+    class="status available"
+    data-en="For sale"
+    data-es="A la venta"
+  >
+    For sale
+  </div>
+
+  <div class="price-area">
+
+<a
+href="#contact"
+class="button"
+data-en="Buy/Enquire"
+data-es="Comprar/Consultar"
+
+>
+
+Buy/Enquire </a>
+
+  </div>
+
+</div>
+
+  </div>
 
   </section>
 
