@@ -337,6 +337,38 @@
     }
 
     /* =========================
+       MANDARINE LP
+    ========================= */
+
+    .artwork:nth-child(3) {
+      position: relative;
+    }
+
+    .artwork:nth-child(3) img {
+      height: 360px;
+
+      margin-top: -80px;
+
+      object-fit: contain;
+
+      object-position: center bottom;
+
+      background: #111;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .artwork:nth-child(3) .artwork-info {
+      position: relative;
+
+      z-index: 3;
+
+      background: #1c1c1c;
+    }
+
+    /* =========================
        ARTWORK INFORMATION
     ========================= */
 
@@ -905,6 +937,16 @@
         margin-top: -50px;
       }
 
+      .artwork:nth-child(3) {
+        margin-top: 60px;
+      }
+
+      .artwork:nth-child(3) img {
+        height: 340px;
+
+        margin-top: -40px;
+      }
+
       .design img {
         height: 320px;
       }
@@ -1253,58 +1295,36 @@ Buy/Enquire </a>
   </div>
 
   <!-- ARTWORK 03 -->
-  
-<img
-  src="Mandarine LP.jpeg"
-  alt="Mandarine LP"
-  onclick="openLightbox(this.src)"
->
 
   <div class="artwork">
 
-<div
-  style="
-    height:280px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#1c1c1c;
-  "
+<img
+src="Mandarine LP.jpeg"
+alt="Mandarine LP"
+onclick="openLightbox(this.src)"
+
 >
-
-  <div>
-
-<h3
-  style="
-    color:#49e6d8;
-    font-size:24px;
-    margin-bottom:10px;
-  "
->
-  Mandarine LP
-</h3>
-
-<p
-  style="color:#ddd;"
-  data-en="Acrylic on framed canvas_20x40x1.5cm"
-  data-es="Pintura acrílica sobre lienzo enmarcado_20x40x1.5xm"
->
-  Acrylic on framed canvas_20x40x1.5cm
-</p>
-
-<div
-  class="artwork-price"
-  data-en="Price: 100 €"
-  data-es="Precio: 100 €"
->
-  Price: 100 €
-</div>
-
-  </div>
-
-</div>
 
 <div class="artwork-info">
+
+  <h3>
+    Mandarine LP
+  </h3>
+
+  <p
+    data-en="Acrylic on framed canvas_20x40x1.5cm"
+    data-es="Pintura acrílica sobre lienzo enmarcado_20x40x1.5cm"
+  >
+    Acrylic on framed canvas_20x40x1.5cm
+  </p>
+
+  <div
+    class="artwork-price"
+    data-en="Price: 100 €"
+    data-es="Precio: 100 €"
+  >
+    Price: 100 €
+  </div>
 
   <div
     class="status available"
@@ -1331,7 +1351,6 @@ Buy/Enquire </a>
 </div>
 
   </div>
-
 </div>
 
   </section>
