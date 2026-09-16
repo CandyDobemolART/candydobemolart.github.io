@@ -1,2267 +1,2291 @@
-\<!DOCTYPE html>
-
-\<html lang="en" translate="no">
-\<head>
-&#x20; \<meta charset="UTF-8">
-&#x20; \<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-&#x20; \<title>CandyDobemol\_ART | Art Gallery\</title>
-
-&#x20; \<meta name="description" content="CandyDobemol\_ART - Original artwork, paintings and creative T-shirt designs.">
-
-&#x20; \<meta name="google" content="notranslate">
-
-&#x20; \<style>
-
-&#x20;   \* {
-&#x20;     box-sizing: border-box;
-&#x20;     margin: 0;
-&#x20;     padding: 0;
-&#x20;   }
-
-&#x20;   html {
-&#x20;     scroll-behavior: smooth;
-&#x20;   }
-
-&#x20;   body {
-&#x20;     font-family: Georgia, "Times New Roman", serif;
-&#x20;     background: #111;
-&#x20;     color: #ddd;
-&#x20;     line-height: 1.6;
-&#x20;   }
-
-&#x20;   /\* =========================
-&#x20;      LANGUAGE BUTTON
-&#x20;   \========================= \*/
-
-&#x20;   .language-control {
-&#x20;     position: fixed;
-&#x20;     top: 20px;
-&#x20;     left: 20px;
-&#x20;     z-index: 9998;
-&#x20;   }
-
-&#x20;   \#languageButton {
-&#x20;     width: 92px;
-&#x20;     height: 38px;
-&#x20;     padding: 0;
-&#x20;     background: #111;
-&#x20;     color: #777;
-&#x20;     border: 1px solid #20d5c5;
-&#x20;     border-radius: 20px;
-&#x20;     font-family: Georgia, "Times New Roman", serif;
-&#x20;     font-size: 13px;
-&#x20;     font-weight: bold;
-&#x20;     cursor: pointer;
-&#x20;     box-shadow:
-&#x20;       0 5px 15px rgba(0,0,0,0.45);
-&#x20;     transition: all 0.3s ease;
-&#x20;     position: relative;
-&#x20;     display: flex;
-&#x20;     align-items: center;
-&#x20;     justify-content: space-around;
-&#x20;   }
-
-&#x20;   \#languageButton .language-option {
-&#x20;     width: 40px;
-&#x20;     height: 28px;
-&#x20;     display: flex;
-&#x20;     align-items: center;
-&#x20;     justify-content: center;
-&#x20;     border-radius: 15px;
-&#x20;     transition: all 0.3s ease;
-&#x20;     position: relative;
-&#x20;     z-index: 2;
-&#x20;   }
-
-&#x20;   \#languageButton .language-option.active {
-&#x20;     background: #20d5c5;
-&#x20;     color: #111;
-&#x20;     box-shadow:
-&#x20;       0 0 10px rgba(32,213,197,0.45);
-&#x20;   }
-
-&#x20;   \#languageButton\:hover {
-&#x20;     border-color: #49e6d8;
-&#x20;     box-shadow:
-&#x20;       0 0 18px rgba(32,213,197,0.5);
-&#x20;   }
-
-&#x20;   /\* =========================
-&#x20;      HEADER
-&#x20;   \========================= \*/
-
-&#x20;   header {
-&#x20;     min-height: 330px;
-&#x20;     display: flex;
-&#x20;     flex-direction: column;
-&#x20;     justify-content: center;
-&#x20;     align-items: center;
-&#x20;     text-align: center;
-
-&#x20;     background:
-&#x20;       linear-gradient(
-&#x20;         rgba(0,0,0,0.65),
-&#x20;         rgba(0,0,0,0.75)
-&#x20;       ),
-&#x20;       url("Shu Multi2.jpeg");
+<!DOCTYPE html>
+
+<html lang="en" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CandyDobemol_ART | Art Gallery</title>
+
+<meta name="description" content="CandyDobemol_ART - Original artwork, paintings and creative T-shirt designs.">
+
+<meta name="google" content="notranslate">
+
+<style>
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Georgia, "Times New Roman", serif;
+background: #111;
+color: #ddd;
+line-height: 1.6;
+}
+
+/* =========================
+LANGUAGE BUTTON
+========================= */
+
+.language-control {
+position: fixed;
+top: 20px;
+left: 20px;
+z-index: 9998;
+}
+
+#languageButton {
+width: 92px;
+height: 38px;
+padding: 0;
+background: #111;
+color: #777;
+border: 1px solid #20d5c5;
+border-radius: 20px;
+font-family: Georgia, "Times New Roman", serif;
+font-size: 13px;
+font-weight: bold;
+cursor: pointer;
+box-shadow:
+0 5px 15px rgba(0,0,0,0.45);
+transition: all 0.3s ease;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+#languageButton .language-option {
+width: 40px;
+height: 28px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 15px;
+transition: all 0.3s ease;
+position: relative;
+z-index: 2;
+}
+
+#languageButton .language-option.active {
+background: #20d5c5;
+color: #111;
+box-shadow:
+0 0 10px rgba(32,213,197,0.45);
+}
+
+#languageButton:hover {
+border-color: #49e6d8;
+box-shadow:
+0 0 18px rgba(32,213,197,0.5);
+}
+
+/* =========================
+HEADER
+========================= */
+
+header {
+min-height: 330px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+background:
+linear-gradient(
+rgba(0,0,0,0.65),
+rgba(0,0,0,0.75)
+),
+url("Shu Multi2.jpeg");
 
-&#x20;     background-size: cover;
-&#x20;     background-position: center;
-
-&#x20;     padding: 60px 20px 40px;
-&#x20;   }
-
-&#x20;   header h1 {
-&#x20;     font-size: clamp(45px, 8vw, 80px);
-&#x20;     letter-spacing: 8px;
-&#x20;     text-transform: none;
-
-&#x20;     background: linear-gradient(
-&#x20;       90deg,
-&#x20;       \#ff2d55,
-&#x20;       \#ff9500,
-&#x20;       \#ffd60a,
-&#x20;       \#30d158,
-&#x20;       \#00c7be,
-&#x20;       \#0a84ff,
-&#x20;       \#5e5ce6,
-&#x20;       \#bf5af2,
-&#x20;       \#ff2d55
-&#x20;     );
+background-size: cover;
+background-position: center;
+
+padding: 60px 20px 40px;
+}
+
+header h1 {
+font-size: clamp(45px, 8vw, 80px);
+letter-spacing: 8px;
+text-transform: none;
+
+background: linear-gradient(
+90deg,
+#ff2d55,
+#ff9500,
+#ffd60a,
+#30d158,
+#00c7be,
+#0a84ff,
+#5e5ce6,
+#bf5af2,
+#ff2d55
+);
 
-&#x20;     background-size: 300% auto;
+background-size: 300% auto;
 
-&#x20;     -webkit-background-clip: text;
-&#x20;     background-clip: text;
-&#x20;     -webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
 
-&#x20;     animation: rainbowText 8s linear infinite;
+animation: rainbowText 8s linear infinite;
 
-&#x20;     margin-bottom: 12px;
-&#x20;   }
+margin-bottom: 12px;
+}
 
-&#x20;   @keyframes rainbowText {
-&#x20;     0% {
-&#x20;       background-position: 0% center;
-&#x20;     }
+@keyframes rainbowText {
+0% {
+background-position: 0% center;
+}
 
-&#x20;     100% {
-&#x20;       background-position: 300% center;
-&#x20;     }
-&#x20;   }
+100% {
+background-position: 300% center;
+}
+}
 
-&#x20;   header p {
-&#x20;     font-size: 20px;
-&#x20;     letter-spacing: 3px;
-&#x20;     color: #ddd;
-&#x20;   }
+header p {
+font-size: 20px;
+letter-spacing: 3px;
+color: #ddd;
+}
 
-&#x20;   /\* =========================
-&#x20;      NAVIGATION
-&#x20;   \========================= \*/
+/* =========================
+NAVIGATION
+========================= */
 
-&#x20;   nav {
-&#x20;     position: sticky;
-&#x20;     top: 0;
-&#x20;     z-index: 1000;
+nav {
+position: sticky;
+top: 0;
+z-index: 1000;
 
-&#x20;     background: rgba(10,10,10,0.96);
+background: rgba(10,10,10,0.96);
 
-&#x20;     border-bottom: 1px solid #20d5c5;
+border-bottom: 1px solid #20d5c5;
 
-&#x20;     display: flex;
-&#x20;     justify-content: center;
-&#x20;     flex-wrap: wrap;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
 
-&#x20;     gap: 30px;
+gap: 30px;
 
-&#x20;     padding: 15px 20px;
+padding: 15px 20px;
 
-&#x20;     backdrop-filter: blur(8px);
-&#x20;   }
+backdrop-filter: blur(8px);
+}
 
-&#x20;   nav a {
-&#x20;     color: #49e6d8;
-&#x20;     text-decoration: none;
-&#x20;     font-weight: bold;
-&#x20;     font-size: 17px;
+nav a {
+color: #49e6d8;
+text-decoration: none;
+font-weight: bold;
+font-size: 17px;
 
-&#x20;     transition: all 0.3s ease;
-&#x20;   }
+transition: all 0.3s ease;
+}
 
-&#x20;   nav a\:hover {
-&#x20;     color: #ffffff;
+nav a:hover {
+color: #ffffff;
 
-&#x20;     text-shadow:
-&#x20;       0 0 8px rgba(32,213,197,0.9),
-&#x20;       0 0 18px rgba(32,213,197,0.6);
+text-shadow:
+0 0 8px rgba(32,213,197,0.9),
+0 0 18px rgba(32,213,197,0.6);
 
-&#x20;     transform: translateY(-2px);
-&#x20;   }
+transform: translateY(-2px);
+}
 
-&#x20;   /\* =========================
-&#x20;      SECTIONS
-&#x20;   \========================= \*/
+/* =========================
+SECTIONS
+========================= */
 
-&#x20;   section {
-&#x20;     max-width: 1200px;
-&#x20;     margin: auto;
-&#x20;     padding: 70px 30px;
-&#x20;   }
+section {
+max-width: 1200px;
+margin: auto;
+padding: 70px 30px;
+}
 
-&#x20;   section h2 {
-&#x20;     text-align: center;
-&#x20;     font-size: 38px;
-&#x20;     margin-bottom: 50px;
+section h2 {
+text-align: center;
+font-size: 38px;
+margin-bottom: 50px;
 
-&#x20;     color: #49e6d8;
+color: #49e6d8;
 
-&#x20;     letter-spacing: 2px;
+letter-spacing: 2px;
 
-&#x20;     text-shadow:
-&#x20;       0 0 8px rgba(32,213,197,0.35);
+text-shadow:
+0 0 8px rgba(32,213,197,0.35);
 
-&#x20;     display: flex;
-&#x20;     align-items: center;
-&#x20;     justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
 
-&#x20;     gap: 25px;
-&#x20;   }
+gap: 25px;
+}
 
-&#x20;   section h2::before,
-&#x20;   section h2::after {
-&#x20;     content: "";
+section h2::before,
+section h2::after {
+content: "";
 
-&#x20;     width: 120px;
-&#x20;     height: 1px;
+width: 120px;
+height: 1px;
 
-&#x20;     background: rgba(73,230,216,0.55);
-&#x20;   }
+background: rgba(73,230,216,0.55);
+}
 
-&#x20;   /\* =========================
-&#x20;      ARTWORK GALLERY
-&#x20;   \========================= \*/
+/* =========================
+ARTWORK GALLERY
+========================= */
 
-&#x20;   .gallery {
-&#x20;     display: grid;
+.gallery {
+display: grid;
 
-&#x20;     grid-template-columns:
-&#x20;       repeat(auto-fit, minmax(300px, 1fr));
+grid-template-columns:
+repeat(auto-fit, minmax(300px, 1fr));
 
-&#x20;     gap: 30px;
+gap: 30px;
 
-&#x20;     align-items: stretch;
+align-items: stretch;
 
-&#x20;     margin-top: 100px;
-&#x20;   }
+margin-top: 100px;
+}
 
-&#x20;   .artwork {
-&#x20;     background: #1c1c1c;
+.artwork {
+background: #1c1c1c;
 
-&#x20;     border-radius: 8px;
+border-radius: 8px;
 
-&#x20;     overflow: visible;
+overflow: visible;
 
-&#x20;     text-align: center;
+text-align: center;
 
-&#x20;     box-shadow:
-&#x20;       0 10px 30px rgba(0,0,0,0.45);
+box-shadow:
+0 10px 30px rgba(0,0,0,0.45);
 
-&#x20;     transition: all 0.35s ease;
+transition: all 0.35s ease;
 
-&#x20;     display: flex;
-&#x20;     flex-direction: column;
-&#x20;   }
+display: flex;
+flex-direction: column;
+}
 
-&#x20;   .artwork\:hover {
-&#x20;     transform: translateY(-8px);
+.artwork:hover {
+transform: translateY(-8px);
 
-&#x20;     box-shadow:
-&#x20;       0 15px 35px rgba(0,0,0,0.7),
-&#x20;       0 0 20px rgba(32,213,197,0.15);
-&#x20;   }
+box-shadow:
+0 15px 35px rgba(0,0,0,0.7),
+0 0 20px rgba(32,213,197,0.15);
+}
 
-&#x20;   .artwork img {
-&#x20;     width: 100%;
+.artwork img {
+width: 100%;
 
-&#x20;     height: 280px;
+height: 280px;
 
-&#x20;     object-fit: contain;
+object-fit: contain;
 
-&#x20;     object-position: center center;
+object-position: center center;
 
-&#x20;     display: block;
+display: block;
 
-&#x20;     cursor: zoom-in;
+cursor: zoom-in;
 
-&#x20;     background: #111;
+background: #111;
 
-&#x20;     transition: transform 0.3s ease;
-&#x20;   }
+transition: transform 0.3s ease;
+}
 
-&#x20;   .artwork img\:hover {
-&#x20;     transform: scale(1.02);
-&#x20;   }
+.artwork img:hover {
+transform: scale(1.02);
+}
 
-&#x20;   /\* =========================
-&#x20;      SHU´S SEA
-&#x20;   \========================= \*/
+/* =========================
+SHU´S SEA
+========================= */
 
-&#x20;   .artwork\:nth-child(2) {
-&#x20;     position: relative;
-&#x20;   }
+.artwork:nth-child(2) {
+position: relative;
+}
 
-&#x20;   .artwork\:nth-child(2) img {
-&#x20;     height: 380px;
+.artwork:nth-child(2) img {
+height: 380px;
 
-&#x20;     margin-top: -100px;
+margin-top: -100px;
 
-&#x20;     object-fit: contain;
+object-fit: contain;
 
-&#x20;     object-position: center bottom;
+object-position: center bottom;
 
-&#x20;     background: #111;
+background: #111;
 
-&#x20;     position: relative;
+position: relative;
 
-&#x20;     z-index: 2;
-&#x20;   }
+z-index: 2;
+}
 
-&#x20;   .artwork\:nth-child(2) .artwork-info {
-&#x20;     position: relative;
+.artwork:nth-child(2) .artwork-info {
+position: relative;
 
-&#x20;     z-index: 3;
+z-index: 3;
 
-&#x20;     background: #1c1c1c;
-&#x20;   }
+background: #1c1c1c;
+}
 
-&#x20;   /\* =========================
-&#x20;      MANDARINE LP
-&#x20;   \========================= \*/
+/* =========================
+MANDARINE LP
+========================= */
 
-&#x20;   .artwork\:nth-child(3) {
-&#x20;     position: relative;
-&#x20;   }
+.artwork:nth-child(3) {
+position: relative;
+}
 
-&#x20;   .artwork\:nth-child(3) img {
-&#x20;     height: 360px;
+.artwork:nth-child(3) img {
+height: 360px;
 
-&#x20;     margin-top: -80px;
+margin-top: -80px;
 
-&#x20;     object-fit: contain;
+object-fit: contain;
 
-&#x20;     object-position: center bottom;
+object-position: center bottom;
 
-&#x20;     background: #111;
+background: #111;
 
-&#x20;     position: relative;
+position: relative;
 
-&#x20;     z-index: 2;
-&#x20;   }
+z-index: 2;
+}
 
-&#x20;   .artwork\:nth-child(3) .artwork-info {
-&#x20;     position: relative;
+.artwork:nth-child(3) .artwork-info {
+position: relative;
 
-&#x20;     z-index: 3;
+z-index: 3;
 
-&#x20;     background: #1c1c1c;
-&#x20;   }
+background: #1c1c1c;
+}
 
-&#x20;   /\* =========================
-&#x20;      ARTWORK 04 & 05
-&#x20;   \========================= \*/
+/* =========================
+ARTWORK 04 & 05
+========================= */
 
-&#x20;   .artwork\:nth-child(4),
-&#x20;   .artwork\:nth-child(5) {
-&#x20;     position: relative;
-&#x20;     margin-top: 80px;
-&#x20;   }
+.artwork:nth-child(4),
+.artwork:nth-child(5) {
+position: relative;
+margin-top: 80px;
+}
 
-&#x20;   .artwork\:nth-child(4) img,
-&#x20;   .artwork\:nth-child(5) img {
-&#x20;     height: 360px;
+.artwork:nth-child(4) img,
+.artwork:nth-child(5) img {
+height: 360px;
 
-&#x20;     margin-top: -80px;
+margin-top: -80px;
 
-&#x20;     object-fit: contain;
+object-fit: contain;
 
-&#x20;     object-position: center bottom;
+object-position: center bottom;
 
-&#x20;     background: #111;
+background: #111;
 
-&#x20;     position: relative;
+position: relative;
 
-&#x20;     z-index: 2;
-&#x20;   }
+z-index: 2;
+}
 
-&#x20;   .artwork\:nth-child(4) .artwork-info,
-&#x20;   .artwork\:nth-child(5) .artwork-info {
-&#x20;     position: relative;
+.artwork:nth-child(4) .artwork-info,
+.artwork:nth-child(5) .artwork-info {
+position: relative;
 
-&#x20;     z-index: 3;
+z-index: 3;
 
-&#x20;     background: #1c1c1c;
-&#x20;   }
+background: #1c1c1c;
+}
 
-&#x20;   /\* =========================
-&#x20;      ARTWORK INFORMATION
-&#x20;   \========================= \*/
+/* =========================
+ARTWORK INFORMATION
+========================= */
 
-&#x20;   .artwork-info {
-&#x20;     padding: 20px;
+.artwork-info {
+padding: 20px;
 
-&#x20;     flex: 1;
+flex: 1;
 
-&#x20;     display: flex;
-&#x20;     flex-direction: column;
+display: flex;
+flex-direction: column;
 
-&#x20;     justify-content: flex-start;
-&#x20;   }
+justify-content: flex-start;
+}
 
-&#x20;   .artwork-info h3 {
-&#x20;     font-size: 22px;
+.artwork-info h3 {
+font-size: 22px;
 
-&#x20;     margin-bottom: 8px;
+margin-bottom: 8px;
 
-&#x20;     color: #49e6d8;
-&#x20;   }
+color: #49e6d8;
+}
 
-&#x20;   .artwork-info p {
-&#x20;     color: #ddd;
+.artwork-info p {
+color: #ddd;
 
-&#x20;     margin-bottom: 12px;
+margin-bottom: 12px;
 
-&#x20;     font-size: 16px;
-&#x20;   }
+font-size: 16px;
+}
 
-&#x20;   .status {
-&#x20;     font-size: 17px;
+.status {
+font-size: 17px;
 
-&#x20;     font-weight: bold;
+font-weight: bold;
 
-&#x20;     margin: 10px 0 14px;
+margin: 10px 0 14px;
 
-&#x20;     letter-spacing: 1px;
-&#x20;   }
+letter-spacing: 1px;
+}
 
-&#x20;   .status.available {
-&#x20;     color: #39d353;
+.status.available {
+color: #39d353;
 
-&#x20;     text-shadow:
-&#x20;       0 0 8px rgba(57,211,83,0.35);
-&#x20;   }
+text-shadow:
+0 0 8px rgba(57,211,83,0.35);
+}
 
-&#x20;   .status.sold {
-&#x20;     color: #ff4d4d;
+.status.sold {
+color: #ff4d4d;
 
-&#x20;     text-shadow:
-&#x20;       0 0 8px rgba(255,77,77,0.35);
-&#x20;   }
+text-shadow:
+0 0 8px rgba(255,77,77,0.35);
+}
 
-&#x20;   .price-area {
-&#x20;     border-top:
-&#x20;       1px solid rgba(32,213,197,0.45);
+.price-area {
+border-top:
+1px solid rgba(32,213,197,0.45);
 
-&#x20;     margin-top: 5px;
+margin-top: 5px;
 
-&#x20;     padding-top: 18px;
-&#x20;   }
+padding-top: 18px;
+}
 
-&#x20;   /\* =========================
-&#x20;      BUTTONS
-&#x20;   \========================= \*/
+/* =========================
+BUTTONS
+========================= */
 
-&#x20;   .button {
-&#x20;     display: inline-block;
+.button {
+display: inline-block;
 
-&#x20;     padding: 11px 22px;
+padding: 11px 22px;
 
-&#x20;     border: 1px solid #20d5c5;
+border: 1px solid #20d5c5;
 
-&#x20;     border-radius: 25px;
+border-radius: 25px;
 
-&#x20;     color: #49e6d8;
+color: #49e6d8;
 
-&#x20;     background: linear-gradient(
-&#x20;       135deg,
-&#x20;       \#087f7a,
-&#x20;       \#20d5c5,
-&#x20;       \#49e6d8,
-&#x20;       \#b8fff8,
-&#x20;       \#20d5c5,
-&#x20;       \#087f7a
-&#x20;     );
+background: linear-gradient(
+135deg,
+#087f7a,
+#20d5c5,
+#49e6d8,
+#b8fff8,
+#20d5c5,
+#087f7a
+);
 
-&#x20;     background-size: 250% 250%;
+background-size: 250% 250%;
 
-&#x20;     -webkit-background-clip: text;
-&#x20;     background-clip: text;
-&#x20;     -webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
 
-&#x20;     text-decoration: none;
+text-decoration: none;
 
-&#x20;     font-weight: bold;
+font-weight: bold;
 
-&#x20;     transition: all 0.4s ease;
+transition: all 0.4s ease;
 
-&#x20;     box-shadow:
-&#x20;       0 4px 12px rgba(32,213,197,0.15);
-&#x20;   }
+box-shadow:
+0 4px 12px rgba(32,213,197,0.15);
+}
 
-&#x20;   .button\:hover {
-&#x20;     background-position: 100% 50%;
+.button:hover {
+background-position: 100% 50%;
 
-&#x20;     border-color: #b8fff8;
+border-color: #b8fff8;
 
-&#x20;     transform:
-&#x20;       translateY(-3px)
-&#x20;       scale(1.03);
+transform:
+translateY(-3px)
+scale(1.03);
 
-&#x20;     box-shadow:
-&#x20;       0 8px 22px rgba(32,213,197,0.3);
-&#x20;   }
+box-shadow:
+0 8px 22px rgba(32,213,197,0.3);
+}
 
-&#x20;   /\* =========================
-&#x20;      MUSIC BUTTON
-&#x20;   \========================= \*/
+/* =========================
+MUSIC BUTTON
+========================= */
 
-&#x20;   .music-control {
-&#x20;     position: fixed;
+.music-control {
+position: fixed;
 
-&#x20;     top: 10px;
-&#x20;     right: 20px;
+top: 10px;
+right: 20px;
 
-&#x20;     width: 92px;
-&#x20;     height: 92px;
+width: 92px;
+height: 92px;
 
-&#x20;     z-index: 9998;
+z-index: 9998;
 
-&#x20;     display: flex;
-&#x20;     align-items: center;
-&#x20;     justify-content: center;
-&#x20;   }
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
-&#x20;   .music-ring {
-&#x20;     position: absolute;
+.music-ring {
+position: absolute;
 
-&#x20;     width: 92px;
-&#x20;     height: 92px;
+width: 92px;
+height: 92px;
 
-&#x20;     animation: musicRingRotate 18s linear infinite;
+animation: musicRingRotate 18s linear infinite;
 
-&#x20;     pointer-events: none;
-&#x20;   }
+pointer-events: none;
+}
 
-&#x20;   .music-ring svg {
-&#x20;     width: 100%;
-&#x20;     height: 100%;
+.music-ring svg {
+width: 100%;
+height: 100%;
 
-&#x20;     overflow: visible;
-&#x20;   }
+overflow: visible;
+}
 
-&#x20;   .music-ring text {
-&#x20;     font-family: Georgia, "Times New Roman", serif;
-&#x20;     font-size: 9.9px;
-&#x20;     font-weight: bold;
-&#x20;     letter-spacing: 1.3px;
-&#x20;     fill: #ffffff !important;
-&#x20;   }
+.music-ring text {
+font-family: Georgia, "Times New Roman", serif;
+font-size: 9.9px;
+font-weight: bold;
+letter-spacing: 1.3px;
+fill: #ffffff !important;
+}
 
-&#x20;   .turn-pink {
-&#x20;     fill: #ffffff !important;
-&#x20;   }
+.turn-pink {
+fill: #ffffff !important;
+}
 
-&#x20;   .turn-yellow {
-&#x20;     fill: #ffffff !important;
-&#x20;   }
+.turn-yellow {
+fill: #ffffff !important;
+}
 
-&#x20;   .turn-purple {
-&#x20;     fill: #ffffff !important;
-&#x20;   }
+.turn-purple {
+fill: #ffffff !important;
+}
 
-&#x20;   @keyframes musicRingRotate {
-&#x20;     from {
-&#x20;       transform: rotate(0deg);
-&#x20;     }
+@keyframes musicRingRotate {
+from {
+transform: rotate(0deg);
+}
 
-&#x20;     to {
-&#x20;       transform: rotate(360deg);
-&#x20;     }
-&#x20;   }
+to {
+transform: rotate(360deg);
+}
+}
 
-&#x20;   \#musicButton {
-&#x20;     position: relative;
+#musicButton {
+position: relative;
 
-&#x20;     width: 58px;
-&#x20;     height: 58px;
+width: 58px;
+height: 58px;
 
-&#x20;     background: #20d5c5;
+background: #20d5c5;
 
-&#x20;     color: #ffffff;
+color: #ffffff;
 
-&#x20;     border: none;
+border: none;
 
-&#x20;     border-radius: 50%;
+border-radius: 50%;
 
-&#x20;     padding: 0;
+padding: 0;
 
-&#x20;     font-family: Georgia, "Times New Roman", serif;
+font-family: Georgia, "Times New Roman", serif;
 
-&#x20;     font-size: 13px;
+font-size: 13px;
 
-&#x20;     font-weight: bold;
+font-weight: bold;
 
-&#x20;     cursor: pointer;
+cursor: pointer;
 
-&#x20;     box-shadow:
-&#x20;       0 5px 15px rgba(0,0,0,0.45);
+box-shadow:
+0 5px 15px rgba(0,0,0,0.45);
 
-&#x20;     transition: all 0.3s ease;
+transition: all 0.3s ease;
 
-&#x20;     z-index: 2;
-&#x20;   }
+z-index: 2;
+}
 
-&#x20;   \#musicButton\:hover {
-&#x20;     background: #49e6d8;
+#musicButton:hover {
+background: #49e6d8;
 
-&#x20;     color: #ffffff;
+color: #ffffff;
 
-&#x20;     transform: scale(1.08);
+transform: scale(1.08);
 
-&#x20;     box-shadow:
-&#x20;       0 0 18px rgba(32,213,197,0.6);
-&#x20;   }
+box-shadow:
+0 0 18px rgba(32,213,197,0.6);
+}
 
-&#x20;   /\* =========================
-&#x20;      T-SHIRT DESIGNS
-&#x20;   \========================= \*/
+/* =========================
+T-SHIRT DESIGNS
+========================= */
 
-&#x20;   .designs {
-&#x20;     display: grid;
+.designs {
+display: grid;
 
-&#x20;     grid-template-columns:
-&#x20;       repeat(auto-fit, minmax(300px, 1fr));
+grid-template-columns:
+repeat(auto-fit, minmax(300px, 1fr));
 
-&#x20;     gap: 30px;
-&#x20;   }
+gap: 30px;
+}
 
-&#x20;   .design {
-&#x20;     background: #1c1c1c;
+.design {
+background: #1c1c1c;
 
-&#x20;     border-radius: 8px;
+border-radius: 8px;
 
-&#x20;     overflow: hidden;
+overflow: hidden;
 
-&#x20;     text-align: center;
+text-align: center;
 
-&#x20;     box-shadow:
-&#x20;       0 10px 30px rgba(0,0,0,0.45);
+box-shadow:
+0 10px 30px rgba(0,0,0,0.45);
 
-&#x20;     transition: all 0.35s ease;
-&#x20;   }
+transition: all 0.35s ease;
+}
 
-&#x20;   .design\:hover {
-&#x20;     transform: translateY(-8px);
+.design:hover {
+transform: translateY(-8px);
 
-&#x20;     box-shadow:
-&#x20;       0 15px 35px rgba(0,0,0,0.7),
-&#x20;       0 0 20px rgba(32,213,197,0.15);
-&#x20;   }
+box-shadow:
+0 15px 35px rgba(0,0,0,0.7),
+0 0 20px rgba(32,213,197,0.15);
+}
 
-&#x20;   .design img {
-&#x20;     width: 100%;
+.design img {
+width: 100%;
 
-&#x20;     height: 350px;
+height: 350px;
 
-&#x20;     object-fit: cover;
+object-fit: cover;
 
-&#x20;     object-position: center center;
+object-position: center center;
 
-&#x20;     display: block;
+display: block;
 
-&#x20;     cursor: zoom-in;
+cursor: zoom-in;
 
-&#x20;     background: #111;
+background: #111;
 
-&#x20;     transition: transform 0.3s ease;
-&#x20;   }
+transition: transform 0.3s ease;
+}
 
-&#x20;   .design img\:hover {
-&#x20;     transform: scale(1.02);
-&#x20;   }
+.design img:hover {
+transform: scale(1.02);
+}
 
-&#x20;   .design-info {
-&#x20;     padding: 20px;
-&#x20;   }
+.design-info {
+padding: 20px;
+}
 
-&#x20;   .design-info h3 {
-&#x20;     font-size: 21px;
+.design-info h3 {
+font-size: 21px;
 
-&#x20;     margin-bottom: 8px;
+margin-bottom: 8px;
 
-&#x20;     color: #49e6d8;
-&#x20;   }
+color: #49e6d8;
+}
 
-&#x20;   .design-info p {
-&#x20;     color: #ddd;
+.design-info p {
+color: #ddd;
 
-&#x20;     margin-bottom: 15px;
-&#x20;   }
+margin-bottom: 15px;
+}
 
-&#x20;   /\* =========================
-&#x20;      ABOUT
-&#x20;   \========================= \*/
+/* =========================
+ABOUT
+========================= */
 
-&#x20;   \#about {
-&#x20;     text-align: center;
-&#x20;   }
+#about {
+text-align: center;
+}
 
-&#x20;   .about-content {
-&#x20;     display: flex;
+.about-content {
+display: flex;
 
-&#x20;     align-items: center;
+align-items: center;
 
-&#x20;     justify-content: center;
+justify-content: center;
 
-&#x20;     gap: 50px;
+gap: 50px;
 
-&#x20;     max-width: 1000px;
+max-width: 1000px;
 
-&#x20;     margin: auto;
+margin: auto;
 
-&#x20;     text-align: left;
-&#x20;   }
+text-align: left;
+}
 
-&#x20;   .about-photo {
-&#x20;     flex: 0 0 300px;
-&#x20;   }
+.about-photo {
+flex: 0 0 300px;
+}
 
-&#x20;   .about-photo img {
-&#x20;     width: 300px;
+.about-photo img {
+width: 300px;
 
-&#x20;     height: 300px;
+height: 300px;
 
-&#x20;     object-fit: cover;
+object-fit: cover;
 
-&#x20;     object-position: center;
+object-position: center;
 
-&#x20;     display: block;
+display: block;
 
-&#x20;     border-radius: 8px;
+border-radius: 8px;
 
-&#x20;     border:
-&#x20;       1px solid rgba(32,213,197,0.45);
+border:
+1px solid rgba(32,213,197,0.45);
 
-&#x20;     box-shadow:
-&#x20;       0 10px 30px rgba(0,0,0,0.5),
-&#x20;       0 0 20px rgba(32,213,197,0.12);
-&#x20;   }
+box-shadow:
+0 10px 30px rgba(0,0,0,0.5),
+0 0 20px rgba(32,213,197,0.12);
+}
 
-&#x20;   .about-photo img\:hover {
-&#x20;     transform: scale(1.02);
-&#x20;   }
+.about-photo img:hover {
+transform: scale(1.02);
+}
 
-&#x20;   .about-text {
-&#x20;     flex: 1;
-&#x20;   }
+.about-text {
+flex: 1;
+}
 
-&#x20;   .about-text p {
-&#x20;     max-width: none;
+.about-text p {
+max-width: none;
 
-&#x20;     margin: 0;
+margin: 0;
 
-&#x20;     font-size: 18px;
+font-size: 18px;
 
-&#x20;     color: #ccc;
+color: #ccc;
 
-&#x20;     line-height: 1.8;
-&#x20;   }
+line-height: 1.8;
+}
 
-&#x20;   /\* =========================
-&#x20;      CONTACT
-&#x20;   \========================= \*/
+/* =========================
+CONTACT
+========================= */
 
-&#x20;   \#contact {
-&#x20;     text-align: center;
-&#x20;   }
+#contact {
+text-align: center;
+}
 
-&#x20;   \#contact p {
-&#x20;     margin-bottom: 12px;
+#contact p {
+margin-bottom: 12px;
 
-&#x20;     font-size: 18px;
-&#x20;   }
+font-size: 18px;
+}
 
-&#x20;   .email-link {
-&#x20;     display: inline-block;
+.email-link {
+display: inline-block;
 
-&#x20;     margin-top: 15px;
+margin-top: 15px;
 
-&#x20;     color: #49e6d8;
+color: #49e6d8;
 
-&#x20;     font-size: 20px;
+font-size: 20px;
 
-&#x20;     font-weight: bold;
+font-weight: bold;
 
-&#x20;     text-decoration: none;
+text-decoration: none;
 
-&#x20;     transition: all 0.3s ease;
-&#x20;   }
+transition: all 0.3s ease;
+}
 
-&#x20;   .email-link\:hover {
-&#x20;     color: #ffffff;
+.email-link:hover {
+color: #ffffff;
 
-&#x20;     text-shadow:
-&#x20;       0 0 10px rgba(32,213,197,0.9);
-&#x20;   }
+text-shadow:
+0 0 10px rgba(32,213,197,0.9);
+}
 
-&#x20;   /\* =========================
-&#x20;      LIGHTBOX
-&#x20;   \========================= \*/
+/* =========================
+LIGHTBOX
+========================= */
 
-&#x20;   .lightbox {
-&#x20;     display: none;
+.lightbox {
+display: none;
 
-&#x20;     position: fixed;
+position: fixed;
 
-&#x20;     z-index: 9999;
+z-index: 9999;
 
-&#x20;     left: 0;
-&#x20;     top: 0;
+left: 0;
+top: 0;
 
-&#x20;     width: 100%;
-&#x20;     height: 100%;
+width: 100%;
+height: 100%;
 
-&#x20;     background: rgba(0,0,0,0.94);
+background: rgba(0,0,0,0.94);
 
-&#x20;     align-items: center;
+align-items: center;
 
-&#x20;     justify-content: center;
+justify-content: center;
 
-&#x20;     padding: 30px;
-&#x20;   }
+padding: 30px;
+}
 
-&#x20;   .lightbox img {
-&#x20;     max-width: 90%;
+.lightbox img {
+max-width: 90%;
 
-&#x20;     max-height: 90%;
+max-height: 90%;
 
-&#x20;     object-fit: contain;
+object-fit: contain;
 
-&#x20;     border-radius: 5px;
+border-radius: 5px;
 
-&#x20;     box-shadow:
-&#x20;       0 0 40px rgba(0,0,0,0.8);
-&#x20;   }
+box-shadow:
+0 0 40px rgba(0,0,0,0.8);
+}
 
-&#x20;   .lightbox .close {
-&#x20;     position: absolute;
+.lightbox .close {
+position: absolute;
 
-&#x20;     top: 20px;
-&#x20;     right: 35px;
+top: 20px;
+right: 35px;
 
-&#x20;     font-size: 45px;
+font-size: 45px;
 
-&#x20;     color: #49e6d8;
+color: #49e6d8;
 
-&#x20;     cursor: pointer;
+cursor: pointer;
 
-&#x20;     font-weight: bold;
+font-weight: bold;
 
-&#x20;     transition: all 0.3s ease;
-&#x20;   }
+transition: all 0.3s ease;
+}
 
-&#x20;   .lightbox .close\:hover {
-&#x20;     color: #ffffff;
+.lightbox .close:hover {
+color: #ffffff;
 
-&#x20;     text-shadow:
-&#x20;       0 0 10px rgba(32,213,197,0.9);
-&#x20;   }
+text-shadow:
+0 0 10px rgba(32,213,197,0.9);
+}
 
-&#x20;   /\* =========================
-&#x20;      FOOTER
-&#x20;   \========================= \*/
+/* =========================
+FOOTER
+========================= */
 
-&#x20;   footer {
-&#x20;     text-align: center;
+footer {
+text-align: center;
 
-&#x20;     padding: 30px 20px;
+padding: 30px 20px;
 
-&#x20;     background: #090909;
+background: #090909;
 
-&#x20;     border-top:
-&#x20;       1px solid rgba(32,213,197,0.35);
+border-top:
+1px solid rgba(32,213,197,0.35);
 
-&#x20;     color: #aaa;
+color: #aaa;
 
-&#x20;     font-size: 14px;
-&#x20;   }
+font-size: 14px;
+}
 
-&#x20;   /\* =========================
-&#x20;      MOBILE
-&#x20;   \========================= \*/
+/* =========================
+MOBILE
+========================= */
 
-&#x20;   @media (max-width: 700px) {
+@media (max-width: 700px) {
 
-&#x20;     header {
-&#x20;       min-height: 280px;
+header {
+min-height: 280px;
 
-&#x20;       padding: 50px 15px 35px;
-&#x20;     }
+padding: 50px 15px 35px;
+}
 
-&#x20;     header h1 {
-&#x20;       font-size: 40px;
+header h1 {
+font-size: 40px;
 
-&#x20;       letter-spacing: 4px;
-&#x20;     }
+letter-spacing: 4px;
+}
 
-&#x20;     header p {
-&#x20;       font-size: 16px;
+header p {
+font-size: 16px;
 
-&#x20;       letter-spacing: 2px;
-&#x20;     }
+letter-spacing: 2px;
+}
 
-&#x20;     nav {
-&#x20;       gap: 15px;
+nav {
+gap: 15px;
 
-&#x20;       padding: 60px 10px 12px;
-&#x20;     }
+padding: 60px 10px 12px;
+}
 
-&#x20;     nav a {
-&#x20;       font-size: 15px;
-&#x20;     }
+nav a {
+font-size: 15px;
+}
 
-&#x20;     section {
-&#x20;       padding: 55px 18px;
-&#x20;     }
+section {
+padding: 55px 18px;
+}
 
-&#x20;     section h2 {
-&#x20;       font-size: 30px;
+section h2 {
+font-size: 30px;
 
-&#x20;       margin-bottom: 35px;
-&#x20;     }
+margin-bottom: 35px;
+}
 
-&#x20;     section h2::before,
-&#x20;     section h2::after {
-&#x20;       width: 50px;
-&#x20;     }
+section h2::before,
+section h2::after {
+width: 50px;
+}
 
-&#x20;     .gallery,
-&#x20;     .designs {
-&#x20;       grid-template-columns: 1fr;
-&#x20;     }
+.gallery,
+.designs {
+grid-template-columns: 1fr;
+}
 
-&#x20;     /\* =========================
-&#x20;        MOBILE ARTWORK
-&#x20;     \========================= \*/
+/* =========================
+MOBILE ARTWORK
+========================= */
 
-&#x20;     .gallery {
-&#x20;       margin-top: 80px;
-&#x20;     }
+.gallery {
+margin-top: 80px;
+}
 
-&#x20;     .artwork img {
-&#x20;       height: 300px;
-&#x20;     }
+.artwork img {
+height: 300px;
+}
 
-&#x20;     .artwork\:nth-child(2) {
-&#x20;       margin-top: 70px;
-&#x20;     }
+.artwork:nth-child(2) {
+margin-top: 70px;
+}
 
-&#x20;     .artwork\:nth-child(2) img {
-&#x20;       height: 350px;
+.artwork:nth-child(2) img {
+height: 350px;
 
-&#x20;       margin-top: -50px;
-&#x20;     }
+margin-top: -50px;
+}
 
-&#x20;     .artwork\:nth-child(3) {
-&#x20;       margin-top: 60px;
-&#x20;     }
+.artwork:nth-child(3) {
+margin-top: 60px;
+}
 
-&#x20;     .artwork\:nth-child(3) img {
-&#x20;       height: 340px;
+.artwork:nth-child(3) img {
+height: 340px;
 
-&#x20;       margin-top: -40px;
-&#x20;     }
+margin-top: -40px;
+}
 
-&#x20;     .artwork\:nth-child(4),
-&#x20;     .artwork\:nth-child(5) {
-&#x20;       margin-top: 60px;
-&#x20;     }
+.artwork:nth-child(4),
+.artwork:nth-child(5) {
+margin-top: 60px;
+}
 
-&#x20;     .artwork\:nth-child(4) img,
-&#x20;     .artwork\:nth-child(5) img {
-&#x20;       height: 340px;
+.artwork:nth-child(4) img,
+.artwork:nth-child(5) img {
+height: 340px;
 
-&#x20;       margin-top: -40px;
-&#x20;     }
+margin-top: -40px;
+}
 
-&#x20;     .design img {
-&#x20;       height: 320px;
-&#x20;     }
+.design img {
+height: 320px;
+}
 
-&#x20;     /\* =========================
-&#x20;        MOBILE MUSIC BUTTON
-&#x20;     \========================= \*/
+/* =========================
+MOBILE MUSIC BUTTON
+========================= */
 
-&#x20;     .music-control {
-&#x20;       top: -5px;
+.music-control {
+top: -5px;
 
-&#x20;       right: 5px;
+right: 5px;
 
-&#x20;       width: 82px;
-&#x20;       height: 82px;
-&#x20;     }
+width: 82px;
+height: 82px;
+}
 
-&#x20;     .music-ring {
-&#x20;       width: 82px;
-&#x20;       height: 82px;
-&#x20;     }
+.music-ring {
+width: 82px;
+height: 82px;
+}
 
-&#x20;     .music-ring text {
-&#x20;       font-size: 9.9px;
+.music-ring text {
+font-size: 9.9px;
 
-&#x20;       letter-spacing: 1.3px;
-&#x20;     }
+letter-spacing: 1.3px;
+}
 
-&#x20;     \#musicButton {
-&#x20;       width: 52px;
-&#x20;       height: 52px;
+#musicButton {
+width: 52px;
+height: 52px;
 
-&#x20;       padding: 0;
+padding: 0;
 
-&#x20;       font-size: 12px;
-&#x20;     }
+font-size: 12px;
+}
 
-&#x20;     /\* =========================
-&#x20;        MOBILE LANGUAGE BUTTON
-&#x20;     \========================= \*/
+/* =========================
+MOBILE LANGUAGE BUTTON
+========================= */
 
-&#x20;     .language-control {
-&#x20;       top: 10px;
-&#x20;       left: 10px;
-&#x20;     }
+.language-control {
+top: 10px;
+left: 10px;
+}
 
-&#x20;     \#languageButton {
-&#x20;       width: 86px;
-&#x20;       height: 36px;
-&#x20;     }
+#languageButton {
+width: 86px;
+height: 36px;
+}
 
-&#x20;     \#languageButton .language-option {
-&#x20;       width: 37px;
-&#x20;       height: 26px;
-&#x20;     }
+#languageButton .language-option {
+width: 37px;
+height: 26px;
+}
 
-&#x20;     /\* =========================
-&#x20;        MOBILE ABOUT
-&#x20;     \========================= \*/
+/* =========================
+MOBILE ABOUT
+========================= */
 
-&#x20;     .about-content {
-&#x20;       flex-direction: column;
+.about-content {
+flex-direction: column;
 
-&#x20;       gap: 30px;
+gap: 30px;
 
-&#x20;       text-align: center;
-&#x20;     }
+text-align: center;
+}
 
-&#x20;     .about-photo {
-&#x20;       flex: none;
-&#x20;     }
+.about-photo {
+flex: none;
+}
 
-&#x20;     .about-photo img {
-&#x20;       width: 240px;
+.about-photo img {
+width: 240px;
 
-&#x20;       height: 240px;
+height: 240px;
 
-&#x20;       margin: auto;
-&#x20;     }
+margin: auto;
+}
 
-&#x20;     .about-text p {
-&#x20;       font-size: 17px;
+.about-text p {
+font-size: 17px;
 
-&#x20;       line-height: 1.7;
-&#x20;     }
-&#x20;   }
+line-height: 1.7;
+}
+}
 
-&#x20; \</style>
+</style>
 
-\</head>
+</head>
 
-\<body class="notranslate">
+<body class="notranslate">
 
-&#x20; \<!-- LANGUAGE BUTTON -->
+<!-- LANGUAGE BUTTON -->
 
-&#x20; \<div class="language-control">
+<div class="language-control">
 
-\<button
+<button
 id="languageButton"
 onclick="toggleLanguage()"
 aria-label="Change language"
 
-\>
+>
 
-\<span class="language-option active" id="languageEN">EN\</span> \<span class="language-option" id="languageES">ES\</span>
+<span class="language-option active" id="languageEN">EN</span> <span class="language-option" id="languageES">ES</span>
 
-\</button>
+</button>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- BACKGROUND MUSIC -->
+<!-- BACKGROUND MUSIC -->
 
-&#x20; \<audio id="backgroundMusic" loop>
-&#x20;   \<source src="Pqña.mp3" type="audio/mpeg">
-&#x20; \</audio>
+<audio id="backgroundMusic" loop>
+<source src="Pqña.mp3" type="audio/mpeg">
+</audio>
 
-&#x20; \<div class="music-control">
+<div class="music-control">
 
-\<div class="music-ring">
+<div class="music-ring">
 
-&#x20; \<svg viewBox="0 0 100 100">
+<svg viewBox="0 0 100 100">
 
-\<defs>
+<defs>
 
-\<path
+<path
 id="musicCircle"
 d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
 />
 
-\</defs>
+</defs>
 
-\<text>
+<text>
 
-&#x20; \<textPath href="#musicCircle" startOffset="0%">
+<textPath href="#musicCircle" startOffset="0%">
 
-\<tspan class="turn-pink" fill="#ffffff">- Turn It Up -\</tspan> \<tspan class="turn-yellow" fill="#ffffff"> Turn It Up -\</tspan> \<tspan class="turn-purple" fill="#ffffff"> Turn It Up -\</tspan>
+<tspan class="turn-pink" fill="#ffffff">- Turn It Up -</tspan> <tspan class="turn-yellow" fill="#ffffff"> Turn It Up -</tspan> <tspan class="turn-purple" fill="#ffffff"> Turn It Up -</tspan>
 
-&#x20; \</textPath>
+</textPath>
 
-\</text>
+</text>
 
-&#x20; \</svg>
+</svg>
 
-\</div>
+</div>
 
-\<button id="musicButton" onclick="toggleMusic()">
-&#x20; 🎵
-\</button>
+<button id="musicButton" onclick="toggleMusic()">
+🎵
+</button>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- HEADER -->
+<!-- HEADER -->
 
-&#x20; \<header id="home">
+<header id="home">
 
-\<h1>
-&#x20; Candy Dobemol\_ART
-\</h1>
+<h1>
+Candy Dobemol_ART
+</h1>
 
-\<p
-&#x20; data-en="Art · Painting · Original Designs"
-&#x20; data-es="Arte · Pintura · Diseños Originales"
-\>
-&#x20; Art · Painting · Original Designs
-\</p>
+<p
+data-en="Art · Painting · Original Designs"
+data-es="Arte · Pintura · Diseños Originales"
+>
+Art · Painting · Original Designs
+</p>
 
-&#x20; \</header>
+</header>
 
-&#x20; \<!-- NAVIGATION -->
+<!-- NAVIGATION -->
 
-&#x20; \<nav>
+<nav>
 
-\<a
+<a
 href="#home"
 data-en="Home"
 data-es="Inicio"
 
-\>
+>
 
-Home \</a>
+Home </a>
 
-\<a
+<a
 href="#artwork"
 data-en="Artwork"
 data-es="Obras"
 
-\>
+>
 
-Artwork \</a>
+Artwork </a>
 
-\<a
+<a
 href="#designs"
 data-en="T-Shirt Designs"
 data-es="Diseños de camisetas"
 
-\>
+>
 
-T-Shirt Designs \</a>
+T-Shirt Designs </a>
 
-\<a
+<a
 href="#about"
 data-en="About"
 data-es="Sobre mí"
 
-\>
+>
 
-About \</a>
+About </a>
 
-\<a
+<a
 href="#contact"
 data-en="Contact"
 data-es="Contacto"
 
-\>
+>
 
-Contact \</a>
+Contact </a>
 
-&#x20; \</nav>
+</nav>
 
-&#x20; \<!-- ARTWORK -->
+<!-- ARTWORK -->
 
-&#x20; \<section id="artwork">
+<section id="artwork">
 
-\<h2
-&#x20; data-en="Artwork"
-&#x20; data-es="Obras"
-\>
-&#x20; Artwork
-\</h2>
+<h2
+data-en="Artwork"
+data-es="Obras"
+>
+Artwork
+</h2>
 
-\<div class="gallery">
+<div class="gallery">
 
-&#x20; \<!-- DOLO´S MINIWORLD -->
+<!-- DOLO´S MINIWORLD -->
 
-&#x20; \<div class="artwork">
+<div class="artwork">
 
-\<img
+<img
 src="Dolo.jpeg"
 alt="Dolo´s MiniWorld"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="artwork-info">
+<div class="artwork-info">
 
-&#x20; \<h3>
-&#x20;   Dolo´s MiniWorld
-&#x20; \</h3>
+<h3>
+Dolo´s MiniWorld
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Acrylic on framed canvas\_6x6x1cm"
-&#x20;   data-es="Pintura acrílica sobre lienzo enmarcado\_6x6x1cm"
-&#x20; \>
-&#x20;   Acrylic on framed canvas\_6x6x1cm
-&#x20; \</p>
+<p
+data-en="Acrylic on framed canvas_6x6x1cm"
+data-es="Pintura acrílica sobre lienzo enmarcado_6x6x1cm"
+>
+Acrylic on framed canvas_6x6x1cm
+</p>
 
-&#x20; \<div
-&#x20;   class="artwork-price"
-&#x20;   data-en="Price: 50 €"
-&#x20;   data-es="Precio: 50 €"
-&#x20; \>
-&#x20;   Price: 50 €
-&#x20; \</div>
+<div
+class="artwork-price"
+data-en="Price: 50 €"
+data-es="Precio: 50 €"
+>
+Price: 50 €
+</div>
 
-&#x20; \<div class="status available"
-&#x20;   data-en="Still here"
-&#x20;   data-es="Sigue aquí"
-&#x20; \>
-&#x20;   Still here
-&#x20; \</div>
+<div class="status available"
+data-en="Still here"
+data-es="Sigue aquí"
+>
+Still here
+</div>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
+<a
 href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 
-\>
+>
 
-Buy/Enquire \</a>
+Buy/Enquire </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- SHU´S SEA -->
+<!-- SHU´S SEA -->
 
-&#x20; \<div class="artwork">
+<div class="artwork">
 
-\<img
+<img
 src="Shu´s Sea.jpg"
 alt="Shu´s Sea"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="artwork-info">
+<div class="artwork-info">
 
-&#x20; \<h3>
-&#x20;   Shu´s Sea
-&#x20; \</h3>
+<h3>
+Shu´s Sea
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Acrylic on framed canvas\_20x50x1,5cm"
-&#x20;   data-es="Pintura acrílica sobre lienzo enmarcado\_20x50x1,5cm"
-&#x20; \>
-&#x20;   Acrylic on framed canvas\_20x50x1,5cm
-&#x20; \</p>
+<p
+data-en="Acrylic on framed canvas_20x50x1,5cm"
+data-es="Pintura acrílica sobre lienzo enmarcado_20x50x1,5cm"
+>
+Acrylic on framed canvas_20x50x1,5cm
+</p>
 
-&#x20; \<div
-&#x20;   class="artwork-price"
-&#x20;   data-en="Price: 80 €"
-&#x20;   data-es="Precio: 80 €"
-&#x20; \>
-&#x20;   Price: 80 €
-&#x20; \</div>
+<div
+class="artwork-price"
+data-en="Price: 80 €"
+data-es="Precio: 80 €"
+>
+Price: 80 €
+</div>
 
-&#x20; \<div
-&#x20;   class="status available"
-&#x20;   data-en="Still here"
-&#x20;   data-es="Sigue aquí"
-&#x20; \>
-&#x20;   Still here
-&#x20; \</div>
+<div
+class="status available"
+data-en="Still here"
+data-es="Sigue aquí"
+>
+Still here
+</div>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
+<a
 href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 
-\>
+>
 
-Buy/Enquire \</a>
+Buy/Enquire </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- ARTWORK 03 -->
+<!-- ARTWORK 03 -->
 
-&#x20; \<div class="artwork">
+<div class="artwork">
 
-\<img
+<img
 src="Mandarine LP.jpeg"
 alt="Mandarine LP"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="artwork-info">
+<div class="artwork-info">
 
-&#x20; \<h3>
-&#x20;   Mandarine LP
-&#x20; \</h3>
+<h3>
+Mandarine LP
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Acrylic on framed canvas\_20x40x1,5cm"
-&#x20;   data-es="Pintura acrílica sobre lienzo enmarcado\_20x40x1,5cm"
-&#x20; \>
-&#x20;   Acrylic on framed canvas\_20x40x1,5cm
-&#x20; \</p>
+<p
+data-en="Acrylic on framed canvas_20x40x1,5cm"
+data-es="Pintura acrílica sobre lienzo enmarcado_20x40x1,5cm"
+>
+Acrylic on framed canvas_20x40x1,5cm
+</p>
 
-&#x20; \<div
-&#x20;   class="artwork-price"
-&#x20;   data-en="Price: 70 €"
-&#x20;   data-es="Precio: 70 €"
-&#x20; \>
-&#x20;   Price: 70 €
-&#x20; \</div>
+<div
+class="artwork-price"
+data-en="Price: 70 €"
+data-es="Precio: 70 €"
+>
+Price: 70 €
+</div>
 
-&#x20; \<div
-&#x20;   class="status available"
-&#x20;   data-en="Still here"
-&#x20;   data-es="Sigue aquí"
-&#x20; \>
-&#x20;   Still here
-&#x20; \</div>
+<div
+class="status available"
+data-en="Still here"
+data-es="Sigue aquí"
+>
+Still here
+</div>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
+<a
 href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 
-\>
+>
 
-Buy/Enquire \</a>
+Buy/Enquire </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- ARTWORK 04 -->
+<!-- ARTWORK 04 -->
 
-&#x20; \<div class="artwork">
+<div class="artwork">
 
-\<img
+<img
 src="Cherokee.jpeg"
 alt="Cherokee"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="artwork-info">
+<div class="artwork-info">
 
-&#x20; \<h3>
-&#x20;   Cherokee
-&#x20; \</h3>
+<h3>
+Cherokee
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Acrylic on panel canvas\_28x36x0,30cm"
-&#x20;   data-es="Pintura acrílica sobre lienzo en  panel \_28x36x0,30cm"
-&#x20; \>
-&#x20;   Acrylic on panel canvas\_28x36x0,30cm
-&#x20; \</p>
+<p
+data-en="Acrylic on panel canvas_28x36x0,30cm"
+data-es="Pintura acrílica sobre lienzo en panel _28x36x0,30cm"
+>
+Acrylic on panel canvas_28x36x0,30cm
+</p>
 
-&#x20; \<div
-&#x20;   class="artwork-price"
-&#x20;   data-en="Price: 60 €"
-&#x20;   data-es="Precio: 60 €"
-&#x20; \>
-&#x20;   Price: 60 €
-&#x20; \</div>
+<div
+class="artwork-price"
+data-en="Price: 60 €"
+data-es="Precio: 60 €"
+>
+Price: 60 €
+</div>
 
-&#x20; \<div
-&#x20;   class="status available"
-&#x20;   data-en="Still here"
-&#x20;   data-es="Sigue aquí"
-&#x20; \>
-&#x20;   Still here
-&#x20; \</div>
+<div
+class="status available"
+data-en="Still here"
+data-es="Sigue aquí"
+>
+Still here
+</div>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
+<a
 href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 
-\>
+>
 
-Buy/Enquire \</a>
+Buy/Enquire </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- ARTWORK 05 -->
+<!-- ARTWORK 05 -->
 
-&#x20; \<div class="artwork">
+<div class="artwork">
 
-\<img
+<img
 src="On the way.jpeg"
 alt="On the way"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="artwork-info">
+<div class="artwork-info">
 
-&#x20; \<h3>
-&#x20;   On the way
-&#x20; \</h3>
+<h3>
+On the way
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Acrylic on panel canvas\_30.5x23x0,30cm"
-&#x20;   data-es="Pintura acrílica sobre lienzo en panel\_30.5x23x0,30cm"
-&#x20; \>
-&#x20;   Acrylic on panel canvas\_30.5x23x0,30cm
-&#x20; \</p>
+<p
+data-en="Acrylic on panel canvas_30.5x23x0,30cm"
+data-es="Pintura acrílica sobre lienzo en panel_30.5x23x0,30cm"
+>
+Acrylic on panel canvas_30.5x23x0,30cm
+</p>
 
-&#x20; \<div
-&#x20;   class="artwork-price"
-&#x20;   data-en="Price: 60 €"
-&#x20;   data-es="Precio: 60 €"
-&#x20; \>
-&#x20;   Price: 60 €
-&#x20; \</div>
+<div
+class="artwork-price"
+data-en="Price: 60 €"
+data-es="Precio: 60 €"
+>
+Price: 60 €
+</div>
 
-&#x20; \<div
-&#x20;   class="status available"
-&#x20;   data-en="Still here"
-&#x20;   data-es="Sigue aquí"
-&#x20; \>
-&#x20;   Still here
-&#x20; \</div>
+<div
+class="status available"
+data-en="Still here"
+data-es="Sigue aquí"
+>
+Still here
+</div>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
+<a
 href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 
-\>
+>
 
-Buy/Enquire \</a>
+Buy/Enquire </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \</section>
+</section>
 
-&#x20; \<!-- T-SHIRT DESIGNS -->
+<!-- T-SHIRT DESIGNS -->
 
-&#x20; \<section id="designs">
+<section id="designs">
 
-\<h2
-&#x20; data-en="T-Shirt Designs"
-&#x20; data-es="Diseños de camisetas"
-\>
-&#x20; T-Shirt Designs
-\</h2>
+<h2
+data-en="T-Shirt Designs"
+data-es="Diseños de camisetas"
+>
+T-Shirt Designs
+</h2>
 
-\<div class="designs">
+<div class="designs">
 
-&#x20; \<!-- DESIGN 1 -->
+<!-- DESIGN 1 -->
 
-&#x20; \<div class="design">
+<div class="design">
 
-\<img
+<img
 src="Shu.webp"
 alt="Shu Multi-Guitar2"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="design-info">
+<div class="design-info">
 
-&#x20; \<h3>
-&#x20;   Shu Multi-Guitar2
-&#x20; \</h3>
+<h3>
+Shu Multi-Guitar2
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Original T-shirt design"
-&#x20;   data-es="Diseño original de camiseta"
-&#x20; \>
-&#x20;   Original T-shirt design
-&#x20; \</p>
+<p
+data-en="Original T-shirt design"
+data-es="Diseño original de camiseta"
+>
+Original T-shirt design
+</p>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
-href="[https://www.latostadora.com/web/dobemola-shu-multi-guitar2/11674014?s=H\_A1](https://www.latostadora.com/web/dobemola-shu-multi-guitar2/11674014?s=H_A1)"
+<a
+href="https://www.latostadora.com/web/dobemola-shu-multi-guitar2/11674014?s=H_A1"
 class="button"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 
-\>
+>
 
-Have a look! \</a>
+Have a look! </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- DESIGN 2 -->
+<!-- DESIGN 2 -->
 
-&#x20; \<div class="design">
+<div class="design">
 
-\<img
+<img
 src="Freenomads Girl.webp"
 alt="Freenomads Multi-Guitar"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="design-info">
+<div class="design-info">
 
-&#x20; \<h3>
-&#x20;   Freenomads Multi-Guitar
-&#x20; \</h3>
+<h3>
+Freenomads Multi-Guitar
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Original T-shirt design"
-&#x20;   data-es="Diseño original de camiseta"
-&#x20; \>
-&#x20;   Original T-shirt design
-&#x20; \</p>
+<p
+data-en="Original T-shirt design"
+data-es="Diseño original de camiseta"
+>
+Original T-shirt design
+</p>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
-href="[https://www.latostadora.com/web/dobemola-freenomads-multi-guitar/11512389?s=M\_F1](https://www.latostadora.com/web/dobemola-freenomads-multi-guitar/11512389?s=M_F1)"
+<a
+href="https://www.latostadora.com/web/dobemola-freenomads-multi-guitar/11512389?s=M_F1"
 class="button"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 
-\>
+>
 
-Have a look! \</a>
+Have a look! </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- DESIGN 3 -->
+<!-- DESIGN 3 -->
 
-&#x20; \<div class="design">
+<div class="design">
 
-\<img
+<img
 src="Twin Girl.webp"
 alt="Twin Multi-Guitar"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="design-info">
+<div class="design-info">
 
-&#x20; \<h3>
-&#x20;   Twin Multi-Guitar
-&#x20; \</h3>
+<h3>
+Twin Multi-Guitar
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Original T-shirt design"
-&#x20;   data-es="Diseño original de camiseta"
-&#x20; \>
-&#x20;   Original T-shirt design
-&#x20; \</p>
+<p
+data-en="Original T-shirt design"
+data-es="Diseño original de camiseta"
+>
+Original T-shirt design
+</p>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
-href="[https://www.latostadora.com/web/dobemola-twin-multi-guitar/11673960?s=M\_L1](https://www.latostadora.com/web/dobemola-twin-multi-guitar/11673960?s=M_L1)"
+<a
+href="https://www.latostadora.com/web/dobemola-twin-multi-guitar/11673960?s=M_L1"
 class="button"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 
-\>
+>
 
-Have a look! \</a>
+Have a look! </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- DESIGN 4 -->
+<!-- DESIGN 4 -->
 
-&#x20; \<div class="design">
+<div class="design">
 
-\<img
+<img
 src="Black Guitar.webp"
 alt="Black Guitar"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="design-info">
+<div class="design-info">
 
-&#x20; \<h3>
-&#x20;   Black Guitar
-&#x20; \</h3>
+<h3>
+Black Guitar
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Original T-shirt design"
-&#x20;   data-es="Diseño original de camiseta"
-&#x20; \>
-&#x20;   Original T-shirt design
-&#x20; \</p>
+<p
+data-en="Original T-shirt design"
+data-es="Diseño original de camiseta"
+>
+Original T-shirt design
+</p>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
-href="[https://www.latostadora.com/web/dobemola-black-guitar/11527097?s=H\_A17](https://www.latostadora.com/web/dobemola-black-guitar/11527097?s=H_A17)"
+<a
+href="https://www.latostadora.com/web/dobemola-black-guitar/11527097?s=H_A17"
 class="button"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 
-\>
+>
 
-Have a look! \</a>
+Have a look! </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- DESIGN 5 -->
+<!-- DESIGN 5 -->
 
-&#x20; \<div class="design">
+<div class="design">
 
-\<img
+<img
 src="Yellow Guitar.webp"
 alt="Yellow Guitar"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="design-info">
+<div class="design-info">
 
-&#x20; \<h3>
-&#x20;   Yellow Guitar
-&#x20; \</h3>
+<h3>
+Yellow Guitar
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Original T-shirt design"
-&#x20;   data-es="Diseño original de camiseta"
-&#x20; \>
-&#x20;   Original T-shirt design
-&#x20; \</p>
+<p
+data-en="Original T-shirt design"
+data-es="Diseño original de camiseta"
+>
+Original T-shirt design
+</p>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
-href="[https://www.latostadora.com/web/dobemola-yellow-guitar/11535941?s=M\_L1](https://www.latostadora.com/web/dobemola-yellow-guitar/11535941?s=M_L1)"
+<a
+href="https://www.latostadora.com/web/dobemola-yellow-guitar/11535941?s=M_L1"
 class="button"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 
-\>
+>
 
-Have a look! \</a>
+Have a look! </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- DESIGN 6 -->
+<!-- DESIGN 6 -->
 
-&#x20; \<div class="design">
+<div class="design">
 
-\<img
+<img
 src="Help Guitar.webp"
 alt="Help Guitar"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="design-info">
+<div class="design-info">
 
-&#x20; \<h3>
-&#x20;   Help Guitar
-&#x20; \</h3>
+<h3>
+Help Guitar
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Original T-shirt design"
-&#x20;   data-es="Diseño original de camiseta"
-&#x20; \>
-&#x20;   Original T-shirt design
-&#x20; \</p>
+<p
+data-en="Original T-shirt design"
+data-es="Diseño original de camiseta"
+>
+Original T-shirt design
+</p>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
-href="[https://www.latostadora.com/web/dobemola-help-guitar/14530692?s=M\_L7](https://www.latostadora.com/web/dobemola-help-guitar/14530692?s=M_L7)"
+<a
+href="https://www.latostadora.com/web/dobemola-help-guitar/14530692?s=M_L7"
 class="button"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 
-\>
+>
 
-Have a look! \</a>
+Have a look! </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- DESIGN 7 -->
+<!-- DESIGN 7 -->
 
-&#x20; \<div class="design">
+<div class="design">
 
-\<img
+<img
 src="Picassianna Guitar II.webp"
 alt="Picassianna Guitar II"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="design-info">
+<div class="design-info">
 
-&#x20; \<h3>
-&#x20;   Picassianna Guitar II
-&#x20; \</h3>
+<h3>
+Picassianna Guitar II
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Original T-shirt design"
-&#x20;   data-es="Diseño original de camiseta"
-&#x20; \>
-&#x20;   Original T-shirt design
-&#x20; \</p>
+<p
+data-en="Original T-shirt design"
+data-es="Diseño original de camiseta"
+>
+Original T-shirt design
+</p>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
-href="[https://www.latostadora.com/web/dobemola-picassianna-guitar-ii/11930528](https://www.latostadora.com/web/dobemola-picassianna-guitar-ii/11930528)"
+<a
+href="https://www.latostadora.com/web/dobemola-picassianna-guitar-ii/11930528"
 class="button"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 
-\>
+>
 
-Have a look! \</a>
+Have a look! </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- DESIGN 8 -->
+<!-- DESIGN 8 -->
 
-&#x20; \<div class="design">
+<div class="design">
 
-\<img
+<img
 src="Drum Power.webp"
 alt="Drum Power"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="design-info">
+<div class="design-info">
 
-&#x20; \<h3>
-&#x20;   Drum Power
-&#x20; \</h3>
+<h3>
+Drum Power
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Original T-shirt design"
-&#x20;   data-es="Diseño original de camiseta"
-&#x20; \>
-&#x20;   Original T-shirt design
-&#x20; \</p>
+<p
+data-en="Original T-shirt design"
+data-es="Diseño original de camiseta"
+>
+Original T-shirt design
+</p>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
-href="[https://www.latostadora.com/web/dobemola-drum-power-1/12223631](https://www.latostadora.com/web/dobemola-drum-power-1/12223631)"
+<a
+href="https://www.latostadora.com/web/dobemola-drum-power-1/12223631"
 class="button"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 
-\>
+>
 
-Have a look! \</a>
+Have a look! </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- DESIGN 9 -->
+<!-- DESIGN 9 -->
 
-&#x20; \<div class="design">
+<div class="design">
 
-\<img
+<img
 src="Sgt. Pepper Honored Guitar.webp"
 alt="Sgt. Pepper Honored Guitar"
 onclick="openLightbox(this.src)"
 
-\>
+>
 
-\<div class="design-info">
+<div class="design-info">
 
-&#x20; \<h3>
-&#x20;   Sgt. Pepper Honored Guitar
-&#x20; \</h3>
+<h3>
+Sgt. Pepper Honored Guitar
+</h3>
 
-&#x20; \<p
-&#x20;   data-en="Original T-shirt design"
-&#x20;   data-es="Diseño original de camiseta"
-&#x20; \>
-&#x20;   Original T-shirt design
-&#x20; \</p>
+<p
+data-en="Original T-shirt design"
+data-es="Diseño original de camiseta"
+>
+Original T-shirt design
+</p>
 
-&#x20; \<div class="price-area">
+<div class="price-area">
 
-\<a
-href="[https://www.latostadora.com/web/dobemola-sgt-pepper-honored-guitar/15157132](https://www.latostadora.com/web/dobemola-sgt-pepper-honored-guitar/15157132)"
+<a
+href="https://www.latostadora.com/web/dobemola-sgt-pepper-honored-guitar/15157132"
 class="button"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 
-\>
+>
 
-Have a look! \</a>
+Have a look! </a>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-\<div
-&#x20; style="
-&#x20;   text-align\:center;
-&#x20;   margin-top:45px;
-&#x20; "
-\>
+<div
+style="
+text-align:center;
+margin-top:45px;
+"
+>
 
-\<a
-href="[https://www.latostadora.com/shop/Dobemol/?shop\_trk](https://www.latostadora.com/shop/Dobemol/?shop_trk)"
+<a
+href="https://www.latostadora.com/shop/Dobemol/?shop_trk"
 class="button"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 data-en="Visit the complete collection of T-shirts"
 data-es="Visita la colección completa de camisetas"
 
-\>
+>
 
 Visit the complete collection of T-shirts
 
-\</a>
+</a>
 
-\</div>
+</div>
 
-&#x20; \</section>
+</section>
 
-&#x20; \<!-- ABOUT -->
+<!-- ABOUT -->
 
-&#x20; \<section id="about">
+<section id="about">
 
-\<h2
-&#x20; data-en="About"
-&#x20; data-es="Sobre mí"
-\>
-&#x20; About
-\</h2>
+<h2
+data-en="About"
+data-es="Sobre mí"
+>
+About
+</h2>
 
-\<div class="about-content">
+<div class="about-content">
 
-&#x20; \<div class="about-photo">
+<div class="about-photo">
 
-\<img
+<img
 src="Dobe.jpeg"
 alt="Candy Dobemol"
 
-\>
+>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<div class="about-text">
+<div class="about-text">
 
-\<p>
-&#x20; Welcome to CandyDobemol\_ART.
-\</p>
+<p>
+Welcome to CandyDobemol_ART.
+</p>
 
-\<p
-&#x20; data-en="Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars."
-&#x20; data-es="Candy Dobemol es músico y artista, y su trabajo artístico está inspirado en el maravilloso mundo de la música, especialmente en las guitarras."
-\>
-&#x20; Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars.
-\</p>
+<p
+data-en="Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars."
+data-es="Candy Dobemol es músico y artista, y su trabajo artístico está inspirado en el maravilloso mundo de la música, especialmente en las guitarras."
+>
+Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars.
+</p>
 
-\<p
-&#x20; data-en="This gallery brings together his original artwork, paintings and creative designs. A space where art, colour and creativity become unique pieces."
-&#x20; data-es="Esta galería reúne sus obras originales, pinturas y diseños creativos. Un espacio donde el arte, el color y la creatividad se convierten en piezas únicas."
-\>
-&#x20; This gallery brings together his original artwork, paintings and creative designs. A space where art, colour and creativity become unique pieces.
-\</p>
+<p
+data-en="This gallery brings together his original artwork, paintings and creative designs. A space where art, colour and creativity become unique pieces."
+data-es="Esta galería reúne sus obras originales, pinturas y diseños creativos. Un espacio donde el arte, el color y la creatividad se convierten en piezas únicas."
+>
+This gallery brings together his original artwork, paintings and creative designs. A space where art, colour and creativity become unique pieces.
+</p>
 
-\<p
-&#x20; data-en="On this website You can discover and purchase his paintings on canvas, as well as explore links to the T-shirt shop featuring his designs."
-&#x20; data-es="En esta web puedes descubrir y comprar sus pinturas sobre lienzo, así como explorar los enlaces a la tienda de camisetas con sus diseños."
-\>
-&#x20; On this website You can discover and purchase his paintings on canvas, as well as explore links to the T-shirt shop featuring his designs.
-\</p>
+<p
+data-en="On this website You can discover and purchase his paintings on canvas, as well as explore links to the T-shirt shop featuring his designs."
+data-es="En esta web puedes descubrir y comprar sus pinturas sobre lienzo, así como explorar los enlaces a la tienda de camisetas con sus diseños."
+>
+On this website You can discover and purchase his paintings on canvas, as well as explore links to the T-shirt shop featuring his designs.
+</p>
 
-\<p
-&#x20; data-en="Enjoy!!!!"
-&#x20; data-es="¡Disfruta!!!!"
-\>
-&#x20; Enjoy!!!!
-\</p>
+<p
+data-en="Enjoy!!!!"
+data-es="¡Disfruta!!!!"
+>
+Enjoy!!!!
+</p>
 
-&#x20; \</div>
+</div>
 
-\</div>
+</div>
 
-&#x20; \</section>
+</section>
 
-&#x20; \<!-- CONTACT -->
+<!-- CONTACT -->
 
-&#x20; \<section id="contact">
+<section id="contact">
 
-\<h2
-&#x20; data-en="Contact"
-&#x20; data-es="Contacto"
-\>
-&#x20; Contact
-\</h2>
+<h2
+data-en="Contact"
+data-es="Contacto"
+>
+Contact
+</h2>
 
-\<p
-&#x20; data-en="Interested in Candy Dobemol's original artworks or T-shirt designs?"
-&#x20; data-es="¿Te interesan las obras originales o los diseños de camisetas de Candy Dobemol?"
-\>
-&#x20; Interested in Candy Dobemol's original artworks or T-shirt designs?
-\</p>
+<p
+data-en="Interested in Candy Dobemol's original artworks or T-shirt designs?"
+data-es="¿Te interesan las obras originales o los diseños de camisetas de Candy Dobemol?"
+>
+Interested in Candy Dobemol's original artworks or T-shirt designs?
+</p>
 
-\<p
-&#x20; data-en="Get in touch for availability, prices and orders."
-&#x20; data-es="Ponte en contacto para consultar disponibilidad, precios y pedidos."
-\>
-&#x20; Get in touch for availability, prices and orders.
-\</p>
+<p
+data-en="Get in touch for availability, prices and orders."
+data-es="Ponte en contacto para consultar disponibilidad, precios y pedidos."
+>
+Get in touch for availability, prices and orders.
+</p>
 
-\<a
-href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
+<a
+href="
+https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
 class="email-link"
 style="color:#ff9f43;"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 
-\>
+>
 
-✉ candydobemolart\@gmail.com
+✉ candydobemolart@gmail.com
 
-\</a>
+</a>
 
-\<div
-&#x20; style="
-&#x20;   margin-top:20px;
-&#x20; "
-\>
+<div
+style="
+margin-top:20px;
+"
+>
 
-\<a
-href="[https://www.facebook.com/candy.dobemol/](https://www.facebook.com/candy.dobemol/)"
+<a
+href="https://www.facebook.com/candy.dobemol/"
 class="email-link"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 style="
 margin:0 12px;
 color:#1877F2;
 "
 
-\>
+>
 
 Facebook
 
-\</a>
+</a>
 
-\<a
-href="[https://www.instagram.com/candy\_dobemol/](https://www.instagram.com/candy_dobemol/)"
+<a
+href="https://www.instagram.com/candy_dobemol/"
 class="email-link"
-target="\_blank"
+target="_blank"
 rel="noopener noreferrer"
 style="
 margin:0 12px;
 color:#E4405F;
 "
 
-\>
+>
 
 Instagram
 
-\</a>
+</a>
 
-\</div>
+</div>
 
-&#x20; \</section>
+</section>
 
-&#x20; \<!-- FOOTER -->
+<!-- FOOTER -->
 
-\<footer>
-&#x20; \<p>© 2026 CandyDobemol\_ART - All rights reserved\</p>
+<footer>
+<p>© 2026 CandyDobemol_ART - All rights reserved</p>
 
-&#x20; \<p
-&#x20;   data-en="🎵 Original music by Candy Dobemol"
-&#x20;   data-es="🎵 Música original de Candy Dobemol"
-&#x20; \>
-&#x20;   🎵 Original music by Candy Dobemol
-&#x20; \</p>
-\</footer>
+<p
+data-en="🎵 Original music by Candy Dobemol"
+data-es="🎵 Música original de Candy Dobemol"
+>
+🎵 Original music by Candy Dobemol
+</p>
+</footer>
 
-&#x20; \<!-- LIGHTBOX -->
+<!-- LIGHTBOX -->
 
-&#x20; \<div
-&#x20;   id="lightbox"
-&#x20;   class="lightbox"
-&#x20;   onclick="closeLightbox()"
-&#x20; \>
+<div
+id="lightbox"
+class="lightbox"
+onclick="closeLightbox()"
+>
 
-\<span
+<span
 class="close"
 onclick="closeLightbox()"
 
-\>
+>
 
 ×
 
-\</span>
+</span>
 
-\<img
+<img
 id="lightbox-img"
 src=""
 alt="Enlarged artwork"
 
-\>
+>
 
-&#x20; \</div>
+</div>
 
-&#x20; \<!-- JAVASCRIPT -->
+<!-- JAVASCRIPT -->
 
-&#x20; \<script>
+<script>
 
-&#x20;   /\* =========================
-&#x20;      LANGUAGE
-&#x20;   \========================= \*/
+/* =========================
+LANGUAGE
+========================= */
 
-&#x20;   let currentLanguage = "en";
+let currentLanguage = "en";
+
+function setLanguage(language) {
+
+currentLanguage = language;
+
+document.documentElement.lang = language;
+
+const elements = document.querySelectorAll(
+"[data-en][data-es]"
+);
+
+elements.forEach(function(element) {
+
+element.textContent =
+element.getAttribute("data-" + language);
+
+});
+
+/* LANGUAGE SWITCH INDICATOR */
+
+document.getElementById("languageEN")
+.classList.toggle(
+"active",
+language === "en"
+);
+
+document.getElementById("languageES")
+.classList.toggle(
+"active",
+language === "es"
+);
+
+}
+
+function toggleLanguage() {
+
+if (currentLanguage === "en") {
+
+setLanguage("es");
+
+} else {
+
+setLanguage("en");
+
+}
+
+}
+
+/* =========================
+LIGHTBOX
+========================= */
+
+function openLightbox(src) {
+
+document.getElementById("lightbox-img").src = src;
+
+document.getElementById("lightbox").style.display = "flex";
+
+}
+
+function closeLightbox() {
+
+document.getElementById("lightbox").style.display = "none";
+
+}
+
+document.addEventListener(
+"keydown",
+function(event) {
+
+if (event.key === "Escape") {
+
+closeLightbox();
+
+}
+
+}
+);
+
+/* =========================
+   BACKGROUND MUSIC
+========================= */
+
+const music = document.getElementById("backgroundMusic");
+const musicButton = document.getElementById("musicButton");
+
+const songs = [
+  "Pqña.mp3",
+  "GYP.mp3"
+];
+
+let currentSong = 0;
+
+function playCurrentSong() {
+
+  music.src = songs[currentSong];
+
+  music.load();
+
+  music.play()
+    .then(() => {
+      musicButton.textContent = "🔊";
+    })
+    .catch((error) => {
+      console.log("Music error:", error);
+    });
+}
 
 
-&#x20;   function setLanguage(language) {
+music.addEventListener("ended", function () {
 
-&#x20;     currentLanguage = language;
+  currentSong = currentSong + 1;
 
-&#x20;     document.documentElement.lang = language;
+  if (currentSong >= songs.length) {
+    currentSong = 0;
+  }
 
-&#x20;     const elements = document.querySelectorAll(
-&#x20;       "[data-en][data-es]"
-&#x20;     );
+  playCurrentSong();
 
-&#x20;     elements.forEach(function(element) {
-
-&#x20;       element.textContent =
-&#x20;         element.getAttribute("data-" + language);
-
-&#x20;     });
+});
 
 
-&#x20;     /\* LANGUAGE SWITCH INDICATOR \*/
+function toggleMusic() {
 
-&#x20;     document.getElementById("languageEN")
-&#x20;       .classList.toggle(
-&#x20;         "active",
-&#x20;         language === "en"
-&#x20;       );
+  if (music.paused) {
 
-&#x20;     document.getElementById("languageES")
-&#x20;       .classList.toggle(
-&#x20;         "active",
-&#x20;         language === "es"
-&#x20;       );
+    playCurrentSong();
 
-&#x20;   }
+  } else {
 
+    music.pause();
 
-&#x20;   function toggleLanguage() {
+    musicButton.textContent = "🎵";
 
-&#x20;     if (currentLanguage === "en") {
+  }
 
-&#x20;       setLanguage("es");
+}
 
-&#x20;     } else {
+</script>
 
-&#x20;       setLanguage("en");
-
-&#x20;     }
-
-&#x20;   }
-
-
-&#x20;   /\* =========================
-&#x20;      LIGHTBOX
-&#x20;   \========================= \*/
-
-&#x20;   function openLightbox(src) {
-
-&#x20;     document.getElementById("lightbox-img").src = src;
-
-&#x20;     document.getElementById("lightbox").style.display = "flex";
-
-&#x20;   }
-
-
-&#x20;   function closeLightbox() {
-
-&#x20;     document.getElementById("lightbox").style.display = "none";
-
-&#x20;   }
-
-
-&#x20;   document.addEventListener(
-&#x20;     "keydown",
-&#x20;     function(event) {
-
-&#x20;       if (event.key === "Escape") {
-
-&#x20;         closeLightbox();
-
-&#x20;       }
-
-&#x20;     }
-&#x20;   );
-
-
-&#x20;   /\* =========================
-&#x20;      BACKGROUND MUSIC
-&#x20;   \========================= \*/
-
-&#x20;   const music =
-&#x20;     document.getElementById("backgroundMusic");
-
-&#x20;   const musicButton =
-&#x20;     document.getElementById("musicButton");
-
-
-&#x20;   function toggleMusic() {
-
-&#x20;     if (music.paused) {
-
-&#x20;       music.play();
-
-&#x20;       musicButton.textContent = "🔊";
-
-&#x20;     } else {
-
-&#x20;       music.pause();
-
-&#x20;       musicButton.textContent = "🎵";
-
-&#x20;     }
-
-&#x20;   }
-
-&#x20; \</script>
-
-\</body>
-\</html>
+</body>
+</html>
