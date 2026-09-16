@@ -1107,8 +1107,8 @@ aria-label="Change language"
 
 <!-- BACKGROUND MUSIC -->
 
-<audio id="backgroundMusic">
-  <source id="musicSource" src="Pqña.mp3" type="audio/mpeg">
+<audio id="backgroundMusic" loop>
+<source src="Pqña.mp3" type="audio/mpeg">
 </audio>
 
 <div class="music-control">
@@ -2231,7 +2231,6 @@ closeLightbox();
 ========================= */
 
 const music = document.getElementById("backgroundMusic");
-const musicSource = document.getElementById("musicSource");
 const musicButton = document.getElementById("musicButton");
 
 const songs = [
@@ -2241,28 +2240,28 @@ const songs = [
 
 let currentSong = 0;
 
-
 function playCurrentSong() {
 
-  musicSource.src = songs[currentSong];
+  music.src = songs[currentSong];
 
   music.load();
 
-  music.play();
-
-  musicButton.textContent = "🔊";
-
+  music.play()
+    .then(() => {
+      musicButton.textContent = "🔊";
+    })
+    .catch((error) => {
+      console.log("Music error:", error);
+    });
 }
 
 
-music.addEventListener("ended", function() {
+music.addEventListener("ended", function () {
 
-  currentSong++;
+  currentSong = currentSong + 1;
 
   if (currentSong >= songs.length) {
-
     currentSong = 0;
-
   }
 
   playCurrentSong();
