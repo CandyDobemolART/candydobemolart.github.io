@@ -2227,30 +2227,66 @@ closeLightbox();
 );
 
 /* =========================
-BACKGROUND MUSIC
+   BACKGROUND MUSIC
 ========================= */
 
 const music =
-document.getElementById("backgroundMusic");
+  document.getElementById("backgroundMusic");
 
 const musicButton =
-document.getElementById("musicButton");
+  document.getElementById("musicButton");
+
+
+const songs = [
+  "Pqña.mp3",
+  "GYP.mp3"
+];
+
+let currentSong = 0;
+
+
+function playCurrentSong() {
+
+  music.src = songs[currentSong];
+
+  music.play();
+
+  musicButton.textContent = "🔊";
+
+}
+
+
+music.addEventListener(
+  "ended",
+  function() {
+
+    currentSong++;
+
+    if (currentSong >= songs.length) {
+
+      currentSong = 0;
+
+    }
+
+    playCurrentSong();
+
+  }
+);
+
 
 function toggleMusic() {
 
-if (music.paused) {
+  if (music.paused) {
 
-music.play();
+    playCurrentSong();
 
-musicButton.textContent = "🔊";
+  } else {
 
-} else {
+    music.pause();
 
-music.pause();
+    musicButton.textContent = "🎵";
 
-musicButton.textContent = "🎵";
-
-}
+  }
 
 }
 
