@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-
 <html lang="en" translate="no">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="google"
+        content="notranslate">
 
   <title>CandyDobemol_ART | Art Gallery</title>
 
-  <meta name="description" content="CandyDobemol_ART - Original artwork, paintings and creative T-shirt designs.">
-
-  <meta name="google" content="notranslate">
+  <meta name="description"
+        content="CandyDobemol_ART - Original artwork, paintings and creative T-shirt designs.">
 
   <style>
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     html {
@@ -24,67 +27,11 @@
     }
 
     body {
-      font-family: Georgia, "Times New Roman", serif;
+      margin: 0;
+      font-family: Georgia, serif;
       background: #111;
       color: #ddd;
-      line-height: 1.6;
-    }
-
-    /* =========================
-       LANGUAGE BUTTON
-    ========================= */
-
-    .language-control {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 9998;
-    }
-
-    #languageButton {
-      width: 92px;
-      height: 38px;
-      padding: 0;
-      background: #111;
-      color: #777;
-      border: 1px solid #20d5c5;
-      border-radius: 20px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 13px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow:
-        0 5px 15px rgba(0,0,0,0.45);
-      transition: all 0.3s ease;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-    }
-
-    #languageButton .language-option {
-      width: 40px;
-      height: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 15px;
-      transition: all 0.3s ease;
-      position: relative;
-      z-index: 2;
-    }
-
-    #languageButton .language-option.active {
-      background: #20d5c5;
-      color: #111;
-      box-shadow:
-        0 0 10px rgba(32,213,197,0.45);
-    }
-
-    #languageButton:hover {
-      border-color: #49e6d8;
-      box-shadow:
-        0 0 18px rgba(32,213,197,0.5);
+      overflow-x: hidden;
     }
 
     /* =========================
@@ -92,158 +39,327 @@
     ========================= */
 
     header {
+
+      position: relative;
+
       min-height: 330px;
+
       display: flex;
       flex-direction: column;
+
       justify-content: center;
       align-items: center;
+
       text-align: center;
 
       background:
         linear-gradient(
-          rgba(0,0,0,0.65),
-          rgba(0,0,0,0.75)
+          rgba(0,0,0,0.58),
+          rgba(0,0,0,0.58)
         ),
         url("Shu Multi2.jpeg");
 
       background-size: cover;
       background-position: center;
 
-      padding: 60px 20px 40px;
+      padding: 30px 20px;
+
     }
 
     header h1 {
-      font-size: clamp(45px, 8vw, 80px);
-      letter-spacing: 8px;
-      text-transform: none;
+
+      margin: 0;
+
+      font-size: clamp(38px, 7vw, 72px);
+
+      font-weight: bold;
 
       background: linear-gradient(
         90deg,
-        #ff2d55,
-        #ff9500,
-        #ffd60a,
-        #30d158,
-        #00c7be,
-        #0a84ff,
-        #5e5ce6,
-        #bf5af2,
-        #ff2d55
+        #ff4d4d,
+        #ff9f43,
+        #ffe66d,
+        #39d353,
+        #20d5c5,
+        #4d9cff,
+        #c77dff,
+        #ff4d4d
       );
 
-      background-size: 300% auto;
+      background-size: 400% 400%;
 
       -webkit-background-clip: text;
-      background-clip: text;
       -webkit-text-fill-color: transparent;
 
       animation: rainbowText 8s linear infinite;
 
-      margin-bottom: 12px;
     }
 
     @keyframes rainbowText {
+
       0% {
-        background-position: 0% center;
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
       }
 
       100% {
-        background-position: 300% center;
+        background-position: 0% 50%;
       }
+
     }
 
     header p {
-      font-size: 20px;
-      letter-spacing: 3px;
-      color: #ddd;
+
+      margin-top: 15px;
+
+      font-size: 21px;
+
+      color: #fff;
+
+      letter-spacing: 2px;
+
     }
+
+
+    /* =========================
+       LANGUAGE BUTTON
+    ========================= */
+
+    #languageButton {
+
+      position: absolute;
+
+      top: 20px;
+      left: 20px;
+
+      padding: 8px 15px;
+
+      border: 1px solid #20d5c5;
+
+      border-radius: 20px;
+
+      background: rgba(0,0,0,0.6);
+
+      color: #49e6d8;
+
+      cursor: pointer;
+
+      font-family: Georgia, serif;
+
+      transition: 0.3s;
+
+    }
+
+    #languageButton:hover {
+
+      background: #20d5c5;
+      color: #111;
+
+    }
+
+
+    /* =========================
+       MUSIC CONTROL
+    ========================= */
+
+    #musicControl {
+
+      position: fixed;
+
+      top: 20px;
+      right: 20px;
+
+      width: 75px;
+      height: 75px;
+
+      z-index: 9999;
+
+    }
+
+    #musicButton {
+
+      position: absolute;
+
+      top: 18px;
+      left: 18px;
+
+      width: 40px;
+      height: 40px;
+
+      border-radius: 50%;
+
+      border: 2px solid #20d5c5;
+
+      background: #111;
+
+      color: #49e6d8;
+
+      font-size: 20px;
+
+      cursor: pointer;
+
+      z-index: 2;
+
+    }
+
+    .music-ring {
+
+      position: absolute;
+
+      width: 75px;
+      height: 75px;
+
+      border-radius: 50%;
+
+      border: 1px dashed #20d5c5;
+
+      animation: rotateMusic 8s linear infinite;
+
+    }
+
+    .music-ring::after {
+
+      content: "TURN IT UP • TURN IT UP • ";
+
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      color: #49e6d8;
+
+      font-size: 8px;
+
+      letter-spacing: 1px;
+
+    }
+
+    @keyframes rotateMusic {
+
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+
+    }
+
 
     /* =========================
        NAVIGATION
     ========================= */
 
     nav {
+
       position: sticky;
+
       top: 0;
+
       z-index: 1000;
 
-      background: rgba(10,10,10,0.96);
-
-      border-bottom: 1px solid #20d5c5;
-
       display: flex;
+
       justify-content: center;
+
       flex-wrap: wrap;
 
-      gap: 30px;
+      gap: 25px;
 
-      padding: 15px 20px;
+      padding: 15px;
 
-      backdrop-filter: blur(8px);
+      background: #111;
+
+      border-bottom: 2px solid #20d5c5;
+
     }
 
     nav a {
-      color: #49e6d8;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 17px;
 
-      transition: all 0.3s ease;
+      color: #49e6d8;
+
+      text-decoration: none;
+
+      font-size: 18px;
+
+      transition: 0.3s;
+
     }
 
     nav a:hover {
-      color: #ffffff;
 
-      text-shadow:
-        0 0 8px rgba(32,213,197,0.9),
-        0 0 18px rgba(32,213,197,0.6);
+      color: #fff;
 
       transform: translateY(-2px);
+
     }
+
 
     /* =========================
        SECTIONS
     ========================= */
 
     section {
+
       max-width: 1200px;
+
       margin: auto;
-      padding: 70px 30px;
+
+      padding: 70px 25px;
+
     }
 
-    section h2 {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 50px;
+    h2 {
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 20px;
+
+      justify-content: center;
 
       color: #49e6d8;
 
-      letter-spacing: 2px;
+      font-size: 32px;
 
-      text-shadow:
-        0 0 8px rgba(32,213,197,0.35);
+      margin-bottom: 30px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      text-align: center;
 
-      gap: 25px;
     }
 
-    section h2::before,
-    section h2::after {
+    h2::before,
+    h2::after {
+
       content: "";
 
-      width: 120px;
       height: 1px;
 
-      background: rgba(73,230,216,0.55);
+      background: #20d5c5;
+
+      width: 120px;
+
     }
 
+
     /* =========================
-       ARTWORK GALLERY
+       ARTWORK
     ========================= */
 
     .gallery {
+
       display: grid;
 
       grid-template-columns:
@@ -254,648 +370,419 @@
       align-items: stretch;
 
       margin-top: 100px;
+
     }
 
     .artwork {
-      background: #1c1c1c;
 
-      border-radius: 8px;
+      background: #181818;
 
-      overflow: visible;
+      border: 1px solid #252525;
 
-      text-align: center;
+      border-radius: 10px;
 
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.45);
-
-      transition: all 0.35s ease;
+      overflow: hidden;
 
       display: flex;
+
       flex-direction: column;
+
+      transition: 0.3s;
+
     }
 
     .artwork:hover {
+
       transform: translateY(-8px);
 
       box-shadow:
-        0 15px 35px rgba(0,0,0,0.7),
-        0 0 20px rgba(32,213,197,0.15);
+        0 15px 35px rgba(0,0,0,0.6);
+
     }
 
     .artwork img {
+
       width: 100%;
 
       height: 280px;
 
       object-fit: contain;
 
-      object-position: center center;
-
       display: block;
 
-      cursor: zoom-in;
-
-      background: #111;
-
-      transition: transform 0.3s ease;
     }
 
-    .artwork img:hover {
-      transform: scale(1.02);
-    }
-
-    /* =========================
-       SHU´S SEA
-    ========================= */
-
-    .artwork:nth-child(2) {
-      position: relative;
-    }
+    /* SHU'S SEA */
 
     .artwork:nth-child(2) img {
+
       height: 380px;
 
       margin-top: -100px;
 
-      object-fit: contain;
-
       object-position: center bottom;
 
-      background: #111;
-
-      position: relative;
-
-      z-index: 2;
     }
 
-    .artwork:nth-child(2) .artwork-info {
-      position: relative;
-
-      z-index: 3;
-
-      background: #1c1c1c;
-    }
-
-    /* =========================
-       MANDARINE LP
-    ========================= */
-
-    .artwork:nth-child(3) {
-      position: relative;
-    }
+    /* MANDARINE */
 
     .artwork:nth-child(3) img {
+
       height: 360px;
 
       margin-top: -80px;
 
-      object-fit: contain;
-
-      object-position: center bottom;
-
-      background: #111;
-
-      position: relative;
-
-      z-index: 2;
     }
 
-    .artwork:nth-child(3) .artwork-info {
-      position: relative;
-
-      z-index: 3;
-
-      background: #1c1c1c;
-    }
-
-    /* =========================
-       ARTWORK 04 & 05
-    ========================= */
-
-    .artwork:nth-child(4),
-    .artwork:nth-child(5) {
-      position: relative;
-      margin-top: 80px;
-    }
+    /* CHEROKEE + ON THE WAY */
 
     .artwork:nth-child(4) img,
     .artwork:nth-child(5) img {
+
       height: 360px;
 
       margin-top: -80px;
 
-      object-fit: contain;
-
-      object-position: center bottom;
-
-      background: #111;
-
-      position: relative;
-
-      z-index: 2;
     }
 
-    .artwork:nth-child(4) .artwork-info,
-    .artwork:nth-child(5) .artwork-info {
-      position: relative;
+    .artwork:nth-child(4),
+    .artwork:nth-child(5) {
 
-      z-index: 3;
+      margin-top: 80px;
 
-      background: #1c1c1c;
     }
-
-    /* =========================
-       ARTWORK INFORMATION
-    ========================= */
 
     .artwork-info {
+
       padding: 20px;
+
+      display: flex;
+
+      flex-direction: column;
 
       flex: 1;
 
-      display: flex;
-      flex-direction: column;
-
-      justify-content: flex-start;
     }
 
     .artwork-info h3 {
-      font-size: 22px;
 
-      margin-bottom: 8px;
+      font-size: 21px;
 
-      color: #49e6d8;
+      margin: 0 0 8px;
+
+      color: #fff;
+
     }
 
     .artwork-info p {
-      color: #ddd;
 
-      margin-bottom: 12px;
+      margin: 6px 0;
 
-      font-size: 16px;
+      line-height: 1.5;
+
+    }
+
+    .price {
+
+      font-weight: bold;
+
+      margin-top: 12px;
+
     }
 
     .status {
-      font-size: 17px;
 
       font-weight: bold;
 
-      margin: 10px 0 14px;
+      margin-top: 8px;
 
-      letter-spacing: 1px;
+      padding-top: 10px;
+
+      border-top: 1px solid #333;
+
     }
 
-    .status.available {
+    .available {
+
       color: #39d353;
 
-      text-shadow:
-        0 0 8px rgba(57,211,83,0.35);
     }
 
-    .status.sold {
+    .sold {
+
       color: #ff4d4d;
 
-      text-shadow:
-        0 0 8px rgba(255,77,77,0.35);
     }
 
-    .price-area {
-      border-top:
-        1px solid rgba(32,213,197,0.45);
+    .artwork-button {
 
-      margin-top: 5px;
-
-      padding-top: 18px;
-    }
-
-    /* =========================
-       BUTTONS
-    ========================= */
-
-    .button {
       display: inline-block;
 
-      padding: 11px 22px;
+      margin-top: auto;
+
+      padding: 10px 18px;
 
       border: 1px solid #20d5c5;
 
-      border-radius: 25px;
+      border-radius: 5px;
 
       color: #49e6d8;
 
-      background: linear-gradient(
-        135deg,
-        #087f7a,
-        #20d5c5,
-        #49e6d8,
-        #b8fff8,
-        #20d5c5,
-        #087f7a
-      );
-
-      background-size: 250% 250%;
-
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-
       text-decoration: none;
 
-      font-weight: bold;
+      text-align: center;
 
-      transition: all 0.4s ease;
+      transition: 0.3s;
 
-      box-shadow:
-        0 4px 12px rgba(32,213,197,0.15);
     }
 
-    .button:hover {
-      background-position: 100% 50%;
-
-      border-color: #b8fff8;
-
-      transform:
-        translateY(-3px)
-        scale(1.03);
-
-      box-shadow:
-        0 8px 22px rgba(32,213,197,0.3);
-    }
-
-    /* =========================
-       MUSIC BUTTON
-    ========================= */
-
-    .music-control {
-      position: fixed;
-
-      top: 10px;
-      right: 20px;
-
-      width: 92px;
-      height: 92px;
-
-      z-index: 9998;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .music-ring {
-      position: absolute;
-
-      width: 92px;
-      height: 92px;
-
-      animation: musicRingRotate 18s linear infinite;
-
-      pointer-events: none;
-    }
-
-    .music-ring svg {
-      width: 100%;
-      height: 100%;
-
-      overflow: visible;
-    }
-
-    .music-ring text {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 9.9px;
-      font-weight: bold;
-      letter-spacing: 1.3px;
-      fill: #ffffff !important;
-    }
-
-    .turn-pink {
-      fill: #ffffff !important;
-    }
-
-    .turn-yellow {
-      fill: #ffffff !important;
-    }
-
-    .turn-purple {
-      fill: #ffffff !important;
-    }
-
-    @keyframes musicRingRotate {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    #musicButton {
-      position: relative;
-
-      width: 58px;
-      height: 58px;
+    .artwork-button:hover {
 
       background: #20d5c5;
 
-      color: #ffffff;
+      color: #111;
 
-      border: none;
-
-      border-radius: 50%;
-
-      padding: 0;
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 13px;
-
-      font-weight: bold;
-
-      cursor: pointer;
-
-      box-shadow:
-        0 5px 15px rgba(0,0,0,0.45);
-
-      transition: all 0.3s ease;
-
-      z-index: 2;
     }
 
-    #musicButton:hover {
-      background: #49e6d8;
-
-      color: #ffffff;
-
-      transform: scale(1.08);
-
-      box-shadow:
-        0 0 18px rgba(32,213,197,0.6);
-    }
 
     /* =========================
        T-SHIRT DESIGNS
     ========================= */
 
     .designs {
+
       display: grid;
 
       grid-template-columns:
-        repeat(auto-fit, minmax(300px, 1fr));
+        repeat(auto-fit, minmax(280px, 1fr));
 
       gap: 30px;
+
+      margin-top: 50px;
+
     }
 
     .design {
-      background: #1c1c1c;
 
-      border-radius: 8px;
+      background: #181818;
+
+      border: 1px solid #252525;
+
+      border-radius: 10px;
 
       overflow: hidden;
 
-      text-align: center;
+      display: flex;
 
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.45);
+      flex-direction: column;
 
-      transition: all 0.35s ease;
+      transition: 0.3s;
+
     }
 
     .design:hover {
+
       transform: translateY(-8px);
 
       box-shadow:
-        0 15px 35px rgba(0,0,0,0.7),
-        0 0 20px rgba(32,213,197,0.15);
+        0 15px 35px rgba(0,0,0,0.6);
+
     }
 
     .design img {
+
       width: 100%;
 
       height: 350px;
 
       object-fit: cover;
 
-      object-position: center center;
-
       display: block;
 
-      cursor: zoom-in;
-
-      background: #111;
-
-      transition: transform 0.3s ease;
-    }
-
-    .design img:hover {
-      transform: scale(1.02);
     }
 
     .design-info {
+
       padding: 20px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      flex: 1;
+
     }
 
     .design-info h3 {
+
       font-size: 21px;
 
-      margin-bottom: 8px;
+      margin: 0 0 10px;
 
-      color: #49e6d8;
     }
 
     .design-info p {
-      color: #ddd;
 
-      margin-bottom: 15px;
+      line-height: 1.5;
+
     }
+
+    .design-button {
+
+      display: inline-block;
+
+      margin-top: auto;
+
+      padding: 10px 18px;
+
+      border: 1px solid #20d5c5;
+
+      border-radius: 5px;
+
+      color: #49e6d8;
+
+      text-decoration: none;
+
+      text-align: center;
+
+      transition: 0.3s;
+
+    }
+
+    .design-button:hover {
+
+      background: #20d5c5;
+
+      color: #111;
+
+    }
+
 
     /* =========================
        ABOUT
     ========================= */
 
-    #about {
-      text-align: center;
-    }
-
     .about-content {
+
       display: flex;
 
       align-items: center;
 
-      justify-content: center;
+      gap: 40px;
 
-      gap: 50px;
-
-      max-width: 1000px;
-
-      margin: auto;
-
-      text-align: left;
     }
 
     .about-photo {
-      flex: 0 0 300px;
-    }
 
-    .about-photo img {
       width: 300px;
 
-      height: 300px;
+      height: auto;
 
-      object-fit: cover;
-
-      object-position: center;
+      border-radius: 10px;
 
       display: block;
 
-      border-radius: 8px;
-
-      border:
-        1px solid rgba(32,213,197,0.45);
-
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.5),
-        0 0 20px rgba(32,213,197,0.12);
-    }
-
-    .about-photo img:hover {
-      transform: scale(1.02);
     }
 
     .about-text {
+
       flex: 1;
-    }
 
-    .about-text p {
-      max-width: none;
-
-      margin: 0;
+      line-height: 1.7;
 
       font-size: 18px;
 
-      color: #ccc;
-
-      line-height: 1.8;
     }
+
 
     /* =========================
        CONTACT
     ========================= */
 
-    #contact {
+    .contact {
+
       text-align: center;
+
     }
 
-    #contact p {
-      margin-bottom: 12px;
-
-      font-size: 18px;
-    }
-
-    .email-link {
-      display: inline-block;
-
-      margin-top: 15px;
+    .contact a {
 
       color: #49e6d8;
-
-      font-size: 20px;
-
-      font-weight: bold;
 
       text-decoration: none;
 
-      transition: all 0.3s ease;
     }
 
-    .email-link:hover {
-      color: #ffffff;
+    .contact a:hover {
 
-      text-shadow:
-        0 0 10px rgba(32,213,197,0.9);
+      color: #fff;
+
     }
 
-    /* =========================
-       LIGHTBOX
-    ========================= */
+    .social-links {
 
-    .lightbox {
-      display: none;
-
-      position: fixed;
-
-      z-index: 9999;
-
-      left: 0;
-      top: 0;
-
-      width: 100%;
-      height: 100%;
-
-      background: rgba(0,0,0,0.94);
-
-      align-items: center;
+      display: flex;
 
       justify-content: center;
 
-      padding: 30px;
+      gap: 25px;
+
+      margin-top: 20px;
+
     }
 
-    .lightbox img {
-      max-width: 90%;
-
-      max-height: 90%;
-
-      object-fit: contain;
-
-      border-radius: 5px;
-
-      box-shadow:
-        0 0 40px rgba(0,0,0,0.8);
-    }
-
-    .lightbox .close {
-      position: absolute;
-
-      top: 20px;
-      right: 35px;
-
-      font-size: 45px;
-
-      color: #49e6d8;
-
-      cursor: pointer;
-
-      font-weight: bold;
-
-      transition: all 0.3s ease;
-    }
-
-    .lightbox .close:hover {
-      color: #ffffff;
-
-      text-shadow:
-        0 0 10px rgba(32,213,197,0.9);
-    }
 
     /* =========================
        FOOTER
     ========================= */
 
     footer {
+
       text-align: center;
 
-      padding: 30px 20px;
+      padding: 35px 20px;
 
-      background: #090909;
-
-      border-top:
-        1px solid rgba(32,213,197,0.35);
+      border-top: 2px solid #20d5c5;
 
       color: #aaa;
 
-      font-size: 14px;
     }
+
+
+    /* =========================
+       LIGHTBOX
+    ========================= */
+
+    #lightbox {
+
+      display: none;
+
+      position: fixed;
+
+      z-index: 99999;
+
+      inset: 0;
+
+      background: rgba(0,0,0,0.92);
+
+      justify-content: center;
+
+      align-items: center;
+
+      padding: 30px;
+
+    }
+
+    #lightbox img {
+
+      max-width: 90%;
+
+      max-height: 90%;
+
+      object-fit: contain;
+
+    }
+
 
     /* =========================
        MOBILE
@@ -904,1364 +791,1251 @@
     @media (max-width: 700px) {
 
       header {
+
         min-height: 280px;
 
-        padding: 50px 15px 35px;
+        padding: 25px 15px;
+
       }
 
       header h1 {
-        font-size: 40px;
 
-        letter-spacing: 4px;
+        font-size: 39px;
+
       }
 
       header p {
-        font-size: 16px;
 
-        letter-spacing: 2px;
+        font-size: 17px;
+
       }
 
       nav {
+
         gap: 15px;
 
-        padding: 60px 10px 12px;
       }
 
       nav a {
-        font-size: 15px;
+
+        font-size: 16px;
+
       }
 
       section {
-        padding: 55px 18px;
+
+        padding: 55px 15px;
+
       }
 
-      section h2 {
-        font-size: 30px;
+      h2 {
 
-        margin-bottom: 35px;
+        font-size: 27px;
+
       }
 
-      section h2::before,
-      section h2::after {
+      h2::before,
+      h2::after {
+
         width: 50px;
-      }
 
-      .gallery,
-      .designs {
-        grid-template-columns: 1fr;
       }
-
-      /* =========================
-         MOBILE ARTWORK
-      ========================= */
 
       .gallery {
-        margin-top: 80px;
+
+        grid-template-columns: 1fr;
+
+        margin-top: 60px;
+
       }
 
       .artwork img {
-        height: 300px;
-      }
 
-      .artwork:nth-child(2) {
-        margin-top: 70px;
+        height: 300px;
+
       }
 
       .artwork:nth-child(2) img {
+
         height: 350px;
 
         margin-top: -50px;
-      }
 
-      .artwork:nth-child(3) {
-        margin-top: 60px;
       }
 
       .artwork:nth-child(3) img {
+
         height: 340px;
 
         margin-top: -40px;
-      }
 
-      .artwork:nth-child(4),
-      .artwork:nth-child(5) {
-        margin-top: 60px;
       }
 
       .artwork:nth-child(4) img,
       .artwork:nth-child(5) img {
+
         height: 340px;
 
         margin-top: -40px;
+
+      }
+
+      .artwork:nth-child(4),
+      .artwork:nth-child(5) {
+
+        margin-top: 40px;
+
+      }
+
+      .designs {
+
+        grid-template-columns: 1fr;
+
       }
 
       .design img {
+
         height: 320px;
+
       }
-
-      /* =========================
-         MOBILE MUSIC BUTTON
-      ========================= */
-
-      .music-control {
-        top: -5px;
-
-        right: 5px;
-
-        width: 82px;
-        height: 82px;
-      }
-
-      .music-ring {
-        width: 82px;
-        height: 82px;
-      }
-
-      .music-ring text {
-        font-size: 9.9px;
-
-        letter-spacing: 1.3px;
-      }
-
-      #musicButton {
-        width: 52px;
-        height: 52px;
-
-        padding: 0;
-
-        font-size: 12px;
-      }
-
-      /* =========================
-         MOBILE LANGUAGE BUTTON
-      ========================= */
-
-      .language-control {
-        top: 10px;
-        left: 10px;
-      }
-
-      #languageButton {
-        width: 86px;
-        height: 36px;
-      }
-
-      #languageButton .language-option {
-        width: 37px;
-        height: 26px;
-      }
-
-      /* =========================
-         MOBILE ABOUT
-      ========================= */
 
       .about-content {
+
         flex-direction: column;
 
-        gap: 30px;
-
         text-align: center;
+
       }
 
       .about-photo {
-        flex: none;
-      }
 
-      .about-photo img {
         width: 240px;
 
-        height: 240px;
-
-        margin: auto;
       }
 
-      .about-text p {
-        font-size: 17px;
+      #musicControl {
 
-        line-height: 1.7;
+        top: 12px;
+
+        right: 12px;
+
+        transform: scale(0.9);
+
       }
+
     }
 
   </style>
 
 </head>
 
+
 <body class="notranslate">
 
-  <!-- LANGUAGE BUTTON -->
 
-  <div class="language-control">
+<!-- =========================
+     LANGUAGE BUTTON
+========================= -->
 
-<button
-id="languageButton"
-onclick="toggleLanguage()"
-aria-label="Change language"
+<button id="languageButton"
+        onclick="toggleLanguage()">
 
->
-
-<span class="language-option active" id="languageEN">EN</span> <span class="language-option" id="languageES">ES</span>
+  ES
 
 </button>
 
-  </div>
 
-  <!-- BACKGROUND MUSIC -->
+<!-- =========================
+     BACKGROUND MUSIC
+========================= -->
 
-  <audio id="backgroundMusic" loop>
-    <source src="Pqña.mp3" type="audio/mpeg">
-  </audio>
+<audio id="backgroundMusic">
 
-  <div class="music-control">
+  <source src="Pqña.mp3"
+          type="audio/mpeg">
 
-<div class="music-ring">
+</audio>
 
-  <svg viewBox="0 0 100 100">
 
-<defs>
+<!-- =========================
+     MUSIC CONTROL
+========================= -->
 
-<path
-id="musicCircle"
-d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
-/>
+<div id="musicControl">
 
-</defs>
+  <div class="music-ring"></div>
 
-<text>
+  <button id="musicButton"
+          onclick="toggleMusic()">
 
-  <textPath href="#musicCircle" startOffset="0%">
+    🎵
 
-<tspan class="turn-pink" fill="#ffffff">- Turn It Up -</tspan> <tspan class="turn-yellow" fill="#ffffff"> Turn It Up -</tspan> <tspan class="turn-purple" fill="#ffffff"> Turn It Up -</tspan>
-
-  </textPath>
-
-</text>
-
-  </svg>
+  </button>
 
 </div>
 
-<button id="musicButton" onclick="toggleMusic()">
-  🎵
-</button>
 
-  </div>
+<!-- =========================
+     HEADER
+========================= -->
 
-  <!-- HEADER -->
+<header id="home">
 
-  <header id="home">
-
-<h1>
-  Candy Dobemol_ART
-</h1>
-
-<p
-  data-en="Art · Painting · Original Designs"
-  data-es="Arte · Pintura · Diseños Originales"
->
-  Art · Painting · Original Designs
-</p>
-
-  </header>
-
-  <!-- NAVIGATION -->
-
-  <nav>
-
-<a
-href="#home"
-data-en="Home"
-data-es="Inicio"
-
->
-
-Home </a>
-
-<a
-href="#artwork"
-data-en="Artwork"
-data-es="Obras"
-
->
-
-Artwork </a>
-
-<a
-href="#designs"
-data-en="T-Shirt Designs"
-data-es="Diseños de camisetas"
-
->
-
-T-Shirt Designs </a>
-
-<a
-href="#about"
-data-en="About"
-data-es="Sobre mí"
-
->
-
-About </a>
-
-<a
-href="#contact"
-data-en="Contact"
-data-es="Contacto"
-
->
-
-Contact </a>
-
-  </nav>
-
-  <!-- ARTWORK -->
-
-  <section id="artwork">
-
-<h2
-  data-en="Artwork"
-  data-es="Obras"
->
-  Artwork
-</h2>
-
-<div class="gallery">
-
-  <!-- DOLO´S MINIWORLD -->
-
-  <div class="artwork">
-
-<img
-src="Dolo.jpeg"
-alt="Dolo´s MiniWorld"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="artwork-info">
-
-  <h3>
-    Dolo´s MiniWorld
-  </h3>
+  <h1>Candy Dobemol_ART</h1>
 
   <p
-    data-en="Acrylic on framed canvas_6x6x1cm"
-    data-es="Pintura acrílica sobre lienzo enmarcado_6x6x1cm"
-  >
-    Acrylic on framed canvas_6x6x1cm
+    data-en="Art · Painting · Original Designs"
+    data-es="Arte · Pintura · Diseños Originales">
+
+    Art · Painting · Original Designs
+
   </p>
 
-  <div
-    class="artwork-price"
-    data-en="Price: 50 €"
-    data-es="Precio: 50 €"
-  >
-    Price: 50 €
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+  <a href="#home"
+     data-en="Home"
+     data-es="Inicio">
+    Home
+  </a>
+
+  <a href="#artwork"
+     data-en="Artwork"
+     data-es="Obras">
+    Artwork
+  </a>
+
+  <a href="#designs"
+     data-en="T-Shirt Designs"
+     data-es="Diseños de Camisetas">
+    T-Shirt Designs
+  </a>
+
+  <a href="#about"
+     data-en="About"
+     data-es="Sobre mí">
+    About
+  </a>
+
+  <a href="#contact"
+     data-en="Contact"
+     data-es="Contacto">
+    Contact
+  </a>
+
+</nav>
+
+
+<!-- =========================
+     ARTWORK
+========================= -->
+
+<section id="artwork">
+
+  <h2
+    data-en="Artwork"
+    data-es="Obras">
+
+    Artwork
+
+  </h2>
+
+
+  <div class="gallery">
+
+
+    <!-- ARTWORK 1 -->
+
+    <div class="artwork">
+
+      <img
+        src="Dolo.jpeg"
+        alt="Dolo´s MiniWorld"
+        onclick="openLightbox(this.src)">
+
+      <div class="artwork-info">
+
+        <h3>Dolo´s MiniWorld</h3>
+
+        <p
+          data-en="Acrylic on framed canvas_6x6x1cm"
+          data-es="Pintura acrílica sobre lienzo enmarcado_6x6x1cm">
+
+          Acrylic on framed canvas_6x6x1cm
+
+        </p>
+
+        <p class="price">
+          Price: 50 €
+        </p>
+
+        <p
+          class="status available"
+          data-en="Still here"
+          data-es="Sigue aquí">
+
+          Still here
+
+        </p>
+
+        <a
+          href="#contact"
+          class="artwork-button"
+          data-en="Buy/Enquire"
+          data-es="Comprar/Consultar">
+
+          Buy/Enquire
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ARTWORK 2 -->
+
+    <div class="artwork">
+
+      <img
+        src="Shu´s Sea.jpg"
+        alt="Shu´s Sea"
+        onclick="openLightbox(this.src)">
+
+      <div class="artwork-info">
+
+        <h3>Shu´s Sea</h3>
+
+        <p
+          data-en="Acrylic on framed canvas_20x50x1,5cm"
+          data-es="Pintura acrílica sobre lienzo enmarcado_20x50x1,5cm">
+
+          Acrylic on framed canvas_20x50x1,5cm
+
+        </p>
+
+        <p class="price">
+          Price: 80 €
+        </p>
+
+        <p
+          class="status available"
+          data-en="Still here"
+          data-es="Sigue aquí">
+
+          Still here
+
+        </p>
+
+        <a
+          href="#contact"
+          class="artwork-button"
+          data-en="Buy/Enquire"
+          data-es="Comprar/Consultar">
+
+          Buy/Enquire
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ARTWORK 3 -->
+
+    <div class="artwork">
+
+      <img
+        src="Mandarine LP.jpeg"
+        alt="Mandarine LP"
+        onclick="openLightbox(this.src)">
+
+      <div class="artwork-info">
+
+        <h3>Mandarine LP</h3>
+
+        <p
+          data-en="Acrylic on framed canvas_20x40x1,5cm"
+          data-es="Pintura acrílica sobre lienzo enmarcado_20x40x1,5cm">
+
+          Acrylic on framed canvas_20x40x1,5cm
+
+        </p>
+
+        <p class="price">
+          Price: 70 €
+        </p>
+
+        <p
+          class="status available"
+          data-en="Still here"
+          data-es="Sigue aquí">
+
+          Still here
+
+        </p>
+
+        <a
+          href="#contact"
+          class="artwork-button"
+          data-en="Buy/Enquire"
+          data-es="Comprar/Consultar">
+
+          Buy/Enquire
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ARTWORK 4 -->
+
+    <div class="artwork">
+
+      <img
+        src="Cherokee.jpeg"
+        alt="Cherokee"
+        onclick="openLightbox(this.src)">
+
+      <div class="artwork-info">
+
+        <h3>Cherokee</h3>
+
+        <p
+          data-en="Acrylic on panel canvas_28x36x0,30cm"
+          data-es="Pintura acrílica sobre lienzo en panel _28x36x0,30cm">
+
+          Acrylic on panel canvas_28x36x0,30cm
+
+        </p>
+
+        <p class="price">
+          Price: 60 €
+        </p>
+
+        <p
+          class="status available"
+          data-en="Still here"
+          data-es="Sigue aquí">
+
+          Still here
+
+        </p>
+
+        <a
+          href="#contact"
+          class="artwork-button"
+          data-en="Buy/Enquire"
+          data-es="Comprar/Consultar">
+
+          Buy/Enquire
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ARTWORK 5 -->
+
+    <div class="artwork">
+
+      <img
+        src="On the way.jpeg"
+        alt="On the way"
+        onclick="openLightbox(this.src)">
+
+      <div class="artwork-info">
+
+        <h3>On the way</h3>
+
+        <p
+          data-en="Acrylic on panel canvas_30.5x23x0,30cm"
+          data-es="Pintura acrílica sobre lienzo en panel_30.5x23x0,30cm">
+
+          Acrylic on panel canvas_30.5x23x0,30cm
+
+        </p>
+
+        <p class="price">
+          Price: 60 €
+        </p>
+
+        <p
+          class="status available"
+          data-en="Still here"
+          data-es="Sigue aquí">
+
+          Still here
+
+        </p>
+
+        <a
+          href="#contact"
+          class="artwork-button"
+          data-en="Buy/Enquire"
+          data-es="Comprar/Consultar">
+
+          Buy/Enquire
+
+        </a>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="status available"
-    data-en="Still here"
-    data-es="Sigue aquí"
-  >
-    Still here
-  </div>
+</section>
 
-  <div class="price-area">
 
-<a
-href="#contact"
-class="button"
-data-en="Buy/Enquire"
-data-es="Comprar/Consultar"
+<!-- =========================
+     T-SHIRT DESIGNS
+========================= -->
 
->
+<section id="designs">
 
-Buy/Enquire </a>
+  <h2
+    data-en="T-Shirt Designs"
+    data-es="Diseños de Camisetas">
 
-  </div>
+    T-Shirt Designs
 
-</div>
+  </h2>
 
-  </div>
+  <p style="text-align:center;">
 
-  <!-- SHU´S SEA -->
+    <span
+      data-en="Original CandyDobemol_ART designs created to bring art and creativity to your everyday style."
+      data-es="Diseños originales de CandyDobemol_ART creados para llevar arte y creatividad a tu estilo diario.">
 
-  <div class="artwork">
+      Original CandyDobemol_ART designs created to bring art and creativity to your everyday style.
 
-<img
-src="Shu´s Sea.jpg"
-alt="Shu´s Sea"
-onclick="openLightbox(this.src)"
+    </span>
 
->
+    <br><br>
 
-<div class="artwork-info">
+    <a
+      href="https://www.latostadora.com/shop/Dobemol/?shop_trk"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="design-button">
 
-  <h3>
-    Shu´s Sea
-  </h3>
+      <span
+        data-en="Visit the shop"
+        data-es="Visita la tienda">
 
-  <p
-    data-en="Acrylic on framed canvas_20x50x1,5cm"
-    data-es="Pintura acrílica sobre lienzo enmarcado_20x50x1,5cm"
-  >
-    Acrylic on framed canvas_20x50x1,5cm
+        Visit the shop
+
+      </span>
+
+    </a>
+
   </p>
 
-  <div
-    class="artwork-price"
-    data-en="Price: 80 €"
-    data-es="Precio: 80 €"
-  >
-    Price: 80 €
+
+  <div class="designs">
+
+
+    <!-- DESIGN 1 -->
+
+    <div class="design">
+
+      <img
+        src="Shu.webp"
+        alt="Shu Multi-Guitar2"
+        onclick="openLightbox(this.src)">
+
+      <div class="design-info">
+
+        <h3>
+          Shu Multi-Guitar2
+        </h3>
+
+        <p
+          data-en="Original T-shirt design"
+          data-es="Diseño original de camiseta">
+
+          Original T-shirt design
+
+        </p>
+
+        <a
+          href="https://www.latostadora.com/web/dobemola-shu-multi-guitar2/11674014?s=H_A1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="design-button">
+
+          <span
+            data-en="Have a look!"
+            data-es="¡Echa un vistazo!">
+
+            Have a look!
+
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESIGN 2 -->
+
+    <div class="design">
+
+      <img
+        src="Freenomads Girl.webp"
+        alt="Freenomads Multi-Guitar"
+        onclick="openLightbox(this.src)">
+
+      <div class="design-info">
+
+        <h3>
+          Freenomads Multi-Guitar
+        </h3>
+
+        <p
+          data-en="Original T-shirt design"
+          data-es="Diseño original de camiseta">
+
+          Original T-shirt design
+
+        </p>
+
+        <a
+          href="https://www.latostadora.com/web/dobemola-freenomads-multi-guitar/11512389?s=M_F1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="design-button">
+
+          <span
+            data-en="Have a look!"
+            data-es="¡Echa un vistazo!">
+
+            Have a look!
+
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESIGN 3 -->
+
+    <div class="design">
+
+      <img
+        src="Twin Girl.webp"
+        alt="Twin Multi-Guitar"
+        onclick="openLightbox(this.src)">
+
+      <div class="design-info">
+
+        <h3>
+          Twin Multi-Guitar
+        </h3>
+
+        <p
+          data-en="Original T-shirt design"
+          data-es="Diseño original de camiseta">
+
+          Original T-shirt design
+
+        </p>
+
+        <a
+          href="https://www.latostadora.com/web/dobemola-twin-multi-guitar/11673960?s=M_L1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="design-button">
+
+          <span
+            data-en="Have a look!"
+            data-es="¡Echa un vistazo!">
+
+            Have a look!
+
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESIGN 4 -->
+
+    <div class="design">
+
+      <img
+        src="Black Guitar.webp"
+        alt="Black Guitar"
+        onclick="openLightbox(this.src)">
+
+      <div class="design-info">
+
+        <h3>
+          Black Guitar
+        </h3>
+
+        <p
+          data-en="Original T-shirt design"
+          data-es="Diseño original de camiseta">
+
+          Original T-shirt design
+
+        </p>
+
+        <a
+          href="https://www.latostadora.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="design-button">
+
+          <span
+            data-en="Have a look!"
+            data-es="¡Echa un vistazo!">
+
+            Have a look!
+
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESIGN 5 -->
+
+    <div class="design">
+
+      <img
+        src="Yellow Guitar.webp"
+        alt="Yellow Guitar"
+        onclick="openLightbox(this.src)">
+
+      <div class="design-info">
+
+        <h3>
+          Yellow Guitar
+        </h3>
+
+        <p
+          data-en="Original T-shirt design"
+          data-es="Diseño original de camiseta">
+
+          Original T-shirt design
+
+        </p>
+
+        <a
+          href="https://www.latostadora.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="design-button">
+
+          <span
+            data-en="Have a look!"
+            data-es="¡Echa un vistazo!">
+
+            Have a look!
+
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESIGN 6 -->
+
+    <div class="design">
+
+      <img
+        src="Help Guitar.webp"
+        alt="Help Guitar"
+        onclick="openLightbox(this.src)">
+
+      <div class="design-info">
+
+        <h3>
+          Help Guitar
+        </h3>
+
+        <p
+          data-en="Original T-shirt design"
+          data-es="Diseño original de camiseta">
+
+          Original T-shirt design
+
+        </p>
+
+        <a
+          href="https://www.latostadora.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="design-button">
+
+          <span
+            data-en="Have a look!"
+            data-es="¡Echa un vistazo!">
+
+            Have a look!
+
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESIGN 7 -->
+
+    <div class="design">
+
+      <img
+        src="Picassianna Guitar II.webp"
+        alt="Picassianna Guitar II"
+        onclick="openLightbox(this.src)">
+
+      <div class="design-info">
+
+        <h3>
+          Picassianna Guitar II
+        </h3>
+
+        <p
+          data-en="Original T-shirt design"
+          data-es="Diseño original de camiseta">
+
+          Original T-shirt design
+
+        </p>
+
+        <a
+          href="https://www.latostadora.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="design-button">
+
+          <span
+            data-en="Have a look!"
+            data-es="¡Echa un vistazo!">
+
+            Have a look!
+
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESIGN 8 -->
+
+    <div class="design">
+
+      <img
+        src="Drum Power.webp"
+        alt="Drum Power"
+        onclick="openLightbox(this.src)">
+
+      <div class="design-info">
+
+        <h3>
+          Drum Power
+        </h3>
+
+        <p
+          data-en="Original T-shirt design"
+          data-es="Diseño original de camiseta">
+
+          Original T-shirt design
+
+        </p>
+
+        <a
+          href="https://www.latostadora.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="design-button">
+
+          <span
+            data-en="Have a look!"
+            data-es="¡Echa un vistazo!">
+
+            Have a look!
+
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESIGN 9 -->
+
+    <div class="design">
+
+      <img
+        src="Sgt. Pepper Honored Guitar.webp"
+        alt="Sgt. Pepper Honored Guitar"
+        onclick="openLightbox(this.src)">
+
+      <div class="design-info">
+
+        <h3>
+          Sgt. Pepper Honored Guitar
+        </h3>
+
+        <p
+          data-en="Original T-shirt design"
+          data-es="Diseño original de camiseta">
+
+          Original T-shirt design
+
+        </p>
+
+        <a
+          href="https://www.latostadora.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="design-button">
+
+          <span
+            data-en="Have a look!"
+            data-es="¡Echa un vistazo!">
+
+            Have a look!
+
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div
-    class="status available"
-    data-en="Still here"
-    data-es="Sigue aquí"
-  >
-    Still here
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <h2
+    data-en="About"
+    data-es="Sobre mí">
+
+    About
+
+  </h2>
+
+  <div class="about-content">
+
+    <img
+      src="Dobe.jpeg"
+      alt="Candy Dobemol"
+      class="about-photo">
+
+    <div class="about-text">
+
+      <p
+        data-en="Candy Dobemol is a musician and artist whose work is strongly inspired by music, especially guitars."
+        data-es="Candy Dobemol es músico y artista y su trabajo está fuertemente inspirado por la música, especialmente por las guitarras.">
+
+        Candy Dobemol is a musician and artist whose work is strongly inspired by music, especially guitars.
+
+      </p>
+
+      <p
+        data-en="This gallery presents original canvas paintings together with creative T-shirt designs."
+        data-es="Esta galería presenta pinturas originales sobre lienzo junto con diseños creativos de camisetas.">
+
+        This gallery presents original canvas paintings together with creative T-shirt designs.
+
+      </p>
+
+      <p
+        data-en="Here you can discover and purchase original artwork, or visit the T-shirt shop to explore the designs."
+        data-es="Aquí puedes descubrir y comprar obras originales, o visitar la tienda de camisetas para descubrir los diseños.">
+
+        Here you can discover and purchase original artwork, or visit the T-shirt shop to explore the designs.
+
+      </p>
+
+      <p>
+        Enjoy!!!!
+      </p>
+
+    </div>
+
   </div>
 
-  <div class="price-area">
+</section>
 
-<a
-href="#contact"
-class="button"
-data-en="Buy/Enquire"
-data-es="Comprar/Consultar"
 
->
+<!-- =========================
+     CONTACT
+========================= -->
 
-Buy/Enquire </a>
+<section id="contact"
+         class="contact">
 
-  </div>
+  <h2
+    data-en="Contact"
+    data-es="Contacto">
 
-</div>
+    Contact
 
-  </div>
+  </h2>
 
-  <!-- ARTWORK 03 -->
+  <p>
 
-  <div class="artwork">
+    <a
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="color:#ff9f43;">
 
-<img
-src="Mandarine LP.jpeg"
-alt="Mandarine LP"
-onclick="openLightbox(this.src)"
+      ✉ candydobemolart@gmail.com
 
->
+    </a>
 
-<div class="artwork-info">
-
-  <h3>
-    Mandarine LP
-  </h3>
-
-  <p
-    data-en="Acrylic on framed canvas_20x40x1,5cm"
-    data-es="Pintura acrílica sobre lienzo enmarcado_20x40x1,5cm"
-  >
-    Acrylic on framed canvas_20x40x1,5cm
   </p>
 
-  <div
-    class="artwork-price"
-    data-en="Price: 70 €"
-    data-es="Precio: 70 €"
-  >
-    Price: 70 €
-  </div>
 
-  <div
-    class="status available"
-    data-en="Still here"
-    data-es="Sigue aquí"
-  >
-    Still here
-  </div>
+  <div class="social-links">
 
-  <div class="price-area">
+    <a
+      href="#"
+      style="color:#1877f2;">
 
-<a
-href="#contact"
-class="button"
-data-en="Buy/Enquire"
-data-es="Comprar/Consultar"
+      Facebook
 
->
+    </a>
 
-Buy/Enquire </a>
+    <a
+      href="#"
+      style="color:#e1306c;">
+
+      Instagram
+
+    </a>
 
   </div>
 
-</div>
+</section>
 
-  </div>
 
-  <!-- ARTWORK 04 -->
-
-  <div class="artwork">
-
-<img
-src="Cherokee.jpeg"
-alt="Cherokee"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="artwork-info">
-
-  <h3>
-    Cherokee
-  </h3>
-
-  <p
-    data-en="Acrylic on panel canvas_28x36x0,30cm"
-    data-es="Pintura acrílica sobre lienzo en  panel _28x36x0,30cm"
-  >
-    Acrylic on panel canvas_28x36x0,30cm
-  </p>
-
-  <div
-    class="artwork-price"
-    data-en="Price: 60 €"
-    data-es="Precio: 60 €"
-  >
-    Price: 60 €
-  </div>
-
-  <div
-    class="status available"
-    data-en="Still here"
-    data-es="Sigue aquí"
-  >
-    Still here
-  </div>
-
-  <div class="price-area">
-
-<a
-href="#contact"
-class="button"
-data-en="Buy/Enquire"
-data-es="Comprar/Consultar"
-
->
-
-Buy/Enquire </a>
-
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- ARTWORK 05 -->
-
-  <div class="artwork">
-
-<img
-src="On the way.jpeg"
-alt="On the way"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="artwork-info">
-
-  <h3>
-    On the way
-  </h3>
-
-  <p
-    data-en="Acrylic on panel canvas_30.5x23x0,30cm"
-    data-es="Pintura acrílica sobre lienzo en panel_30.5x23x0,30cm"
-  >
-    Acrylic on panel canvas_30.5x23x0,30cm
-  </p>
-
-  <div
-    class="artwork-price"
-    data-en="Price: 60 €"
-    data-es="Precio: 60 €"
-  >
-    Price: 60 €
-  </div>
-
-  <div
-    class="status available"
-    data-en="Still here"
-    data-es="Sigue aquí"
-  >
-    Still here
-  </div>
-
-  <div class="price-area">
-
-<a
-href="#contact"
-class="button"
-data-en="Buy/Enquire"
-data-es="Comprar/Consultar"
-
->
-
-Buy/Enquire </a>
-
-  </div>
-
-</div>
-
-  </div>
-
-  </section>
-
-  <!-- T-SHIRT DESIGNS -->
-
-  <section id="designs">
-
-<h2
-  data-en="T-Shirt Designs"
-  data-es="Diseños de camisetas"
->
-  T-Shirt Designs
-</h2>
-
-<div class="designs">
-
-  <!-- DESIGN 1 -->
-
-  <div class="design">
-
-<img
-src="Shu.webp"
-alt="Shu Multi-Guitar2"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="design-info">
-
-  <h3>
-    Shu Multi-Guitar2
-  </h3>
-
-  <p
-    data-en="Original T-shirt design"
-    data-es="Diseño original de camiseta"
-  >
-    Original T-shirt design
-  </p>
-
-  <div class="price-area">
-
-<a
-href="https://www.latostadora.com/web/dobemola-shu-multi-guitar2/11674014?s=H_A1"
-class="button"
-target="_blank"
-rel="noopener noreferrer"
-data-en="Have a look!"
-data-es="¡Echa un vistazo!"
-
->
-
-Have a look! </a>
-
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- DESIGN 2 -->
-
-  <div class="design">
-
-<img
-src="Freenomads Girl.webp"
-alt="Freenomads Multi-Guitar"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="design-info">
-
-  <h3>
-    Freenomads Multi-Guitar
-  </h3>
-
-  <p
-    data-en="Original T-shirt design"
-    data-es="Diseño original de camiseta"
-  >
-    Original T-shirt design
-  </p>
-
-  <div class="price-area">
-
-<a
-href="https://www.latostadora.com/web/dobemola-freenomads-multi-guitar/11512389?s=M_F1"
-class="button"
-target="_blank"
-rel="noopener noreferrer"
-data-en="Have a look!"
-data-es="¡Echa un vistazo!"
-
->
-
-Have a look! </a>
-
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- DESIGN 3 -->
-
-  <div class="design">
-
-<img
-src="Twin Girl.webp"
-alt="Twin Multi-Guitar"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="design-info">
-
-  <h3>
-    Twin Multi-Guitar
-  </h3>
-
-  <p
-    data-en="Original T-shirt design"
-    data-es="Diseño original de camiseta"
-  >
-    Original T-shirt design
-  </p>
-
-  <div class="price-area">
-
-<a
-href="https://www.latostadora.com/web/dobemola-twin-multi-guitar/11673960?s=M_L1"
-class="button"
-target="_blank"
-rel="noopener noreferrer"
-data-en="Have a look!"
-data-es="¡Echa un vistazo!"
-
->
-
-Have a look! </a>
-
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- DESIGN 4 -->
-
-  <div class="design">
-
-<img
-src="Black Guitar.webp"
-alt="Black Guitar"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="design-info">
-
-  <h3>
-    Black Guitar
-  </h3>
-
-  <p
-    data-en="Original T-shirt design"
-    data-es="Diseño original de camiseta"
-  >
-    Original T-shirt design
-  </p>
-
-  <div class="price-area">
-
-<a
-href="https://www.latostadora.com/web/dobemola-black-guitar/11527097?s=H_A17"
-class="button"
-target="_blank"
-rel="noopener noreferrer"
-data-en="Have a look!"
-data-es="¡Echa un vistazo!"
-
->
-
-Have a look! </a>
-
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- DESIGN 5 -->
-
-  <div class="design">
-
-<img
-src="Yellow Guitar.webp"
-alt="Yellow Guitar"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="design-info">
-
-  <h3>
-    Yellow Guitar
-  </h3>
-
-  <p
-    data-en="Original T-shirt design"
-    data-es="Diseño original de camiseta"
-  >
-    Original T-shirt design
-  </p>
-
-  <div class="price-area">
-
-<a
-href="https://www.latostadora.com/web/dobemola-yellow-guitar/11535941?s=M_L1"
-class="button"
-target="_blank"
-rel="noopener noreferrer"
-data-en="Have a look!"
-data-es="¡Echa un vistazo!"
-
->
-
-Have a look! </a>
-
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- DESIGN 6 -->
-
-  <div class="design">
-
-<img
-src="Help Guitar.webp"
-alt="Help Guitar"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="design-info">
-
-  <h3>
-    Help Guitar
-  </h3>
-
-  <p
-    data-en="Original T-shirt design"
-    data-es="Diseño original de camiseta"
-  >
-    Original T-shirt design
-  </p>
-
-  <div class="price-area">
-
-<a
-href="https://www.latostadora.com/web/dobemola-help-guitar/14530692?s=M_L7"
-class="button"
-target="_blank"
-rel="noopener noreferrer"
-data-en="Have a look!"
-data-es="¡Echa un vistazo!"
-
->
-
-Have a look! </a>
-
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- DESIGN 7 -->
-
-  <div class="design">
-
-<img
-src="Picassianna Guitar II.webp"
-alt="Picassianna Guitar II"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="design-info">
-
-  <h3>
-    Picassianna Guitar II
-  </h3>
-
-  <p
-    data-en="Original T-shirt design"
-    data-es="Diseño original de camiseta"
-  >
-    Original T-shirt design
-  </p>
-
-  <div class="price-area">
-
-<a
-href="https://www.latostadora.com/web/dobemola-picassianna-guitar-ii/11930528"
-class="button"
-target="_blank"
-rel="noopener noreferrer"
-data-en="Have a look!"
-data-es="¡Echa un vistazo!"
-
->
-
-Have a look! </a>
-
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- DESIGN 8 -->
-
-  <div class="design">
-
-<img
-src="Drum Power.webp"
-alt="Drum Power"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="design-info">
-
-  <h3>
-    Drum Power
-  </h3>
-
-  <p
-    data-en="Original T-shirt design"
-    data-es="Diseño original de camiseta"
-  >
-    Original T-shirt design
-  </p>
-
-  <div class="price-area">
-
-<a
-href="https://www.latostadora.com/web/dobemola-drum-power-1/12223631"
-class="button"
-target="_blank"
-rel="noopener noreferrer"
-data-en="Have a look!"
-data-es="¡Echa un vistazo!"
-
->
-
-Have a look! </a>
-
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- DESIGN 9 -->
-
-  <div class="design">
-
-<img
-src="Sgt. Pepper Honored Guitar.webp"
-alt="Sgt. Pepper Honored Guitar"
-onclick="openLightbox(this.src)"
-
->
-
-<div class="design-info">
-
-  <h3>
-    Sgt. Pepper Honored Guitar
-  </h3>
-
-  <p
-    data-en="Original T-shirt design"
-    data-es="Diseño original de camiseta"
-  >
-    Original T-shirt design
-  </p>
-
-  <div class="price-area">
-
-<a
-href="https://www.latostadora.com/web/dobemola-sgt-pepper-honored-guitar/15157132"
-class="button"
-target="_blank"
-rel="noopener noreferrer"
-data-en="Have a look!"
-data-es="¡Echa un vistazo!"
-
->
-
-Have a look! </a>
-
-  </div>
-
-</div>
-
-  </div>
-
-</div>
-
-<div
-  style="
-    text-align:center;
-    margin-top:45px;
-  "
->
-
-<a
-href="https://www.latostadora.com/shop/Dobemol/?shop_trk"
-class="button"
-target="_blank"
-rel="noopener noreferrer"
-data-en="Visit the complete collection of T-shirts"
-data-es="Visita la colección completa de camisetas"
-
->
-
-Visit the complete collection of T-shirts
-
-</a>
-
-</div>
-
-  </section>
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-<h2
-  data-en="About"
-  data-es="Sobre mí"
->
-  About
-</h2>
-
-<div class="about-content">
-
-  <div class="about-photo">
-
-<img
-src="Dobe.jpeg"
-alt="Candy Dobemol"
-
->
-
-  </div>
-
-  <div class="about-text">
-
-<p>
-  Welcome to CandyDobemol_ART.
-</p>
-
-<p
-  data-en="Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars."
-  data-es="Candy Dobemol es músico y artista, y su trabajo artístico está inspirado en el maravilloso mundo de la música, especialmente en las guitarras."
->
-  Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars.
-</p>
-
-<p
-  data-en="This gallery brings together his original artwork, paintings and creative designs. A space where art, colour and creativity become unique pieces."
-  data-es="Esta galería reúne sus obras originales, pinturas y diseños creativos. Un espacio donde el arte, el color y la creatividad se convierten en piezas únicas."
->
-  This gallery brings together his original artwork, paintings and creative designs. A space where art, colour and creativity become unique pieces.
-</p>
-
-<p
-  data-en="On this website You can discover and purchase his paintings on canvas, as well as explore links to the T-shirt shop featuring his designs."
-  data-es="En esta web puedes descubrir y comprar sus pinturas sobre lienzo, así como explorar los enlaces a la tienda de camisetas con sus diseños."
->
-  On this website You can discover and purchase his paintings on canvas, as well as explore links to the T-shirt shop featuring his designs.
-</p>
-
-<p
-  data-en="Enjoy!!!!"
-  data-es="¡Disfruta!!!!"
->
-  Enjoy!!!!
-</p>
-
-  </div>
-
-</div>
-
-  </section>
-
-  <!-- CONTACT -->
-
-  <section id="contact">
-
-<h2
-  data-en="Contact"
-  data-es="Contacto"
->
-  Contact
-</h2>
-
-<p
-  data-en="Interested in Candy Dobemol's original artworks or T-shirt designs?"
-  data-es="¿Te interesan las obras originales o los diseños de camisetas de Candy Dobemol?"
->
-  Interested in Candy Dobemol's original artworks or T-shirt designs?
-</p>
-
-<p
-  data-en="Get in touch for availability, prices and orders."
-  data-es="Ponte en contacto para consultar disponibilidad, precios y pedidos."
->
-  Get in touch for availability, prices and orders.
-</p>
-
-<a
-href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com"
-class="email-link"
-style="color:#ff9f43;"
-target="_blank"
-rel="noopener noreferrer"
-
->
-
-✉ candydobemolart@gmail.com
-
-</a>
-
-<div
-  style="
-    margin-top:20px;
-  "
->
-
-<a
-href="https://www.facebook.com/candy.dobemol/"
-class="email-link"
-target="_blank"
-rel="noopener noreferrer"
-style="
-margin:0 12px;
-color:#1877F2;
-"
-
->
-
-Facebook
-
-</a>
-
-<a
-href="https://www.instagram.com/candy_dobemol/"
-class="email-link"
-target="_blank"
-rel="noopener noreferrer"
-style="
-margin:0 12px;
-color:#E4405F;
-"
-
->
-
-Instagram
-
-</a>
-
-</div>
-
-  </section>
-
-  <!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-  <p>© 2026 CandyDobemol_ART - All rights reserved</p>
+
+  <p>
+    © 2026 CandyDobemol_ART - All rights reserved
+  </p>
 
   <p
     data-en="🎵 Original music by Candy Dobemol"
-    data-es="🎵 Música original de Candy Dobemol"
-  >
+    data-es="🎵 Música original de Candy Dobemol">
+
     🎵 Original music by Candy Dobemol
+
   </p>
+
 </footer>
 
-  <!-- LIGHTBOX -->
 
-  <div
-    id="lightbox"
-    class="lightbox"
-    onclick="closeLightbox()"
-  >
+<!-- =========================
+     LIGHTBOX
+========================= -->
 
-<span
-class="close"
-onclick="closeLightbox()"
+<div id="lightbox"
+     onclick="closeLightbox()">
 
->
+  <img
+    id="lightboxImage"
+    src=""
+    alt="Artwork">
 
-×
-
-</span>
-
-<img
-id="lightbox-img"
-src=""
-alt="Enlarged artwork"
-
->
-
-  </div>
-
-  <!-- JAVASCRIPT -->
-
-  <script>
-
-    /* =========================
-       LANGUAGE
-    ========================= */
-
-    let currentLanguage = "en";
+</div>
 
 
-    function setLanguage(language) {
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
-      currentLanguage = language;
-
-      document.documentElement.lang = language;
-
-      const elements = document.querySelectorAll(
-        "[data-en][data-es]"
-      );
-
-      elements.forEach(function(element) {
-
-        element.textContent =
-          element.getAttribute("data-" + language);
-
-      });
+<script>
 
 
-      /* LANGUAGE SWITCH INDICATOR */
+/* =========================
+   LANGUAGE
+========================= */
 
-      document.getElementById("languageEN")
-        .classList.toggle(
-          "active",
-          language === "en"
-        );
-
-      document.getElementById("languageES")
-        .classList.toggle(
-          "active",
-          language === "es"
-        );
-
-    }
+let currentLanguage = "en";
 
 
-    function toggleLanguage() {
+function toggleLanguage() {
 
-      if (currentLanguage === "en") {
-
-        setLanguage("es");
-
-      } else {
-
-        setLanguage("en");
-
-      }
-
-    }
+  currentLanguage =
+    currentLanguage === "en"
+      ? "es"
+      : "en";
 
 
-    /* =========================
-       LIGHTBOX
-    ========================= */
+  document
+    .querySelectorAll("[data-en]")
+    .forEach(function(element) {
 
-    function openLightbox(src) {
+      element.textContent =
+        element.dataset[currentLanguage];
 
-      document.getElementById("lightbox-img").src = src;
-
-      document.getElementById("lightbox").style.display = "flex";
-
-    }
+    });
 
 
-    function closeLightbox() {
+  document.getElementById("languageButton")
+    .textContent =
+      currentLanguage === "en"
+        ? "ES"
+        : "EN";
 
-      document.getElementById("lightbox").style.display = "none";
-
-    }
-
-
-    document.addEventListener(
-      "keydown",
-      function(event) {
-
-        if (event.key === "Escape") {
-
-          closeLightbox();
-
-        }
-
-      }
-    );
+}
 
 
-    /* =========================
-       BACKGROUND MUSIC
-    ========================= */
+/* =========================
+   LIGHTBOX
+========================= */
 
-    const music =
-      document.getElementById("backgroundMusic");
+function openLightbox(src) {
 
-    const musicButton =
-      document.getElementById("musicButton");
+  document
+    .getElementById("lightboxImage")
+    .src = src;
+
+  document
+    .getElementById("lightbox")
+    .style.display = "flex";
+
+}
 
 
-    function toggleMusic() {
+function closeLightbox() {
 
-      if (music.paused) {
+  document
+    .getElementById("lightbox")
+    .style.display = "none";
 
-        music.play();
+}
 
-        musicButton.textContent = "🔊";
 
-      } else {
+/* =========================
+   BACKGROUND MUSIC
+========================= */
 
-        music.pause();
+const music =
+  document.getElementById("backgroundMusic");
 
-        musicButton.textContent = "🎵";
+const musicButton =
+  document.getElementById("musicButton");
 
-      }
+
+const songs = [
+
+  "Pqña.mp3",
+
+  "GYP.mp3"
+
+];
+
+
+let currentSong = 0;
+
+
+function playCurrentSong() {
+
+  music.src =
+    songs[currentSong];
+
+  music.play();
+
+  musicButton.textContent =
+    "🔊";
+
+}
+
+
+music.addEventListener(
+  "ended",
+  function() {
+
+    currentSong++;
+
+    if (currentSong >= songs.length) {
+
+      currentSong = 0;
 
     }
 
-  </script>
+    playCurrentSong();
+
+  }
+);
+
+
+function toggleMusic() {
+
+  if (music.paused) {
+
+    playCurrentSong();
+
+  } else {
+
+    music.pause();
+
+    musicButton.textContent =
+      "🎵";
+
+  }
+
+}
+
+
+</script>
 
 </body>
+
 </html>
