@@ -2,7 +2,6 @@
 
 <html lang="en" translate="no">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -143,7 +142,6 @@ margin-bottom: 12px;
 }
 
 @keyframes rainbowText {
-
 0% {
 background-position: 0% center;
 }
@@ -151,7 +149,6 @@ background-position: 0% center;
 100% {
 background-position: 300% center;
 }
-
 }
 
 header p {
@@ -372,21 +369,19 @@ background: #1c1c1c;
 }
 
 /* =========================
-ARTWORK 04, 05, 06 & 07
+ARTWORK 04 & 05 & 06
 ========================= */
 
 .artwork:nth-child(4),
 .artwork:nth-child(5),
-.artwork:nth-child(6),
-.artwork:nth-child(7) {
+.artwork:nth-child(6) {
 position: relative;
 margin-top: 80px;
 }
 
 .artwork:nth-child(4) img,
 .artwork:nth-child(5) img,
-.artwork:nth-child(6) img,
-.artwork:nth-child(7) img {
+.artwork:nth-child(6) img {
 height: 360px;
 
 margin-top: -80px;
@@ -404,8 +399,40 @@ z-index: 2;
 
 .artwork:nth-child(4) .artwork-info,
 .artwork:nth-child(5) .artwork-info,
-.artwork:nth-child(6) .artwork-info,
-.artwork:nth-child(7) .artwork-info {
+.artwork:nth-child(6) .artwork-info {
+position: relative;
+
+z-index: 3;
+
+background: #1c1c1c;
+}
+
+/* =========================
+ARTWORK 08 - WAVES
+========================= */
+
+.artwork:nth-child(8) {
+position: relative;
+margin-top: 80px;
+}
+
+.artwork:nth-child(8) img {
+height: 280px;
+
+margin-top: -40px;
+
+object-fit: contain;
+
+object-position: center center;
+
+background: #111;
+
+position: relative;
+
+z-index: 2;
+}
+
+.artwork:nth-child(8) .artwork-info {
 position: relative;
 
 z-index: 3;
@@ -590,7 +617,6 @@ fill: #ffffff !important;
 }
 
 @keyframes musicRingRotate {
-
 from {
 transform: rotate(0deg);
 }
@@ -598,7 +624,6 @@ transform: rotate(0deg);
 to {
 transform: rotate(360deg);
 }
-
 }
 
 #musicButton {
@@ -996,18 +1021,34 @@ margin-top: -40px;
 
 .artwork:nth-child(4),
 .artwork:nth-child(5),
-.artwork:nth-child(6),
-.artwork:nth-child(7) {
+.artwork:nth-child(6) {
 margin-top: 60px;
 }
 
 .artwork:nth-child(4) img,
 .artwork:nth-child(5) img,
-.artwork:nth-child(6) img,
-.artwork:nth-child(7) img {
+.artwork:nth-child(6) img {
 height: 340px;
 
 margin-top: -40px;
+}
+
+/* =========================
+MOBILE WAVES
+========================= */
+
+.artwork:nth-child(8) {
+margin-top: 60px;
+}
+
+.artwork:nth-child(8) img {
+height: 220px;
+
+margin-top: -20px;
+
+object-fit: contain;
+
+object-position: center center;
 }
 
 .design img {
@@ -1112,10 +1153,10 @@ line-height: 1.7;
 id="languageButton"
 onclick="toggleLanguage()"
 aria-label="Change language"
-
 >
 
-<span class="language-option active" id="languageEN">EN</span> <span class="language-option" id="languageES">ES</span>
+<span class="language-option active" id="languageEN">EN</span>
+<span class="language-option" id="languageES">ES</span>
 
 </button>
 
@@ -1146,7 +1187,17 @@ d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
 
 <textPath href="#musicCircle" startOffset="0%">
 
-<tspan class="turn-pink" fill="#ffffff">- Turn It Up -</tspan> <tspan class="turn-yellow" fill="#ffffff"> Turn It Up -</tspan> <tspan class="turn-purple" fill="#ffffff"> Turn It Up -</tspan>
+<tspan class="turn-pink" fill="#ffffff">
+- Turn It Up -
+</tspan>
+
+<tspan class="turn-yellow" fill="#ffffff">
+Turn It Up -
+</tspan>
+
+<tspan class="turn-purple" fill="#ffffff">
+Turn It Up -
+</tspan>
 
 </textPath>
 
@@ -1187,46 +1238,41 @@ Art · Painting · Original Designs
 href="#home"
 data-en="Home"
 data-es="Inicio"
-
 >
-
-Home </a>
+Home
+</a>
 
 <a
 href="#artwork"
 data-en="Artwork"
 data-es="Obras"
-
 >
-
-Artwork </a>
+Artwork
+</a>
 
 <a
 href="#designs"
 data-en="T-Shirt Designs"
 data-es="Diseños de camisetas"
-
 >
-
-T-Shirt Designs </a>
+T-Shirt Designs
+</a>
 
 <a
 href="#about"
 data-en="About"
 data-es="Sobre mí"
-
 >
-
-About </a>
+About
+</a>
 
 <a
 href="#contact"
 data-en="Contact"
 data-es="Contacto"
-
 >
-
-Contact </a>
+Contact
+</a>
 
 </nav>
 
@@ -1243,7 +1289,7 @@ Artwork
 
 <div class="gallery">
 
-<!-- DOLO´S MINIWORLD -->
+<!-- ARTWORK 01 -->
 
 <div class="artwork">
 
@@ -1251,7 +1297,6 @@ Artwork
 src="Dolo.jpeg"
 alt="Dolo´s MiniWorld"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="artwork-info">
@@ -1290,18 +1335,17 @@ href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
-
 >
-
-Buy/Enquire </a>
-
-</div>
+Buy/Enquire
+</a>
 
 </div>
 
 </div>
 
-<!-- SHU´S SEA -->
+</div>
+
+<!-- ARTWORK 02 -->
 
 <div class="artwork">
 
@@ -1309,7 +1353,6 @@ Buy/Enquire </a>
 src="Shu´s Sea.jpg"
 alt="Shu´s Sea"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="artwork-info">
@@ -1348,10 +1391,9 @@ href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
-
 >
-
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1367,7 +1409,6 @@ Buy/Enquire </a>
 src="Mandarine LP.jpeg"
 alt="Mandarine LP"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="artwork-info">
@@ -1406,10 +1447,9 @@ href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
-
 >
-
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1425,7 +1465,6 @@ Buy/Enquire </a>
 src="Cherokee.jpeg"
 alt="Cherokee"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="artwork-info">
@@ -1436,7 +1475,7 @@ Cherokee
 
 <p
 data-en="Acrylic on panel canvas_28x36x0,30cm"
-data-es="Pintura acrílica sobre lienzo en panel_28x36x0,30cm"
+data-es="Pintura acrílica sobre lienzo en panel _28x36x0,30cm"
 >
 Acrylic on panel canvas_28x36x0,30cm
 </p>
@@ -1464,10 +1503,9 @@ href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
-
 >
-
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1483,7 +1521,6 @@ Buy/Enquire </a>
 src="On the way.jpeg"
 alt="On the way"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="artwork-info">
@@ -1522,10 +1559,9 @@ href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
-
 >
-
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1541,7 +1577,6 @@ Buy/Enquire </a>
 src="Greenish.jpeg"
 alt="Greenish"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="artwork-info">
@@ -1580,10 +1615,9 @@ href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
-
 >
-
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1596,10 +1630,9 @@ Buy/Enquire </a>
 <div class="artwork">
 
 <img
-src="Heart It In!.jpeg"
+src="Heart It In!.jepg"
 alt="Heart It In!"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="artwork-info">
@@ -1638,10 +1671,65 @@ href="#contact"
 class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
+>
+Buy/Enquire
+</a>
 
+</div>
+
+</div>
+
+</div>
+
+<!-- ARTWORK 08 -->
+
+<div class="artwork">
+
+<img
+src="Waves.jpeg"
+alt="Waves"
+onclick="openLightbox(this.src)"
 >
 
-Buy/Enquire </a>
+<div class="artwork-info">
+
+<h3>
+Waves
+</h3>
+
+<p
+data-en="Acrylic on panel canvas_50x20x0,30cm"
+data-es="Pintura acrílica sobre lienzo en panel_50x20x0,30cm"
+>
+Acrylic on panel canvas_50x20x0,30cm
+</p>
+
+<div
+class="artwork-price"
+data-en="Price: 50 €"
+data-es="Precio: 50 €"
+>
+Price: 50 €
+</div>
+
+<div
+class="status available"
+data-en="Still here"
+data-es="Sigue aquí"
+>
+Still here
+</div>
+
+<div class="price-area">
+
+<a
+href="#contact"
+class="button"
+data-en="Buy/Enquire"
+data-es="Comprar/Consultar"
+>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1674,7 +1762,6 @@ T-Shirt Designs
 src="Shu.webp"
 alt="Shu Multi-Guitar2"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="design-info">
@@ -1699,10 +1786,9 @@ target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
-
 >
-
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -1718,7 +1804,6 @@ Have a look! </a>
 src="Freenomads Girl.webp"
 alt="Freenomads Multi-Guitar"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="design-info">
@@ -1743,10 +1828,9 @@ target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
-
 >
-
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -1762,7 +1846,6 @@ Have a look! </a>
 src="Twin Girl.webp"
 alt="Twin Multi-Guitar"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="design-info">
@@ -1787,10 +1870,9 @@ target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
-
 >
-
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -1806,7 +1888,6 @@ Have a look! </a>
 src="Black Guitar.webp"
 alt="Black Guitar"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="design-info">
@@ -1831,10 +1912,9 @@ target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
-
 >
-
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -1850,7 +1930,6 @@ Have a look! </a>
 src="Yellow Guitar.webp"
 alt="Yellow Guitar"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="design-info">
@@ -1875,10 +1954,9 @@ target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
-
 >
-
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -1894,7 +1972,6 @@ Have a look! </a>
 src="Help Guitar.webp"
 alt="Help Guitar"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="design-info">
@@ -1919,10 +1996,9 @@ target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
-
 >
-
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -1938,7 +2014,6 @@ Have a look! </a>
 src="Picassianna Guitar II.webp"
 alt="Picassianna Guitar II"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="design-info">
@@ -1963,10 +2038,9 @@ target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
-
 >
-
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -1982,7 +2056,6 @@ Have a look! </a>
 src="Drum Power.webp"
 alt="Drum Power"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="design-info">
@@ -2007,10 +2080,9 @@ target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
-
 >
-
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -2026,7 +2098,6 @@ Have a look! </a>
 src="Sgt. Pepper Honored Guitar.webp"
 alt="Sgt. Pepper Honored Guitar"
 onclick="openLightbox(this.src)"
-
 >
 
 <div class="design-info">
@@ -2051,10 +2122,9 @@ target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
-
 >
-
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -2078,10 +2148,9 @@ target="_blank"
 rel="noopener noreferrer"
 data-en="Visit the complete collection of T-shirts"
 data-es="Visita la colección completa de camisetas"
-
 >
-
-Visit the complete collection of T-shirts </a>
+Visit the complete collection of T-shirts
+</a>
 
 </div>
 
@@ -2105,7 +2174,6 @@ About
 <img
 src="Dobe.jpeg"
 alt="Candy Dobemol"
-
 >
 
 </div>
@@ -2181,10 +2249,9 @@ class="email-link"
 style="color:#ff9f43;"
 target="_blank"
 rel="noopener noreferrer"
-
 >
-
-✉ [candydobemolart@gmail.com](mailto:candydobemolart@gmail.com) </a>
+✉ candydobemolart@gmail.com
+</a>
 
 <div
 style="
@@ -2201,10 +2268,9 @@ style="
 margin:0 12px;
 color:#1877F2;
 "
-
 >
-
-Facebook </a>
+Facebook
+</a>
 
 <a
 href="https://www.instagram.com/candy_dobemol/"
@@ -2215,10 +2281,9 @@ style="
 margin:0 12px;
 color:#E4405F;
 "
-
 >
-
-Instagram </a>
+Instagram
+</a>
 
 </div>
 
@@ -2252,16 +2317,14 @@ onclick="closeLightbox()"
 <span
 class="close"
 onclick="closeLightbox()"
-
 >
-
-× </span>
+×
+</span>
 
 <img
 id="lightbox-img"
 src=""
 alt="Enlarged artwork"
-
 >
 
 </div>
