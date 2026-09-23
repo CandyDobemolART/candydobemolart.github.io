@@ -2609,9 +2609,36 @@ console.log("Music error:", error);
 
 }
 
+function toggleMusic() {
+
+/* If music is currently playing,
+go immediately to the next song */
+
+if (!music.paused) {
+
+currentSong++;
+
+if (currentSong >= songs.length) {
+
+currentSong = 0;
+
+}
+
+playCurrentSong();
+
+return;
+
+}
+
+/* First press starts the current song */
+
+playCurrentSong();
+
+}
+
 music.addEventListener("ended", function () {
 
-currentSong = currentSong + 1;
+currentSong++;
 
 if (currentSong >= songs.length) {
 
@@ -2622,22 +2649,6 @@ currentSong = 0;
 playCurrentSong();
 
 });
-
-function toggleMusic() {
-
-if (music.paused) {
-
-playCurrentSong();
-
-} else {
-
-music.pause();
-
-musicButton.textContent = "🎵";
-
-}
-
-}
 
 </script>
 
