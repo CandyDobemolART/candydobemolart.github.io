@@ -408,74 +408,7 @@ background: #1c1c1c;
 }
 
 /* =========================
-ARTWORK 07
-========================= */
-
-.artwork:nth-child(7) {
-position: relative;
-margin-top: 80px;
-}
-
-.artwork:nth-child(7) img {
-height: 360px;
-
-margin-top: -80px;
-
-object-fit: contain;
-
-object-position: center bottom;
-
-background: #111;
-
-position: relative;
-
-z-index: 2;
-}
-
-.artwork:nth-child(7) .artwork-info {
-position: relative;
-
-z-index: 3;
-
-background: #1c1c1c;
-}
-
-/* =========================
-ARTWORK 08 - WAVES
-SAME SIZE AS GREENISH
-========================= */
-
-.artwork:nth-child(8) {
-position: relative;
-margin-top: 80px;
-}
-
-.artwork:nth-child(8) img {
-height: 360px;
-
-margin-top: -80px;
-
-object-fit: contain;
-
-object-position: center bottom;
-
-background: #111;
-
-position: relative;
-
-z-index: 2;
-}
-
-.artwork:nth-child(8) .artwork-info {
-position: relative;
-
-z-index: 3;
-
-background: #1c1c1c;
-}
-
-/* =========================
-ARTWORK 09
+ARTWORK 09 - AGUAMARINA COVE
 ========================= */
 
 .artwork:nth-child(9) {
@@ -500,6 +433,39 @@ z-index: 2;
 }
 
 .artwork:nth-child(9) .artwork-info {
+position: relative;
+
+z-index: 3;
+
+background: #1c1c1c;
+}
+
+/* =========================
+ARTWORK 08 - WAVES
+========================= */
+
+.artwork:nth-child(8) {
+position: relative;
+margin-top: 80px;
+}
+
+.artwork:nth-child(8) img {
+height: 280px;
+
+margin-top: -40px;
+
+object-fit: contain;
+
+object-position: center center;
+
+background: #111;
+
+position: relative;
+
+z-index: 2;
+}
+
+.artwork:nth-child(8) .artwork-info {
 position: relative;
 
 z-index: 3;
@@ -1100,47 +1066,6 @@ height: 340px;
 margin-top: -40px;
 }
 
-/* =========================
-MOBILE ARTWORK 07
-========================= */
-
-.artwork:nth-child(7) {
-margin-top: 60px;
-}
-
-.artwork:nth-child(7) img {
-height: 340px;
-
-margin-top: -40px;
-
-object-fit: contain;
-
-object-position: center bottom;
-}
-
-/* =========================
-MOBILE WAVES
-SAME SIZE AS GREENISH
-========================= */
-
-.artwork:nth-child(8) {
-margin-top: 60px;
-}
-
-.artwork:nth-child(8) img {
-height: 340px;
-
-margin-top: -40px;
-
-object-fit: contain;
-
-object-position: center bottom;
-}
-
-/* =========================
-MOBILE ARTWORK 09
-========================= */
-
 .artwork:nth-child(9) {
 margin-top: 60px;
 }
@@ -1149,14 +1074,20 @@ margin-top: 60px;
 height: 340px;
 
 margin-top: -40px;
-
-object-fit: contain;
-
-object-position: center bottom;
 }
 
 .design img {
 height: 320px;
+}
+
+.artwork:nth-child(8) {
+margin-top: 60px;
+}
+
+.artwork:nth-child(8) img {
+height: 240px;
+
+margin-top: -30px;
 }
 
 /* =========================
@@ -1268,7 +1199,7 @@ aria-label="Change language"
 
 <!-- BACKGROUND MUSIC -->
 
-<audio id="backgroundMusic" loop>
+<audio id="backgroundMusic">
 <source src="Pqña.mp3" type="audio/mpeg">
 </audio>
 
@@ -1291,17 +1222,9 @@ d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
 
 <textPath href="#musicCircle" startOffset="0%">
 
-<tspan class="turn-pink" fill="#ffffff">
-- Turn It Up -
-</tspan>
-
-<tspan class="turn-yellow" fill="#ffffff">
-Turn It Up -
-</tspan>
-
-<tspan class="turn-purple" fill="#ffffff">
-Turn It Up -
-</tspan>
+<tspan class="turn-pink" fill="#ffffff">- Turn It Up -</tspan>
+<tspan class="turn-yellow" fill="#ffffff"> Turn It Up -</tspan>
+<tspan class="turn-purple" fill="#ffffff"> Turn It Up -</tspan>
 
 </textPath>
 
@@ -1393,7 +1316,7 @@ Artwork
 
 <div class="gallery">
 
-<!-- ARTWORK 01 -->
+<!-- DOLO´S MINIWORLD -->
 
 <div class="artwork">
 
@@ -1449,7 +1372,7 @@ Buy/Enquire
 
 </div>
 
-<!-- ARTWORK 02 -->
+<!-- SHU´S SEA -->
 
 <div class="artwork">
 
@@ -1846,7 +1769,7 @@ Buy/Enquire
 <div class="artwork">
 
 <img
-src="Aguamarina Cove...png"
+src="Aguamarina Cove.jpeg"
 alt="AguaMarina Cove"
 onclick="openLightbox(this.src)"
 >
@@ -2281,7 +2204,7 @@ class="button"
 target="_blank"
 rel="noopener noreferrer"
 data-en="Have a look!"
-data-es="¡Echa un vistazo!"
+data-es="¡Echa un vistazo!'
 >
 Have a look!
 </a>
@@ -2453,9 +2376,7 @@ Instagram
 
 <footer>
 
-<p>
-© 2026 CandyDobemol_ART - All rights reserved
-</p>
+<p>© 2026 CandyDobemol_ART - All rights reserved</p>
 
 <p
 data-en="🎵 Original music by Candy Dobemol"
@@ -2587,11 +2508,11 @@ const songs = [
 "GYP.mp3"
 ];
 
-let currentSong = 0;
+let musicStep = 0;
 
-function playCurrentSong() {
+function playSong(song) {
 
-music.src = songs[currentSong];
+music.src = song;
 
 music.load();
 
@@ -2611,44 +2532,46 @@ console.log("Music error:", error);
 
 function toggleMusic() {
 
-/* If music is currently playing,
-go immediately to the next song */
+/*
+SEQUENCE:
 
-if (!music.paused) {
+1 = Pqña
+2 = GYP
+3 = Stop
+4 = Pqña
+5 = GYP
+6 = Stop
+*/
 
-currentSong++;
+if (musicStep === 0) {
 
-if (currentSong >= songs.length) {
+playSong("Pqña.mp3");
 
-currentSong = 0;
-
-}
-
-playCurrentSong();
-
-return;
-
-}
-
-/* First press starts the current song */
-
-playCurrentSong();
+musicStep = 1;
 
 }
 
-music.addEventListener("ended", function () {
+else if (musicStep === 1) {
 
-currentSong++;
+playSong("GYP.mp3");
 
-if (currentSong >= songs.length) {
-
-currentSong = 0;
+musicStep = 2;
 
 }
 
-playCurrentSong();
+else {
 
-});
+music.pause();
+
+music.currentTime = 0;
+
+musicButton.textContent = "🎵";
+
+musicStep = 0;
+
+}
+
+}
 
 </script>
 
