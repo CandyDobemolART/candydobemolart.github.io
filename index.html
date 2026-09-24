@@ -11,8 +11,6 @@
 
 <meta name="google" content="notranslate">
 
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
 <style>
 
 * {
@@ -115,9 +113,6 @@ padding: 60px 20px 40px;
 }
 
 header h1 {
-font-family: "Pacifico", cursive;
-line-height: 1.25;
-
 font-size: clamp(45px, 8vw, 80px);
 letter-spacing: 8px;
 text-transform: none;
@@ -412,49 +407,19 @@ z-index: 3;
 background: #1c1c1c;
 }
 
-
 /* =========================
-ARTWORK 07 - HEART IT IN!
+ARTWORK 07 & 08 & 09
 ========================= */
 
-.artwork:nth-child(7) {
-position: relative;
-margin-top: 80px;
-}
-
-.artwork:nth-child(7) img {
-height: 360px;
-
-margin-top: -80px;
-
-object-fit: contain;
-
-object-position: center bottom;
-
-background: #111;
-
-position: relative;
-
-z-index: 2;
-}
-
-.artwork:nth-child(7) .artwork-info {
-position: relative;
-
-z-index: 3;
-
-background: #1c1c1c;
-}
-
-/* =========================
-ARTWORK 09 - AGUAMARINA COVE
-========================= */
-
+.artwork:nth-child(7),
+.artwork:nth-child(8),
 .artwork:nth-child(9) {
 position: relative;
 margin-top: 80px;
 }
 
+.artwork:nth-child(7) img,
+.artwork:nth-child(8) img,
 .artwork:nth-child(9) img {
 height: 360px;
 
@@ -471,36 +436,13 @@ position: relative;
 z-index: 2;
 }
 
+.artwork:nth-child(7) .artwork-info,
+.artwork:nth-child(8) .artwork-info,
 .artwork:nth-child(9) .artwork-info {
 position: relative;
 
 z-index: 3;
 
-background: #1c1c1c;
-}
-
-/* =========================
-ARTWORK 08 - WAVES (LANDSCAPE)
-========================= */
-
-.artwork:nth-child(8) {
-position: relative;
-margin-top: 80px;
-}
-
-.artwork:nth-child(8) img {
-height: 280px;
-margin-top: -40px;
-object-fit: contain;
-object-position: center center;
-background: #111;
-position: relative;
-z-index: 2;
-}
-
-.artwork:nth-child(8) .artwork-info {
-position: relative;
-z-index: 3;
 background: #1c1c1c;
 }
 
@@ -1013,7 +955,6 @@ header h1 {
 font-size: 40px;
 
 letter-spacing: 4px;
-line-height: 1.25;
 }
 
 header p {
@@ -1086,24 +1027,30 @@ margin-top: -40px;
 
 .artwork:nth-child(4),
 .artwork:nth-child(5),
-.artwork:nth-child(6),
-.artwork:nth-child(7) {
+.artwork:nth-child(6) {
 margin-top: 60px;
 }
 
 .artwork:nth-child(4) img,
 .artwork:nth-child(5) img,
-.artwork:nth-child(6) img,
-.artwork:nth-child(7) img {
+.artwork:nth-child(6) img {
 height: 340px;
 
 margin-top: -40px;
 }
 
+/* =========================
+MOBILE ARTWORK 07 & 08 & 09
+========================= */
+
+.artwork:nth-child(7),
+.artwork:nth-child(8),
 .artwork:nth-child(9) {
 margin-top: 60px;
 }
 
+.artwork:nth-child(7) img,
+.artwork:nth-child(8) img,
 .artwork:nth-child(9) img {
 height: 340px;
 
@@ -1112,16 +1059,6 @@ margin-top: -40px;
 
 .design img {
 height: 320px;
-}
-
-
-.artwork:nth-child(8) {
-margin-top: 60px;
-}
-
-.artwork:nth-child(8) img {
-height: 240px;
-margin-top: -30px;
 }
 
 /* =========================
@@ -1205,6 +1142,7 @@ font-size: 17px;
 
 line-height: 1.7;
 }
+
 }
 
 </style>
@@ -1221,10 +1159,10 @@ line-height: 1.7;
 id="languageButton"
 onclick="toggleLanguage()"
 aria-label="Change language"
-
 >
 
-<span class="language-option active" id="languageEN">EN</span> <span class="language-option" id="languageES">ES</span>
+<span class="language-option active" id="languageEN">EN</span>
+<span class="language-option" id="languageES">ES</span>
 
 </button>
 
@@ -1232,7 +1170,7 @@ aria-label="Change language"
 
 <!-- BACKGROUND MUSIC -->
 
-<audio id="backgroundMusic" loop>
+<audio id="backgroundMusic">
 <source src="Pqña.mp3" type="audio/mpeg">
 </audio>
 
@@ -1255,7 +1193,9 @@ d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
 
 <textPath href="#musicCircle" startOffset="0%">
 
-<tspan class="turn-pink" fill="#ffffff">- Turn It Up -</tspan> <tspan class="turn-yellow" fill="#ffffff"> Turn It Up -</tspan> <tspan class="turn-purple" fill="#ffffff"> Turn It Up -</tspan>
+<tspan class="turn-pink" fill="#ffffff">- Turn It Up -</tspan>
+<tspan class="turn-yellow" fill="#ffffff"> Turn It Up -</tspan>
+<tspan class="turn-purple" fill="#ffffff"> Turn It Up -</tspan>
 
 </textPath>
 
@@ -1297,35 +1237,40 @@ href="#home"
 data-en="Home"
 data-es="Inicio"
 >
-Home </a>
+Home
+</a>
 
 <a
 href="#artwork"
 data-en="Artwork"
 data-es="Obras"
 >
-Artwork </a>
+Artwork
+</a>
 
 <a
 href="#designs"
 data-en="T-Shirt Designs"
 data-es="Diseños de camisetas"
 >
-T-Shirt Designs </a>
+T-Shirt Designs
+</a>
 
 <a
 href="#about"
 data-en="About"
 data-es="Sobre mí"
 >
-About </a>
+About
+</a>
 
 <a
 href="#contact"
 data-en="Contact"
 data-es="Contacto"
 >
-Contact </a>
+Contact
+</a>
 
 </nav>
 
@@ -1373,7 +1318,8 @@ data-es="Precio: 50 €"
 Price: 50 €
 </div>
 
-<div class="status available"
+<div
+class="status available"
 data-en="Still here"
 data-es="Sigue aquí"
 >
@@ -1388,7 +1334,8 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1443,7 +1390,8 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1498,7 +1446,8 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1553,7 +1502,8 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1608,7 +1558,8 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1663,7 +1614,8 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1718,7 +1670,8 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1773,7 +1726,8 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1786,7 +1740,7 @@ Buy/Enquire </a>
 <div class="artwork">
 
 <img
-src="Aguamarina Cove.jpeg"
+src="Aguamarina Cove...png"
 alt="AguaMarina Cove"
 onclick="openLightbox(this.src)"
 >
@@ -1828,7 +1782,8 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
-Buy/Enquire </a>
+Buy/Enquire
+</a>
 
 </div>
 
@@ -1886,7 +1841,8 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -1927,7 +1883,8 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -1968,7 +1925,8 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -2009,7 +1967,8 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -2050,7 +2009,8 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -2091,7 +2051,8 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -2132,7 +2093,8 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -2173,7 +2135,8 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -2214,7 +2177,8 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
-Have a look! </a>
+Have a look!
+</a>
 
 </div>
 
@@ -2382,6 +2346,7 @@ Instagram
 <!-- FOOTER -->
 
 <footer>
+
 <p>© 2026 CandyDobemol_ART - All rights reserved</p>
 
 <p
@@ -2390,6 +2355,7 @@ data-es="🎵 Música original de Candy Dobemol"
 >
 🎵 Original music by Candy Dobemol
 </p>
+
 </footer>
 
 <!-- LIGHTBOX -->
@@ -2513,12 +2479,11 @@ const songs = [
 "GYP.mp3"
 ];
 
-let currentSong = 0;
-let musicAction = 0;
+let musicStep = 0;
 
-function playCurrentSong() {
+function playSong(song) {
 
-music.src = songs[currentSong];
+music.src = song;
 
 music.load();
 
@@ -2539,30 +2504,41 @@ console.log("Music error:", error);
 function toggleMusic() {
 
 /*
-1st press  = Pqña
-2nd press  = GYP
-3rd press  = Stop
-Then repeat: Pqña → GYP → Stop
+SEQUENCE:
+
+1 = Pqña
+2 = GYP
+3 = Stop
+4 = Pqña
+5 = GYP
+6 = Stop
 */
 
-if (musicAction === 0) {
+if (musicStep === 0) {
 
-currentSong = 0;
-playCurrentSong();
-musicAction = 1;
+playSong("Pqña.mp3");
 
-} else if (musicAction === 1) {
+musicStep = 1;
 
-currentSong = 1;
-playCurrentSong();
-musicAction = 2;
+}
 
-} else {
+else if (musicStep === 1) {
+
+playSong("GYP.mp3");
+
+musicStep = 2;
+
+}
+
+else {
 
 music.pause();
+
 music.currentTime = 0;
+
 musicButton.textContent = "🎵";
-musicAction = 0;
+
+musicStep = 0;
 
 }
 
