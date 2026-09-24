@@ -116,6 +116,7 @@ padding: 60px 20px 40px;
 
 header h1 {
 font-family: "Pacifico", cursive;
+line-height: 1.25;
 
 font-size: clamp(45px, 8vw, 80px);
 letter-spacing: 8px;
@@ -411,6 +412,39 @@ z-index: 3;
 background: #1c1c1c;
 }
 
+
+/* =========================
+ARTWORK 07 - HEART IT IN!
+========================= */
+
+.artwork:nth-child(7) {
+position: relative;
+margin-top: 80px;
+}
+
+.artwork:nth-child(7) img {
+height: 360px;
+
+margin-top: -80px;
+
+object-fit: contain;
+
+object-position: center bottom;
+
+background: #111;
+
+position: relative;
+
+z-index: 2;
+}
+
+.artwork:nth-child(7) .artwork-info {
+position: relative;
+
+z-index: 3;
+
+background: #1c1c1c;
+}
 
 /* =========================
 ARTWORK 09 - AGUAMARINA COVE
@@ -979,6 +1013,7 @@ header h1 {
 font-size: 40px;
 
 letter-spacing: 4px;
+line-height: 1.25;
 }
 
 header p {
@@ -1051,13 +1086,15 @@ margin-top: -40px;
 
 .artwork:nth-child(4),
 .artwork:nth-child(5),
-.artwork:nth-child(6) {
+.artwork:nth-child(6),
+.artwork:nth-child(7) {
 margin-top: 60px;
 }
 
 .artwork:nth-child(4) img,
 .artwork:nth-child(5) img,
-.artwork:nth-child(6) img {
+.artwork:nth-child(6) img,
+.artwork:nth-child(7) img {
 height: 340px;
 
 margin-top: -40px;
