@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 
 <html lang="en" translate="no">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CandyDobemol_ART | Art Gallery</title>
@@ -10,6 +13,8 @@
 <meta name="description" content="CandyDobemol_ART - Original artwork, paintings and creative T-shirt designs.">
 
 <meta name="google" content="notranslate">
+
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 <style>
 
@@ -98,25 +103,22 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
-
 background:
 linear-gradient(
 rgba(0,0,0,0.65),
 rgba(0,0,0,0.75)
 ),
 url("Shu Multi2.jpeg");
-
 background-size: cover;
 background-position: center;
-
 padding: 60px 20px 40px;
 }
 
 header h1 {
+font-family: "Lobster", cursive;
 font-size: clamp(45px, 8vw, 80px);
-letter-spacing: 8px;
+letter-spacing: 4px;
 text-transform: none;
-
 background: linear-gradient(
 90deg,
 #ff2d55,
@@ -129,19 +131,16 @@ background: linear-gradient(
 #bf5af2,
 #ff2d55
 );
-
 background-size: 300% auto;
-
 -webkit-background-clip: text;
 background-clip: text;
 -webkit-text-fill-color: transparent;
-
 animation: rainbowText 8s linear infinite;
-
 margin-bottom: 12px;
 }
 
 @keyframes rainbowText {
+
 0% {
 background-position: 0% center;
 }
@@ -149,6 +148,7 @@ background-position: 0% center;
 100% {
 background-position: 300% center;
 }
+
 }
 
 header p {
@@ -165,19 +165,13 @@ nav {
 position: sticky;
 top: 0;
 z-index: 1000;
-
 background: rgba(10,10,10,0.96);
-
 border-bottom: 1px solid #20d5c5;
-
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
-
 gap: 30px;
-
 padding: 15px 20px;
-
 backdrop-filter: blur(8px);
 }
 
@@ -186,17 +180,14 @@ color: #49e6d8;
 text-decoration: none;
 font-weight: bold;
 font-size: 17px;
-
 transition: all 0.3s ease;
 }
 
 nav a:hover {
 color: #ffffff;
-
 text-shadow:
 0 0 8px rgba(32,213,197,0.9),
 0 0 18px rgba(32,213,197,0.6);
-
 transform: translateY(-2px);
 }
 
@@ -214,28 +205,21 @@ section h2 {
 text-align: center;
 font-size: 38px;
 margin-bottom: 50px;
-
 color: #49e6d8;
-
 letter-spacing: 2px;
-
 text-shadow:
 0 0 8px rgba(32,213,197,0.35);
-
 display: flex;
 align-items: center;
 justify-content: center;
-
 gap: 25px;
 }
 
 section h2::before,
 section h2::after {
 content: "";
-
 width: 120px;
 height: 1px;
-
 background: rgba(73,230,216,0.55);
 }
 
@@ -245,38 +229,27 @@ ARTWORK GALLERY
 
 .gallery {
 display: grid;
-
 grid-template-columns:
 repeat(auto-fit, minmax(300px, 1fr));
-
 gap: 30px;
-
 align-items: stretch;
-
 margin-top: 100px;
 }
 
 .artwork {
 background: #1c1c1c;
-
 border-radius: 8px;
-
 overflow: visible;
-
 text-align: center;
-
 box-shadow:
 0 10px 30px rgba(0,0,0,0.45);
-
 transition: all 0.35s ease;
-
 display: flex;
 flex-direction: column;
 }
 
 .artwork:hover {
 transform: translateY(-8px);
-
 box-shadow:
 0 15px 35px rgba(0,0,0,0.7),
 0 0 20px rgba(32,213,197,0.15);
@@ -284,19 +257,12 @@ box-shadow:
 
 .artwork img {
 width: 100%;
-
 height: 280px;
-
 object-fit: contain;
-
 object-position: center center;
-
 display: block;
-
 cursor: zoom-in;
-
 background: #111;
-
 transition: transform 0.3s ease;
 }
 
@@ -314,25 +280,17 @@ position: relative;
 
 .artwork:nth-child(2) img {
 height: 380px;
-
 margin-top: -100px;
-
 object-fit: contain;
-
 object-position: center bottom;
-
 background: #111;
-
 position: relative;
-
 z-index: 2;
 }
 
 .artwork:nth-child(2) .artwork-info {
 position: relative;
-
 z-index: 3;
-
 background: #1c1c1c;
 }
 
@@ -346,25 +304,17 @@ position: relative;
 
 .artwork:nth-child(3) img {
 height: 360px;
-
 margin-top: -80px;
-
 object-fit: contain;
-
 object-position: center bottom;
-
 background: #111;
-
 position: relative;
-
 z-index: 2;
 }
 
 .artwork:nth-child(3) .artwork-info {
 position: relative;
-
 z-index: 3;
-
 background: #1c1c1c;
 }
 
@@ -383,17 +333,11 @@ margin-top: 80px;
 .artwork:nth-child(5) img,
 .artwork:nth-child(6) img {
 height: 360px;
-
 margin-top: -80px;
-
 object-fit: contain;
-
 object-position: center bottom;
-
 background: #111;
-
 position: relative;
-
 z-index: 2;
 }
 
@@ -401,9 +345,7 @@ z-index: 2;
 .artwork:nth-child(5) .artwork-info,
 .artwork:nth-child(6) .artwork-info {
 position: relative;
-
 z-index: 3;
-
 background: #1c1c1c;
 }
 
@@ -422,17 +364,11 @@ margin-top: 80px;
 .artwork:nth-child(8) img,
 .artwork:nth-child(9) img {
 height: 360px;
-
 margin-top: -80px;
-
 object-fit: contain;
-
 object-position: center bottom;
-
 background: #111;
-
 position: relative;
-
 z-index: 2;
 }
 
@@ -440,9 +376,7 @@ z-index: 2;
 .artwork:nth-child(8) .artwork-info,
 .artwork:nth-child(9) .artwork-info {
 position: relative;
-
 z-index: 3;
-
 background: #1c1c1c;
 }
 
@@ -452,51 +386,39 @@ ARTWORK INFORMATION
 
 .artwork-info {
 padding: 20px;
-
 flex: 1;
-
 display: flex;
 flex-direction: column;
-
 justify-content: flex-start;
 }
 
 .artwork-info h3 {
 font-size: 22px;
-
 margin-bottom: 8px;
-
 color: #49e6d8;
 }
 
 .artwork-info p {
 color: #ddd;
-
 margin-bottom: 12px;
-
 font-size: 16px;
 }
 
 .status {
 font-size: 17px;
-
 font-weight: bold;
-
 margin: 10px 0 14px;
-
 letter-spacing: 1px;
 }
 
 .status.available {
 color: #39d353;
-
 text-shadow:
 0 0 8px rgba(57,211,83,0.35);
 }
 
 .status.sold {
 color: #ff4d4d;
-
 text-shadow:
 0 0 8px rgba(255,77,77,0.35);
 }
@@ -504,9 +426,7 @@ text-shadow:
 .price-area {
 border-top:
 1px solid rgba(32,213,197,0.45);
-
 margin-top: 5px;
-
 padding-top: 18px;
 }
 
@@ -516,15 +436,10 @@ BUTTONS
 
 .button {
 display: inline-block;
-
 padding: 11px 22px;
-
 border: 1px solid #20d5c5;
-
 border-radius: 25px;
-
 color: #49e6d8;
-
 background: linear-gradient(
 135deg,
 #087f7a,
@@ -534,32 +449,23 @@ background: linear-gradient(
 #20d5c5,
 #087f7a
 );
-
 background-size: 250% 250%;
-
 -webkit-background-clip: text;
 background-clip: text;
 -webkit-text-fill-color: transparent;
-
 text-decoration: none;
-
 font-weight: bold;
-
 transition: all 0.4s ease;
-
 box-shadow:
 0 4px 12px rgba(32,213,197,0.15);
 }
 
 .button:hover {
 background-position: 100% 50%;
-
 border-color: #b8fff8;
-
 transform:
 translateY(-3px)
 scale(1.03);
-
 box-shadow:
 0 8px 22px rgba(32,213,197,0.3);
 }
@@ -570,15 +476,11 @@ MUSIC BUTTON
 
 .music-control {
 position: fixed;
-
 top: 10px;
 right: 20px;
-
 width: 92px;
 height: 92px;
-
 z-index: 9998;
-
 display: flex;
 align-items: center;
 justify-content: center;
@@ -586,19 +488,15 @@ justify-content: center;
 
 .music-ring {
 position: absolute;
-
 width: 92px;
 height: 92px;
-
 animation: musicRingRotate 18s linear infinite;
-
 pointer-events: none;
 }
 
 .music-ring svg {
 width: 100%;
 height: 100%;
-
 overflow: visible;
 }
 
@@ -623,6 +521,7 @@ fill: #ffffff !important;
 }
 
 @keyframes musicRingRotate {
+
 from {
 transform: rotate(0deg);
 }
@@ -630,47 +529,32 @@ transform: rotate(0deg);
 to {
 transform: rotate(360deg);
 }
+
 }
 
 #musicButton {
 position: relative;
-
 width: 58px;
 height: 58px;
-
 background: #20d5c5;
-
 color: #ffffff;
-
 border: none;
-
 border-radius: 50%;
-
 padding: 0;
-
 font-family: Georgia, "Times New Roman", serif;
-
 font-size: 13px;
-
 font-weight: bold;
-
 cursor: pointer;
-
 box-shadow:
 0 5px 15px rgba(0,0,0,0.45);
-
 transition: all 0.3s ease;
-
 z-index: 2;
 }
 
 #musicButton:hover {
 background: #49e6d8;
-
 color: #ffffff;
-
 transform: scale(1.08);
-
 box-shadow:
 0 0 18px rgba(32,213,197,0.6);
 }
@@ -681,31 +565,23 @@ T-SHIRT DESIGNS
 
 .designs {
 display: grid;
-
 grid-template-columns:
 repeat(auto-fit, minmax(300px, 1fr));
-
 gap: 30px;
 }
 
 .design {
 background: #1c1c1c;
-
 border-radius: 8px;
-
 overflow: hidden;
-
 text-align: center;
-
 box-shadow:
 0 10px 30px rgba(0,0,0,0.45);
-
 transition: all 0.35s ease;
 }
 
 .design:hover {
 transform: translateY(-8px);
-
 box-shadow:
 0 15px 35px rgba(0,0,0,0.7),
 0 0 20px rgba(32,213,197,0.15);
@@ -713,19 +589,12 @@ box-shadow:
 
 .design img {
 width: 100%;
-
 height: 350px;
-
 object-fit: cover;
-
 object-position: center center;
-
 display: block;
-
 cursor: zoom-in;
-
 background: #111;
-
 transition: transform 0.3s ease;
 }
 
@@ -739,15 +608,12 @@ padding: 20px;
 
 .design-info h3 {
 font-size: 21px;
-
 margin-bottom: 8px;
-
 color: #49e6d8;
 }
 
 .design-info p {
 color: #ddd;
-
 margin-bottom: 15px;
 }
 
@@ -761,17 +627,11 @@ text-align: center;
 
 .about-content {
 display: flex;
-
 align-items: center;
-
 justify-content: center;
-
 gap: 50px;
-
 max-width: 1000px;
-
 margin: auto;
-
 text-align: left;
 }
 
@@ -781,20 +641,13 @@ flex: 0 0 300px;
 
 .about-photo img {
 width: 300px;
-
 height: 300px;
-
 object-fit: cover;
-
 object-position: center;
-
 display: block;
-
 border-radius: 8px;
-
 border:
 1px solid rgba(32,213,197,0.45);
-
 box-shadow:
 0 10px 30px rgba(0,0,0,0.5),
 0 0 20px rgba(32,213,197,0.12);
@@ -810,13 +663,9 @@ flex: 1;
 
 .about-text p {
 max-width: none;
-
 margin: 0;
-
 font-size: 18px;
-
 color: #ccc;
-
 line-height: 1.8;
 }
 
@@ -830,29 +679,21 @@ text-align: center;
 
 #contact p {
 margin-bottom: 12px;
-
 font-size: 18px;
 }
 
 .email-link {
 display: inline-block;
-
 margin-top: 15px;
-
 color: #49e6d8;
-
 font-size: 20px;
-
 font-weight: bold;
-
 text-decoration: none;
-
 transition: all 0.3s ease;
 }
 
 .email-link:hover {
 color: #ffffff;
-
 text-shadow:
 0 0 10px rgba(32,213,197,0.9);
 }
@@ -863,59 +704,40 @@ LIGHTBOX
 
 .lightbox {
 display: none;
-
 position: fixed;
-
 z-index: 9999;
-
 left: 0;
 top: 0;
-
 width: 100%;
 height: 100%;
-
 background: rgba(0,0,0,0.94);
-
 align-items: center;
-
 justify-content: center;
-
 padding: 30px;
 }
 
 .lightbox img {
 max-width: 90%;
-
 max-height: 90%;
-
 object-fit: contain;
-
 border-radius: 5px;
-
 box-shadow:
 0 0 40px rgba(0,0,0,0.8);
 }
 
 .lightbox .close {
 position: absolute;
-
 top: 20px;
 right: 35px;
-
 font-size: 45px;
-
 color: #49e6d8;
-
 cursor: pointer;
-
 font-weight: bold;
-
 transition: all 0.3s ease;
 }
 
 .lightbox .close:hover {
 color: #ffffff;
-
 text-shadow:
 0 0 10px rgba(32,213,197,0.9);
 }
@@ -926,16 +748,11 @@ FOOTER
 
 footer {
 text-align: center;
-
 padding: 30px 20px;
-
 background: #090909;
-
 border-top:
 1px solid rgba(32,213,197,0.35);
-
 color: #aaa;
-
 font-size: 14px;
 }
 
@@ -947,25 +764,21 @@ MOBILE
 
 header {
 min-height: 280px;
-
 padding: 50px 15px 35px;
 }
 
 header h1 {
 font-size: 40px;
-
 letter-spacing: 4px;
 }
 
 header p {
 font-size: 16px;
-
 letter-spacing: 2px;
 }
 
 nav {
 gap: 15px;
-
 padding: 60px 10px 12px;
 }
 
@@ -979,7 +792,6 @@ padding: 55px 18px;
 
 section h2 {
 font-size: 30px;
-
 margin-bottom: 35px;
 }
 
@@ -1011,7 +823,6 @@ margin-top: 70px;
 
 .artwork:nth-child(2) img {
 height: 350px;
-
 margin-top: -50px;
 }
 
@@ -1021,7 +832,6 @@ margin-top: 60px;
 
 .artwork:nth-child(3) img {
 height: 340px;
-
 margin-top: -40px;
 }
 
@@ -1035,7 +845,6 @@ margin-top: 60px;
 .artwork:nth-child(5) img,
 .artwork:nth-child(6) img {
 height: 340px;
-
 margin-top: -40px;
 }
 
@@ -1053,7 +862,6 @@ margin-top: 60px;
 .artwork:nth-child(8) img,
 .artwork:nth-child(9) img {
 height: 340px;
-
 margin-top: -40px;
 }
 
@@ -1067,9 +875,7 @@ MOBILE MUSIC BUTTON
 
 .music-control {
 top: -5px;
-
 right: 5px;
-
 width: 82px;
 height: 82px;
 }
@@ -1081,16 +887,13 @@ height: 82px;
 
 .music-ring text {
 font-size: 9.9px;
-
 letter-spacing: 1.3px;
 }
 
 #musicButton {
 width: 52px;
 height: 52px;
-
 padding: 0;
-
 font-size: 12px;
 }
 
@@ -1119,9 +922,7 @@ MOBILE ABOUT
 
 .about-content {
 flex-direction: column;
-
 gap: 30px;
-
 text-align: center;
 }
 
@@ -1131,15 +932,12 @@ flex: none;
 
 .about-photo img {
 width: 240px;
-
 height: 240px;
-
 margin: auto;
 }
 
 .about-text p {
 font-size: 17px;
-
 line-height: 1.7;
 }
 
@@ -1162,6 +960,7 @@ aria-label="Change language"
 >
 
 <span class="language-option active" id="languageEN">EN</span>
+
 <span class="language-option" id="languageES">ES</span>
 
 </button>
@@ -1171,7 +970,9 @@ aria-label="Change language"
 <!-- BACKGROUND MUSIC -->
 
 <audio id="backgroundMusic">
+
 <source src="Pqña.mp3" type="audio/mpeg">
+
 </audio>
 
 <div class="music-control">
@@ -1206,7 +1007,9 @@ d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
 </div>
 
 <button id="musicButton" onclick="toggleMusic()">
+
 🎵
+
 </button>
 
 </div>
@@ -1223,7 +1026,9 @@ Candy Dobemol_ART
 data-en="Art · Painting · Original Designs"
 data-es="Arte · Pintura · Diseños Originales"
 >
+
 Art · Painting · Original Designs
+
 </p>
 
 </header>
@@ -1237,7 +1042,9 @@ href="#home"
 data-en="Home"
 data-es="Inicio"
 >
+
 Home
+
 </a>
 
 <a
@@ -1245,7 +1052,9 @@ href="#artwork"
 data-en="Artwork"
 data-es="Obras"
 >
+
 Artwork
+
 </a>
 
 <a
@@ -1253,7 +1062,9 @@ href="#designs"
 data-en="T-Shirt Designs"
 data-es="Diseños de camisetas"
 >
+
 T-Shirt Designs
+
 </a>
 
 <a
@@ -1261,7 +1072,9 @@ href="#about"
 data-en="About"
 data-es="Sobre mí"
 >
+
 About
+
 </a>
 
 <a
@@ -1269,7 +1082,9 @@ href="#contact"
 data-en="Contact"
 data-es="Contacto"
 >
+
 Contact
+
 </a>
 
 </nav>
@@ -1282,7 +1097,9 @@ Contact
 data-en="Artwork"
 data-es="Obras"
 >
+
 Artwork
+
 </h2>
 
 <div class="gallery">
@@ -1307,7 +1124,9 @@ Dolo´s MiniWorld
 data-en="Acrylic on framed canvas_6x6x1cm"
 data-es="Pintura acrílica sobre lienzo enmarcado_6x6x1cm"
 >
+
 Acrylic on framed canvas_6x6x1cm
+
 </p>
 
 <div
@@ -1315,7 +1134,9 @@ class="artwork-price"
 data-en="Price: 50 €"
 data-es="Precio: 50 €"
 >
+
 Price: 50 €
+
 </div>
 
 <div
@@ -1323,7 +1144,9 @@ class="status available"
 data-en="Still here"
 data-es="Sigue aquí"
 >
+
 Still here
+
 </div>
 
 <div class="price-area">
@@ -1334,7 +1157,9 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
+
 Buy/Enquire
+
 </a>
 
 </div>
@@ -1363,7 +1188,9 @@ Shu´s Sea
 data-en="Acrylic on framed canvas_20x50x1,5cm"
 data-es="Pintura acrílica sobre lienzo enmarcado_20x50x1,5cm"
 >
+
 Acrylic on framed canvas_20x50x1,5cm
+
 </p>
 
 <div
@@ -1371,7 +1198,9 @@ class="artwork-price"
 data-en="Price: 60 €"
 data-es="Precio: 60 €"
 >
+
 Price: 60 €
+
 </div>
 
 <div
@@ -1379,7 +1208,9 @@ class="status available"
 data-en="Still here"
 data-es="Sigue aquí"
 >
+
 Still here
+
 </div>
 
 <div class="price-area">
@@ -1390,7 +1221,9 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
+
 Buy/Enquire
+
 </a>
 
 </div>
@@ -1419,7 +1252,9 @@ Mandarine LP
 data-en="Acrylic on framed canvas_20x40x1,5cm"
 data-es="Pintura acrílica sobre lienzo enmarcado_20x40x1,5cm"
 >
+
 Acrylic on framed canvas_20x40x1,5cm
+
 </p>
 
 <div
@@ -1427,7 +1262,9 @@ class="artwork-price"
 data-en="Price: 60 €"
 data-es="Precio: 60 €"
 >
+
 Price: 60 €
+
 </div>
 
 <div
@@ -1435,7 +1272,9 @@ class="status available"
 data-en="Still here"
 data-es="Sigue aquí"
 >
+
 Still here
+
 </div>
 
 <div class="price-area">
@@ -1446,7 +1285,9 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
+
 Buy/Enquire
+
 </a>
 
 </div>
@@ -1473,9 +1314,11 @@ Cherokee
 
 <p
 data-en="Acrylic on panel canvas_28x36x0,30cm"
-data-es="Pintura acrílica sobre lienzo en panel _28x36x0,30cm"
+data-es="Pintura acrílica sobre lienzo en panel_28x36x0,30cm"
 >
+
 Acrylic on panel canvas_28x36x0,30cm
+
 </p>
 
 <div
@@ -1483,7 +1326,9 @@ class="artwork-price"
 data-en="Price: 50 €"
 data-es="Precio: 50 €"
 >
+
 Price: 50 €
+
 </div>
 
 <div
@@ -1491,7 +1336,9 @@ class="status available"
 data-en="Still here"
 data-es="Sigue aquí"
 >
+
 Still here
+
 </div>
 
 <div class="price-area">
@@ -1502,7 +1349,9 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
+
 Buy/Enquire
+
 </a>
 
 </div>
@@ -1531,7 +1380,9 @@ On the way
 data-en="Acrylic on panel canvas_30.5x23x0,30cm"
 data-es="Pintura acrílica sobre lienzo en panel_30.5x23x0,30cm"
 >
+
 Acrylic on panel canvas_30.5x23x0,30cm
+
 </p>
 
 <div
@@ -1539,7 +1390,9 @@ class="artwork-price"
 data-en="Price: 50 €"
 data-es="Precio: 50 €"
 >
+
 Price: 50 €
+
 </div>
 
 <div
@@ -1547,7 +1400,9 @@ class="status available"
 data-en="Still here"
 data-es="Sigue aquí"
 >
+
 Still here
+
 </div>
 
 <div class="price-area">
@@ -1558,7 +1413,9 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
+
 Buy/Enquire
+
 </a>
 
 </div>
@@ -1587,7 +1444,9 @@ Greenish
 data-en="Acrylic on framed canvas_20x50x1,5cm"
 data-es="Pintura acrílica sobre lienzo enmarcado_20x50x1,5cm"
 >
+
 Acrylic on framed canvas_20x50x1,5cm
+
 </p>
 
 <div
@@ -1595,7 +1454,9 @@ class="artwork-price"
 data-en="Price: 60 €"
 data-es="Precio: 60 €"
 >
+
 Price: 60 €
+
 </div>
 
 <div
@@ -1603,7 +1464,9 @@ class="status available"
 data-en="Still here"
 data-es="Sigue aquí"
 >
+
 Still here
+
 </div>
 
 <div class="price-area">
@@ -1614,7 +1477,9 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
+
 Buy/Enquire
+
 </a>
 
 </div>
@@ -1643,7 +1508,9 @@ Heart It In!
 data-en="Acrylic on framed canvas_30x40x1,5cm"
 data-es="Pintura acrílica sobre lienzo enmarcado_30x40x1,5cm"
 >
+
 Acrylic on framed canvas_30x40x1,5cm
+
 </p>
 
 <div
@@ -1651,7 +1518,9 @@ class="artwork-price"
 data-en="Price: 60 €"
 data-es="Precio: 60 €"
 >
+
 Price: 60 €
+
 </div>
 
 <div
@@ -1659,7 +1528,9 @@ class="status available"
 data-en="Still here"
 data-es="Sigue aquí"
 >
+
 Still here
+
 </div>
 
 <div class="price-area">
@@ -1670,7 +1541,9 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
+
 Buy/Enquire
+
 </a>
 
 </div>
@@ -1699,7 +1572,9 @@ Waves
 data-en="Acrylic on panel canvas_50x20x0,30cm"
 data-es="Pintura acrílica sobre lienzo en panel_50x20x0,30cm"
 >
+
 Acrylic on panel canvas_50x20x0,30cm
+
 </p>
 
 <div
@@ -1707,7 +1582,9 @@ class="artwork-price"
 data-en="Price: 50 €"
 data-es="Precio: 50 €"
 >
+
 Price: 50 €
+
 </div>
 
 <div
@@ -1715,7 +1592,9 @@ class="status available"
 data-en="Still here"
 data-es="Sigue aquí"
 >
+
 Still here
+
 </div>
 
 <div class="price-area">
@@ -1726,7 +1605,9 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
+
 Buy/Enquire
+
 </a>
 
 </div>
@@ -1755,7 +1636,9 @@ AguaMarina Cove
 data-en="Acrylic on panel canvas_35,7x28x0,30cm"
 data-es="Pintura acrílica sobre lienzo en panel_35,7x28x0,30cm"
 >
+
 Acrylic on panel canvas_35,7x28x0,30cm
+
 </p>
 
 <div
@@ -1763,7 +1646,9 @@ class="artwork-price"
 data-en="Price: 50 €"
 data-es="Precio: 50 €"
 >
+
 Price: 50 €
+
 </div>
 
 <div
@@ -1771,7 +1656,9 @@ class="status available"
 data-en="Still here"
 data-es="Sigue aquí"
 >
+
 Still here
+
 </div>
 
 <div class="price-area">
@@ -1782,7 +1669,9 @@ class="button"
 data-en="Buy/Enquire"
 data-es="Comprar/Consultar"
 >
+
 Buy/Enquire
+
 </a>
 
 </div>
@@ -1803,7 +1692,9 @@ Buy/Enquire
 data-en="T-Shirt Designs"
 data-es="Diseños de camisetas"
 >
+
 T-Shirt Designs
+
 </h2>
 
 <div class="designs">
@@ -1828,7 +1719,9 @@ Shu Multi-Guitar2
 data-en="Original T-shirt design"
 data-es="Diseño original de camiseta"
 >
+
 Original T-shirt design
+
 </p>
 
 <div class="price-area">
@@ -1841,7 +1734,9 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
+
 Have a look!
+
 </a>
 
 </div>
@@ -1870,7 +1765,9 @@ Freenomads Multi-Guitar
 data-en="Original T-shirt design"
 data-es="Diseño original de camiseta"
 >
+
 Original T-shirt design
+
 </p>
 
 <div class="price-area">
@@ -1883,7 +1780,9 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
+
 Have a look!
+
 </a>
 
 </div>
@@ -1912,7 +1811,9 @@ Twin Multi-Guitar
 data-en="Original T-shirt design"
 data-es="Diseño original de camiseta"
 >
+
 Original T-shirt design
+
 </p>
 
 <div class="price-area">
@@ -1925,7 +1826,9 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
+
 Have a look!
+
 </a>
 
 </div>
@@ -1954,7 +1857,9 @@ Black Guitar
 data-en="Original T-shirt design"
 data-es="Diseño original de camiseta"
 >
+
 Original T-shirt design
+
 </p>
 
 <div class="price-area">
@@ -1967,7 +1872,9 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
+
 Have a look!
+
 </a>
 
 </div>
@@ -1996,7 +1903,9 @@ Yellow Guitar
 data-en="Original T-shirt design"
 data-es="Diseño original de camiseta"
 >
+
 Original T-shirt design
+
 </p>
 
 <div class="price-area">
@@ -2009,7 +1918,9 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
+
 Have a look!
+
 </a>
 
 </div>
@@ -2038,7 +1949,9 @@ Help Guitar
 data-en="Original T-shirt design"
 data-es="Diseño original de camiseta"
 >
+
 Original T-shirt design
+
 </p>
 
 <div class="price-area">
@@ -2051,7 +1964,9 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
+
 Have a look!
+
 </a>
 
 </div>
@@ -2080,7 +1995,9 @@ Picassianna Guitar II
 data-en="Original T-shirt design"
 data-es="Diseño original de camiseta"
 >
+
 Original T-shirt design
+
 </p>
 
 <div class="price-area">
@@ -2093,7 +2010,9 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
+
 Have a look!
+
 </a>
 
 </div>
@@ -2122,7 +2041,9 @@ Drum Power
 data-en="Original T-shirt design"
 data-es="Diseño original de camiseta"
 >
+
 Original T-shirt design
+
 </p>
 
 <div class="price-area">
@@ -2135,7 +2056,9 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
+
 Have a look!
+
 </a>
 
 </div>
@@ -2164,7 +2087,9 @@ Sgt. Pepper Honored Guitar
 data-en="Original T-shirt design"
 data-es="Diseño original de camiseta"
 >
+
 Original T-shirt design
+
 </p>
 
 <div class="price-area">
@@ -2177,7 +2102,9 @@ rel="noopener noreferrer"
 data-en="Have a look!"
 data-es="¡Echa un vistazo!"
 >
+
 Have a look!
+
 </a>
 
 </div>
@@ -2203,7 +2130,9 @@ rel="noopener noreferrer"
 data-en="Visit the complete collection of T-shirts"
 data-es="Visita la colección completa de camisetas"
 >
+
 Visit the complete collection of T-shirts
+
 </a>
 
 </div>
@@ -2218,7 +2147,9 @@ Visit the complete collection of T-shirts
 data-en="About"
 data-es="Sobre mí"
 >
+
 About
+
 </h2>
 
 <div class="about-content">
@@ -2242,28 +2173,36 @@ Welcome to CandyDobemol_ART.
 data-en="Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars."
 data-es="Candy Dobemol es músico y artista, y su trabajo artístico está inspirado en el maravilloso mundo de la música, especialmente en las guitarras."
 >
+
 Candy Dobemol is a musician and artist whose artistic work is inspired by the wonderful world of music, especially guitars.
+
 </p>
 
 <p
 data-en="This gallery brings together his original artwork, paintings and creative designs. A space where art, colour and creativity become unique pieces."
 data-es="Esta galería reúne sus obras originales, pinturas y diseños creativos. Un espacio donde el arte, el color y la creatividad se convierten en piezas únicas."
 >
+
 This gallery brings together his original artwork, paintings and creative designs. A space where art, colour and creativity become unique pieces.
+
 </p>
 
 <p
 data-en="On this website You can discover and purchase his paintings on canvas, as well as explore links to the T-shirt shop featuring his designs."
 data-es="En esta web puedes descubrir y comprar sus pinturas sobre lienzo, así como explorar los enlaces a la tienda de camisetas con sus diseños."
 >
+
 On this website You can discover and purchase his paintings on canvas, as well as explore links to the T-shirt shop featuring his designs.
+
 </p>
 
 <p
 data-en="Enjoy!!!!"
 data-es="¡Disfruta!!!!"
 >
+
 Enjoy!!!!
+
 </p>
 
 </div>
@@ -2280,21 +2219,27 @@ Enjoy!!!!
 data-en="Contact"
 data-es="Contacto"
 >
+
 Contact
+
 </h2>
 
 <p
 data-en="Interested in Candy Dobemol's original artworks or T-shirt designs?"
 data-es="¿Te interesan las obras originales o los diseños de camisetas de Candy Dobemol?"
 >
+
 Interested in Candy Dobemol's original artworks or T-shirt designs?
+
 </p>
 
 <p
 data-en="Get in touch for availability, prices and orders."
 data-es="Ponte en contacto para consultar disponibilidad, precios y pedidos."
 >
+
 Get in touch for availability, prices and orders.
+
 </p>
 
 <a
@@ -2304,7 +2249,9 @@ style="color:#ff9f43;"
 target="_blank"
 rel="noopener noreferrer"
 >
+
 ✉ candydobemolart@gmail.com
+
 </a>
 
 <div
@@ -2323,7 +2270,9 @@ margin:0 12px;
 color:#1877F2;
 "
 >
+
 Facebook
+
 </a>
 
 <a
@@ -2336,7 +2285,9 @@ margin:0 12px;
 color:#E4405F;
 "
 >
+
 Instagram
+
 </a>
 
 </div>
@@ -2353,7 +2304,9 @@ Instagram
 data-en="🎵 Original music by Candy Dobemol"
 data-es="🎵 Música original de Candy Dobemol"
 >
+
 🎵 Original music by Candy Dobemol
+
 </p>
 
 </footer>
@@ -2370,7 +2323,9 @@ onclick="closeLightbox()"
 class="close"
 onclick="closeLightbox()"
 >
+
 ×
+
 </span>
 
 <img
@@ -2472,6 +2427,7 @@ BACKGROUND MUSIC
 ========================= */
 
 const music = document.getElementById("backgroundMusic");
+
 const musicButton = document.getElementById("musicButton");
 
 const songs = [
@@ -2488,11 +2444,13 @@ music.src = song;
 music.load();
 
 music.play()
+
 .then(() => {
 
 musicButton.textContent = "🔊";
 
 })
+
 .catch((error) => {
 
 console.log("Music error:", error);
@@ -2504,14 +2462,21 @@ console.log("Music error:", error);
 function toggleMusic() {
 
 /*
+
 SEQUENCE:
 
 1 = Pqña
+
 2 = GYP
+
 3 = Stop
+
 4 = Pqña
+
 5 = GYP
+
 6 = Stop
+
 */
 
 if (musicStep === 0) {
@@ -2547,4 +2512,5 @@ musicStep = 0;
 </script>
 
 </body>
+
 </html>
