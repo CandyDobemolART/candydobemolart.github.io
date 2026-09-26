@@ -390,6 +390,31 @@ background: #1c1c1c;
 }
 
 /* =========================
+ARTWORK 10
+========================= */
+
+.artwork:nth-child(10) {
+position: relative;
+margin-top: 80px;
+}
+
+.artwork:nth-child(10) img {
+height: 360px;
+margin-top: -80px;
+object-fit: contain;
+object-position: center bottom;
+background: #111;
+position: relative;
+z-index: 2;
+}
+
+.artwork:nth-child(10) .artwork-info {
+position: relative;
+z-index: 3;
+background: #1c1c1c;
+}
+
+/* =========================
 ARTWORK INFORMATION
 ========================= */
 
@@ -797,7 +822,7 @@ font-size: 15px;
 
 section {
 padding: 55px 18px;
-scroll-margin-top: 125px;  
+scroll-margin-top: 125px;
 }
 
 section h2 {
@@ -871,6 +896,19 @@ margin-top: 60px;
 .artwork:nth-child(7) img,
 .artwork:nth-child(8) img,
 .artwork:nth-child(9) img {
+height: 340px;
+margin-top: -40px;
+}
+
+/* =========================
+MOBILE ARTWORK 10
+========================= */
+
+.artwork:nth-child(10) {
+margin-top: 60px;
+}
+
+.artwork:nth-child(10) img {
 height: 340px;
 margin-top: -40px;
 }
@@ -1658,6 +1696,70 @@ data-es="Precio: 50 €"
 >
 
 Price: 50 €
+
+</div>
+
+<div
+class="status available"
+data-en="Still here"
+data-es="Sigue aquí"
+>
+
+Still here
+
+</div>
+
+<div class="price-area">
+
+<a
+href="#contact"
+class="button"
+data-en="Buy/Enquire"
+data-es="Comprar/Consultar"
+>
+
+Buy/Enquire
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ARTWORK 10 -->
+
+<div class="artwork">
+
+<img
+src="Damn Bush.jpeg"
+alt="Damn Bush"
+onclick="openLightbox(this.src)"
+>
+
+<div class="artwork-info">
+
+<h3>
+Damn Bush
+</h3>
+
+<p
+data-en="Acrylic on framed canvas_25x30x1.5cm"
+data-es="Pintura acrílica sobre lienzo enmarcado_25x30x1.5cm"
+>
+
+Acrylic on framed canvas_25x30x1.5cm
+
+</p>
+
+<div
+class="artwork-price"
+data-en="Price: 40 €"
+data-es="Precio: 40 €"
+>
+
+Price: 40 €
 
 </div>
 
