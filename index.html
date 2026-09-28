@@ -415,15 +415,17 @@ background: #1c1c1c;
 }
 
 /* =========================
-ARTWORK 11
+ARTWORK 11 & 12
 ========================= */
 
-.artwork:nth-child(11) {
+.artwork:nth-child(11),
+.artwork:nth-child(12) {
 position: relative;
 margin-top: 80px;
 }
 
-.artwork:nth-child(11) img {
+.artwork:nth-child(11) img,
+.artwork:nth-child(12) img {
 height: 360px;
 margin-top: -80px;
 object-fit: contain;
@@ -433,7 +435,8 @@ position: relative;
 z-index: 2;
 }
 
-.artwork:nth-child(11) .artwork-info {
+.artwork:nth-child(11) .artwork-info,
+.artwork:nth-child(12) .artwork-info {
 position: relative;
 z-index: 3;
 background: #1c1c1c;
@@ -939,14 +942,16 @@ margin-top: -40px;
 }
 
 /* =========================
-MOBILE ARTWORK 11
+MOBILE ARTWORK 11 & 12
 ========================= */
 
-.artwork:nth-child(11) {
+.artwork:nth-child(11),
+.artwork:nth-child(12) {
 margin-top: 60px;
 }
 
-.artwork:nth-child(11) img {
+.artwork:nth-child(11) img,
+.artwork:nth-child(12) img {
 height: 340px;
 margin-top: -40px;
 }
@@ -1091,7 +1096,7 @@ d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
 
 </div>
 
-<button id="musicButton" onclick="toggleMusic()">
+<button id="musicButton" onclick="toggleMusic">
 
 🎵
 
@@ -1869,6 +1874,72 @@ onclick="openLightbox(this.src)"
 
 <h3>
 Nowhere/Somewhere
+</h3>
+
+<p
+data-en="Acrylic on framed canvas_25x30x1,5cm"
+data-es="Pintura acrílica sobre lienzo enmarcado_25x30x1,5cm"
+>
+
+Acrylic on framed canvas_25x30x1,5cm
+
+</p>
+
+<div
+class="artwork-price"
+data-en="Price: 25 €"
+data-es="Precio: 25 €"
+>
+
+Price: 25 €
+
+</div>
+
+<div
+class="status available"
+data-en="Still here"
+data-es="Sigue aquí"
+>
+
+Still here
+
+</div>
+
+<div class="price-area">
+
+<a
+href="#contact"
+class="button"
+data-en="Buy/Enquire"
+data-es="Comprar/Consultar"
+
+>
+
+Buy/Enquire
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ARTWORK 12 -->
+
+<div class="artwork">
+
+<img
+src="Relic.jpeg"
+alt="Relic"
+onclick="openLightbox(this.src)"
+
+>
+
+<div class="artwork-info">
+
+<h3>
+Relic
 </h3>
 
 <p
