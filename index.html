@@ -1140,7 +1140,7 @@ aria-label="Change language"
 
 <!-- BACKGROUND MUSIC -->
 
-<audio id="backgroundMusic">
+<audio id="backgroundMusic" preload="auto">
 
 <source src="Pqña.mp3" type="audio/mpeg">
 
@@ -2924,71 +2924,64 @@ const musicButton = document.getElementById("musicButton");
 let musicStep = 0;
 
 const musicTracks = [
-    "Pqña.mp3",
-    "GYP.mp3"
+"Pqña.mp3",
+"GYP.mp3"
 ];
 
 function toggleMusic() {
 
-    /* 1º clic → Pqña */
-    if (musicStep === 0) {
+/* 1º clic → Pqña */
 
-        music.src = musicTracks[0];
-        music.load();
+if (musicStep === 0) {
 
-        music.play().then(() => {
-            musicButton.textContent = "Pqña";
-            musicStep = 1;
-        }).catch(() => {});
+music.src = encodeURI(musicTracks[0]);
+music.load();
 
-    }
+music.play().then(function() {
 
-    /* 2º clic → GYP */
-    else if (musicStep === 1) {
+musicButton.textContent = "Pqña";
+musicStep = 1;
 
-        music.src = musicTracks[1];
-        music.load();
+}).catch(function(error) {
 
-        music.play().then(() => {
-            musicButton.textContent = "GYP";
-            musicStep = 2;
-        }).catch(() => {});
+console.log("Error al reproducir Pqña.mp3:", error);
 
-    }
+});
 
-    /* 3º clic → PARAR */
-    else {
-
-        music.pause();
-        music.currentTime = 0;
-
-        musicButton.textContent = "▶";
-        musicStep = 0;
-    }
 }
 
-    /* 2º clic → GYP */
-    else if (musicStep === 1) {
+/* 2º clic → GYP */
 
-        music.src = musicTracks[1];
-        music.load();
+else if (musicStep === 1) {
 
-        music.play().then(() => {
-            musicButton.textContent = "GYP";
-            musicStep = 2;
-        }).catch(() => {});
+music.src = encodeURI(musicTracks[1]);
+music.load();
 
-    }
+music.play().then(function() {
 
-    /* 3º clic → PARAR */
-    else {
+musicButton.textContent = "GYP";
+musicStep = 2;
 
-        music.pause();
-        music.currentTime = 0;
+}).catch(function(error) {
 
-        musicButton.textContent = "▶";
-        musicStep = 0;
-    }
+console.log("Error al reproducir GYP.mp3:", error);
+
+});
+
+}
+
+/* 3º clic → PARAR */
+
+else {
+
+music.pause();
+music.currentTime = 0;
+
+musicButton.textContent = "▶";
+musicStep = 0;
+
+}
+
 }
 
 </script>
