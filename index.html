@@ -2914,7 +2914,6 @@ closeLightbox();
 
 });
 
-```javascript
 /* =========================
 BACKGROUND MUSIC
 ========================= */
@@ -2943,6 +2942,30 @@ function toggleMusic() {
         }).catch(() => {});
 
     }
+
+    /* 2º clic → GYP */
+    else if (musicStep === 1) {
+
+        music.src = musicTracks[1];
+        music.load();
+
+        music.play().then(() => {
+            musicButton.textContent = "GYP";
+            musicStep = 2;
+        }).catch(() => {});
+
+    }
+
+    /* 3º clic → PARAR */
+    else {
+
+        music.pause();
+        music.currentTime = 0;
+
+        musicButton.textContent = "▶";
+        musicStep = 0;
+    }
+}
 
     /* 2º clic → GYP */
     else if (musicStep === 1) {
