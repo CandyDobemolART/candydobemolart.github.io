@@ -2915,6 +2915,7 @@ closeLightbox();
 });
 
 ```html
+```html
 /* =========================
 BACKGROUND MUSIC
 ========================= */
@@ -2936,11 +2937,12 @@ function toggleMusic() {
 
         music.src = musicTracks[0];
         music.load();
-        music.play().catch(() => {});
 
-        musicButton.textContent = "Pqña";
+        music.play().then(() => {
+            musicButton.textContent = "Pqña";
+        }).catch(() => {});
+
         musicStep = 1;
-
     }
 
     /* 2º clic → GYP */
@@ -2948,11 +2950,12 @@ function toggleMusic() {
 
         music.src = musicTracks[1];
         music.load();
-        music.play().catch(() => {});
 
-        musicButton.textContent = "GYP";
+        music.play().then(() => {
+            musicButton.textContent = "GYP";
+        }).catch(() => {});
+
         musicStep = 2;
-
     }
 
     /* 3º clic → PARAR */
@@ -2963,7 +2966,6 @@ function toggleMusic() {
 
         musicButton.textContent = "▶";
         musicStep = 0;
-
     }
 }
 ```
