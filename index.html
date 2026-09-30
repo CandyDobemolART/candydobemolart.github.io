@@ -2914,8 +2914,7 @@ closeLightbox();
 
 });
 
-```html
-```html
+```javascript
 /* =========================
 BACKGROUND MUSIC
 ========================= */
@@ -2940,9 +2939,9 @@ function toggleMusic() {
 
         music.play().then(() => {
             musicButton.textContent = "Pqña";
+            musicStep = 1;
         }).catch(() => {});
 
-        musicStep = 1;
     }
 
     /* 2º clic → GYP */
@@ -2953,9 +2952,9 @@ function toggleMusic() {
 
         music.play().then(() => {
             musicButton.textContent = "GYP";
+            musicStep = 2;
         }).catch(() => {});
 
-        musicStep = 2;
     }
 
     /* 3º clic → PARAR */
@@ -2968,8 +2967,6 @@ function toggleMusic() {
         musicStep = 0;
     }
 }
-```
-
 
 </script>
 
