@@ -18,6 +18,10 @@
 
 <style>
 
+/* =========================
+GENERAL
+========================= */
+
 * {
 box-sizing: border-box;
 margin: 0;
@@ -462,6 +466,31 @@ z-index: 2;
 }
 
 .artwork:nth-child(13) .artwork-info {
+position: relative;
+z-index: 3;
+background: #1c1c1c;
+}
+
+/* =========================
+ARTWORK 14
+========================= */
+
+.artwork:nth-child(14) {
+position: relative;
+margin-top: 80px;
+}
+
+.artwork:nth-child(14) img {
+height: 400px;
+margin-top: -100px;
+object-fit: contain;
+object-position: center bottom;
+background: #111;
+position: relative;
+z-index: 2;
+}
+
+.artwork:nth-child(14) .artwork-info {
 position: relative;
 z-index: 3;
 background: #1c1c1c;
@@ -994,6 +1023,19 @@ height: 350px;
 margin-top: -50px;
 }
 
+/* =========================
+MOBILE ARTWORK 14
+========================= */
+
+.artwork:nth-child(14) {
+margin-top: 70px;
+}
+
+.artwork:nth-child(14) img {
+height: 370px;
+margin-top: -50px;
+}
+
 .design img {
 height: 320px;
 }
@@ -1086,7 +1128,6 @@ line-height: 1.7;
 id="languageButton"
 onclick="toggleLanguage()"
 aria-label="Change language"
-
 >
 
 <span class="language-option active" id="languageEN">EN</span>
@@ -2095,6 +2136,72 @@ Buy/Enquire
 
 </div>
 
+<!-- ARTWORK 14 -->
+
+<div class="artwork">
+
+<img
+src="Multi III.jpeg"
+alt="Multi III"
+onclick="openLightbox(this.src)"
+
+>
+
+<div class="artwork-info">
+
+<h3>
+Multi III
+</h3>
+
+<p
+data-en="Acrylic on framed canvas_30x40x1,5cm"
+data-es="Pintura acrílica sobre lienzo enmarcado_30x40x1,5cm"
+>
+
+Acrylic on framed canvas_30x40x1,5cm
+
+</p>
+
+<div
+class="artwork-price"
+data-en="Price: 65 €"
+data-es="Precio: 65 €"
+>
+
+Price: 65 €
+
+</div>
+
+<div
+class="status available"
+data-en="Still here"
+data-es="Sigue aquí"
+>
+
+Still here
+
+</div>
+
+<div class="price-area">
+
+<a
+href="#contact"
+class="button"
+data-en="Buy/Enquire"
+data-es="Comprar/Consultar"
+
+>
+
+Buy/Enquire
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
@@ -2749,97 +2856,47 @@ data-es="🎵 Música original de Candy Dobemol"
 
 </footer>
 
-<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
 
-<div
-id="lightbox"
-class="lightbox"
-onclick="closeLightbox()"
->
+<span class="close" onclick="closeLightbox()">&times;</span>
 
-<span
-class="close"
-onclick="closeLightbox()"
-
->
-
-×
-
-</span>
-
-<img
-id="lightbox-img"
-src=""
-alt="Enlarged artwork"
-
->
+<img id="lightboxImg" src="" alt="Artwork">
 
 </div>
 
-<!-- JAVASCRIPT -->
-
 <script>
-
-/* =========================
-LANGUAGE
-========================= */
 
 let currentLanguage = "en";
 
-function setLanguage(language) {
+function toggleLanguage() {
 
-currentLanguage = language;
+currentLanguage = currentLanguage === "en" ? "es" : "en";
 
-document.documentElement.lang = language;
+document.querySelectorAll("[data-en]").forEach(el => {
 
-const elements = document.querySelectorAll(
-"[data-en][data-es]"
-);
-
-elements.forEach(function(element) {
-
-element.textContent =
-element.getAttribute("data-" + language);
+el.textContent = el.getAttribute(`data-${currentLanguage}`);
 
 });
 
-document.getElementById("languageEN")
-.classList.toggle(
+document.getElementById("languageEN").classList.toggle(
 "active",
-language === "en"
+currentLanguage === "en"
 );
 
-document.getElementById("languageES")
-.classList.toggle(
+document.getElementById("languageES").classList.toggle(
 "active",
-language === "es"
+currentLanguage === "es"
 );
 
 }
-
-function toggleLanguage() {
-
-if (currentLanguage === "en") {
-
-setLanguage("es");
-
-} else {
-
-setLanguage("en");
-
-}
-
-}
-
-/* =========================
-LIGHTBOX
-========================= */
 
 function openLightbox(src) {
 
-document.getElementById("lightbox-img").src = src;
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
 
-document.getElementById("lightbox").style.display = "flex";
+lightboxImg.src = src;
+lightbox.style.display = "flex";
 
 }
 
@@ -2849,105 +2906,77 @@ document.getElementById("lightbox").style.display = "none";
 
 }
 
-document.addEventListener(
-"keydown",
-function(event) {
+document.getElementById("lightbox").addEventListener("click", function(e) {
 
-if (event.key === "Escape") {
-
+if (e.target === this) {
 closeLightbox();
-
 }
 
-}
-);
+});
 
 /* =========================
 BACKGROUND MUSIC
 ========================= */
 
 const music = document.getElementById("backgroundMusic");
-
 const musicButton = document.getElementById("musicButton");
 
-const songs = [
+let musicStep = 0;
+let musicStarted = false;
+
+const musicTracks = [
 "Pqña.mp3",
 "GYP.mp3"
 ];
 
-let musicStep = 0;
-
-function playSong(song) {
-
-music.src = song;
-
-music.load();
-
-music.play()
-
-.then(() => {
-
-musicButton.textContent = "🔊";
-
-})
-
-.catch((error) => {
-
-console.log("Music error:", error);
-
-});
-
-}
-
 function toggleMusic() {
 
-/*
+if (!musicStarted) {
 
-SEQUENCE:
-
-1 = Pqña
-
-2 = GYP
-
-3 = Stop
-
-4 = Pqña
-
-5 = GYP
-
-6 = Stop
-
-*/
-
-if (musicStep === 0) {
-
-playSong("Pqña.mp3");
-
-musicStep = 1;
-
-}
-
-else if (musicStep === 1) {
-
-playSong("GYP.mp3");
-
-musicStep = 2;
-
-}
-
-else {
-
-music.pause();
-
-music.currentTime = 0;
-
-musicButton.textContent = "🎵";
-
+musicStarted = true;
 musicStep = 0;
 
+music.src = musicTracks[musicStep];
+music.play();
+
+musicButton.textContent = "⏸";
+
+return;
+
+}
+
+if (!music.paused) {
+
+music.pause();
+musicButton.textContent = "▶";
+
+} else {
+
+music.play();
+musicButton.textContent = "⏸";
+
 }
 
 }
+
+music.addEventListener("ended", function() {
+
+musicStep++;
+
+if (musicStep < musicTracks.length) {
+
+music.src = musicTracks[musicStep];
+music.play();
+
+} else {
+
+musicStep = 0;
+music.src = musicTracks[musicStep];
+music.play();
+
+}
+
+});
 
 </script>
 
