@@ -2922,61 +2922,49 @@ const music = document.getElementById("backgroundMusic");
 const musicButton = document.getElementById("musicButton");
 
 let musicStep = 0;
-let musicStarted = false;
 
 const musicTracks = [
-"Pqña.mp3",
-"GYP.mp3"
+    "Pqña.mp3",
+    "GYP.mp3"
 ];
 
 function toggleMusic() {
 
-if (!musicStarted) {
+    /* 1º clic → Pqña */
+    if (musicStep === 0) {
 
-musicStarted = true;
-musicStep = 0;
+        music.src = musicTracks[0];
+        music.load();
+        music.play().catch(() => {});
 
-music.src = musicTracks[musicStep];
-music.play();
+        musicButton.textContent = "⏸";
+        musicStep = 1;
 
-musicButton.textContent = "⏸";
+    }
 
-return;
+    /* 2º clic → GYP */
+    else if (musicStep === 1) {
 
+        music.src = musicTracks[1];
+        music.load();
+        music.play().catch(() => {});
+
+        musicButton.textContent = "⏸";
+        musicStep = 2;
+
+    }
+
+    /* 3º clic → PARAR */
+    else {
+
+        music.pause();
+        music.currentTime = 0;
+
+        musicButton.textContent = "▶";
+        musicStep = 0;
+
+    }
 }
-
-if (!music.paused) {
-
-music.pause();
-musicButton.textContent = "▶";
-
-} else {
-
-music.play();
-musicButton.textContent = "⏸";
-
-}
-
-}
-
-music.addEventListener("ended", function() {
-
-musicStep++;
-
-if (musicStep < musicTracks.length) {
-
-music.src = musicTracks[musicStep];
-music.play();
-
-} else {
-
-musicStep = 0;
-music.src = musicTracks[musicStep];
-music.play();
-
-}
-
-});
 
 </script>
 
