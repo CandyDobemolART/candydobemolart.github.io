@@ -56,7 +56,7 @@ z-index: 9998;
 
 #languageButton {
 width: 92px;
-height: 38px;
+height: 52px;
 padding: 0;
 background: #111;
 color: #777;
@@ -77,14 +77,34 @@ justify-content: space-around;
 
 #languageButton .language-option {
 width: 40px;
-height: 28px;
+height: 44px;
 display: flex;
+flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: flex-start;
+padding-top: 5px;
 border-radius: 15px;
 transition: all 0.3s ease;
 position: relative;
 z-index: 2;
+line-height: 1.1;
+}
+
+#languageButton .language-option::after {
+display: block;
+font-size: 18px;
+line-height: 18px;
+margin-top: 2px;
+opacity: 0.38;
+filter: saturate(0.75);
+}
+
+#languageButton #languageEN::after {
+content: "🇬🇧";
+}
+
+#languageButton #languageES::after {
+content: "🇪🇸";
 }
 
 #languageButton .language-option.active {
@@ -92,6 +112,10 @@ background: #20d5c5;
 color: #111;
 box-shadow:
 0 0 10px rgba(32,213,197,0.45);
+}
+
+#languageButton .language-option.active::after {
+opacity: 0.48;
 }
 
 #languageButton:hover {
@@ -1117,12 +1141,19 @@ left: 10px;
 
 #languageButton {
 width: 86px;
-height: 36px;
+height: 50px;
 }
 
 #languageButton .language-option {
 width: 37px;
-height: 26px;
+height: 43px;
+padding-top: 4px;
+}
+
+#languageButton .language-option::after {
+font-size: 17px;
+line-height: 17px;
+margin-top: 2px;
 }
 
 /* =========================
