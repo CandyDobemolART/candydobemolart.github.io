@@ -9,15 +9,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 <style>
-/* ========================= GENERAL ========================= */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: Georgia, "Times New Roman", serif; background: #111; color: #ddd; line-height: 1.6; }
 html, body { overflow-x: clip; }
 
-/* ========================= LANGUAGE BUTTON ========================= */
 .language-control { position: fixed; top: 20px; left: 20px; z-index: 9998; }
-
 #languageButton {
 width: 92px; height: 38px; padding: 0; background: #111; color: #777;
 border: 1px solid #20d5c5; border-radius: 20px;
@@ -26,50 +23,41 @@ cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.45);
 transition: all 0.3s ease; position: relative; display: flex;
 flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: space-around;
 }
-
 #languageButton .language-option {
 width: 40px; height: 28px; flex: 0 0 40px; display: flex;
 align-items: center; justify-content: center; border-radius: 15px;
 transition: all 0.3s ease; position: relative; overflow: hidden;
 isolation: isolate; background: transparent; color: #20d5c5;
 }
-
 #languageButton .language-option::before {
 content: ""; position: absolute; inset: 0; border-radius: 15px;
 background-repeat: no-repeat; background-position: center; background-size: cover;
 opacity: 0.38; z-index: 0; pointer-events: none;
 transition: opacity 0.3s ease, filter 0.3s ease;
 }
-
 #languageButton #languageEN::before {
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect width='60' height='40' fill='%23012169'/%3E%3Cpath d='M0 0L60 40M60 0L0 40' stroke='%23fff' stroke-width='8'/%3E%3Cpath d='M0 0L60 40M60 0L0 40' stroke='%23c8102e' stroke-width='4'/%3E%3Cpath d='M30 0V40M0 20H60' stroke='%23fff' stroke-width='14'/%3E%3Cpath d='M30 0V40M0 20H60' stroke='%23c8102e' stroke-width='8'/%3E%3C/svg%3E");
 }
-
 #languageButton #languageES::before {
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'%3E%3Crect width='60' height='40' fill='%23AA151B'/%3E%3Crect y='10' width='60' height='20' fill='%23F1BF00'/%3E%3C/svg%3E");
 }
-
 #languageButton .language-option.active::before { opacity: 0.78; filter: brightness(1.15) saturate(1.2); }
-
 #languageButton .language-option .language-text {
 position: relative; z-index: 2; color: #fff; font-weight: bold;
 text-shadow: 0 1px 3px rgba(0,0,0,0.95);
 transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
 #languageButton .language-option.active .language-text {
 color: #000; background: rgba(255,255,255,0.55);
 border-radius: 5px; padding: 1px 4px; text-shadow: none;
 }
 
-/* ========================= HEADER ========================= */
 header {
 min-height: 330px; display: flex; flex-direction: column; justify-content: center;
 align-items: center; text-align: center;
 background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url("Shu Multi2.jpeg");
 background-size: cover; background-position: center; padding: 60px 20px 40px;
 }
-
 header h1 {
 font-family: "Lobster", cursive; font-size: clamp(45px, 8vw, 80px);
 letter-spacing: 4px; padding: 0 15px; box-sizing: border-box;
@@ -78,246 +66,168 @@ background: linear-gradient(90deg, #ff2d55, #ff9500, #ffd60a, #30d158, #00c7be, 
 background-size: 300% auto; -webkit-background-clip: text; background-clip: text;
 -webkit-text-fill-color: transparent; animation: rainbowText 8s linear infinite; margin-bottom: 12px;
 }
-
 @keyframes rainbowText {
 0% { background-position: 0% center; }
 100% { background-position: 300% center; }
 }
-
 header p { font-size: 20px; letter-spacing: 3px; color: #ddd; }
 
-/* ========================= NAVIGATION ========================= */
 nav {
 position: sticky; top: 0; z-index: 1000; width: 100%; box-sizing: border-box;
 background: rgba(10,10,10,0.96); border-bottom: 1px solid #20d5c5;
 display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;
 padding: 15px 20px; backdrop-filter: blur(8px);
 }
-
 nav a { color: #49e6d8; text-decoration: none; font-weight: bold; font-size: 17px; transition: all 0.3s ease; }
-
 nav a:hover {
 color: #ffffff;
 text-shadow: 0 0 8px rgba(32,213,197,0.9), 0 0 18px rgba(32,213,197,0.6);
 transform: translateY(-2px);
 }
 
-/* ========================= SECTIONS ========================= */
 section { max-width: 1200px; margin: auto; padding: 70px 30px; }
-
 section h2 {
 text-align: center; font-size: 38px; margin-bottom: 50px; color: #49e6d8;
 letter-spacing: 2px; text-shadow: 0 0 8px rgba(32,213,197,0.35);
 display: flex; align-items: center; justify-content: center; gap: 25px;
 }
-
 section h2::before, section h2::after {
 content: ""; width: 120px; height: 1px; background: rgba(73,230,216,0.55);
 }
 
-/* ========================= ARTWORK GALLERY ========================= */
 .gallery {
 display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 gap: 30px; align-items: stretch; margin-top: 100px;
 }
-
 .artwork {
 background: #1c1c1c; border-radius: 8px; overflow: visible; text-align: center;
 box-shadow: 0 10px 30px rgba(0,0,0,0.45); transition: all 0.35s ease;
 display: flex; flex-direction: column;
 }
-
 .artwork:hover {
 transform: translateY(-8px);
 box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 20px rgba(32,213,197,0.15);
 }
-
 .artwork img {
 width: 100%; height: 280px; object-fit: contain; object-position: center center;
 display: block; cursor: zoom-in; background: #111; transition: transform 0.3s ease;
 }
-
 .artwork img:hover { transform: scale(1.02); }
 
-/* ========================= SHU'S SEA - NOW ARTWORK 01 ========================= */
 .artwork:nth-child(1) { position: relative; }
-
 .artwork:nth-child(1) img {
 height: 380px; margin-top: -100px; object-fit: contain; object-position: center bottom;
 background: #111; position: relative; z-index: 2;
 }
+.artwork:nth-child(1) .artwork-info { position: relative; z-index: 3; background: #1c1c1c; }
 
-.artwork:nth-child(1) .artwork-info {
-position: relative; z-index: 3; background: #1c1c1c;
-}
-
-/* ========================= MANDARINE LP ========================= */
 .artwork:nth-child(3) { position: relative; }
-
 .artwork:nth-child(3) img {
 height: 360px; margin-top: -80px; object-fit: contain; object-position: center bottom;
 background: #111; position: relative; z-index: 2;
 }
+.artwork:nth-child(3) .artwork-info { position: relative; z-index: 3; background: #1c1c1c; }
 
-.artwork:nth-child(3) .artwork-info {
-position: relative; z-index: 3; background: #1c1c1c;
-}
-
-/* ========================= ARTWORK 04 & 05 & 06 ========================= */
 .artwork:nth-child(4), .artwork:nth-child(5), .artwork:nth-child(6) {
 position: relative; margin-top: 80px;
 }
-
 .artwork:nth-child(4) img, .artwork:nth-child(5) img, .artwork:nth-child(6) img {
 height: 360px; margin-top: -80px; object-fit: contain; object-position: center bottom;
 background: #111; position: relative; z-index: 2;
 }
-
 .artwork:nth-child(4) .artwork-info, .artwork:nth-child(5) .artwork-info, .artwork:nth-child(6) .artwork-info {
 position: relative; z-index: 3; background: #1c1c1c;
 }
 
-/* ========================= ARTWORK 07 & 08 & 09 ========================= */
 .artwork:nth-child(7), .artwork:nth-child(8), .artwork:nth-child(9) {
 position: relative; margin-top: 80px;
 }
-
 .artwork:nth-child(7) img, .artwork:nth-child(8) img, .artwork:nth-child(9) img {
 height: 360px; margin-top: -80px; object-fit: contain; object-position: center bottom;
 background: #111; position: relative; z-index: 2;
 }
-
 .artwork:nth-child(7) .artwork-info, .artwork:nth-child(8) .artwork-info, .artwork:nth-child(9) .artwork-info {
 position: relative; z-index: 3; background: #1c1c1c;
 }
 
-/* ========================= ARTWORK 10 ========================= */
 .artwork:nth-child(10) { position: relative; margin-top: 80px; }
-
 .artwork:nth-child(10) img {
 height: 360px; margin-top: -80px; object-fit: contain; object-position: center bottom;
 background: #111; position: relative; z-index: 2;
 }
+.artwork:nth-child(10) .artwork-info { position: relative; z-index: 3; background: #1c1c1c; }
 
-.artwork:nth-child(10) .artwork-info {
-position: relative; z-index: 3; background: #1c1c1c;
-}
-
-/* ========================= ARTWORK 11 & 12 ========================= */
-.artwork:nth-child(11), .artwork:nth-child(12) {
-position: relative; margin-top: 80px;
-}
-
+.artwork:nth-child(11), .artwork:nth-child(12) { position: relative; margin-top: 80px; }
 .artwork:nth-child(11) img, .artwork:nth-child(12) img {
 height: 360px; margin-top: -80px; object-fit: contain; object-position: center bottom;
 background: #111; position: relative; z-index: 2;
 }
-
 .artwork:nth-child(11) .artwork-info, .artwork:nth-child(12) .artwork-info {
 position: relative; z-index: 3; background: #1c1c1c;
 }
 
-/* ========================= ARTWORK 13 ========================= */
 .artwork:nth-child(13) { position: relative; margin-top: 80px; }
-
 .artwork:nth-child(13) img {
 height: 380px; margin-top: -100px; object-fit: contain; object-position: center bottom;
 background: #111; position: relative; z-index: 2;
 }
+.artwork:nth-child(13) .artwork-info { position: relative; z-index: 3; background: #1c1c1c; }
 
-.artwork:nth-child(13) .artwork-info {
-position: relative; z-index: 3; background: #1c1c1c;
-}
-
-/* ========================= ARTWORK 14 ========================= */
 .artwork:nth-child(14) { position: relative; margin-top: 80px; }
-
 .artwork:nth-child(14) img {
 height: 360px; margin-top: -80px; object-fit: contain; object-position: center bottom;
 background: #111; position: relative; z-index: 2;
 }
+.artwork:nth-child(14) .artwork-info { position: relative; z-index: 3; background: #1c1c1c; }
 
-.artwork:nth-child(14) .artwork-info {
-position: relative; z-index: 3; background: #1c1c1c;
-}
-
-/* ========================= ARTWORK 15 ========================= */
 .artwork:nth-child(15) { position: relative; margin-top: 80px; }
-
 .artwork:nth-child(15) img {
 height: 360px; margin-top: -80px; object-fit: contain; object-position: center bottom;
 background: #111; position: relative; z-index: 2;
 }
+.artwork:nth-child(15) .artwork-info { position: relative; z-index: 3; background: #1c1c1c; }
 
-.artwork:nth-child(15) .artwork-info {
-position: relative; z-index: 3; background: #1c1c1c;
-}
-
-/* ========================= ARTWORK 16 ========================= */
 .artwork:nth-child(16) { position: relative; margin-top: 80px; }
-
 .artwork:nth-child(16) img {
 width: 100%; height: 280px; margin-left: 0; margin-top: 0;
 object-fit: contain; object-position: center center; background: #111;
 position: relative; z-index: 2; transform: scale(1.02);
 }
+.artwork:nth-child(16) .artwork-info { position: relative; z-index: 3; background: #1c1c1c; }
 
-.artwork:nth-child(16) .artwork-info {
-position: relative; z-index: 3; background: #1c1c1c;
-}
-
-/* ========================= ARTWORK 17 - THE KEEPER ========================= */
 .artwork:nth-child(17) { position: relative; margin-top: 80px; }
-
 .artwork:nth-child(17) img {
 height: 380px; margin-top: -100px; object-fit: contain; object-position: center bottom;
 background: #111; position: relative; z-index: 2;
 }
+.artwork:nth-child(17) .artwork-info { position: relative; z-index: 3; background: #1c1c1c; }
 
-.artwork:nth-child(17) .artwork-info {
-position: relative; z-index: 3; background: #1c1c1c;
-}
-
-/* ========================= ARTWORK 18 - TEPES ========================= */
 .artwork:nth-child(18) { position: relative; margin-top: 80px; }
-
 .artwork:nth-child(18) img {
 height: 380px; margin-top: -100px; object-fit: contain; object-position: center bottom;
 background: #111; position: relative; z-index: 2;
 }
+.artwork:nth-child(18) .artwork-info { position: relative; z-index: 3; background: #1c1c1c; }
 
-.artwork:nth-child(18) .artwork-info {
-position: relative; z-index: 3; background: #1c1c1c;
-}
-
-/* ========================= ARTWORK 19 - AUGUSTA! ========================= */
-.artwork:nth-child(19) {
-position: relative;
-margin-top: 80px;
-}
-
+.artwork:nth-child(19) { position: relative; margin-top: 80px; }
 .artwork:nth-child(19) img {
-width: 100%;
-height: 400px;
-margin-top: -80px;
-object-fit: contain;
-object-position: center bottom;
-background: #111;
-position: relative;
-z-index: 2;
+width: 100%; height: 400px; margin-top: -80px;
+object-fit: contain; object-position: center bottom; background: #111;
+position: relative; z-index: 2;
 }
+.artwork:nth-child(19) .artwork-info { position: relative; z-index: 3; background: #1c1c1c; }
 
-.artwork:nth-child(19) .artwork-info {
-position: relative;
-z-index: 3;
-background: #1c1c1c;
+.artwork:nth-child(20) { position: relative; margin-top: 80px; }
+.artwork:nth-child(20) img {
+width: 100%; height: 360px; margin-top: -60px;
+object-fit: contain; object-position: center bottom; background: #111;
+position: relative; z-index: 2;
 }
+.artwork:nth-child(20) .artwork-info { position: relative; z-index: 3; background: #1c1c1c; }
 
-/* ========================= ARTWORK INFORMATION ========================= */
 .artwork-info {
 padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: flex-start;
 }
-
 .artwork-info h3 { font-size: 22px; margin-bottom: 8px; color: #49e6d8; }
 .artwork-info p { color: #ddd; margin-bottom: 12px; font-size: 16px; }
 .status { font-size: 17px; font-weight: bold; margin: 10px 0 14px; letter-spacing: 1px; }
@@ -328,7 +238,6 @@ padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: 
 border-top: 1px solid rgba(32,213,197,0.45); margin-top: 5px; padding-top: 18px;
 }
 
-/* ========================= BUTTONS ========================= */
 .button {
 display: inline-block; padding: 11px 22px; border: 1px solid #20d5c5;
 border-radius: 25px; color: #49e6d8;
@@ -337,32 +246,26 @@ background-size: 250% 250%; -webkit-background-clip: text; background-clip: text
 -webkit-text-fill-color: transparent; text-decoration: none; font-weight: bold;
 transition: all 0.4s ease; box-shadow: 0 4px 12px rgba(32,213,197,0.15);
 }
-
 .button:hover {
 background-position: 100% 50%; border-color: #b8fff8;
 transform: translateY(-3px) scale(1.03); box-shadow: 0 8px 22px rgba(32,213,197,0.3);
 }
 
-/* ========================= MUSIC BUTTON ========================= */
 .music-control {
 position: fixed; top: 10px; right: 20px; width: 92px; height: 92px;
 z-index: 9998; display: flex; align-items: center; justify-content: center;
 }
-
 .music-ring {
 position: absolute; width: 92px; height: 92px;
 animation: musicRingRotate 18s linear infinite; pointer-events: none;
 }
-
 .music-ring svg { width: 100%; height: 100%; overflow: visible; }
 .music-ring text { font-family: Georgia, "Times New Roman", serif; font-size: 9.9px; font-weight: bold; letter-spacing: 1.3px; fill: #ffffff !important; }
 .turn-pink, .turn-yellow, .turn-purple { fill: #ffffff !important; }
-
 @keyframes musicRingRotate {
 from { transform: rotate(0deg); }
 to { transform: rotate(360deg); }
 }
-
 #musicButton {
 position: relative; width: 58px; height: 58px; background: #20d5c5; color: #ffffff;
 border: none; border-radius: 50%; padding: 0;
@@ -370,193 +273,138 @@ font-family: Georgia, "Times New Roman", serif; font-size: 13px; font-weight: bo
 cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.45);
 transition: all 0.3s ease; z-index: 2;
 }
-
 #musicButton:hover {
 background: #49e6d8; color: #ffffff; transform: scale(1.08);
 box-shadow: 0 0 18px rgba(32,213,197,0.6);
 }
 
-/* ========================= T-SHIRT DESIGNS ========================= */
 .designs {
 display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
 }
-
 .design {
 background: #1c1c1c; border-radius: 8px; overflow: hidden; text-align: center;
 box-shadow: 0 10px 30px rgba(0,0,0,0.45); transition: all 0.35s ease;
 }
-
 .design:hover {
 transform: translateY(-8px);
 box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 20px rgba(32,213,197,0.15);
 }
-
 .design img {
 width: 100%; height: 350px; object-fit: cover; object-position: center center;
 display: block; cursor: zoom-in; background: #111; transition: transform 0.3s ease;
 }
-
 .design img:hover { transform: scale(1.02); }
 .design-info { padding: 20px; }
 .design-info h3 { font-size: 21px; margin-bottom: 8px; color: #49e6d8; }
 .design-info p { color: #ddd; margin-bottom: 15px; }
 
-/* ========================= ABOUT ========================= */
 #about { text-align: center; }
-
 .about-content {
 display: flex; align-items: center; justify-content: center; gap: 50px;
 max-width: 1000px; margin: auto; text-align: left;
 }
-
 .about-photo { flex: 0 0 300px; }
-
 .about-photo img {
 width: 300px; height: 300px; object-fit: cover; object-position: center;
 display: block; border-radius: 8px; border: 1px solid rgba(32,213,197,0.45);
 box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(32,213,197,0.12);
 }
-
 .about-photo img:hover { transform: scale(1.02); }
 .about-text { flex: 1; }
-
 .about-text p {
 max-width: none; margin: 0; font-size: 18px; color: #ccc; line-height: 1.8;
 }
 
-/* ========================= CONTACT ========================= */
 #contact { text-align: center; }
 #contact p { margin-bottom: 12px; font-size: 18px; }
-
 .email-link {
 display: inline-block; margin-top: 15px; color: #49e6d8; font-size: 20px;
 font-weight: bold; text-decoration: none; transition: all 0.3s ease;
 }
-
 .email-link:hover { color: #ffffff; text-shadow: 0 0 10px rgba(32,213,197,0.9); }
 
-/* ========================= LIGHTBOX ========================= */
 .lightbox {
 display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%;
 height: 100%; background: rgba(0,0,0,0.94); align-items: center;
 justify-content: center; padding: 30px;
 }
-
 .lightbox img {
 max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 5px;
 box-shadow: 0 0 40px rgba(0,0,0,0.8);
 }
-
 .lightbox .close {
 position: absolute; top: 20px; right: 35px; font-size: 45px; color: #49e6d8;
 cursor: pointer; font-weight: bold; transition: all 0.3s ease;
 }
-
 .lightbox .close:hover { color: #ffffff; text-shadow: 0 0 10px rgba(32,213,197,0.9); }
 
-/* ========================= FOOTER ========================= */
 footer {
 text-align: center; padding: 30px 20px; background: #090909;
 border-top: 1px solid rgba(32,213,197,0.35); color: #aaa; font-size: 14px;
 }
-
 .price-notice {
 margin: 25px auto 5px; max-width: 750px; font-size: 13px; line-height: 1.6;
 color: #777; font-style: italic;
 }
 
-/* ========================= MOBILE ========================= */
 @media (max-width: 700px) {
 header { min-height: 280px; padding: 50px 15px 35px; }
 header h1 { font-size: 40px; letter-spacing: 4px; }
 header p { font-size: 16px; letter-spacing: 2px; }
-
 nav { gap: 15px; padding: 60px 10px 12px; }
 nav a { font-size: 15px; }
-
 section { padding: 55px 18px; scroll-margin-top: 125px; }
-
 section h2 { font-size: 30px; margin-bottom: 35px; }
-
 section h2::before, section h2::after { width: 50px; }
-
 .gallery, .designs { grid-template-columns: 1fr; }
 .gallery { margin-top: 80px; }
 .artwork img { height: 300px; }
 
-/* MOBILE SHU'S SEA - NOW ARTWORK 01 */
 .artwork:nth-child(1) { margin-top: 70px; }
 .artwork:nth-child(1) img { height: 350px; margin-top: -50px; }
-
-/* MOBILE MANDARINE LP */
 .artwork:nth-child(3) { margin-top: 60px; }
 .artwork:nth-child(3) img { height: 340px; margin-top: -40px; }
-
 .artwork:nth-child(4), .artwork:nth-child(5), .artwork:nth-child(6) { margin-top: 60px; }
 .artwork:nth-child(4) img, .artwork:nth-child(5) img, .artwork:nth-child(6) img { height: 340px; margin-top: -40px; }
-
-/* MOBILE ARTWORK 07 & 08 & 09 */
 .artwork:nth-child(7), .artwork:nth-child(8), .artwork:nth-child(9) { margin-top: 60px; }
 .artwork:nth-child(7) img, .artwork:nth-child(8) img, .artwork:nth-child(9) img { height: 340px; margin-top: -40px; }
-
-/* MOBILE ARTWORK 10 */
 .artwork:nth-child(10) { margin-top: 60px; }
 .artwork:nth-child(10) img { height: 340px; margin-top: -40px; }
-
-/* MOBILE ARTWORK 11 & 12 */
 .artwork:nth-child(11), .artwork:nth-child(12) { margin-top: 60px; }
 .artwork:nth-child(11) img, .artwork:nth-child(12) img { height: 340px; margin-top: -40px; }
-
-/* MOBILE ARTWORK 13 */
 .artwork:nth-child(13) { margin-top: 70px; }
 .artwork:nth-child(13) img { height: 350px; margin-top: -50px; }
-
-/* MOBILE ARTWORK 14 */
 .artwork:nth-child(14) { margin-top: 70px; }
 .artwork:nth-child(14) img { height: 370px; margin-top: -50px; }
-
-/* MOBILE ARTWORK 15 */
 .artwork:nth-child(15) { margin-top: 70px; }
 .artwork:nth-child(15) img { height: 340px; margin-top: -40px; }
-
-/* MOBILE ARTWORK 16 */
 .artwork:nth-child(16) { margin-top: 60px; }
 .artwork:nth-child(16) img {
 width: 100%; height: 300px; margin-left: 0; margin-top: 0;
 object-fit: contain; object-position: center center; transform: scale(1.02);
 }
-
-/* MOBILE ARTWORK 17 */
 .artwork:nth-child(17) { margin-top: 70px; }
 .artwork:nth-child(17) img { height: 350px; margin-top: -50px; object-fit: contain; object-position: center bottom; }
-
-/* MOBILE ARTWORK 18 */
 .artwork:nth-child(18) { margin-top: 70px; }
 .artwork:nth-child(18) img { height: 350px; margin-top: -50px; object-fit: contain; object-position: center bottom; }
-
-/* MOBILE ARTWORK 19 - AUGUSTA! */
 .artwork:nth-child(19) { margin-top: 70px; }
 .artwork:nth-child(19) img {
-height: 370px;
-margin-top: -50px;
-object-fit: contain;
-object-position: center bottom;
+height: 370px; margin-top: -50px;
+object-fit: contain; object-position: center bottom;
 }
-
+.artwork:nth-child(20) { margin-top: 70px; }
+.artwork:nth-child(20) img {
+height: 330px; margin-top: -40px;
+object-fit: contain; object-position: center bottom;
+}
 .design img { height: 320px; }
-
-/* MOBILE MUSIC BUTTON */
 .music-control { top: -5px; right: 5px; width: 82px; height: 82px; }
 .music-ring { width: 82px; height: 82px; }
 .music-ring text { font-size: 9.9px; letter-spacing: 1.3px; }
 #musicButton { width: 52px; height: 52px; padding: 0; font-size: 12px; }
-
-/* MOBILE LANGUAGE BUTTON */
 .language-control { top: 10px; left: 10px; }
 #languageButton { width: 86px; height: 36px; flex-direction: row; flex-wrap: nowrap; }
 #languageButton .language-option { width: 37px; height: 26px; flex: 0 0 37px; }
-
-/* MOBILE ABOUT */
 .about-content { flex-direction: column; gap: 30px; text-align: center; }
 .about-photo { flex: none; }
 .about-photo img { width: 240px; height: 240px; margin: auto; }
@@ -567,7 +415,6 @@ object-position: center bottom;
 
 <body class="notranslate">
 
-<!-- LANGUAGE BUTTON -->
 <div class="language-control">
 <button id="languageButton" onclick="toggleLanguage()" aria-label="Change language">
 <span class="language-option active" id="languageEN"><span class="language-text">EN</span></span>
@@ -575,7 +422,6 @@ object-position: center bottom;
 </button>
 </div>
 
-<!-- BACKGROUND MUSIC -->
 <audio id="backgroundMusic" preload="auto">
 <source src="Pqña.mp3" type="audio/mpeg">
 </audio>
@@ -598,7 +444,6 @@ object-position: center bottom;
 <button id="musicButton" onclick="toggleMusic()">🎵</button>
 </div>
 
-<!-- HEADER -->
 <header id="home">
 <h1>Candy Dobemol_ART</h1>
 <p data-en="Art · Music · Painting · Original Designs" data-es="Arte · Música · Pintura · Diseños Originales">
@@ -606,7 +451,6 @@ Art · Music · Painting · Original Designs
 </p>
 </header>
 
-<!-- NAVIGATION -->
 <nav>
 <a href="#home" data-en="Home" data-es="Inicio">Home</a>
 <a href="#artwork" data-en="Artwork" data-es="Obras">Artwork</a>
@@ -615,13 +459,10 @@ Art · Music · Painting · Original Designs
 <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
 </nav>
 
-<!-- ARTWORK -->
 <section id="artwork">
 <h2 data-en="Artwork" data-es="Obras">Artwork</h2>
-
 <div class="gallery">
 
-<!-- ARTWORK 01 - SHU'S SEA -->
 <div class="artwork">
 <img src="Shu´s Sea.jpeg" alt="Shu´s Sea" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -635,7 +476,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 02 - DOLO'S MINIWORLD -->
 <div class="artwork">
 <img src="Dolo.jpeg" alt="Dolo´s MiniWorld" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -649,7 +489,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 03 -->
 <div class="artwork">
 <img src="Mandarine LP.jpeg" alt="Mandarine LP" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -663,7 +502,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 04 -->
 <div class="artwork">
 <img src="Cherokee.jpeg" alt="Cherokee" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -677,7 +515,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 05 -->
 <div class="artwork">
 <img src="On the way.jpeg" alt="On the way" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -691,7 +528,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 06 -->
 <div class="artwork">
 <img src="Greenish.jpeg" alt="Greenish" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -705,7 +541,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 07 -->
 <div class="artwork">
 <img src="Heart It In!.jpeg" alt="Heart It In!" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -719,7 +554,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 08 -->
 <div class="artwork">
 <img src="Waves.jpeg" alt="Waves" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -733,7 +567,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 09 -->
 <div class="artwork">
 <img src="Aguamarina Cove...png" alt="AguaMarina Cove" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -747,7 +580,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 10 -->
 <div class="artwork">
 <img src="Damn Bush.jpeg" alt="Damn It!!" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -761,7 +593,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 11 -->
 <div class="artwork">
 <img src="Nowhere_Somewhere.jpeg" alt="Nowhere/Somewhere" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -775,7 +606,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 12 -->
 <div class="artwork">
 <img src="Relic.jpeg" alt="Relic" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -789,7 +619,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 13 -->
 <div class="artwork">
 <img src="Mammadou Honored.jpeg" alt="Mammadou Honored" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -803,7 +632,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 14 -->
 <div class="artwork">
 <img src="Multi III.jpeg" alt="Multi III" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -817,7 +645,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 15 -->
 <div class="artwork">
 <img src="Aranjuez Dance.png" alt="Aranjuez Dance" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -831,7 +658,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 16 -->
 <div class="artwork">
 <img src="¡Mirror¡ !Mirror!.jpeg" alt="¡Mirror¡ !Mirror!" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -845,7 +671,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 17 -->
 <div class="artwork">
 <img src="The Keeper.jpeg" alt="The Keeper" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -859,7 +684,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 18 -->
 <div class="artwork">
 <img src="Tepes.jpeg" alt="Tepes" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -873,7 +697,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- ARTWORK 19 - AUGUSTA! -->
 <div class="artwork">
 <img src="Augusta.jpeg" alt="Augusta!" onclick="openLightbox(this.src)">
 <div class="artwork-info">
@@ -887,16 +710,27 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
+<!-- ARTWORK 20 - THE SOURCE -->
+<div class="artwork">
+<img src="The Source.png" alt="The Source" onclick="openLightbox(this.src)">
+<div class="artwork-info">
+<h3>The Source</h3>
+<p data-en="Acrylic on panel canvas_30,5x23x0,30cm" data-es="Pintura acrílica sobre panel_30,5x23x0,30cm">Acrylic on panel canvas_30,5x23x0,30cm</p>
+<div class="artwork-price" data-en="Price: 30 €" data-es="Precio: 30 €">Price: 30 €</div>
+<div class="status available" data-en="Still Here" data-es="Sigue aquí">Still Here</div>
+<div class="price-area">
+<a href="#contact" class="button" data-en="Acquire/Enquire" data-es="Adquirir/Consultar">Acquire/Enquire</a>
+</div>
+</div>
+</div>
+
 </div>
 </section>
 
-<!-- T-SHIRT DESIGNS -->
 <section id="designs">
 <h2 data-en="T-Shirt Designs" data-es="Diseños de camisetas">T-Shirt Designs</h2>
-
 <div class="designs">
 
-<!-- DESIGN 1 -->
 <div class="design">
 <img src="Shu.webp" alt="Shu Multi-Guitar2" onclick="openLightbox(this.src)">
 <div class="design-info">
@@ -908,7 +742,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- DESIGN 2 -->
 <div class="design">
 <img src="Freenomads Girl.webp" alt="Freenomads Multi-Guitar" onclick="openLightbox(this.src)">
 <div class="design-info">
@@ -920,7 +753,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- DESIGN 3 -->
 <div class="design">
 <img src="Twin Girl.webp" alt="Twin Multi-Guitar" onclick="openLightbox(this.src)">
 <div class="design-info">
@@ -932,7 +764,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- DESIGN 4 -->
 <div class="design">
 <img src="Black Guitar.webp" alt="Black Guitar" onclick="openLightbox(this.src)">
 <div class="design-info">
@@ -944,7 +775,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- DESIGN 5 -->
 <div class="design">
 <img src="Yellow Guitar.webp" alt="Yellow Guitar" onclick="openLightbox(this.src)">
 <div class="design-info">
@@ -956,7 +786,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- DESIGN 6 -->
 <div class="design">
 <img src="Help Guitar.webp" alt="Help Guitar" onclick="openLightbox(this.src)">
 <div class="design-info">
@@ -968,7 +797,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- DESIGN 7 -->
 <div class="design">
 <img src="Picassianna.webp" alt="Picassianna Guitar II" onclick="openLightbox(this.src)">
 <div class="design-info">
@@ -980,7 +808,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- DESIGN 8 -->
 <div class="design">
 <img src="Drum Power.webp" alt="Drum Power" onclick="openLightbox(this.src)">
 <div class="design-info">
@@ -992,7 +819,6 @@ Art · Music · Painting · Original Designs
 </div>
 </div>
 
-<!-- DESIGN 9 -->
 <div class="design">
 <img src="Sgt. Pepper Honored Guitar.webp" alt="Sgt. Pepper Honored Guitar" onclick="openLightbox(this.src)">
 <div class="design-info">
@@ -1011,7 +837,6 @@ Art · Music · Painting · Original Designs
 </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
 <h2 data-en="About" data-es="Sobre mí">About</h2>
 <div class="about-content">
@@ -1029,21 +854,17 @@ Art · Music · Painting · Original Designs
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 <h2 data-en="Contact" data-es="Contacto">Contact</h2>
 <p data-en="Interested in Candy Dobemol's original artworks or T-shirt designs?" data-es="¿Te interesan las obras originales o los diseños de camisetas de Candy Dobemol?">Interested in Candy Dobemol's original artworks or T-shirt designs?</p>
 <p data-en="Get in touch!!" data-es="Ponte en contacto!!">Get in touch!!</p>
-
 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=candydobemolart@gmail.com" class="email-link" style="color:#ff9f43;" target="_blank" rel="noopener noreferrer">✉ candydobemolart@gmail.com</a>
-
 <div style="margin-top:20px;">
 <a href="https://www.facebook.com/candy.dobemol/" class="email-link" target="_blank" rel="noopener noreferrer" style="margin:0 12px; color:#1877F2;">Facebook</a>
 <a href="https://www.instagram.com/candy_dobemol/" class="email-link" target="_blank" rel="noopener noreferrer" style="margin:0 12px; color:#E4405F;">Instagram</a>
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
 <p>© 2026 CandyDobemol_ART - All rights reserved</p>
 <p data-en="🎵 Original music by Candy Dobemol" data-es="🎵 Música original de Candy Dobemol">🎵 Original music by Candy Dobemol</p>
@@ -1060,11 +881,9 @@ let currentLanguage = "en";
 
 function toggleLanguage() {
 currentLanguage = currentLanguage === "en" ? "es" : "en";
-
 document.querySelectorAll("[data-en]").forEach(el => {
 el.textContent = el.getAttribute(`data-${currentLanguage}`);
 });
-
 document.getElementById("languageEN").classList.toggle("active", currentLanguage === "en");
 document.getElementById("languageES").classList.toggle("active", currentLanguage === "es");
 }
@@ -1086,7 +905,6 @@ closeLightbox();
 }
 });
 
-/* ========================= BACKGROUND MUSIC ========================= */
 const music = document.getElementById("backgroundMusic");
 const musicButton = document.getElementById("musicButton");
 let musicStep = 0;
@@ -1100,7 +918,6 @@ function toggleMusic() {
 if (musicStep === 0) {
 music.src = encodeURI(musicTracks[0]);
 music.load();
-
 music.play().then(function() {
 musicButton.textContent = '"Pqña"';
 musicButton.style.color = "#000";
@@ -1112,7 +929,6 @@ console.log("Error al reproducir Pqña.mp3:", error);
 else if (musicStep === 1) {
 music.src = encodeURI(musicTracks[1]);
 music.load();
-
 music.play().then(function() {
 musicButton.textContent = '"GYP"';
 musicButton.style.color = "#000";
