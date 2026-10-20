@@ -249,6 +249,19 @@ background: #111; position: relative; z-index: 2;
 position: relative; z-index: 3; background: #1c1c1c;
 }
 
+/* ARTWORK 23 - CHERRY CAKE */
+/* Misma tarjeta que Flexy, con imagen pequeña y centrada */
+.artwork:nth-child(23) { position: relative; margin-top: 80px; }
+.artwork:nth-child(23) img {
+width: 100%; height: 400px; margin-top: -80px;
+padding: 60px 0;
+object-fit: contain; object-position: center center;
+background: #111; position: relative; z-index: 2;
+}
+.artwork:nth-child(23) .artwork-info {
+position: relative; z-index: 3; background: #1c1c1c;
+}
+
 .artwork-info {
 padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: flex-start;
 }
@@ -432,6 +445,14 @@ object-fit: contain; object-position: center bottom;
 /* ARTWORK 22 - FLEXY */
 .artwork:nth-child(22) { margin-top: 70px; }
 .artwork:nth-child(22) img {
+width: 100%; height: 360px; margin-top: -40px;
+padding: 40px 0;
+object-fit: contain; object-position: center center;
+}
+
+/* ARTWORK 23 - CHERRY CAKE */
+.artwork:nth-child(23) { margin-top: 70px; }
+.artwork:nth-child(23) img {
 width: 100%; height: 360px; margin-top: -40px;
 padding: 40px 0;
 object-fit: contain; object-position: center center;
@@ -783,6 +804,20 @@ Art · Music · Painting · Original Designs
 <img src="Flexy.jpeg" alt="Flexy" onclick="openLightbox(this.src)">
 <div class="artwork-info">
 <h3>Flexy</h3>
+<p data-en="Acrylic on Canvas Panel_12,5x17,8x0,3cm" data-es="Acrílica sobre panel de lienzo_12,5x17,8x0,3cm">Acrylic on Canvas Panel_12,5x17,8x0,3cm</p>
+<div class="artwork-price" data-en="Price: 15 €" data-es="Precio: 15 €">Price: 15 €</div>
+<div class="status available" data-en="Still Here" data-es="Sigue aquí">Still Here</div>
+<div class="price-area">
+<a href="#contact" class="button" data-en="Acquire/Enquire" data-es="Adquirir/Consultar">Acquire/Enquire</a>
+</div>
+</div>
+</div>
+
+<!-- ARTWORK 23 - CHERRY CAKE -->
+<div class="artwork">
+<img src="Cherry Cake.jpeg" alt="Cherry Cake" onclick="openLightbox(this.src)">
+<div class="artwork-info">
+<h3>Cherry Cake</h3>
 <p data-en="Acrylic on Canvas Panel_12,5x17,8x0,3cm" data-es="Acrílica sobre panel de lienzo_12,5x17,8x0,3cm">Acrylic on Canvas Panel_12,5x17,8x0,3cm</p>
 <div class="artwork-price" data-en="Price: 15 €" data-es="Precio: 15 €">Price: 15 €</div>
 <div class="status available" data-en="Still Here" data-es="Sigue aquí">Still Here</div>
