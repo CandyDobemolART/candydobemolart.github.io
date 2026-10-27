@@ -1013,44 +1013,50 @@ closeLightbox();
 }
 });
 
+
 const music = document.getElementById("backgroundMusic");
 const musicButton = document.getElementById("musicButton");
 let musicStep = 0;
 
 const musicTracks = [
-"Pqña.mp3",
-"GYP.mp3"
+    "Pqña.mp3",
+    "GYP.mp3"
 ];
 
+function playTrack(step) {
+    musicStep = step;
+    music.src = encodeURI(musicTracks[step - 1]);
+    music.load();
+
+    music.play().then(function() {
+        musicButton.textContent = step === 1 ? '"Pqña"' : '"GYP"';
+        musicButton.style.color = "#000";
+    }).catch(function(error) {
+        console.log("Error al reproducir la música:", error);
+    });
+}
+
+// Al terminar Pqña, empieza GYP automáticamente.
+music.addEventListener("ended", function() {
+    if (musicStep === 1) {
+        playTrack(2);
+    } else if (musicStep === 2) {
+        musicStep = 0;
+        musicButton.textContent = "🎵";
+        musicButton.style.color = "#ffffff";
+    }
+});
+
 function toggleMusic() {
-if (musicStep === 0) {
-music.src = encodeURI(musicTracks[0]);
-music.load();
-music.play().then(function() {
-musicButton.textContent = '"Pqña"';
-musicButton.style.color = "#000";
-musicStep = 1;
-}).catch(function(error) {
-console.log("Error al reproducir Pqña.mp3:", error);
-});
-}
-else if (musicStep === 1) {
-music.src = encodeURI(musicTracks[1]);
-music.load();
-music.play().then(function() {
-musicButton.textContent = '"GYP"';
-musicButton.style.color = "#000";
-musicStep = 2;
-}).catch(function(error) {
-console.log("Error al reproducir GYP.mp3:", error);
-});
-}
-else {
-music.pause();
-music.currentTime = 0;
-musicButton.textContent = "🎵";
-musicStep = 0;
-}
+    if (!music.paused) {
+        music.pause();
+        music.currentTime = 0;
+        musicStep = 0;
+        musicButton.textContent = "🎵";
+        musicButton.style.color = "#ffffff";
+    } else {
+        playTrack(musicStep === 2 ? 2 : 1);
+    }
 }
 </script>
 
