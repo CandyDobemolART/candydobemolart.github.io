@@ -1016,6 +1016,7 @@ closeLightbox();
 
 const music = document.getElementById("backgroundMusic");
 const musicButton = document.getElementById("musicButton");
+
 let musicStep = 0;
 
 const musicTracks = [
@@ -1048,14 +1049,19 @@ music.addEventListener("ended", function() {
 });
 
 function toggleMusic() {
-    if (!music.paused) {
+    if (music.paused) {
+        // Si está parada, empieza Pqña.
+        playTrack(1);
+    } else if (musicStep === 1) {
+        // Si suena Pqña, cambia directamente a GYP.
+        playTrack(2);
+    } else {
+        // Si suena GYP, detiene la música.
         music.pause();
         music.currentTime = 0;
         musicStep = 0;
         musicButton.textContent = "🎵";
         musicButton.style.color = "#ffffff";
-    } else {
-        playTrack(musicStep === 2 ? 2 : 1);
     }
 }
 </script>
