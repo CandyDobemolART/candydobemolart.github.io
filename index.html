@@ -385,6 +385,11 @@ color: #777; font-style: italic;
 }
 
 /* Ajuste de altura de los cajones de información de las obras 17 y 18 (ordenador) */
+.artwork:nth-child(17) img,
+.artwork:nth-child(18) img {
+    margin-top: 0;
+    top: -100px;
+}    
 @media (min-width: 701px) {
 .artwork:nth-child(17) .artwork-info,
 .artwork:nth-child(18) .artwork-info {
