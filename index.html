@@ -1037,8 +1037,7 @@ function updateMusicButton(step) {
     const prefix = currentLanguage === "en" ? "Playing ♪" : "Sonando ♪";
 
     musicButton.innerHTML =
-'<span style="display:block; color:#888888; font-size:9px; line-height:12px; font-weight:normal;">' + prefix + '</span>' +
-function playTrack(step) {
+'<span style="display:block; color:#888888; font-size:9px; line-height:12px; font-weight:normal;">' + prefix + '</span>' +function playTrack(step) {
     musicStep = step;
     music.src = encodeURI(musicTracks[step - 1]);
     music.load();
