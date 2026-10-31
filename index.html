@@ -314,6 +314,17 @@ background: #49e6d8; color: #ffffff; transform: scale(1.08);
 box-shadow: 0 0 18px rgba(32,213,197,0.6);
 }
 
+/* INDICADOR DE LA CANCIÓN QUE ESTÁ SONANDO */
+#nowPlaying {
+position: absolute; top: 88px; left: 50%;
+transform: translateX(-50%);
+display: none; white-space: nowrap;
+padding: 3px 8px; border-radius: 10px;
+background: rgba(17,17,17,0.9);
+color: #20d5c5; font-size: 11px; font-weight: bold;
+text-align: center; letter-spacing: 0.2px;
+}
+
 .designs {
 display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
 }
@@ -502,6 +513,7 @@ object-fit: contain; object-position: center center;
 </svg>
 </div>
 <button id="musicButton" onclick="toggleMusic()">🎵</button>
+<div id="nowPlaying"></div>
 </div>
 
 <header id="home">
@@ -993,6 +1005,9 @@ el.textContent = el.getAttribute(`data-${currentLanguage}`);
 });
 document.getElementById("languageEN").classList.toggle("active", currentLanguage === "en");
 document.getElementById("languageES").classList.toggle("active", currentLanguage === "es");
+
+/* Actualiza también el idioma del indicador musical */
+updateNowPlaying(musicStep);
 }
 
 function openLightbox(src) {
@@ -1023,6 +1038,25 @@ const musicTracks = [
     "GYP.mp3"
 ];
 
+/* Muestra el nombre de la canción que está sonando */
+function updateNowPlaying(step) {
+    const nowPlaying = document.getElementById("nowPlaying");
+
+    if (step === 0) {
+        nowPlaying.style.display = "none";
+        nowPlaying.textContent = "";
+        return;
+    }
+
+    const trackName = step === 1 ? "Pqña" : "GYP";
+
+    nowPlaying.textContent = currentLanguage === "en"
+        ? "♪ Now playing: " + trackName
+        : "♪ Ahora suena: " + trackName;
+
+    nowPlaying.style.display = "block";
+}
+
 function playTrack(step) {
     musicStep = step;
     music.src = encodeURI(musicTracks[step - 1]);
@@ -1031,6 +1065,7 @@ function playTrack(step) {
     music.play().then(function() {
         musicButton.textContent = step === 1 ? '"Pqña"' : '"GyP"';
         musicButton.style.color = "#000";
+        updateNowPlaying(step);
     }).catch(function(error) {
         console.log("Error al reproducir la música:", error);
     });
@@ -1044,6 +1079,7 @@ music.addEventListener("ended", function() {
         musicStep = 0;
         musicButton.textContent = "🎵";
         musicButton.style.color = "#ffffff";
+        updateNowPlaying(0);
     }
 });
 
@@ -1061,6 +1097,7 @@ function toggleMusic() {
         musicStep = 0;
         musicButton.textContent = "🎵";
         musicButton.style.color = "#ffffff";
+        updateNowPlaying(0);
     }
 }
 </script>
