@@ -1029,7 +1029,7 @@ function playTrack(step) {
     music.load();
 
     music.play().then(function() {
-        musicButton.textContent = step === 1 ? '"Pqña"' : '"GYP"';
+        musicButton.textContent = step === 1 ? '"Pqña"' : '"GyP"';
         musicButton.style.color = "#000";
     }).catch(function(error) {
         console.log("Error al reproducir la música:", error);
