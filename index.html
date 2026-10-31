@@ -1027,6 +1027,7 @@ const musicTracks = [
     "GYP.mp3"
 ];
 
+```javascrpit
 function updateMusicButton(step) {
     if (step === 0) {
         musicButton.textContent = "🎵";
@@ -1034,10 +1035,13 @@ function updateMusicButton(step) {
     }
 
     const trackName = step === 1 ? "Pqña" : "Gyp";
-    const status = currentLanguage === "en" ? "Playing" : "Sonando";
+    const prefix = currentLanguage === "en" ? "Playing" : "Sonando";
 
-    musicButton.textContent = "♪ " + status + ": " + trackName + " ♪";
+    musicButton.innerHTML =
+        '<span style="font-size:10px;">' + prefix + '</span><br>' +
+        '<span style="font-size:16px; font-weight:bold;">♪ ' + trackName + ' ♪</span>';
 }
+```
 
 function playTrack(step) {
     musicStep = step;
