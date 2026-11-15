@@ -266,6 +266,9 @@ padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: 
 }
 .artwork-info h3 { font-size: 22px; margin-bottom: 8px; color: #49e6d8; }
 .artwork-info p { color: #ddd; margin-bottom: 12px; font-size: 16px; }
+body:has(#languageES.active) .artwork:nth-child(2) .dolo-description {
+    max-width: 180px;
+}   
 .status { font-size: 17px; font-weight: bold; margin: 10px 0 14px; letter-spacing: 1px; }
 .status.available { color: #39d353; text-shadow: 0 0 8px rgba(57,211,83,0.35); }
 .status.sold { color: #ff4d4d; text-shadow: 0 0 8px rgba(255,77,77,0.35); }
